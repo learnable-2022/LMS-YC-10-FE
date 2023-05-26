@@ -12,6 +12,10 @@ import instructor from './images/instructor.svg'
 import liveClasses from './images/liveClasses.svg'
 import oneSupport from './images/oneSupport.svg'
 import messageIcon from './images/messageIcon.svg'
+import facebook from './images/facebook.svg'
+import twitter from './images/twitter.svg'
+import linkedIn from './images/linkedIn.svg'
+
 function LandingPage(){
     return (
         <div>
@@ -21,7 +25,7 @@ function LandingPage(){
                     <h1>Empowering Your Child <br />
                         Through Our Learning <br /> Management
                         System</h1>
-                    <p>Unlock a kid’s 
+                    <p>Unlock a kid's 
                         world of wonders and empowering <br />
                          children through interactive learning"</p>
                 </div>
@@ -163,19 +167,53 @@ function LandingPage(){
              </div>
              <div className="connectedWrapper">
                 <div className="connectedContainer">
-                    <div className="connectedContent">
-
+                    <div className="connectedContent one">
+                        <div className="connectOneA">
+                            <h1>Stay Connected</h1>
+                            <p>Never miss out on the latest updates,
+                                educational tips, and exclusive offers! Subscribe to our newsletter and 
+                                stay connected with our child learning community.</p>
+                        </div>
+                        <div className="connectedOneB">
+                            <label htmlFor="subscription" className="email">Enter Your Email</label> <br />
+                            <input type="email" name="subscription" id="" placeholder='hello@example.com' />
+                            <button type="submit">Submit</button>
+                            <p>By submitting your email address, you agree 
+                                to kidsTot’s <span>Terms of Use</span> and <span>Policy</span> </p>
+                        </div>
                     </div>
-                    <div className="connectedContent">
-                        
+                    <div className="connectedContent two">
+                        <p>About Us</p>
+                        <ul>
+                            <li>Our Mission</li>
+                            <li>Meet The Team</li>
+                            <li>Testimonials</li>
+                            <li>Privacy POlicy</li>
+                        </ul>
                     </div>
-                    <div className="connectedContent">
-                        
+                    <div className="connectedContent three">
+                        <p>Support</p>
+                            <ul>
+                                <li>FAQs</li>
+                                <li>Contact Us</li>
+                                <li>Terms of Service</li>
+                                <li>Help Center</li>
+                            </ul>
                     </div>
-
                 </div>
              </div>
-            
+            <footer>
+                <div className="footerContainer">
+                    <div className="copyright">
+                        <p>Copyright 2023 Kidstot co. Ltd.All rights reserved</p>
+                    </div>
+                    <div className="socialMedia">
+                        <div className="linkedin"><img src={linkedIn} alt="" /></div>
+                        <div className="twitter"><img src={twitter} alt="" /></div>
+                        <div className="facebook"><img src={facebook} alt="" /></div>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }

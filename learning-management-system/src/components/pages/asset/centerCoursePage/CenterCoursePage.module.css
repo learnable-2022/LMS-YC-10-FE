@@ -1,0 +1,29 @@
+.centerCoursePageWrapper{
+    width: 100%;
+    margin-top: -30px;
+    border: 2px solid blue;
+}
+.centerPage p:nth-child(1){
+    font-size: 18px;
+    text-align: left;
+}
+.firstCenterSection{
+    display: flex;
+    width: 100%;
+    border: 2px solid green;
+    align-items: center;
+    justify-content: space-between;
+}
+.firstCenterSection div{
+    display: flex;
+    align-items: first baseline;
+}
+.firstSectionText{
+    width: 370px;
+    border: 2px solid red;
+    font-size: 14px;
+    text-align: left;
+}
+.firstSectionText:nth-child(1){
+    margin-right: 100px;
+}

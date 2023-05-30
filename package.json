@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "carousel": "^0.0.3",
+    "pure-react": "^1.0.4",
+    "react-icons": "^4.9.0",
+    "react-router-dom": "^6.11.2"
+  }
+}

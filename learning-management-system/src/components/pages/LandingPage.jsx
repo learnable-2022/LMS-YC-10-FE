@@ -207,19 +207,46 @@ function LandingPage(){
                             <div className={styles.clientProfile}>
                                 <div className={styles.clientImg}>
                                     <img src={purpleShirt} alt="" />
+                                    <div className={styles.clientName}>
+                                        <h2></h2>
+                                        <p></p>
+                                    </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={pinkGown} alt="" />
+                                    <div className={styles.clientName}>
+                                        <h2></h2>
+                                        <p></p>
+                                    </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={redShirt} alt="" />
+                                    <div className={styles.clientName}>
+                                        <h2>Nkemdilim Ugwu</h2>
+                                        <p>UI/UX Tutor</p>
+                                    </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={face} alt="" />
+                                    <div className={styles.clientName}>
+                                        <h2></h2>
+                                        <p></p>
+                                    </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={yellowShirt} alt="" />
+                                    <div className={styles.clientName}>
+                                        <h2></h2>
+                                        <p></p>
+                                    </div>
                                 </div>
+                            </div>
+                            <div className={styles.navCarosel}>
+                                <div className={styles.clientOne}></div>
+                                <div className={styles.clientOne}></div>
+                                <div className={styles.clientOne}></div>
+                                <div className={styles.clientOne}></div>
+                                <div className={styles.clientOne}></div>
                             </div>
                         </div>
                     </div>

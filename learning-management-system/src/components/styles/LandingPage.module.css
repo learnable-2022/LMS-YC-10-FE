@@ -307,6 +307,71 @@ li{
 
 
 /*Client testimonial*/
+.clientsWrapper{
+  padding: 60px 90px;
+  background: #FCE4EC;
+}
+.clientsContainer h1{
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 83px;
+}
+.clientcomment{
+  background-color: white;
+  border-radius: 40px;
+  width: 85%;
+  height: 150px;
+  padding: 40px;
+  margin: auto;
+}
+.clientcomment p{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+
+}
+.clientProfile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 45px;
+}
+.clientImg{
+  display: flex;
+
+}
+.clientImg img{
+  width: 160px;
+}
+.clientName{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.clientName h2{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+.clientName p{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+.navCarosel{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.clientOne{
+  width: 20px;
+  height: 20px;
+  background-color: #F48FB1;
+  border-radius: 100%;
+}
+
 
 
 

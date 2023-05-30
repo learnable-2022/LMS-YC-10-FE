@@ -18,6 +18,11 @@ import messageIcon from '../images/messageIcon.svg'
 import facebook from '../images/facebook.svg'
 import twitter from '../images/twitter.svg'
 import linkedIn from '../images/linkedIn.svg'
+import face from '../images/face.svg'
+import yellowShirt from '../images/yellowShirt.svg'
+import pinkGown from '../images/pinkGown.svg'
+import purpleShirt from '../images/purpleShirt.svg'
+import redShirt from '../images/redShirt.svg'
 
 function LandingPage(){
     return (
@@ -185,7 +190,38 @@ function LandingPage(){
                 </div>
                 <div className={styles.clientsWrapper}>
                     <div className={styles.clientsContainer}>
-
+                        <h1>Our Happy Clients</h1>
+                        <div className={styles.clients}>
+                            <div className={styles.clientcomment}>
+                                <p>"The KidsTot program has been a
+                                     lucrative opportunity for
+                                     me as a tutor. Its demand
+                                      and effectiveness in
+                                     supporting students' 
+                                     learning journey have 
+                                     allowed me to earn a substantial 
+                                     income. I'm grateful for the financial 
+                                     rewards that come from making a positive
+                                     impact on children's education."</p>
+                            </div>
+                            <div className={styles.clientProfile}>
+                                <div className={styles.clientImg}>
+                                    <img src={purpleShirt} alt="" />
+                                </div>
+                                <div className={styles.clientImg}>
+                                    <img src={pinkGown} alt="" />
+                                </div>
+                                <div className={styles.clientImg}>
+                                    <img src={redShirt} alt="" />
+                                </div>
+                                <div className={styles.clientImg}>
+                                    <img src={face} alt="" />
+                                </div>
+                                <div className={styles.clientImg}>
+                                    <img src={yellowShirt} alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.connectedWrapper}>

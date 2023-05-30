@@ -1,11 +1,11 @@
 import React from "react";
-import kid1 from "../../images/kid1.png";
-import kid2 from "../../images/kid2.png";
-import kid3 from "../../images/kid3.png";
-import kid4 from "../../images/kid4.png";
-import design from "../../images/design.png";
-import chat from "../../images/chat.png";
-import puzzle from "../../images/WordPuzzle.png";
+import kid1 from "../../../images/kid1.png";
+import kid2 from "../../../images/kid2.png";
+import kid3 from "../../../images/kid3.png";
+import kid4 from "../../../images/kid4.png";
+import design from "../../../images/design.png";
+import chat from "../../../images/chat.png";
+import puzzle from "../../../images/WordPuzzle.png";
 
 
 

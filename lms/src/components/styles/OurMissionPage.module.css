@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'mada' sans-serif;
+}
+.headerTitle{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 83px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    margin-top: 30px;
+}
+.ourMission{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+} 
+.ourMission div{
+    width: 80%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 52px;
+    letter-spacing: 0.005em;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.ourMission div div{
+    width: 90%;
+    display: flex;
+    text-align: left;
+}
+@media screen and (max-width: 550px){
+    .headerTitle h2{
+        font-size: 34px;
+    }
+    .ourMission p{
+        font-size: 20px;
+    }
+}
+

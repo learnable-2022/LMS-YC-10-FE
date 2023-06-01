@@ -1,0 +1,159 @@
+.footer{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+.footerBodyWrapper{
+    display: flex;
+    align-items: center;
+}
+.footerBody{
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.footerBody div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footerText p{
+    width: 620px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.labelField div{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px;
+}
+.labelField{
+    margin-bottom: 10px;
+}
+.labelField div input{
+    width: 450px;
+    height: 40px;
+    background: #E3E3E3;
+    border-radius: 17px;
+    border: none;
+}
+.labelField div input::placeholder{
+    font-size: 14px;
+    padding-left: 20px;
+}
+.labelField div button {
+    width: 120px;
+    height: 40px;
+    margin-left: -30px;
+    border-radius: 17px;
+    background: #0288D1;
+    border: none;
+}
+.labelField label p{
+    display: flex;
+    font-weight: 500;
+}
+.labelField a{
+    color: black;
+}
+.labelField p{
+    margin-top: 0;
+}
+.links{
+    display: flex;
+    width: 65%;
+    justify-content: space-evenly;
+}
+.links li{
+    list-style: none;
+    text-align: left;
+    margin-left: 25px;
+    padding: 5px;
+}
+.links h3{
+    padding-bottom: 10px;
+}
+.links li a{
+    text-decoration: none;
+    color: black;
+}
+.secondLinks li{
+    margin-left: 45px;
+}
+.footerCopywrightWrapper{
+    background-color:  #0288D1;
+    height: 50px;
+    display: flex;
+    margin-top: 70px;
+}
+.footerCopywrightWrapper .footerCopywright{
+    width: 85%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerIcons{
+    width: 9%;
+    display: flex;
+    justify-content: space-between;
+}
+.footerCopywrightWrapper .footerCopywright div i{
+    color: white;
+}
+@media screen and (max-width: 900px){
+    .footerCopywrightWrapper .footerCopywright{
+        width: 82%;
+        font-size: 14px;
+    }
+    .footerBodyWrapper{
+        flex-wrap: wrap;
+        height: 610px;
+        justify-content: space-between;
+    }
+    .footerIcons{
+        width: 12%;
+    }
+    .footerIcons i{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 650px){
+    .footerText p{
+        width: 420px;
+        max-width: 450px;
+        font-weight: 499;
+    }
+    .labelField div{
+        width: 300px;
+        height: 20px;
+        margin-bottom: 30px;
+    }
+    .footerBodyWrapper{
+        height: 750px;
+    }
+    .labelField{
+        width: 280px;
+        text-align: left;
+    }
+    .links a{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 450px){
+    .footerCopywrightWrapper .footerCopywright{
+        font-size: 12px;
+    }
+    .footerText p{
+        width: 320px;
+    }
+    .footerIcons i{
+        font-size: 11.5px;
+    }
+    .links{
+        width: 75%;
+    }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'mada' sans-serif;
+}
+.sideBarWrapper{
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    height: 100%;
+    background-color: #039BE5;
+}
+.sideBarWrapper .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    width: 180px;
+}
+.sideBarWrapper .logo img{
+    width: 120px;
+}
+.sideBarWrapper ul a{
+    text-decoration: none;
+}
+.sideBarWrapper ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    font-size: 17px;
+    height: 42px;
+    margin-bottom: 5px;
+}
+.sideBarWrapper ul li:hover{
+    padding-left: 40px;
+    margin-left: -40px;
+    text-align: center;
+    width: 180px;
+    border-left: 3.5px solid #EC407A;
+    background-color:  #64B5F6;
+}
+.sideBarWrapper ul li i{
+    color: white;
+    margin: 5px 8px 0px 0px;
+}
+.sideBarWrapper ul li i:nth-of-type(2){
+    color: white;
+}
+.sideBarFooter ul li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    width: 50%;
+}
+.sideBarFooter ul a{
+    text-decoration: none;
+}
+.sideBarFooter li i{
+    color: white;
+    margin: 4px 8px 0px 0px;
+}
+.sideBarFooter{
+    margin-top: 32px;
+}
+.navLinkWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+@media screen and (max-width: 950px) {
+    .sideBarWrapper{
+        width: 152px;
+    }
+    .sideBarWrapper .logo img{
+        width: 100px;
+        margin-left: -30px;
+    }
+    .sideBarWrapper ul li{
+        width: 80vw;
+        font-size: 15px;
+    }
+    .sideBarWrapper ul li i{
+        margin: 5px 8px 0px -25px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .sideBarWrapper{
+        width: 160px;
+    }
+}
+

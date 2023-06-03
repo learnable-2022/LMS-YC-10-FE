@@ -17,8 +17,8 @@ return(
         <div className={styles.settingsWrapper}>
             <div className={styles.bodyWrapper}>
                 <div className={styles.settingsHeader}>
-                    <h1>Settings</h1>
-                    <div className={styles.InputWrapper}>
+                    <h1 className={styles.headerText}>Settings</h1>
+                    <div className={styles.inputWrapper}>
                         <div className={styles.settingSearchInput}>
                             <i><CiSearch /></i>
                             <input type="search" placeholder="Search here..."/>
@@ -54,9 +54,9 @@ return(
                     <div className={styles.settingBody}>
                     <div className={styles.profileWrapper}>
                         <div>
-                            <img src={profileImage} alt="ProfilePicture" />
+                            <img src={profileImage} alt="ProfilePicture"  className={styles.profilePicture}/>
                         </div>
-                        <div>
+                        <div className={styles.profileName}>
                             <h2>Arjen Angel</h2>
                             <button>Upload New</button>
                         </div>

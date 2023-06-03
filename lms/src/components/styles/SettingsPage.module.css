@@ -3,23 +3,28 @@
     font-family: 'mada' sans-serif;
 }
 .settingsWrapper{
-    position: relative;
     display: flex;
     width: 100%;
+    margin-left: 30px;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .settingsHeader{
     display: flex;
-    width: 100%;
-    align-items: start;
-    margin-left: 30px;
+    width: 97%;
     justify-content: space-between;
 }
-.bodyWrapper{
-    width: 90%;
+.headerText{
+    font-size: 32px;
 }
-.InputWrapper{
-    display: flex;
+.bodyWrapper{
     width: 80%;
+}
+.inputWrapper{
+    display: flex;
+    width: 73%;
     height: 15%;
     align-items: center;
     justify-content: space-between;
@@ -27,19 +32,19 @@
 .headerIcons{
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 36%;
     justify-content: space-between;
 }
 .secondIconWrapper{
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 86%;
     justify-content: space-between;
 }
 .thirdIconWrapper{
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 99%;
     justify-content: space-between;
 }
 .fourthWrapper{
@@ -88,18 +93,16 @@
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: #90CAF9;
+    background-color: #D1B102;;
 }
 hr{
     height: 25px;
 }
 .profileText{
     text-align: left;
-    padding-left: 35px;
     margin-top: -30px;
 }
 .settingBodyWrapper{
-   width: 100%;
    height: 480px;
    display: flex;
    align-items: right;
@@ -109,38 +112,42 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 63%;
-    padding: 20px 0px 50px 80px;
+    width: 450px;
+    padding: 20px 40px 50px 50px;
     border: 1px solid black;
     border-radius: 20px;
 }
 .profileWrapper{
     display: flex;
     align-items: center;
-    width: 49%;
+    width: 270px;
     justify-content: space-between;
 }
+.profileName{
+    display: flex;
+    flex-direction: column;
+}
 .profileWrapper button{
-    width: 120px;
-    height: 46px;
+    width: 110px;
+    height: 40px;
     background: #0288D1;
-    border-radius: 1.5em;
+    border-radius: 12px;
     color: white;
     border: none;
 }
 .nameWrapper{
     display: flex;
-    width: 500px;
+    width: 300px;
 }
 .nameWrapper div{
     display: flex;
     align-items: center;
-    width: 33.5vw;
+    width: 330px;
     height: 50px;
     border: 1px solid black;
 }
 .nameWrapperFirst{
-    margin-right: 3.6vw;
+    margin-right: 30px;
 }
 .nameWrapper div i{
     padding: 0px 5px 0px 10px;
@@ -150,7 +157,7 @@ hr{
     height: 40px;
 }
 .input div{
-    width: 500px;
+    width: 426px;
     height: 50px;
     border: 1px solid black;
     margin-top: 10px;
@@ -176,131 +183,172 @@ input{
     outline: none;
 }
 input::placeholder{
-    font-size: 1vw;
+    font-size: 14px;
 }
-@media screen and (max-width: 950px) {
-    .bodyWrapper{
-        width: 90%;
+@media screen and (max-width: 750px) {
+    .settingsWrapper{
+        margin-left: 70px;
     }
-    .InputWrapper{
-        width: 25%;
+    .settingsHeader h1{
+        font-size: 30px;
+    }
+    .settingSearchInput{
+        height: 25px;
+        width: 180px;
+        margin-top: 15px;
+    }
+    .inputWrapper{
+        margin-left: 25px;
     }
     .headerIcons{
-        width: 10%;
-    }
-    .secondIconWrapper{
-        display: flex;
-        align-items: center;
-        width: 90%;
-        justify-content: space-between;
-    }
-    .thirdIconWrapper{
-        display: flex;
-        align-items: center;
-        width: 75%;
-        justify-content: space-between;
-    }
-    .fourthWrapper{
-        display: flex;
-        align-items: center;
-        width: 80%;
-        justify-content: space-between;
-    }
-    .fourthWrapper i{
-        width: 25px;
-        height: 25px;
-        border-radius: 2em;
-        background: #F2F2F2;
-    }
-    .settingSearchInput{
-        display: flex;
-        align-items: center;
-        width: 350px;
-        height: 35px;
-        background: #FEFEFE;
-        border: 1px solid #90CAF9;
-        border-radius: 5px;
-    }
-    .settingSearchInput i{
-        padding: 0px  10px;
+        margin-top: 15px;
     }
     .settingSearchInput input{
-        border: none;
-        width: 250px;
-        height: 30px;
+        height: 20px;
+        width: 140px;
     }
-    .userProfileWrapper{
-        display: flex;
-        width: 70%;  
-    }
-    .userProfile{
-        font-size: 14px;
-    }
-    .userProfile .userProfileDiv{
-        width: 100px;
-        height: 30px;
-        border-radius: 3px;
+    .userProfile p{
         font-size: 13px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        background-color: #90CAF9;
+        font-weight: 500;
     }
-    .settingSearchInput{
-        width: 95vw;
-    }
-    .settingSearchInput input{
-        border: none;
-        width: 85vw;
-    }
-    .profileWrapper img{
-        width: 30vw;
-        min-width: 30vw;
+    .nameWrapper{
+        width: 300px;
     }
     .nameWrapper div{
-        width: 56.6vw;
+        width: 180px;
     }
     .nameWrapper div input{
-        width: 35vw;
+        width: 120px;
     }
-    .nameWrapperFirst{
-        margin-right: 5.6vw;
+    .settingBody{
+        width: 350px;
+        padding: 20px 40px 50px 40px;
     }
     .input div{
-        width: 120vw; 
+        width: 345px;
     }
     .input div input{
-        width: 65vw;
+        width: 230px;
     }
-    input::placeholder{
-        font-size: 5.5vw;
+    .settingBodyWrapper h2{
+        font-size: 20px;
     }
-    .settingBodyWrapper{
-        width: 100%;
-        height: 470px;
-        margin-left: 80vw;
-        display: flex;
-        align-items: right;
-        justify-content: center;
-     }
-    .settingBody{
-        width: 150vw;
+    .profileWrapper{
+        width: 200px;
     }
     .profileWrapper button{
-        width: 7em;
-        height: 3em;
-        font-size: 5vw;
+        font-size: 10px;
+        height: 32px;
+        width: 95px;
     }
-    .profileWrapper h2{
-        font-size: 6vw;
+    .profilePicture{
+        width: 85px;
     }
-    h1 {
-        font-size: 13vw;
+}
+@media screen and (max-width: 650px) {
+    .nameWrapper div input{
+        width: 115px;
     }
-    h2{
-        font-size: 10vw;
+    .settingBody{
+        position: relative;
+        left: 20px;
+        padding: 20px 70px 50px 30px;
     }
-
+    .settingSearchInput{
+        height: 25px;
+        width: 180px;
+    }
+    .settingSearchInput input{
+        height: 20px;
+        width: 140px;
+    }
+    .settingSearchInput input::placeholder{
+        font-size: 13px;
+    }
+    .input div{
+        width: 332px;
+    }
+    .input div input{
+        width: 226px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .settingsHeader{
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+    .nameWrapper div input{
+        width: 225px;
+    }
+    .nameWrapper div{
+        width: 271px;
+    }
+    .inputWrapper{
+        margin-left: 20px;
+    }
+    .nameWrapperFirst{
+        margin-bottom: 10px;
+    }
+    .nameWrapper{
+        width: 285px;
+        flex-wrap: wrap;
+    }
+    .settingBody{
+        width: 230px;
+        padding: 20px 70px 50px 20px;
+    }
+    .input div{
+        width: 272px;
+    }
+    .headerIcons{
+        margin-left: 5px;
+        font-size: 12px;
+        margin-top: -30px;
+    }
+    .settingSearchInput{
+        margin-top: -30px;
+    }
+    .input div input{
+        width: 160px;
+    }
+    .settingsWrapper{
+        position: relative;
+        left: -80px;
+    }
+    .userProfile p{
+        font-size: 11px;
+        width: 50px;
+    }
+    .userProfile .userProfileDiv{
+        height: 20px;
+        width: 55px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .nameWrapper div{
+        width: 235px;
+    }
+    .nameWrapperFirst{
+        margin-bottom: 10px;
+    }
+    .nameWrapper{
+        width: 285px;
+        flex-wrap: wrap;
+    }
+    .settingBody{
+        width: 210px;
+        height: 430px;
+        padding: 20px 50px 80px 20px;
+    }
+    .input div{
+        width: 235px;
+    }
+    .input div input{
+        width: 120px;
+    }
+    .settingsWrapper{
+        position: relative;
+        left: -80px;
+        height: 100%;
+    }
 }

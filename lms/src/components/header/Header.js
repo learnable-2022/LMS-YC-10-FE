@@ -7,7 +7,7 @@ import styles from "./Header.module.css"
 function Header(){
 return(
     <>
-        <div>
+        <div className={styles.headerWrapper}>
         <div className={styles.header}>
                     <div className={styles.logo}>
                         <img src={Logo} alt="Logo" />

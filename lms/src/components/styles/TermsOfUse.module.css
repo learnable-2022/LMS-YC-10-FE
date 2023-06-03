@@ -8,6 +8,12 @@
     align-content: center;
     justify-content: center;
 }
+.body{
+    margin-left: 30px;
+    width: 87%;
+    text-align: left;
+    font-size: 18px;
+}
 .bodyText{
     width: 87%;
     font-size: 18px;
@@ -16,4 +22,9 @@
 .bodyText ul li{
     padding: 3px 0px;
     list-style: inside;
+}
+@media screen and (max-width: 650px){
+    .body{
+        font-size: 16px;
+    }
 }

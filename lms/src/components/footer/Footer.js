@@ -48,7 +48,7 @@ return(
             <div className={styles.footerCopywrightWrapper}>
                 <div className={styles.footerCopywright}>
                 <p>Copyright 2023 Kidstot co. Ltd.All rights reserved</p>
-                    <div>
+                    <div className={styles.footerIcons}>
                         <a href="https://"><i><FiLinkedin /></i></a>
                         <a href="https://"><i><FiTwitter /></i></a>
                         <a href="https://"><i><FiFacebook /></i></a>

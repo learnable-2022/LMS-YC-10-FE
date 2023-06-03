@@ -1,0 +1,139 @@
+.ongoingCourseWrapper{
+    margin-left: 40px;
+}
+.courseDirectory div i{
+    margin: 5px 5px 0px;
+}
+.courseDirectory{
+    display: flex;
+}
+.courseDirectory div a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+.active{
+    color:  #039BE5;
+}
+.bodyWrapper{
+    display: flex;
+    width: 104%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tutorWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 235px;
+}
+.tutorWrapper div{
+    text-align: left;
+    margin-top: 8px;
+}
+.tutorWrapper h3{
+    color: #039BE5;
+    margin: 0px;
+}
+.tutorWrapper p{
+    margin-top: 5px;
+}
+.buttonWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 10px;
+}
+.btn1{
+    border: none;
+    background-color: #039BE5;
+    color: white;
+    width: 110px;
+    border-radius: 12px;
+    height: 40px;
+    padding: 4px 6px;
+}
+.btn2{
+    background-color: white;
+    color: black;
+    width: 105px;
+    height: 40px;
+    border: 1px solid #42A5F5;
+    border-radius: 16px;
+    padding: 4px 6px;
+}
+.btn3{
+    background-color: white;
+    color: black;
+    width: 135px;
+    height: 40px;
+    border: 1px solid #42A5F5;
+    border-radius: 16px;
+    padding: 4px 6px;
+}
+.extraSource{
+    text-align: left;
+}
+.extraSource p{
+    width: 550px;
+}
+.extraSource a{
+    color:  #EC407A;
+    text-decoration: none;
+}
+.progressBar {
+    background: #E3F2FD;
+    padding: 30px 20px 40px 25px;
+    width: 250px;
+    border-radius: 12px;
+    text-align: left;
+}
+.progressBarHeader{
+    display: flex;
+    align-items: center;
+    width: 160px;
+    justify-content: start;
+}
+.progressBar hr{
+    border-radius: 8px;
+    width: 7px;
+    height: 35px;
+    background-color: #EC407A;
+}
+.progressBar ol{
+    text-align: left;
+}
+.progressBar ol div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+.progressBar ol div i{
+    margin-top: 5px;
+}
+.progressBar summary{
+    list-style: none;
+}
+.progressBar summary::-webkt-details-marker{
+    display: none;
+}
+.progressBar details[open] summary::after{
+    display: flex;
+    content: "ᨈ";
+    margin-left: 70px;
+}
+.progressBar details summary::after{
+    content: "ᨆ";
+    /* margin-left: 50px; */
+}
+.progressBar details summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 235px;
+    font-weight: 550;
+}

@@ -4,6 +4,7 @@ import SideBar from "../sideBar/SideBar";
 import SettingsPage from "../pages/SettingsPage";
 import CoursePage from "../pages/CoursePage";
 import styles from "./Main.module.css";
+import OngoingCourse from "../pages/OngoingCoursePage";
 
 
 
@@ -32,6 +33,7 @@ return(
                         <Route path='/settings' element={<SettingsPage/>}/>
                         {/* <Route path='/signin' element={<SignIn/>}></Route> */}
                         {/* <Route path='/contact' element={<ContactSection/>}/> */}
+                        <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
                     </Routes>
                 </div>
            </Router>

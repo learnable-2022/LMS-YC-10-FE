@@ -72,7 +72,7 @@
     justify-content: space-between;
     height: 500px;
 }
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
     .sideBarWrapper{
         width: 152px;
     }
@@ -87,10 +87,12 @@
     .sideBarWrapper ul li i{
         margin: 5px 8px 0px -25px;
     }
-}
-@media screen and (max-width: 450px) {
+} */
+@media screen and (max-width: 650px) {
     .sideBarWrapper{
-        width: 160px;
+        /* width: 160px; */
+        overflow-x: hidden;
+        /* display: none; */
     }
 }
 

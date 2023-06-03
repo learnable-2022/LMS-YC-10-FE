@@ -115,18 +115,32 @@
 .centerFooterLastSection{
     margin: 0px 0px 20px 0px;
 }
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 650px) {
     .secondSectionText{
-        width: 580px;
+        width: 92vw;
     }
-    .secondSection{
-        width: 760px;
+    .firstCenterSection{
+        width: 35%;
     }
     .thirdSection{
-        width: 580px;
+        width: 85vw;
+        padding-right: 15px;
     }
     .fourthSection{
-        width: 580px;
+        width: 90vw;
+    }
+    .pTag{
+        font-weight: 599;
+    }
+    .courseSummary{
+        width: 100vw;
+        justify-content: space-around;
+        display: flex;
+        font-size: 10.7px;
+        font-weight: 500;
+    }
+    .courseSummary div{
+        width: 290px;
     }
     .centerCoursePageWrapper{
         margin-top: 0px;

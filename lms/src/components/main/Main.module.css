@@ -14,13 +14,13 @@
     left: 17.2%;
     position: relative;
 }
-@media screen and (max-width: 550px) {
-    .body{
-        left: 50%;
+@media screen and (max-width: 650px) {
+    .sideBar{
+        display: none;
     }
 }
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 650px) {
     .body{
-        left: 80%;
+        left: 0%;
     }
 }

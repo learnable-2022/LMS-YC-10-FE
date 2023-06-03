@@ -1,13 +1,13 @@
 import './App.css';
 
-// import Main from './components/main/Main';
-import LandingPage from './components/pages/LandingPage';
+import Main from './components/main/Main';
+// import LandingPage from './components/pages/LandingPage';
 
 function App() {
   return (
     <div className="App">
-      {/* <Main /> */}
-        <LandingPage />
+      <Main />
+        {/* <LandingPage /> */}
     </div>
   );
 }

@@ -36,7 +36,7 @@ return(
                                         <div className={styles.userProfile}>
                                             <div>
                                                 <p className={styles.userProfileName}>Arjen Angel</p>
-                                                <div className={styles.userProfileDiv}>
+                                                <div className={styles.userProfileDiv} id={styles.userProfileDiv}>
                                                     <p>Learner</p>
                                                 </div>
                                             </div>

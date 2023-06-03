@@ -8,117 +8,106 @@ import styles from "./CourseList.module.css";
 import OngoingCourse  from "../OngoingCoursePage";
 import { Link } from "react-router-dom";
 
-// import video from "../../images/"
-// import { icons } from 'react-icons';
-// RiArrowUpSLine
+
 
 function CourseList(){
 const [ courseList ] = useState([
     {
         id: 1,
+        title: "Week 1- Beginner- Introduction to UX designing",
         icon: <CiStickyNote/>,
-        name: "Please read before you start",
+        name1: "Please read before you start",
+        icon2: <BsPlayCircleFill />,
+        name2: "Introduction to Figma and essential training",
+        icon3: <BsPlayCircleFill />,
+        name3: "What is the difference between UI/UX in Figma",
+        name4: "What we are making in this Figma course",
+        name5: "Class assignment 02- Create your own brief",
+        name6: "Class assignment 02-create your own brief",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 2,
+        title: "Week 2- Beginner-Welcome to course one",
         icon: <BsPlayCircleFill />,
-        name: "Introduction to Figma and essential training",
+        name1: "How to identify stakeholders",
+        icon2: <BsPlayCircleFill />,
+        name2: "How to identify user needs",
+        icon3: <BsPlayCircleFill />,
+        name3: "Creating UX Flows",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 3,
+        title: "Week 3- Beginner-the basic of user experience design",
         icon: <BsPlayCircleFill />,
-        name: "What is the difference between UI/UX in Figma",
+        name1: "Mapping the user journey",
+        icon2: <BsPlayCircleFill />,
+        name2: "Finding solutions & constraint cards",
+        icon3: <BsPlayCircleFill />,
+        name3: "Introduction to Figma",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 4,
+        title: "Week 4- Beginner-the basic of user experience design",
         icon: <BsPlayCircleFill />,
-        name: "What we are making in this Figma course",
+        name1: "Present Sketches, UX Principles",
+        icon2: <BsPlayCircleFill />,
+        name2: "Psychology of UX",
+        icon3: <BsPlayCircleFill />,
+        name3: "Refining grayscales in Figma",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 5,
-        icon: <CiStickyNote/>,
-        name: "Class assignment 02- Create your own brief",
+        title: "Week 5- Beginner-Jobs in the field of user experience",
+        icon: <BsPlayCircleFill />,
+        name1: "Understanding user testing",
+        icon2: <BsPlayCircleFill />,
+        name2: "Design for Inclusion",
+        icon3: <BsPlayCircleFill />,
+        name3: "Figma UI",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 6,
+        title: "Week 6- Beginner-Getting ahead as a junior designer",
         icon: <CiStickyNote/>,
-        name: "Class assignment 02-create your own brief",
+        name1: "Understanding user testing",
+        icon2: <BsPlayCircleFill />,
+        name2: "Design for Inclusion",
+        icon3: <BsPlayCircleFill />,
+        name3: "Figma UI",
         watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 7,
-        icon: <RiArrowDownSLine />,
-        name: "Week 2- Beginner-Welcome to course one",
-        watch: <TfiLock />,
-        time: "02:53",
-        src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 8,
-        icon: <RiArrowDownSLine />,
-        name: "Week 3- Beginner-the basic of user experience design",
-        watch: <TfiLock />,
-        time: "02:53",
-        src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 9,
-        icon: <RiArrowDownSLine />,
-        name: "Week 4- Beginner-the basic of user experience design",
-        watch: <TfiLock />,
-        time: "02:53",
-        src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 10,
-        icon: <RiArrowDownSLine />,
-        name: "Week 2- Beginner-Welcome to course one",
-        watch: <TfiLock />,
-        time: "02:53",
-        src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 11,
-        icon: <RiArrowDownSLine />,
-        name: "Week 5- Beginner-Jobs in the field of user experience",
-        watch: <TfiLock />,
-        time: "02:53",
-        src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 12,
-        icon: <RiArrowDownSLine />,
-        name: "Week 6- Beginner-Getting ahead as a junior designer",
-        watch: <TfiLock />,
+        title: "Week 7- Topics in UI",
+        icon: <CiStickyNote/>,
+        name1: "Understanding user testing",
+        icon2: <BsPlayCircleFill />,
+        name2: "Design for Inclusion",
+        icon3: <BsPlayCircleFill />,
+        name3: "Figma UI",
+        watch: <FcCheckmark />,
         time: "02:53",
         src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     }
 ])
 
-// , setCourseList
-//     const [ course ] = useState("");
-//     const addCourse = () => {
-//         setCourseList([...courseList, course])
-//         // , setCourse 
-//     }
-//  addCourse();
 
 
     const Onclick = (id, src, name) => {
@@ -127,46 +116,69 @@ const [ courseList ] = useState([
 
         console.log(id, src, name)
 
-        // return(
-        //     <>
-        //         <video width="400px" height="400px" key={id} controls>
-        //             <source src={src} type='video/mp4' />
-        //         </video>
-        //     </>
-        // )
+
     }
 return(
     <>
         <div className={styles.courseListWrapper}>
-            <ul>
+            <div>
                 {
                     courseList.map((
                         {
                     id, 
+                    title,
                     icon,
-                    name,
+                    icon2,
+                    icon3,
+                    name1,
+                    name2,
+                    name3,
                     watch,
                     time,
                     src}, index
                     ) => (
-                        <li key={id} >
-                            <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
-                                <i>{icon}</i>
+                        <details key={id} >
+                            <summary>{title}</summary>
                                 <div id={styles.section1}>
-                                    <p>{name}</p>
-                                    <div id={styles.section2}>
-                                        <i>{watch}</i>
-                                        <p>{time}</p>
-                                    </div>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
+                                        <i>{icon}</i>
+                                       <div className={styles.firstRow}>
+                                            <p>{name1}</p>
+                                            <div id={styles.section2}>
+                                                <i>{watch}</i>
+                                                <p>{time}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </div>
-                            </Link>
-                                {/* <video controls>onClick={()=> Onclick(id, src, name)}
-                                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"  type="video/mp4"/>
-                                </video> */}
-                        </li>
+                                <div id={styles.section1}>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
+                                        <i>{icon2}</i>
+                                        <div className={styles.firstRow}>
+                                            <p>{name2}</p>
+                                            <div id={styles.section2}>
+                                                <i>{watch}</i>
+                                                <p>{time}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div id={styles.section1}>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
+                                        <i>{icon3}</i>
+                                        <div className={styles.firstRow}>
+                                            <p>{name3}</p>
+                                            <div id={styles.section2}>
+                                                <i>{watch}</i>
+                                                <p>{time}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                        </details>
                     ))
                 }
-            </ul>
+            </div>
         </div>
     </>
 )

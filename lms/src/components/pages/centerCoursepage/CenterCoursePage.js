@@ -50,10 +50,6 @@ return(
                         <p>Expand all sections</p>
                     </span>
                     <div className={styles.fourthSection}>
-                        <span>
-                            <i><RiArrowUpSLine /></i>
-                            <p>Week 1- Beginner- Introduction to UX designing</p>
-                        </span>
                         <div>
                             <CourseList />
                         </div>

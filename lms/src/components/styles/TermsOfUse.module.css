@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'mada' sans-serif;
+}
+.bodyTextWrappper{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.body{
+    margin-left: 30px;
+    width: 87%;
+    text-align: left;
+    font-size: 18px;
+}
+.bodyText{
+    width: 87%;
+    font-size: 18px;
+    text-align: left;
+}
+.bodyText ul li{
+    padding: 3px 0px;
+    list-style: inside;
+}
+@media screen and (max-width: 650px){
+    .body{
+        font-size: 16px;
+    }
+}

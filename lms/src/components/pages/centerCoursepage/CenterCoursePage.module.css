@@ -1,0 +1,149 @@
+.centerCoursePageWrapper{
+    width: 95%;
+    margin-top: -30px;
+}
+.centerPageText{
+    font-size: 17px;
+    text-align: left;
+}
+.firstCenterSection{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#div{
+    display: flex;
+    align-items: center;
+    width: 160px;
+}
+#div1 i{
+    color:#D1B102;;
+    margin: 0px 5px 12px 0px;
+}
+.firstCenterSection div:nth-child(1){
+    margin-right: 20px;
+    display: flex;
+    width: 280px;
+    align-items:center;
+}
+.firstSectionText{
+    width: 220px;
+    font-size: 13px;
+    text-align: left;
+}
+.firstSectionText2{
+    width: 500px;
+    font-size: 12.5px;
+}
+.secondSection{
+    width: 104%;
+    text-align: left;
+}
+.secondSectionText{
+    font-size: 13.5px;
+    width: 760px;
+}
+.thirdSection{
+    color: #393939;
+    text-align: left;
+    font-size: 14px;
+    background: #FCE4EC;
+    border-radius: 12px;
+    padding: 10px 0px 10px 5px;
+}
+.thirdSection p{
+    font-weight: 500;
+}
+.pTag{
+    font-weight: 499;
+    text-align: left;
+    font-size: 18px;
+}
+.courseSummary{
+    display: flex;
+    align-items: start;
+    color: #0288D1;
+    margin-left: -20px;
+    width: 98%;
+    justify-content: space-between;
+}
+.courseSummary div{
+    display: flex;
+    width: 480px;
+    justify-content: space-evenly;
+}
+.fourthSection{
+    width: 100%;
+    border: 1px solid #E91E63;
+    border-radius: 12px;
+}
+.fourthSection span{
+    display: flex;
+    align-items: center;
+    width: 410px;
+    justify-content: space-between;
+}
+.fourthSection span i{
+    margin-left: 38px;
+}
+.fourthSection span p{
+    font-weight: 500;
+}
+.centerFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.h3{
+    color: #0288D1;
+    font-weight: 500;
+    text-align: left;
+}
+.centerFooter li{
+    list-style-type: none;
+    text-align: left;
+    padding: 8px 0px;
+}
+.centerFooter ul{
+    border: 1.5px solid #E91E63;
+    border-radius: 12px;
+    height: 200px;
+    width: 300px;
+    margin-top: 0px;
+    padding: 15px 65px 15px 30px;
+}
+.centerFooterLastSection{
+    margin: 0px 0px 20px 0px;
+}
+@media screen and (max-width: 650px) {
+    .secondSectionText{
+        width: 92vw;
+    }
+    .firstCenterSection{
+        width: 35%;
+    }
+    .thirdSection{
+        width: 85vw;
+        padding-right: 15px;
+    }
+    .fourthSection{
+        width: 90vw;
+    }
+    .pTag{
+        font-weight: 599;
+    }
+    .courseSummary{
+        width: 100vw;
+        justify-content: space-around;
+        display: flex;
+        font-size: 10.7px;
+        font-weight: 500;
+    }
+    .courseSummary div{
+        width: 290px;
+    }
+    .centerCoursePageWrapper{
+        margin-top: 0px;
+        width: 100%;
+    }
+}

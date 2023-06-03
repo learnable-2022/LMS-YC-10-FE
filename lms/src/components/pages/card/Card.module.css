@@ -1,0 +1,61 @@
+.cardWrapper{
+    width: 300px;
+    height: 450px;
+    border: 1.5px solid #E91E63;
+    border-radius: 12px;
+    padding: 10px 0px;
+}
+.cardWrapper img{
+    width: 280px;
+}
+.cardText{
+    font-size: 14.5px;
+    margin-top: 0px;
+}
+.cardTextAmount{
+    font-size: 14.5px;
+    margin: -10px 0px 0px 25px;
+    font-weight: 500;
+    text-align: left;
+}
+.cardBtnWrapper{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardBtnWrapper button{
+    background: #0288D1;
+    border-radius: 8px;
+    border: none;
+    width: 230px;
+    color: white;
+    height: 30px;
+}
+.cardBtnWrapper i{
+    font-size: 20px;
+    padding: 1px 4px;
+    margin-left: 5px;
+    color: #555555;
+    border: 1px solid #E91E63;
+    border-radius: 8px;
+}
+.cardTextType{
+    width: 63%;
+    margin-top: 0px;
+    text-align: center;
+}
+.description{
+    width: 90%;
+    color: #555555;
+    margin: -10px 0px 0px 8px;
+}
+.descriptionWrapper{
+    display: flex;
+    margin-top: 0px;
+    align-items: center;
+    height: 26px;
+}
+.descriptionWrapper i{
+    margin-right: 8px;
+}

@@ -97,51 +97,57 @@
         background-color: #039BE5;
    }
    .responsiveImg{
-    background-image: url("../images/LogoWhite.png");
-    width: 85px;
-    margin-top: 14px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
+        background-image: url("../images/LogoWhite.png");
+        width: 85px;
+        margin-top: 16px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
    }
-   .headerText, .courseSearchInput, .userProfileDiv p, .userProfileDiv{
-    display: none;
+   .headerText, .courseSearchInput, .userProfileDiv p, #userProfileDiv{
+        display: none;
+   }
+   .userProfileName{
+        width: 100px;
+        font-size: 16px;
+        margin-bottom: 40px;
    }
    .fourthWrapper img{
-    width: 30px;
+        width: 30px;
    }
    .lmsHeaderWrapper i{
-    margin-bottom: 15px;
+        margin-bottom: 15px;
    }
    .thirdIconWrapper hr{
-    width: 0.11px;
-    height: 30px;
-    margin-bottom: 25px;
-    border: 0.1px solid white;
-    border-radius: 12px;
-    background-color: white;
+        width: 0.11px;
+        height: 30px;
+        margin-bottom: 25px;
+        border: 0.1px solid white;
+        border-radius: 12px;
+        background-color: white;
    }
    .fourthWrapper img{
-    margin-bottom: 20px;
+        margin-bottom: 20px;
    }
    .menuIcon{
-    width: 20px;
-    height: 15px;
-    margin: 15px 0px 0px 20px;
-    background-image: url("../images/menuIcon.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+        width: 20px;
+        height: 15px;
+        margin: 15px 0px 0px 20px;
+        background-image: url("../images/menuIcon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     .responsiveTag{
-    display: flex;
-    width: 27%;
-    align-items: center;
-    justify-content: space-between;
+        display: flex;
+        width: 25%;
+        margin-right: 90px;
+        align-items: center;
+        justify-content: space-between;
     }
     .courseHeader{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
     /* .courseBody{
         overflow-x: hidden;

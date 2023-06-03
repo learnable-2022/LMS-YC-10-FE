@@ -115,22 +115,22 @@
 .progressBar ol div i{
     margin-top: 5px;
 }
-summary{
+.progressBar summary{
     list-style: none;
 }
-summary::-webkt-details-marker{
+.progressBar summary::-webkt-details-marker{
     display: none;
 }
-details[open] summary::after{
+.progressBar details[open] summary::after{
     display: flex;
     content: "ᨈ";
     margin-left: 70px;
 }
-details summary::after{
+.progressBar details summary::after{
     content: "ᨆ";
     /* margin-left: 50px; */
 }
-details summary{
+.progressBar details summary{
     display: flex;
     align-items: center;
     justify-content: space-between;

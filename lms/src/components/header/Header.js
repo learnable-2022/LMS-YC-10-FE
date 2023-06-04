@@ -17,11 +17,11 @@ return(
                             <li><a href="https://df">Home</a></li>
                             <li><a href="https://df">Features</a></li>
                             <li><a href="https://df">Pricing</a></li>
-                            <li><a href="https://df">Contact Us</a></li>
+                            <li><a href="/contactus">Contact Us</a></li>
                         </div>
                         <div className={styles.btn}>
-                            <button><a href="https://df">Sign Up</a></button>
-                            <button><a href="https://df">Sign In</a></button>
+                            <button><a href="/accounttype">Sign Up</a></button>
+                            <button><a href="/login">Sign In</a></button>
                         </div>
                     </div>
                 </div>

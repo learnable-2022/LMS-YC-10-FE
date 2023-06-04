@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from '../styles/Dashboard.module.css'
+import { FaEye } from "react-icons/fa";
+
 import CourseComp from '../images/courseComp.svg'
 import CourseReg from '../images/courseReg.svg'
 import CertEarn from '../images/certEarn.svg'
 import Badge from '../images/badge.svg'
 import PointsAcc from '../images/pointsAcc.svg'
+import WebDevIcon from '../images/webDevIcon.svg'
+import UxIcon from '../images/uxIcon.svg'
+import PyIcon from '../images/pyIcon.svg'
+import DataIcon from '../images/datasIcon.svg'
 function Dashboard(){
     // const [step, setStep] = useState(0);
 
@@ -96,7 +102,16 @@ function Dashboard(){
                                     <p>Chapter 1</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={percentage} text={`${percentage}%`} />
+                                    <CircularProgressbar value={percentage} text={`${percentage}%`} style={{font:"30px"}} />
+                                </div>
+                            </div>
+                            <div className={styles.lContent}>
+                                <div className={styles.conText}>
+                                    <h5>Style With CSS</h5>
+                                    <p>Chapter 1</p>
+                                </div>
+                                <div className={styles.progressContainer}>
+                                    <CircularProgressbar value={percentage} text={`${percentage}%`} style={{font:"30px"}} />
                                 </div>
                             </div>
                         </div>
@@ -106,6 +121,46 @@ function Dashboard(){
                                     <p>My Groups</p>
                                 </div>
                                 <button>See All</button>
+                            </div>
+                            <div className={styles.gContent}>
+                                <div className={styles.groupImg}>
+                                    <img src={WebDevIcon} alt="" />
+                                </div>
+                                <div className={styles.gDetail}>
+                                    <h4>Web Development</h4>
+                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
+                                     45 members</span></p>
+                                </div>
+                            </div>
+                            <div className={styles.gContent}>
+                                <div className={styles.groupImg}>
+                                    <img src={UxIcon} alt="" />
+                                </div>
+                                <div className={styles.gDetail}>
+                                    <h4>User Experience</h4>
+                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
+                                     45 members</span></p>
+                                </div>
+                            </div>
+                            <div className={styles.gContent}>
+                                <div className={styles.groupImg}>
+                                    <img src={PyIcon} alt="" />
+                                </div>
+                                <div className={styles.gDetail}>
+                                    <h4>Python Group 5</h4>
+                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
+                                     45 members</span></p>
+                                </div>
+                            </div>
+                            <div className={styles.gContent}>
+                                <div className={styles.groupImg}>
+                                    <img src={DataIcon} alt="" />
+                                </div>
+                                <div className={styles.gDetail}>
+                                    <h4>Data Structures</h4>
+                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
+                                     45 members</span></p>
+                                </div>
                             </div>
                         </div>
                     </div>

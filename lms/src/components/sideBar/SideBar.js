@@ -23,7 +23,7 @@ return(
                     <Link to="/dashboard">
                         <li><i><VscHome /></i><p>Dashboard</p></li>
                     </Link>
-                    <Link to="/courses">
+                    <Link to="/learningpath">
                         <li><i><FaBook /></i><p>Courses</p></li>
                     </Link>
                     <Link to="/assignment">

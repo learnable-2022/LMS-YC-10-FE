@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
-import CenterCoursePage from "./centerCoursepage/CenterCoursePage";
-import RightCoursePage from "./rightCoursePage/RightCoursePage";
+import { CiSearch } from "react-icons/ci";
+import { BsChatRight } from "react-icons/bs";
+import { FiBell } from "react-icons/fi";
+import profileImage from "../images/Mask group.png";
+import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
+import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 

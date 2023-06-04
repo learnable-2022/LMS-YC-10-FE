@@ -9,6 +9,7 @@
 .navContainer{
   width: 100%;
   position: fixed;
+
 }
 
 /*HERO STARTS HERE*/
@@ -315,3 +316,4 @@
   background-color: #F48FB1;
   border-radius: 100%;
 }
+

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from "react";
+import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'
@@ -6,6 +7,7 @@ import codevilleLogo from '../images/codevilleLogo.svg'
 import learnableLogo from '../images/learnableLogo.svg'
 import teneceLogo from '../images/teneceLogo.svg'
 import emblem from '../images/emblem.svg'
+import kidLogo from '../images/kidsLogo.svg'
 import webCourse from '../images/webCourse.svg'
 import roboticsCourse from '../images/roboticsCourse.svg'
 import uiCourse from '../images/uiCourse.svg'
@@ -21,17 +23,26 @@ import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
-
+import thankyou from '../images/thankyou.svg'
+import { Link } from 'react-router-dom'
+import AboutUs from '../pages/AboutUsPage.js'
 
 
 
 function LandingPage(){
+    
+    const [showModal, setShowModal] = useState(false);
+    const renderBackdrop = (props) => <div className="backdrop" {...props} />;
+
+    var handleClose = () => setShowModal(false);
+  
     return (
         <div>
             <div>
                 <div className={styles.navContainer}>
                         <Header />
                 </div>
+
             </div>
             <div>
                 <div className={styles.wrapper}>
@@ -49,8 +60,8 @@ function LandingPage(){
                         </div>
                     </div>
                     <div className={styles.getStartedExplore}>
-                        <a href="https" className={styles.getStarted}>Get Started</a>
-                        <a href="https" className={styles.explore}>Explore Courses</a>
+                        <a href="#" className={styles.getStarted}>Get Started</a>
+                        <a href="#" className={styles.explore}>Explore Courses</a>
                     </div>
                 </div>
                 <div className={styles.partnerWrapper}>
@@ -123,10 +134,10 @@ function LandingPage(){
                             start sharing your expertise with the world!</p>
                         <div className={styles.trialPlans}>
                             <div className={styles.trial}>
-                                <a href="https" className={styles.getStarted}>Start For Free</a>
+                                <a href="#" className={styles.getStarted}>Start For Free</a>
                             </div>
                             <div className={styles.plans}>
-                                <a href="https">View All Plans</a>
+                                <a href="#">View All Plans</a>
                             </div>
                         </div>
                     </div>
@@ -195,14 +206,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={purpleShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={pinkGown} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
@@ -216,14 +227,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={face} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={yellowShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>

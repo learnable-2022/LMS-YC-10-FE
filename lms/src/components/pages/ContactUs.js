@@ -1,7 +1,9 @@
 import React from 'react'
 import style  from './register/style.module.css'
-// import { AiOutlineMail } from 'react-icons/ai';
 import Header from '../header/Header';
+
+
+
 
 export default function ContactUs() {
  

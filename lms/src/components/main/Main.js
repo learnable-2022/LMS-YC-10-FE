@@ -5,9 +5,6 @@ import SettingsPage from "../pages/SettingsPage";
 import CoursePage from "../pages/CoursePage";
 import styles from "./Main.module.css";
 import OngoingCourse from "../pages/OngoingCoursePage";
-import Assignment from "../pages/Assignment";
-import LearningPath from "../pages/LearningPath";
-import GeneralCoursePage from "../pages/GeneralCoursePage";
 
 
 

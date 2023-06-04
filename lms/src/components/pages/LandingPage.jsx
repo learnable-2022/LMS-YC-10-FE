@@ -14,38 +14,24 @@ import instructor from '../images/instructor.svg'
 import liveClasses from '../images/liveClasses.svg'
 import oneSupport from '../images/oneSupport.svg'
 import messageIcon from '../images/messageIcon.svg'
-import facebook from '../images/facebook.svg'
-import twitter from '../images/twitter.svg'
-import linkedIn from '../images/linkedIn.svg'
 import face from '../images/face.svg'
 import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
 import Header from '../header/Header'
+import Footer from "../footer/Footer"
+
+
+
 
 function LandingPage(){
     return (
         <div>
             <div>
-                    <div className={styles.navContainer}>
+                <div className={styles.navContainer}>
                         <Header />
-                        {/* <div className={styles.logo}>
-                            <img src={kidLogo} alt="" />
-                        </div>
-                        <div className={styles.navItems}>
-                            <ul className={styles.nav}>
-                                <li><a href="https">Home</a></li>
-                                <li><a href="https">Features</a></li>
-                                <li><a href="https">Pricing</a></li>
-                                <li><a href="https">Contact Us</a></li>
-                            </ul>
-                            <div className={styles.signupSignin}>
-                                <a href="https" className={styles.signup}>Sign Up</a>
-                                <a href="https" className={styles.signin}>Sign In</a>
-                            </div>
-                        </div> */}
-                    </div>
+                </div>
             </div>
             <div>
                 <div className={styles.wrapper}>
@@ -252,57 +238,11 @@ function LandingPage(){
                         </div>
                     </div>
                 </div>
-                <div className={styles.connectedWrapper}>
-                    <div className={styles.connectedContainer}>
-                        <div className={styles.one}>
-                            <div className={styles.connectOneA}>
-                                <h1>Stay Connected</h1>
-                                <p>Never miss out on the latest updates,
-                                    educational tips, and exclusive offers! Subscribe to our newsletter and 
-                                    stay connected with our child learning community.</p>
-                            </div>
-                            <div className={styles.connectedOneB}>
-                                <label htmlFor="subscription" className={styles.email}>Enter Your Email</label> <br />
-                                <input type="email" name="subscription" id="" placeholder='hello@example.com' />
-                                <button type="submit">Submit</button>
-                                <p>By submitting your email address, you agree 
-                                    to kidsTot’s <span>Terms of Use</span> and <span>Policy</span> </p>
-                            </div>
-                        </div>
-                        <div className={styles.two}>
-                            <p>About Us</p>
-                            <ul>
-                                <li>Our Mission</li>
-                                <li>Meet The Team</li>
-                                <li>Testimonials</li>
-                                <li>Privacy POlicy</li>
-                            </ul>
-                        </div>
-                        <div className={styles.three}>
-                            <p>Support</p>
-                                <ul>
-                                    <li>FAQs</li>
-                                    <li>Contact Us</li>
-                                    <li>Terms of Service</li>
-                                    <li>Help Center</li>
-                                </ul>
-                        </div>
-                    </div>
+                <div>
+                    <Footer />
                 </div>
-                <footer>
-                    <div className={styles.footerContainer}>
-                        <div className={styles.copyright}>
-                            <p>Copyright 2023 Kidstot co. Ltd.All rights reserved</p>
-                        </div>
-                        <div className={styles.socialMedia}>
-                            <div className={styles.linkedin}><img src={linkedIn} alt="" /></div>
-                            <div className={styles.twitter}><img src={twitter} alt="" /></div>
-                            <div className={styles.facebook}><img src={facebook} alt="" /></div>
-                        </div>
-                    </div>
-                </footer>
             </div>
-            </div>
+        </div>
     )
 }
 export default LandingPage;

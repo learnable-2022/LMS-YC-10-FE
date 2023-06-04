@@ -1,114 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
 *{
   font-family: 'Mada';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
 }
 
-
-a{
-  text-decoration: none;
-  color: black;
-  line-height: 20px;
-}
 .landing{
   display: flex;
 }
-
-/*nav section begins*/
-.nav a:hover{
-  color: #0288D1;
-}
-/* .nav, .nav ul, .nav li{
-  display: flex;
-  text-decoration: none;
-} */
 .navContainer{
-  display: flex;
-  background-color: #E3F2FD;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
 }
-/* .logo{
-  margin:12px 80px;
-}
-.nav{
-  margin-top: 25px;
-}
-li{
-  margin-right: 40px;
-} */
-/* .navItems{
-  display: flex;
-  gap: 160px;
-}
-.signupSignin{
-  text-align: center;
-  line-height: 70px;
-} */
-/* .signup, .signin{
-  display: inline-block;
-  width: 100px;
-  height: 40px;
-  line-height: 40px;
-  border: 2px solid #0288D1;
-  border-radius: 40px;
-  background-color: white;
-  margin-right: 40px;
-} */
-.signin:hover{
-  background: #BBDEFB;
-  transition: 400ms;
-}
-.signin:active{
-  background: #005381;
-  color: white;
-  transition: 100ms;
-}
-.signup:hover{
-  background: #E3E3E3;
-  transition: 400ms;
-}
-.signup:active{
-  background: #C6C6C6;
-  transition: 100ms;
-}
-/*nav design ends here*/
-
 
 /*HERO STARTS HERE*/
 .wrapper{
   display: flex;
   flex-direction: column;
-  gap: 45px;
   background-color: #E3F2FD;
-  padding-top: 200px;
-  padding-left: 100px;
+  padding-top: 80px;
+  padding-left: 60px;
   padding-bottom: 120px;
 }
 .heroContainer{
   display: flex;
-  gap: 190px;
+  align-items: center;
 }
 .text h1{
-  font-weight: 700;
-  font-size: 64px;
+  font-weight: 800;
+  font-size: 60px;
+  width: 700px;
+  text-align: left;
   letter-spacing: 0.01em;
 }
 .text p{
-  font-size: 32px;
+  font-size: 28px;
+  text-align: left;
+}
+.heroImg img{
+  width: 450px;
+}
+.getStartedExplore{
+  display: flex;
+  justify-content: left;
 }
 .getStartedExplore a{
   text-align: center;
+  text-decoration: none;
   height: 50px;
   line-height: 50px;
-  display: inline-block;
   border: 2px solid #0288D1;
   border-radius: 40px;
-  margin-right: 40px;
 }
 .getStarted{
   width: 130px;
@@ -132,6 +72,7 @@ li{
 }
 .explore{
   width: 190px;
+  color: rgb(58, 55, 55);
   background-color: white;
 }
 .explore:hover{
@@ -153,6 +94,7 @@ li{
   font-weight: 700;
   font-size: 48px;
   line-height: 62px;
+  text-align: left;
   letter-spacing: 0.005em;
   margin-bottom: 65px;
 }
@@ -174,12 +116,16 @@ li{
   font-weight: 700;
   font-size: 48px;
   line-height: 62px;
+  text-align: left;
   margin-bottom: 40px;
 }
 .coursesWrapper{
   display: flex;
   text-align: center;
   justify-content: space-between;
+}
+.coursesWrapper p{
+  font-size: 16px;
 }
 .courseContainer{
   width: 268px;
@@ -253,10 +199,12 @@ li{
 }
 .trial a{
   width: 150px;
+  text-decoration: none;
 }
 .plans a{
   color: #039BE5;
   font-weight: 600;
+  text-decoration: none;
   line-height: 31px;
   border-bottom: 3px solid #0288D1;
 }
@@ -366,116 +314,4 @@ li{
   height: 20px;
   background-color: #F48FB1;
   border-radius: 100%;
-}
-
-
-
-
-
-/*FOOTER STARTS*/
-.connectedWrapper{
-  padding: 50px 100px;
-}
-.connectedContainer{
-  display: flex;
-  justify-content: space-between;
-}
-.two p, .three p{
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 10px;
-}
-.connectedContainer ul{
-  text-decoration: none;
-  list-style-type: none;
-  padding-left: 0;
-}
-.one{
-  width: 50%;
-}
-.two{
-  width: 15%;
-  padding-top: 15px;
-}
-.three{
-  width: 15%;
-  padding-top: 15px;
-}
-.connectOneA h1{
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 62px;
-  margin-bottom: 5px;
-  margin-top: 20px;
-}
-.connectOneA p{
-  margin-top: 5px;
-}
-.connectedOneB{
-  margin-top: 55px;
-}
-.connectedOneB input{
-  margin-top: 20px;
-  width: 420px;
-  height: 50px;
-  background: #E3E3E3;
-  border-radius: 20px;
-  border: none;
-  padding-left: 28px;
-}
-.connectedOneB button{
-  background: #0288D1;
-  border-radius: 20px;
-  width: 160px;
-  height: 50px;
-  margin-left: -40px;
-  color: white;
-  border-style: none;
-}
-.connectedOneB button:hover{
-  background-color: #BBDEFB;
-  color: black;
-  transition: 500ms;
-}
-.connectedOneB button:active{
-  background-color: #555555;
-  color: white;
-  transition: 400ms;
-}
-.connectedOneB p{
-  font-size: 16px;
-}
-.connectedOneB span{
-  font-size: 16px;
-  border-bottom: 0.3px solid;
-}
-.connectedContent li{
-  margin-bottom: 5px;
-}
-/**/
-
-/*footer begins*/
-footer{
-  background: #0288D1;
-  padding: 40px 100px;
-}
-.copyright{
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-.footerContainer{
-  display: flex;
-  justify-content: space-between;
-}
-.socialMedia{
-  display: flex;
-  align-items: center;
-}
-.socialMedia img{
-  margin-right: 20px;
-}
-.linkedIn{
-  width: 24px;
 }

@@ -1,10 +1,14 @@
 import React from "react";
-import { BrowserRouter as Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SideBar from "../sideBar/SideBar";
 import SettingsPage from "../pages/SettingsPage";
 import CoursePage from "../pages/CoursePage";
 import styles from "./Main.module.css";
 import OngoingCourse from "../pages/OngoingCoursePage";
+import LearningPath from "../pages/LearningPath";
+import GeneralCoursePage from "../pages/GeneralCoursePage";
+import Assignment from "../pages/Assignment";
+
 
 
 
@@ -12,13 +16,13 @@ function Main(){
 return(
     <>
         <div className={styles.main}>
-       
+            
                 <div className={styles.sideBarWrapper}>
                     <div className={styles.sideBar}>
                         <SideBar />
                     </div>
                 </div>
-                <div className={styles.body}>
+                <div className={styles.mainBody}>
                     <Routes>
                        
                         {/* <Route path='/dashboard' element={<Dashboard/>}/> */}

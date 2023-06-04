@@ -1,15 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import './App.css';
 import Main from './components/main/Main';
 import LandingPage from './components/pages/LandingPage';
-
-import AccountType from './components/pages/register/AccountType'
-import SignUp from './components/pages/register/SignUp'
-import Login from './components/pages/register/Login'
-import ForgotPassword from './components/pages/register/ForgotPassword'
+import AccountType from './components/pages/register/AccountType';
+import SignUp from './components/pages/register/SignUp';
+import Login from './components/pages/register/Login';
+import ForgotPassword from './components/pages/register/ForgotPassword';
 import CreateNewPassword from './components/pages/register/CreateNewPassword'
-import ContactUs from './components/pages/ContactUs'
+import ContactUs from './components/pages/ContactUs';
+import TermsOfUsePage from "./components/pages/TermsOfUsePage";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +36,8 @@ function App() {
           {/* <Route index element={} /> */}
           <Route path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
+          <Route path="/privacypolicy" element={ <PrivacyPolicy />} />
+          <Route path="/termsofuse" element={ <TermsOfUsePage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />

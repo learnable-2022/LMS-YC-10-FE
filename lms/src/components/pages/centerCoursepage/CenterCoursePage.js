@@ -3,7 +3,6 @@ import styles from "./CenterCoursePage.module.css"
 import CourseList from "../courseList/CourseList";
 import Card from "../card/Card";
 import { GrGroup } from "react-icons/gr";
-import { RiArrowUpSLine } from "react-icons/ri";
 import { BsStarFill } from "react-icons/bs";
 
 

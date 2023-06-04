@@ -8,13 +8,14 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function LearningPath() {
   return (
-    <div  style={{ width: '100%', margin: '0px', padding: '0px' }}>
-     
+    <div className={style.learningPathWrapper}>
+      <div className={style.learningPath}>
         <LmsHeader />
+      </div>
        <div className={style.wrapper}>
           <div className={style.courseDirectory}>
               <div>
-                  <Link to="/">
+                  <Link to="/learningpath">
                       <p className={style.active} >Course</p>
                       <i><IoIosArrowForward /></i>
                   </Link>

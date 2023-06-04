@@ -1,11 +1,11 @@
-.headerWrapper{
+.navHeaderWrapper{
     width: 100%;
     background: #E3F2FD;
     padding: 0;
     margin: 0;
     height: 100px;
 }
-.header{
+.navHeader{
     padding: 0;
     margin: 0;
     width: 100%;
@@ -30,33 +30,40 @@
     text-decoration: none;
     color: black;
 }
-.btn{
+.navBtn{
     width: 40%;
     display: flex;
     justify-content: space-evenly;
 }
-.btn button{
-    width: 100px;
-    padding: 8px 0px;
-    border: 2px solid #0288D1;
+.navBtn button{
+    width: 86px;
+    padding: 5px 0px;
+    border: 1.5px solid #0288D1;
     border-radius: 20px;
 }
-.btn button a{
+.navBtn button a{
     text-decoration: none;
     color: black;
+    font-size: 17px;
 }
-.logo{
+.navBarWrapper a:hover{
+    color: #0288D1;
+}
+.navLogo{
     display: flex;
     align-items: flex-start;
 }
-.logo img{
+.navLogo a{
+    text-decoration: none;
+}
+.navLogo img{
     width: 200px;
 }
 @media screen and (max-width: 900px){
-    .logo img{
+    .navLogo img{
         width: 150px;
     }
-    .btn button{
+    .navBtn button{
         font-size: 12px;
         width: 70px;
         height: 30px;
@@ -66,52 +73,57 @@
     }
 }
 @media screen and (max-width: 550px){
-    .logo img{
+    .navLogo img{
         width: 105px;
     }
-    .btn button{
-        font-size: 10px;
+    .navBtn button{
         width: 52px;
         height: 25px;
         padding: 0px;
-        font-weight: 600;
+    }
+    .navBtn button a{
+        font-size: 10px;
+        font-weight: 500;
     }
     .navBarWrapper{
-        font-size: 12px;
         width: 70%;
     }
-    .header{
-        width: 96%;
+    .navBarWrapper a{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .navHeader{
+        width: 100%;
     }
 }
-@media screen and (max-width: 450px){
-    .logo img{
+/* @media screen and (max-width: 450px){
+    .navLogo img{
         width: 95px;
     }
-    .headerWrapper{
+    .navHeaderWrapper{
         height: 80px;
     }
     .navBarWrapper{
         font-size: 11.5px;
     }
-    .btn button{
+    .navBtn button{
         font-size: 9px;
         width: 50px;
         height: 22px;
 
     }
-    .header{
+    .navHeader{
         height: 80px;
     }
 }
 @media screen and (max-width: 410px){
-    .logo img{
+    .navLogo img{
         width: 95px;
     }
-    .headerWrapper{
+    .navHeaderWrapper{
         height: 80px;
     }
     .navBarWrapper{
         font-size: 10.5px;
     }
-}
+} */

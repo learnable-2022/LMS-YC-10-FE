@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
 
 *{
-    padding: 0;
-    margin: 0;
     font-family: 'mada' sans-serif;
 }
 
@@ -81,14 +79,12 @@ header{
     position: absolute;
     right: 0px;
     top: 20%;
-    /* max-width: 200px; */
 }
 
 .vectors2{
     position: absolute;
     right: 0px;
     top: 0px;
-    /* max-width: 200px; */
 }
 
 .vectorsPosition3{
@@ -247,7 +243,6 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* margin-top: 20px; */
     font-size: 12px;
     color: #909090;
 }
@@ -270,7 +265,10 @@ header{
 
 
 
-/* contact us border  */
+contact us border 
+.formSection .heading{
+    margin-top: 120px;
+}
 
 .contactUs{
     display: flex;
@@ -338,8 +336,10 @@ header{
 
 .contactUs .agreeTerms p{
     font-size: 12px;
-    color: #909090;
+    color: black;
     width: 60%;
+    text-align: left;
+    font-weight: 499;
 }
 
 
@@ -347,11 +347,11 @@ header{
 .contactUs .submitBtn{
     display: flex;
     align-self: flex-start;
-    padding: 14px 22px;
+    padding: 14px 38px;
     float: left;
-    background: #0288D1;
-    color: white;
-    border-radius: 10px;
+    color: black;
+    background: #E6F6FB;
+    border-radius: 20px;    
     border: none;
     margin-top: 20px;
 }

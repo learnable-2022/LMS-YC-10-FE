@@ -11,26 +11,28 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function CoursePage() {
 return(
     <>
-        <div>
+    <div className={styles.coursePageWrapper}>
+        <div className={styles.courseLmsHeader}>
             <LmsHeader />
+        </div>
             <div className={styles.courseHeaderWrapper}>
                 <div className={styles.bodyWrapper}>
                     <div>
                         <div className={styles.courseDirectory}>
                             <div>
-                                <Link to="/">
+                                <Link to="/learningpath">
                                     <p>Course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/">
+                                <Link to="/courses">
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/" >
+                                <Link to="/coursepage" >
                                     <p className={styles.active}>UI/UX</p>
                                 </Link>
                             </div>
@@ -46,7 +48,7 @@ return(
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </>
 )
 }

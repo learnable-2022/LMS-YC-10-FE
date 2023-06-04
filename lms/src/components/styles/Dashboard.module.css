@@ -4,7 +4,10 @@ body{
   font-style: normal;
   font-weight: 400;
   background-color: #FBFBFB;
-  padding: 50px;
+  overflow-x: hidden;
+}
+.dashboard{
+    display: flex;
 }
 .progressSummary{
     text-align: center;
@@ -55,19 +58,29 @@ body{
 }
 
 /*learn progress styling  */
+.heroWrapper{
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    gap: 30px;
+}
+.learningGroupSchedule{
+    width: 920px;
+}
 .learnGroup{
     display: flex;
     gap: 15px;
-    margin-top: 60px;
+    width: 100%;
 }
 .learn, .group{
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    width: 48%;
 }
 .lText{
     display: flex;
-    gap: 150px;
+    justify-content: space-between;
     margin-bottom: 30px;
     height: 35px;
     align-items: center;
@@ -76,7 +89,7 @@ body{
     font-weight: 700;
     font-size: 30px;
 }
-.lText button{
+.lText button, .textButton button{
     width: 78px;
     height: 33px;
     background: #FFFFFF;
@@ -94,7 +107,7 @@ body{
     width: 100%;
     height: 60px;
     border-top: 0.2px solid #AAAAAA;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px 0;
 }
 .conText{
@@ -130,7 +143,7 @@ body{
     align-items: center;
     height: 60px;
     border-top: 0.2px solid #AAAAAA;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px 0;
 }
 .groupImg{
@@ -173,4 +186,144 @@ body{
 .vl{
     border-left: 0.5px solid #8E8E8E;
     height: 10px;
+}
+/* group section ends */
+
+/* schedule begins*/
+.schedule{
+    width: 100%;
+}
+.scheduleHeader{
+    display: flex;
+    margin-bottom: 30px;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+.textButton{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.textButton h4{
+    font-size: 30px;
+}
+.date{
+    color: #42A5F5;
+    font-weight: 600;
+}
+table{
+    width: 100%;
+}
+th{
+    border-bottom: 1px solid #C6C6C6;;
+    border-collapse: collapse;
+    color: #C6C6C6;
+    font-weight: 600;
+}
+td{
+    border-bottom: 0.2px solid #AAAAAA;
+    border-collapse: collapse;
+    padding-top: 12px;
+}
+td span{
+    color: #8E8E8E;
+    font-size: 12px;
+    font-weight: 500;
+}
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+/* schedule ends*/
+
+
+/*leader board begins*/
+.leaderboard{
+    background-color: #42A5F5;
+    border-radius: 5px;
+    width: 500px;
+    justify-self: right;
+    color: white;
+    padding: 20px;
+}
+.leaderboardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leaderboardHeader h2{
+    font-weight: 600;
+    font-size: 22px;
+}
+.leaderboardHeader button{
+    background-color: #42A5F5;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-size: 17px;
+    color: white;
+    width: 78px;
+    height: 33px;
+    padding: 0;
+}
+.positionPoint{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    
+}
+.position h1{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+}
+.position h1, .position p{
+    margin: 0;
+}
+.point{
+    width: 133px;
+    height: 133px;
+}
+.point .CircularProgressbar .CircularProgressbar-path{
+    stroke: #EC407A;
+}
+.scoreHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.student{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-left: 10px;
+}
+.student img{
+    width: 30px;
+}
+.studentScore{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1.5px solid #40EC7E;
+    border-radius: 5px;
+    color: black;
+}
+.sn p{
+    color: #40EC7E;
+    font-weight: 600;
+
+}
+.imgName{
+    display: flex;
+    gap: 5px;
+    width: 250px;
+}
+.studentScore p{
+    margin: 0;
 }

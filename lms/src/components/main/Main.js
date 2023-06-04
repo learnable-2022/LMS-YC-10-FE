@@ -5,6 +5,7 @@ import SettingsPage from "../pages/SettingsPage";
 import CoursePage from "../pages/CoursePage";
 import styles from "./Main.module.css";
 import OngoingCourse from "../pages/OngoingCoursePage";
+import Assignment from "../pages/Assignment";
 
 
 
@@ -27,9 +28,7 @@ return(
                         {/* <Route path='/classgroup' element={<Signup/>}/> */}
                         {/* <Route path='/webinars' element={<Signup/>}/> */}
                         {/* <Route path='/progressbar' element={<Signup/>}/> */}
-                        {/* <Route path='/assignment' element={<Signup/>}/> */}
-                        {/* <Route path='/certficate' element={<Signup/>}/> */}
-                        {/* <Route path='/instructors' element={<Signup/>}/> */}
+                        <Route path='/assignment' element={<Assignment/>}/>
                         <Route path='/settings' element={<SettingsPage/>}/>
                         {/* <Route path='/signin' element={<SignIn/>}></Route> */}
                         {/* <Route path='/contact' element={<ContactSection/>}/> */}

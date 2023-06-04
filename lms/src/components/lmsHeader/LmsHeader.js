@@ -4,7 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
-import  menuIcon  from "../images/menuIcon.svg"
 
 
 

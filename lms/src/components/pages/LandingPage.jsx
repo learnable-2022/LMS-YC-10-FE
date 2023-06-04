@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from "react";
+import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'
@@ -6,6 +7,7 @@ import codevilleLogo from '../images/codevilleLogo.svg'
 import learnableLogo from '../images/learnableLogo.svg'
 import teneceLogo from '../images/teneceLogo.svg'
 import emblem from '../images/emblem.svg'
+import kidLogo from '../images/kidsLogo.svg'
 import webCourse from '../images/webCourse.svg'
 import roboticsCourse from '../images/roboticsCourse.svg'
 import uiCourse from '../images/uiCourse.svg'
@@ -22,29 +24,35 @@ import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
-import Header from '../header/Header'
-
+import thankyou from '../images/thankyou.svg'
+import { Link } from 'react-router-dom'
+import AboutUs from '../pages/AboutUsPage.js'
 function LandingPage(){
+    
+    const [showModal, setShowModal] = useState(false);
+    const renderBackdrop = (props) => <div className="backdrop" {...props} />;
+
+    var handleClose = () => setShowModal(false);
+  
     return (
         <div>
             <div>
                     <div className={styles.navContainer}>
-                        <Header />
-                        {/* <div className={styles.logo}>
+                        <div className={styles.logo}>
                             <img src={kidLogo} alt="" />
                         </div>
                         <div className={styles.navItems}>
                             <ul className={styles.nav}>
-                                <li><a href="https">Home</a></li>
-                                <li><a href="https">Features</a></li>
-                                <li><a href="https">Pricing</a></li>
-                                <li><a href="https">Contact Us</a></li>
+                                {/* <li><Link to={AboutUs}><a href="https">Home</a></Link></li> */}
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Contact Us</a></li>
                             </ul>
                             <div className={styles.signupSignin}>
-                                <a href="https" className={styles.signup}>Sign Up</a>
-                                <a href="https" className={styles.signin}>Sign In</a>
+                                <a href="#" className={styles.signup}>Sign Up</a>
+                                <a href="#" className={styles.signin}>Sign In</a>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
             </div>
             <div>
@@ -63,8 +71,8 @@ function LandingPage(){
                         </div>
                     </div>
                     <div className={styles.getStartedExplore}>
-                        <a href="https" className={styles.getStarted}>Get Started</a>
-                        <a href="https" className={styles.explore}>Explore Courses</a>
+                        <a href="#" className={styles.getStarted}>Get Started</a>
+                        <a href="#" className={styles.explore}>Explore Courses</a>
                     </div>
                 </div>
                 <div className={styles.partnerWrapper}>
@@ -137,10 +145,10 @@ function LandingPage(){
                             start sharing your expertise with the world!</p>
                         <div className={styles.trialPlans}>
                             <div className={styles.trial}>
-                                <a href="https" className={styles.getStarted}>Start For Free</a>
+                                <a href="#" className={styles.getStarted}>Start For Free</a>
                             </div>
                             <div className={styles.plans}>
-                                <a href="https">View All Plans</a>
+                                <a href="#">View All Plans</a>
                             </div>
                         </div>
                     </div>
@@ -209,14 +217,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={purpleShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={pinkGown} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
@@ -230,14 +238,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={face} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={yellowShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2> </h2>
+                                        <h2></h2>
                                         <p></p>
                                     </div>
                                 </div>
@@ -264,9 +272,26 @@ function LandingPage(){
                             <div className={styles.connectedOneB}>
                                 <label htmlFor="subscription" className={styles.email}>Enter Your Email</label> <br />
                                 <input type="email" name="subscription" id="" placeholder='hello@example.com' />
-                                <button type="submit">Submit</button>
+                                <button type="submit" onClick={() => setShowModal(true)}>Submit</button>
                                 <p>By submitting your email address, you agree 
                                     to kidsTot’s <span>Terms of Use</span> and <span>Policy</span> </p>
+                                <Modal className={styles.modal} show={showModal} onHide={handleClose} renderBackdrop={renderBackdrop}>
+                                    <div>
+                                        <div>
+                                            <span className={styles.closeButton} onClick={handleClose}>
+                                                x
+                                            </span>
+                                        </div>
+                                        <div className={styles.modalHeader}>
+                                            <div className={styles.modalTitle}><img src={thankyou} alt="" /></div>
+                                            
+                                        </div>
+                                        <div className={styles.modalDesc}>
+                                            <h2>Thanks for subscribing</h2>
+                                            <p>Check your email on Fridays for our latest newsletters.</p>
+                                        </div>
+                                    </div>
+                                </Modal>
                             </div>
                         </div>
                         <div className={styles.two}>

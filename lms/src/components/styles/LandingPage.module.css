@@ -2,8 +2,6 @@
 *{
   font-family: 'Mada';
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
 }
 
 
@@ -20,19 +18,22 @@ a{
 .nav a:hover{
   color: #0288D1;
 }
-/* .nav, .nav ul, .nav li{
+.nav, .nav ul, .nav li{
   display: flex;
   text-decoration: none;
-} */
+}
 .navContainer{
   display: flex;
   background-color: #E3F2FD;
+  gap: 230px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
 }
-/* .logo{
+.logo{
   margin:12px 80px;
 }
 .nav{
@@ -40,16 +41,17 @@ a{
 }
 li{
   margin-right: 40px;
-} */
-/* .navItems{
+}
+.navItems{
   display: flex;
   gap: 160px;
 }
 .signupSignin{
   text-align: center;
   line-height: 70px;
-} */
-/* .signup, .signin{
+
+}
+.signup, .signin{
   display: inline-block;
   width: 100px;
   height: 40px;
@@ -58,7 +60,7 @@ li{
   border-radius: 40px;
   background-color: white;
   margin-right: 40px;
-} */
+}
 .signin:hover{
   background: #BBDEFB;
   transition: 400ms;
@@ -479,3 +481,71 @@ footer{
 .linkedIn{
   width: 24px;
 }
+/* modal*/
+.modal {
+  font-family: 'mada';
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  width: 600px;
+  z-index: 5;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+}
+
+.modalTitle {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+
+.modalDesc,
+.modalHeader,
+.modalFooter {
+  padding: 12px;
+}
+.modalDesc h2{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+}
+.modalDesc p{
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+}
+.closeButton {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+}
+

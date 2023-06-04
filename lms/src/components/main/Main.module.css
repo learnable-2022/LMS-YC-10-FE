@@ -1,7 +1,4 @@
-.sideBar{
-    height: 100%;
-    position: fixed;
-}
+
 .main{
     display: flex;
     position: relative;
@@ -10,9 +7,15 @@
 .body{
     display: flex;
     width: 100%;
-    align-items: end;
-    left: 17.2%;
+    /* align-items: end; */
+    /* left: 17.2%; */
     position: relative;
+}
+.sideBar{
+    height: 100%;
+    position: sticky;
+    /* position: fixed; */
+    top: 0px;
 }
 @media screen and (max-width: 650px) {
     .sideBar{

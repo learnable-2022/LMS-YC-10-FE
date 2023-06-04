@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'mada' sans-serif;
+}
+
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 10px;
+   
+  }
+  .gridItem {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .card{
+    max-width: 350px;
+    background: #393939;
+    padding: 0;
+    border-radius: 12px;
+    text-decoration: none;
+  }
+
+  
+  .card img{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .details{
+    margin-top: 0px;
+    padding: 10px;
+    align-items: start;
+  }
+
+  .left{
+   display: flex;
+   align-items: start;
+  }
+  .details p{
+    font-size: 16px;
+    font-weight: 700;
+    color:  #C6C6C6;
+    display: block;
+    text-decoration: none !important;
+   
+   
+  }
+
+  .details .footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+.courseDirectory{
+    display: flex;
+    padding-left: 25px;
+}
+.courseDirectory div a{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+}
+.courseDirectory div i{
+    margin: 5px 5px 0px;
+}
+.active{
+    color:  #039BE5;
+}
+
+
+
+
+
+
+
+
+  
+@media (max-width:768px) {
+  .gridContainer {
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  }
+  .details p{
+    font-size: 12px;
+   
+  }
+  
+  
+  }

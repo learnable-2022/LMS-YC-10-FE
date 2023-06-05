@@ -13,9 +13,7 @@
 }
 .sideBar{
     height: 100%;
-    /* position: sticky; */
     position: fixed;
-    /* top: 0px; */
 }
 @media screen and (max-width: 650px) {
     .sideBar{

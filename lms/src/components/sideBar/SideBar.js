@@ -19,7 +19,7 @@ return(
                 <img src={Logo} alt="Logo" />
             </div>
             <div className={styles.navLinkWrapper}>
-                <ul>
+                <ul className={styles.firstSectionLink}>
                     <Link to="/dashboard">
                         <li><i><VscHome /></i><p>Dashboard</p></li>
                     </Link>

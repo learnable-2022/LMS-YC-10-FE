@@ -13,7 +13,7 @@ return(
     <>
     <div className={styles.coursePageWrapper}>
         <div className={styles.courseLmsHeader}>
-            <LmsHeader />
+            <LmsHeader page="Courses"/>
         </div>
             <div className={styles.courseHeaderWrapper}>
                 <div className={styles.bodyWrapper}>

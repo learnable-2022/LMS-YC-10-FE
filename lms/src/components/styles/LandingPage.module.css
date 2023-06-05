@@ -1,12 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
 *{
   font-family: 'Mada';
+
 }
 
 .landing{
   display: flex;
 }
+
+
+/*nav section begins*/
+.nav a:hover{
+  color: #0288D1;
+}
+.nav, .nav ul, .nav li{
+  display: flex;
+  text-decoration: none;
+}
 .navContainer{
+  display: flex;
+  background-color: #E3F2FD;
+  gap: 230px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   position: fixed;
 }

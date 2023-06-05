@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Modal from "react-overlays/Modal";
+import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'
@@ -21,7 +21,14 @@ import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
+import thankyou from '../images/thankyou.svg'
+import { Link } from 'react-router-dom'
+import AboutUs from '../pages/AboutUsPage.js'
 import Header from '../header/Header'
+import Footer from "../footer/Footer"
+
+
+
 
 function LandingPage(){
     
@@ -33,24 +40,10 @@ function LandingPage(){
     return (
         <div>
             <div>
-                    <div className={styles.navContainer}>
+                <div className={styles.navContainer}>
                         <Header />
-                        {/* <div className={styles.logo}>
-                            <img src={kidLogo} alt="" />
-                        </div>
-                        <div className={styles.navItems}>
-                            <ul className={styles.nav}>
-                                <li><a href="https">Home</a></li>
-                                <li><a href="https">Features</a></li>
-                                <li><a href="https">Pricing</a></li>
-                                <li><a href="https">Contact Us</a></li>
-                            </ul>
-                            <div className={styles.signupSignin}>
-                                <a href="https" className={styles.signup}>Sign Up</a>
-                                <a href="https" className={styles.signin}>Sign In</a>
-                            </div>
-                        </div> */}
-                    </div>
+                </div>
+
             </div>
             <div>
                 <div className={styles.wrapper}>
@@ -257,42 +250,8 @@ function LandingPage(){
                         </div>
                     </div>
                 </div>
-                <div className={styles.connectedWrapper}>
-                    <div className={styles.connectedContainer}>
-                        <div className={styles.one}>
-                            <div className={styles.connectOneA}>
-                                <h1>Stay Connected</h1>
-                                <p>Never miss out on the latest updates,
-                                    educational tips, and exclusive offers! Subscribe to our newsletter and 
-                                    stay connected with our child learning community.</p>
-                            </div>
-                            <div className={styles.connectedOneB}>
-                                <label htmlFor="subscription" className={styles.email}>Enter Your Email</label> <br />
-                                <input type="email" name="subscription" id="" placeholder='hello@example.com' />
-                                <button type="submit">Submit</button>
-                                <p>By submitting your email address, you agree 
-                                    to kidsTot’s <span>Terms of Use</span> and <span>Policy</span> </p>
-                            </div>
-                        </div>
-                        <div className={styles.two}>
-                            <p>About Us</p>
-                            <ul>
-                                <li>Our Mission</li>
-                                <li>Meet The Team</li>
-                                <li>Testimonials</li>
-                                <li>Privacy POlicy</li>
-                            </ul>
-                        </div>
-                        <div className={styles.three}>
-                            <p>Support</p>
-                                <ul>
-                                    <li>FAQs</li>
-                                    <li>Contact Us</li>
-                                    <li>Terms of Service</li>
-                                    <li>Help Center</li>
-                                </ul>
-                        </div>
-                    </div>
+                <div>
+                    <Footer />
                 </div>
             </div>
         </div>

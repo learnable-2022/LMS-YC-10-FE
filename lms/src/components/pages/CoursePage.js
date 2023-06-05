@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
-import CenterCoursePage from "./centerCoursepage/CenterCoursePage";
-import RightCoursePage from "./rightCoursePage/RightCoursePage";
+import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
+import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 

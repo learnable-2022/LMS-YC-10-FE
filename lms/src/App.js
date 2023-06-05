@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import './App.css';
 import Main from './components/main/Main';
 import LandingPage from './components/pages/LandingPage';
-
 import AccountType from './components/pages/register/AccountType'
 import SignUp from './components/pages/register/SignUp'
 import Login from './components/pages/register/Login'

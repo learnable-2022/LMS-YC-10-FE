@@ -13,10 +13,15 @@ import TermsOfUsePage from "./components/pages/TermsOfUsePage";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 
 
+
+
+
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
  
+  
 
       if (isLoggedIn) {
         return (

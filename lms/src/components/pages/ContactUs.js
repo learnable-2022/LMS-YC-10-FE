@@ -1,6 +1,6 @@
 import React from 'react'
 import style  from './register/style.module.css'
-import { AiOutlineMail } from 'react-icons/ai';
+// import { AiOutlineMail } from 'react-icons/ai';
 import Header from '../header/Header';
 
 export default function ContactUs() {
@@ -21,7 +21,7 @@ export default function ContactUs() {
 
             <form action="" className={style.contactUs}>
 
-            <p>send us a message</p>
+            <p>Send us a message</p>
             
             <input type="email" name='email' placeholder='Email' required />
 

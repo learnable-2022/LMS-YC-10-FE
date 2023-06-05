@@ -7,8 +7,6 @@ import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
 import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
 import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
-import CenterCoursePage from "./centerCoursepage/CenterCoursePage";
-import RightCoursePage from "./rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 
@@ -17,26 +15,28 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function CoursePage() {
 return(
     <>
-        <div>
+    <div className={styles.coursePageWrapper}>
+        <div className={styles.courseLmsHeader}>
             <LmsHeader />
+        </div>
             <div className={styles.courseHeaderWrapper}>
                 <div className={styles.bodyWrapper}>
                     <div>
                         <div className={styles.courseDirectory}>
                             <div>
-                                <Link to="/">
+                                <Link to="/learningpath">
                                     <p>Course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/">
+                                <Link to="/courses">
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/" >
+                                <Link to="/coursepage" >
                                     <p className={styles.active}>UI/UX</p>
                                 </Link>
                             </div>
@@ -52,7 +52,7 @@ return(
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </>
 )
 }

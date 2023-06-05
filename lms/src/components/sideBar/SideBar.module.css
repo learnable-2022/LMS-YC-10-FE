@@ -32,7 +32,7 @@
     height: 42px;
     margin-bottom: 5px;
 }
-.sideBarWrapper ul li:hover{
+.navLinkWrapper ul li:hover{
     padding-left: 40px;
     margin-left: -40px;
     text-align: center;
@@ -72,27 +72,9 @@
     justify-content: space-between;
     height: 500px;
 }
-/* @media screen and (max-width: 950px) {
-    .sideBarWrapper{
-        width: 152px;
-    }
-    .sideBarWrapper .logo img{
-        width: 100px;
-        margin-left: -30px;
-    }
-    .sideBarWrapper ul li{
-        width: 80vw;
-        font-size: 15px;
-    }
-    .sideBarWrapper ul li i{
-        margin: 5px 8px 0px -25px;
-    }
-} */
 @media screen and (max-width: 650px) {
     .sideBarWrapper{
-        /* width: 160px; */
         overflow-x: hidden;
-        /* display: none; */
     }
 }
 

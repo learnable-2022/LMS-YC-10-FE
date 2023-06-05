@@ -14,6 +14,10 @@
     align-items: flex-start;
     margin-left: 50px;
 }
+.footerBody h1{
+    font-size: 34px;
+    font-weight: 800;
+}
 .footerBody div{
     display: flex;
     flex-direction: column;
@@ -74,6 +78,8 @@
 }
 .links h3{
     padding-bottom: 10px;
+    font-weight: 550;
+    font-size: 18px;
 }
 .links li a{
     text-decoration: none;
@@ -96,7 +102,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.footerIcons{
+.footerIconsWrapper{
     width: 9%;
     display: flex;
     justify-content: space-between;
@@ -114,11 +120,11 @@
         height: 610px;
         justify-content: space-between;
     }
-    .footerIcons{
+    .footerIconsWrapper{
         width: 12%;
     }
-    .footerIcons i{
-        font-size: 12px;
+    .footerIconsWrapper i{
+        font-size: 11px;
     }
 }
 @media screen and (max-width: 650px){
@@ -128,7 +134,7 @@
         font-weight: 499;
     }
     .labelField div{
-        width: 300px;
+        width: 350px;
         height: 20px;
         margin-bottom: 30px;
     }
@@ -136,21 +142,37 @@
         height: 750px;
     }
     .labelField{
-        width: 280px;
+        width: 380px;
         text-align: left;
     }
-    .links a{
+    .labelField button{
         font-size: 14px;
+    }
+    .labelField p, .labelField a{
+        font-size: 15px;
+    }
+    .links a{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .footerCopywrightWrapper .footerCopywright p{
+        font-size: 12px;
+        font-weight: 500;
+    }    
+    .footerIconsWrapper i{
+        font-size: 7px;
+        margin: 0px 1px;
     }
 }
 @media screen and (max-width: 450px){
-    .footerCopywrightWrapper .footerCopywright{
+    .footerCopywrightWrapper .footerCopywright p{
         font-size: 12px;
+        font-weight: 500;
     }
     .footerText p{
         width: 320px;
     }
-    .footerIcons i{
+    .footerIconsWrapper a i{
         font-size: 11.5px;
     }
     .links{

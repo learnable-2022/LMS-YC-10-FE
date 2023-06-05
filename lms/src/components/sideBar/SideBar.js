@@ -1,9 +1,9 @@
 import React from "react";
-import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5"
-import { MdOutlineAssignment } from "react-icons/md"
-import { FaBook } from "react-icons/fa"
-import { VscHome } from "react-icons/vsc"
-import { FiLogIn } from "react-icons/fi"
+import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineAssignment } from "react-icons/md";
+import { FaBook } from "react-icons/fa";
+import { VscHome } from "react-icons/vsc";
+import { FiLogIn } from "react-icons/fi";
 import styles from "../sideBar/SideBar.module.css"
 import Logo from "../images/LogoWhite.png"; 
 import { Link } from "react-router-dom";
@@ -38,12 +38,9 @@ return(
                 </ul>
                 <div className={styles.sideBarFooter}>
                     <ul>
-                        <Link to="">
+                        <Link to="/">
                             <li><i><FiLogIn /></i><p>Logout</p></li>
                         </Link>
-                        {/* <Link to="">
-                            <li><i><FiHelpCircle /></i><p>Help</p></li>
-                        </Link> */}
                     </ul>
                 </div>
             </div>

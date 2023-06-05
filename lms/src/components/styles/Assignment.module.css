@@ -1,0 +1,32 @@
+.assignment{
+    width: 80%;
+}
+.assignmentBodyWrapper{
+    text-align: left;
+    margin-left: 30px;
+}
+.tutorWrapper{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+}
+.tutorWrapper img{
+    width: 60px;
+    height: 60px;
+}
+.tutorWrapper h3{
+    color: #039BE5;
+}
+.tutorWrapper p{
+    margin-top: -15px;
+}
+.taskWrapper{
+    display: flex;
+}
+.taskText{
+    display: flex;
+}
+.taskWrapper hr{
+    height: 20px;
+}

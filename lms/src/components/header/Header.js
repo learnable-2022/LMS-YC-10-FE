@@ -1,27 +1,28 @@
 import React from "react";
 import Logo from "../images/Logo.png"; 
 import styles from "./Header.module.css"
+import { Link } from "react-router-dom";
 
 
 
 function Header(){
 return(
     <>
-        <div className={styles.headerWrapper}>
-        <div className={styles.header}>
-                    <div className={styles.logo}>
-                        <img src={Logo} alt="Logo" />
+        <div className={styles.navHeaderWrapper}>
+        <div className={styles.navHeader}>
+                    <div className={styles.navLogo}>
+                    <Link to="/"><img src={Logo} alt="Logo" /></Link>
                     </div>
                     <div className={styles.navBarWrapper}>
                         <div className={styles.navBarWrapper}>
-                            <li><a href="https://df">Home</a></li>
-                            <li><a href="https://df">Features</a></li>
-                            <li><a href="https://df">Pricing</a></li>
-                            <li><a href="/contactus">Contact Us</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/termsofuse">Features</Link></li>
+                            <li><Link to="https://df">Pricing</Link></li>
+                            <li><Link to="/contactus">Contact Us</Link></li>
                         </div>
-                        <div className={styles.btn}>
-                            <button><a href="/accounttype">Sign Up</a></button>
-                            <button><a href="/login">Sign In</a></button>
+                        <div className={styles.navBtn}>
+                            <button><Link to="/accounttype">Sign Up</Link></button>
+                            <button><Link to="/login">Sign In</Link></button>
                         </div>
                     </div>
                 </div>

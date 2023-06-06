@@ -2,6 +2,15 @@
 *{
     font-family: 'mada' sans-serif;
 }
+.termsWrapper{
+    margin-top: 40px;
+}
+.termsWrapper h1{
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
 .bodyTextWrappper{
     width: 100%;
     display: flex;

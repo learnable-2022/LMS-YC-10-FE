@@ -1,14 +1,10 @@
 import React from "react";
-import styles from "../styles/CoursePage.module.css";
+import mystyles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
-import { CiSearch } from "react-icons/ci";
-import { BsChatRight } from "react-icons/bs";
-import { FiBell } from "react-icons/fi";
-import profileImage from "../images/Mask group.png";
-import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
-import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
-import CenterCoursePage from "./centerCoursepage/CenterCoursePage";
-import RightCoursePage from "./rightCoursePage/RightCoursePage";
+import CenterCoursePage from "../pages/centerCoursepage/CenterCoursePage";
+import RightCoursePage from "../pages/rightCoursePage/RightCoursePage";
+// import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
+// import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 
@@ -17,32 +13,34 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function CoursePage() {
 return(
     <>
-        <div>
-            <LmsHeader />
-            <div className={styles.courseHeaderWrapper}>
-                <div className={styles.bodyWrapper}>
+    <div className={mystyles.coursePageWrapper}>
+        <div className={mystyles.courseLmsHeader}>
+            <LmsHeader page="Courses"/>
+        </div>
+            <div className={mystyles.courseHeaderWrapper}>
+                <div className={mystyles.bodyWrapper}>
                     <div>
-                        <div className={styles.courseDirectory}>
+                        <div className={mystyles.courseDirectory}>
                             <div>
-                                <Link to="/">
+                                <Link to="/learningpath">
                                     <p>Course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/">
+                                <Link to="/courses">
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/" >
-                                    <p className={styles.active}>UI/UX</p>
+                                <Link to="/coursepage" >
+                                    <p className={mystyles.active}>UI/UX</p>
                                 </Link>
                             </div>
                         </div>
-                        <div className={styles.courseBody}>
-                            <div className={styles.centerCoursePage}>
+                        <div className={mystyles.courseBody}>
+                            <div className={mystyles.centerCoursePage}>
                                 <CenterCoursePage />
                             </div>
                             <div>
@@ -52,7 +50,7 @@ return(
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </>
 )
 }

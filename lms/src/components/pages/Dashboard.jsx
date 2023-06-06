@@ -3,7 +3,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from '../styles/Dashboard.module.css'
 import { FaEye } from "react-icons/fa";
-
 import CourseComp from '../images/courseComp.svg'
 import CourseReg from '../images/courseReg.svg'
 import CertEarn from '../images/certEarn.svg'

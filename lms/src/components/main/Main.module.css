@@ -4,26 +4,22 @@
     position: relative;
     width: 100%;
 }
-.body{
+.mainBody{
     display: flex;
     width: 100%;
-    /* align-items: end; */
-    /* left: 17.2%; */
+    align-items: end;
+    left: 17.2%;
     position: relative;
 }
 .sideBar{
     height: 100%;
-    position: sticky;
-    /* position: fixed; */
-    top: 0px;
+    position: fixed;
 }
 @media screen and (max-width: 650px) {
     .sideBar{
         display: none;
     }
-}
-@media screen and (max-width: 650px) {
-    .body{
+    .mainBody{
         left: 0%;
     }
 }

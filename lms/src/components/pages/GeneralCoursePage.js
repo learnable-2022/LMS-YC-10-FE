@@ -4,20 +4,24 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 
+
+
 export default function GeneralCoursePage() {
   return (
-    <div style={{ width: '100%', overflow: 'auto' }}>
-         <LmsHeader />
+    <div className={style.generalCourseWrapper}>
+        <div className={style.generalLmsHeader}>
+            <LmsHeader page="Courses"/>
+         </div>
          <div className={style.courseDirectory}>
               <div>
-                  <Link to="/">
+                  <Link to="/learningpath">
                       <p >Course</p>
                       <i><IoIosArrowForward /></i>
                   </Link>
               </div>
 
               <div>
-                  <Link to="/">
+                  <Link to="/courses">
                       <p className={style.active} >Select a course</p>
                       <i><IoIosArrowForward /></i>
                   </Link>
@@ -225,12 +229,7 @@ export default function GeneralCoursePage() {
                         </div>
                     </Link>
                 </div>
-
-
-
             </div>
-     
-        
     </div>
   )
 }

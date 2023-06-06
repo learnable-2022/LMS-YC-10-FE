@@ -4,12 +4,11 @@ import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
-import  menuIcon  from "../images/menuIcon.svg"
 
 
 
 
-function LmsHeader(){
+function LmsHeader({page}){
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
@@ -18,7 +17,7 @@ return(
                     <div className={styles.menuIcon}></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
-                <h1 className={styles.headerText}>Courses</h1>
+                <h1 className={styles.headerText}>{page}</h1>
                 <div className={styles.courseInputWrapper}>
                     <div className={styles.courseSearchInput}>
                         <i><CiSearch /></i>

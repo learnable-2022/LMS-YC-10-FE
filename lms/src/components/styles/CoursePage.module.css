@@ -4,7 +4,13 @@
 }
 *::-webkit-scrollbar{
     display: none;
-  }
+}
+.coursePageWrapper{
+    width: 80%;
+}
+.courseLmsHeader{
+    width: 100%;
+}
 .courseHeaderWrapper{
     display: flex;
     overflow-y: scroll;
@@ -36,7 +42,8 @@
     color:  #039BE5;
 }
 @media screen and (max-width: 650px) {
-    .courseHeaderWrapper{
-        margin-left: 18px;
+
+    .coursePageWrapper{
+        width: 100%;
     }
 }

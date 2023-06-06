@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "../styles/CoursePage.module.css";
+import mystyles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
-import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
-import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
+import CenterCoursePage from "../pages/centerCoursepage/CenterCoursePage";
+import RightCoursePage from "../pages/rightCoursePage/RightCoursePage";
+// import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
+// import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 
@@ -11,14 +13,14 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function CoursePage() {
 return(
     <>
-    <div className={styles.coursePageWrapper}>
-        <div className={styles.courseLmsHeader}>
+    <div className={mystyles.coursePageWrapper}>
+        <div className={mystyles.courseLmsHeader}>
             <LmsHeader page="Courses"/>
         </div>
-            <div className={styles.courseHeaderWrapper}>
-                <div className={styles.bodyWrapper}>
+            <div className={mystyles.courseHeaderWrapper}>
+                <div className={mystyles.bodyWrapper}>
                     <div>
-                        <div className={styles.courseDirectory}>
+                        <div className={mystyles.courseDirectory}>
                             <div>
                                 <Link to="/learningpath">
                                     <p>Course</p>
@@ -33,12 +35,12 @@ return(
                             </div>
                             <div>
                                 <Link to="/coursepage" >
-                                    <p className={styles.active}>UI/UX</p>
+                                    <p className={mystyles.active}>UI/UX</p>
                                 </Link>
                             </div>
                         </div>
-                        <div className={styles.courseBody}>
-                            <div className={styles.centerCoursePage}>
+                        <div className={mystyles.courseBody}>
+                            <div className={mystyles.centerCoursePage}>
                                 <CenterCoursePage />
                             </div>
                             <div>

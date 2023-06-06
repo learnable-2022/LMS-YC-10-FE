@@ -20,9 +20,9 @@ export default function SignUp() {
 
  
 
-  useEffect(() => {
-    // code to run on component mount
-  }, []);
+  // useEffect(() => {
+  //   // code to run on component mount
+  // }, []);
   const handleTermsAccepted = () => {
     setTermsAccepted(!termsAccepted);
   };
@@ -31,7 +31,7 @@ export default function SignUp() {
     event.preventDefault();
 
     // const redirectUrl = window.location.href;
-    const apiUrl = "/kidtots.onrender.com/student/";
+    const apiUrl = "https://kidtots.onrender.com/student/";
 
 
     // window.location.href = `${apiUrl}&redirect_uri=${redirectUrl}`
@@ -39,7 +39,9 @@ export default function SignUp() {
   axios.post(apiUrl,
     // "/kidtots.onrender.com/student/",
   {
-    username: `${firstName} ${lastName}`
+    username: `${firstName} ${lastName}`,
+    password: `${password}`,
+    email: `${email}`
   }).then((response) =>{
     console.log(response);
   },(error) =>{

@@ -8,7 +8,7 @@ import OngoingCourse from "../pages/OngoingCoursePage";
 import LearningPath from "../pages/LearningPath";
 import GeneralCoursePage from "../pages/GeneralCoursePage";
 import Assignment from "../pages/Assignment";
-
+import Dashboard from "../pages/Dashboard";
 
 
 
@@ -25,7 +25,7 @@ return(
                 <div className={styles.mainBody}>
                     <Routes>
                        
-                        {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
+                        <Route path='/dashboard' element={<Dashboard/>}/>
                         <Route path='/learningpath' element={<LearningPath />}/>
                         <Route path='/courses' element={<GeneralCoursePage />}/>
                         <Route path='/coursepage' element={<CoursePage/>} />

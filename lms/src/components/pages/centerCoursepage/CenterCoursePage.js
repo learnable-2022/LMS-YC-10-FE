@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CenterCoursePage.module.css"
+import coursestyles from "./CenterCoursePage.module.css"
 import CourseList from "../courseList/CourseList";
 import Card from "../card/Card";
 import { GrGroup } from "react-icons/gr";
@@ -11,25 +11,25 @@ import { BsStarFill } from "react-icons/bs";
 function CenterCoursePage(){
 return(
     <>
-        <div className={styles.centerCoursePageWrapper}>
-            <div className={styles.centerPage}>
-                <p className={styles.centerPageText}>The complete  6- weeks UI/UX design skill learning</p>
-                <div className={styles.firstCenterSection}>
-                    <div id={styles.div1}>
+        <div className={coursestyles.centerCoursePageWrapper}>
+            <div className={coursestyles.centerPage}>
+                <p className={coursestyles.centerPageText}>The complete  6- weeks UI/UX design skill learning</p>
+                <div className={coursestyles.firstCenterSection}>
+                    <div id={coursestyles.div1}>
                         <i><BsStarFill /></i>
-                        <p className={styles.firstSectionText}>#1 out of 7 in-demand careers in the global job market(2021 rating)</p>
+                        <p className={coursestyles.firstSectionText}>#1 out of 7 in-demand careers in the global job market(2021 rating)</p>
                     </div>
-                    <div id={styles.div}>
+                    <div id={coursestyles.div}>
                         <i><GrGroup /></i>
-                        <p className={styles.firstSectionText2}>1000 Learners enrolled</p>
+                        <p className={coursestyles.firstSectionText2}>1000 Learners enrolled</p>
                     </div>
                 </div>
-                    <div className={styles.secondSection}>
-                    <p className={styles.secondSectionText}>Our 6- weeks UI/UX design skill course equips learners with the essential skills to 
+                    <div className={coursestyles.secondSection}>
+                    <p className={coursestyles.secondSectionText}>Our 6- weeks UI/UX design skill course equips learners with the essential skills to 
                         become world-class designers. Our exponential instructors provide hands-on learning 
                         opportunities to design and prototype digital products, conduct user, flows and wire frames research</p>
                     </div>
-                    <div className={styles.thirdSection}>
+                    <div className={coursestyles.thirdSection}>
                         <ol><p>COURSE OVERVIEW</p>
                             <li>Understand the definition and principles of UI/UX Design in order to design with intention.</li>
                             <li>Achieve a deep understanding of the entire life-cycle of design—the process, purpose, and tools.</li>
@@ -39,8 +39,8 @@ return(
                             <li>Eligibility</li>
                         </ol>
                     </div>
-                    <p className={styles.pTag}>Course content</p>
-                    <span className={styles.courseSummary}>
+                    <p className={coursestyles.pTag}>Course content</p>
+                    <span className={coursestyles.courseSummary}>
                         <div>
                             <p>41 sections-</p>
                             <p>490 lectures-</p>
@@ -48,13 +48,13 @@ return(
                         </div>
                         <p>Expand all sections</p>
                     </span>
-                    <div className={styles.fourthSection}>
+                    <div className={coursestyles.fourthSection}>
                         <div>
                             <CourseList />
                         </div>
                     </div>
-                    <h3 className={styles.h3}>SKILLS TO GAIN</h3>
-                    <div className={styles.centerFooter}>
+                    <h3 className={coursestyles.h3}>SKILLS TO GAIN</h3>
+                    <div className={coursestyles.centerFooter}>
                         <div>
                             <ul>
                                 <li>Figma and Adobe XD</li>
@@ -64,7 +64,7 @@ return(
                                 <li>User Experience Design (UXD)</li>
                             </ul>
                         </div>
-                        <div className={styles.centerFooterLastSection}>
+                        <div className={coursestyles.centerFooterLastSection}>
                             <Card />
                         </div>
                     </div>

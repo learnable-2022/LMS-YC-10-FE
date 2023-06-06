@@ -15,6 +15,9 @@
     padding: 10px;
    
   }
+  .generalCourseBodyWrapper{
+    margin-left: 46px;
+  }
 .gridItem {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -98,6 +101,8 @@
     font-size: 12px;
    
   }
-  
+  .generalCourseBodyWrapper{
+    margin-left: 0px;
+  }
   
   }

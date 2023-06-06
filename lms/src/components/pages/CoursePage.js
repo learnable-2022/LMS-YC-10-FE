@@ -3,8 +3,6 @@ import mystyles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import CenterCoursePage from "../pages/centerCoursepage/CenterCoursePage";
 import RightCoursePage from "../pages/rightCoursePage/RightCoursePage";
-// import CenterCoursePage from "./asset/centerCoursePage/CenterCoursePage";
-// import RightCoursePage from "./asset/rightCoursePage/RightCoursePage";
 import { Link } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 

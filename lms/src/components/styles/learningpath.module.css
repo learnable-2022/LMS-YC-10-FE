@@ -70,7 +70,9 @@
 .active{
     color:  #039BE5;
 }
-
+.learningPathBodyWrapper{
+    margin-left: 42px;
+}
 
 
 
@@ -87,6 +89,8 @@
         width: 350px;
         padding: 20px;
     }
-    
+    .learningPathBodyWrapper{
+        margin-left: 0px;
+    }
     
     }

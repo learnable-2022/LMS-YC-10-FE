@@ -10,7 +10,7 @@ export default function GeneralCoursePage() {
   return (
     <div className={style.generalCourseWrapper}>
         <div className={style.generalLmsHeader}>
-            <LmsHeader />
+            <LmsHeader page="Courses"/>
          </div>
          <div className={style.courseDirectory}>
               <div>

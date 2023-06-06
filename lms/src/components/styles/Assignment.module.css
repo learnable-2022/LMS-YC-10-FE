@@ -1,19 +1,26 @@
 .assignment{
-    width: 80%;
+    width: 75%;
+    margin-left: 30px;
 }
 .assignmentBodyWrapper{
     text-align: left;
     margin-left: 30px;
 }
+.assignmentFirstSection{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
 .tutorWrapper{
     display: flex;
-    width: 25%;
+    width: 50%;
     align-items: center;
     justify-content: space-between;
 }
 .tutorWrapper img{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .tutorWrapper h3{
     color: #039BE5;
@@ -23,10 +30,291 @@
 }
 .taskWrapper{
     display: flex;
+    align-items: center;
+}
+.task{
+    display: flex;
+    align-items: start;
+}
+.taskTextWrapper{
+    text-align: left;
 }
 .taskText{
     display: flex;
+    width: 400px;
+    margin-top: -12px;
+    justify-content: space-between;
 }
 .taskWrapper hr{
-    height: 20px;
+    height: 32px;
+    margin-right: 10px;
+    width: 5px;
+    border: 1px solid  #F48FB1;
+    background-color: #F48FB1;
+    border-radius: 12px;
+}
+.taskWrapper h4{
+    color: #039BE5;
+    margin: 0px;
+}
+.easyLevel{
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color:  #F06292; 
+}
+.levelWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105px;
+}
+.levelAnimateWrapper{
+    display: flex;
+    width: 35px;
+    justify-content: space-between;
+}
+.semiHardLevel{
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color:  #AAAAAA; 
+}
+.hardLevel{
+    width: 10px;
+    height: 10px;
+    background-color:  #AAAAAA; 
+    border-radius: 20px;
+}
+.retakeWrapper{
+    display: flex;
+    width: 85px;
+    justify-content: space-between;
+}
+.retakeWrapper p:last-child{
+    color: #2196F3;
+}
+.retakeWrapper p span{
+    color: #F06292;
+}
+.taskDetails ol{
+    margin: -10px 0px 0px -25px;
+}
+.taskDetails ol p{
+    margin-left: -15px;
+    margin-bottom: 5px;
+}
+.assesmentWrapper{
+    width: 200px;
+    height: 180px;
+    padding-right: 40px;
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E3F2FD;
+    border-radius: 12px;
+}
+.assesProgress{
+    display: flex;
+    align-items: center;
+}
+.assesProgress div{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 60px;
+    border: 3px solid #039BE5;
+}
+.assesProgress h4{
+    width: 100px;
+}
+.assesProgress p {
+    font-weight: 600;
+    color: #2196F3;
+}
+.assesProgress p span{
+    color:  #EC407A; 
+}
+.warningWrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    background: #F06292;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    width: 80%;
+}
+.warningWrapper i{
+    font-size: 25px;
+    margin: 6px 2px 0px 8px;
+}
+.resourcesWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.resourcesWrapper .resources{
+    display: flex;
+    align-items: center;
+    background: #E3F2FD;
+    border: 1px solid #42A5F5;
+    border-radius: 12px;
+    width: 250px;
+    justify-content: space-between;
+}
+.resourcesWrapper .resources div{
+    display: flex;
+    align-items: center;
+    width: 235px;
+    justify-content: space-evenly;
+}
+.resourcesWrapper div p{
+    font-size: 13px;
+    font-weight: 700;
+    color: #C2185B;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.resourcesWrapper div i{
+    color: #0288D1;
+    font-size: 18px;
+    font-weight: 700;
+}
+.doingRetakesWrapper{
+    display: flex;
+    align-items: start;
+}
+.doingRetakes{
+    display: flex;
+    align-items: last baseline;
+}
+.doingRetakes hr{
+    height: 32px;
+    margin-right: 10px;
+    width: 5px;
+    border: 1px solid  #F48FB1;
+    background-color: #F48FB1;
+    border-radius: 12px;
+}
+.doingRetakes h4{
+    color: #0288D1;
+}
+.doingRetakes div div{
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+    margin: -34px 0px 20px;
+    display: flex;
+}
+.doingRetakes div p span{
+    color: #F06292;
+}
+.doingRetakes div p{
+    color: #2196F3;
+}
+.assignmentTextArea{
+    width: 70%;
+    height: 70px;
+    background: #EDEDED;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.assignmentTextArea textarea{
+    width: 95%;
+    height: 40px;
+    background: #EDEDED;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+#formFileUpload {
+    height: 16rem;
+    width: 28rem;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+} 
+#inputFileUpload {
+    display: none;
+}  
+#labelFileUpload {
+    width: 700px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3.8px dashed #039BE5;
+    border-radius: 12px;
+    font-weight: 700;
+}
+#labelFileUpload .dragActive {
+    background-color: #ffffff;
+}
+#labelFileUpload .dragWrapper{
+    display: flex;
+    margin: 0;
+}
+.dragWrapper img{
+    margin-right: 12px;
+}
+.dragTextWrapper{
+    margin-top: -25px;
+}
+.uploadButton{
+    cursor: pointer;
+    padding: 0.25rem;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    color:  #D81B60;
+    background-color: transparent;
+}
+  
+.uploadButton:hover{
+    text-decoration-line: underline;
+  }
+  
+#dragFileElement {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+@media screen and (max-width: 650px) {
+    .assignment{
+        width: 100%;
+        margin: 0;
+    }
+    .assignmentBodyWrapper{
+        text-align: left;
+    }
+    .assesmentWrapper{
+        display: none;
+    }
+    .resourcesWrapper{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .warningWrapper{
+        width: 85vw;
+    }
+    #labelFileUpload{
+        width: 80vw;
+    }
 }

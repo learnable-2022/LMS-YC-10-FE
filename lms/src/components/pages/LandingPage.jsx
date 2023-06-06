@@ -7,7 +7,7 @@ import codevilleLogo from '../images/codevilleLogo.svg'
 import learnableLogo from '../images/learnableLogo.svg'
 import teneceLogo from '../images/teneceLogo.svg'
 import emblem from '../images/emblem.svg'
-import kidLogo from '../images/kidsLogo.svg'
+// import kidLogo from '../images/kidsLogo.svg'
 import webCourse from '../images/webCourse.svg'
 import roboticsCourse from '../images/roboticsCourse.svg'
 import uiCourse from '../images/uiCourse.svg'
@@ -21,11 +21,12 @@ import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
-import Header from '../header/Header'
-import Footer from "../footer/Footer"
 import thankyou from '../images/thankyou.svg'
 import { Link } from 'react-router-dom'
 import AboutUs from '../pages/AboutUsPage.js'
+import Header from '../header/Header'
+import Footer from "../footer/Footer"
+
 
 
 

@@ -16,7 +16,7 @@ return(
     <>
         <div className={styles.settingsPage}>
             <div className={styles.settingsPageHeader}>
-                <LmsHeader />
+                <LmsHeader page="Settings" />
             </div>
             <div className={styles.profileText}>
                 <h3>Profile</h3>

@@ -10,7 +10,7 @@ export default function LearningPath() {
   return (
     <div className={style.learningPathWrapper}>
       <div className={style.learningPath}>
-        <LmsHeader />
+        <LmsHeader page="Courses"/>
       </div>
        <div className={style.wrapper}>
           <div className={style.courseDirectory}>

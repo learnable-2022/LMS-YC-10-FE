@@ -75,10 +75,10 @@
 
 
 @media (max-width:768px) {
-    /* .cards{
+    .cards{
       
         flex-direction: column;
-    } */
+    }
     .learningPathWrapper{
         width: 100%;
     }

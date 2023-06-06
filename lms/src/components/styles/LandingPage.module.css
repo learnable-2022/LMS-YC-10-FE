@@ -12,12 +12,12 @@
 
 }
 
-/*HERO STARTS HERE*/
+/* HERO STARTS HERE */
 .wrapper{
   display: flex;
   flex-direction: column;
   background-color: #E3F2FD;
-  padding-top: 80px;
+  padding-top: 120px;
   padding-left: 60px;
   padding-bottom: 120px;
 }
@@ -27,17 +27,17 @@
 }
 .text h1{
   font-weight: 800;
-  font-size: 60px;
-  width: 700px;
+  font-size: 56px;
+  width: 600px;
   text-align: left;
   letter-spacing: 0.01em;
 }
 .text p{
-  font-size: 28px;
+  font-size: 26px;
   text-align: left;
 }
 .heroImg img{
-  width: 450px;
+  width: 430px;
 }
 .getStartedExplore{
   display: flex;
@@ -48,8 +48,7 @@
   text-decoration: none;
   height: 50px;
   line-height: 50px;
-  border: 2px solid #0288D1;
-  border-radius: 40px;
+  border-radius: 24px;
 }
 .getStarted{
   width: 130px;
@@ -59,7 +58,7 @@
   height: 40px;
   line-height: 40px;
   border: 2px solid #0288D1;
-  border-radius: 40px;
+  border-radius: 20px;
   margin-right: 40px;
 }
 .getStarted:hover{
@@ -74,6 +73,7 @@
 .explore{
   width: 190px;
   color: rgb(58, 55, 55);
+  border: 2px solid #717171;
   background-color: white;
 }
 .explore:hover{
@@ -87,7 +87,7 @@
 /* HERO SECTION END */
 
 
-/*PARTNERS SECTION BEGINS*/
+/* PARTNERS SECTION BEGINS */
 .partnerWrapper{
   margin: 120px 100px;
 }
@@ -103,10 +103,10 @@
   display:flex;
   justify-content: space-between;
 }
-/*PARTNER SECTION ENDS*/
+/* PARTNER SECTION ENDS */
 
 
-/*COURSE SECTION BEGINS*/
+/* COURSE SECTION BEGINS */
 .coursesSection{
   margin-top: 60px;
   margin-bottom: 60px;
@@ -158,23 +158,24 @@
   font-size: 20px;
   line-height: 26px;
 }
-/*courses section ends*/
+/* courses section ends */
 
 .customerSupport{
   position: fixed;
   bottom: 100px;
   right: 100px;
   background-color: #c2185b;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   border-radius: 90px;
 }
 .customerSupport img{
+  width: 35px;
   margin-top: 20px;
 }
 
-/* trial section starts*/
+trial section starts
 .potentialWrapper{
   padding: 60px 100px;
 }
@@ -214,9 +215,9 @@
   color: black;
   border-bottom: black;
 }
-/*trial section ends*/
+/* trial section ends */
 
-/*porvision section begins*/
+/* porvision section begins */
 .provisionWrapper{
   margin: 60px 100px;
 }
@@ -248,10 +249,10 @@
   line-height: 31px;
   margin-bottom: 7px;
 }
-/*PROVISION SECTION ENDS*/
+/* PROVISION SECTION ENDS */
 
 
-/*Client testimonial*/
+/* Client testimonial */
 .clientsWrapper{
   padding: 60px 90px;
   background: #FCE4EC;

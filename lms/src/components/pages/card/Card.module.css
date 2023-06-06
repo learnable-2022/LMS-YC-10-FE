@@ -8,14 +8,19 @@
 .cardWrapper img{
     width: 280px;
 }
+.cardImgWrapper{
+    display: flex;
+    justify-content: center;
+}
 .cardText{
     font-size: 14.5px;
     margin-top: 0px;
+    text-align: center;
 }
 .cardTextAmount{
     font-size: 14.5px;
-    margin: -10px 0px 0px 25px;
-    font-weight: 500;
+    margin: -12px 0px 0px 30px;
+    font-weight: 600;
     text-align: left;
 }
 .cardBtnWrapper{
@@ -33,9 +38,13 @@
     height: 30px;
 }
 .cardBtnWrapper i{
-    font-size: 20px;
-    padding: 1px 4px;
-    margin-left: 5px;
+    font-size: 24px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px; 
     color: #555555;
     border: 1px solid #E91E63;
     border-radius: 8px;

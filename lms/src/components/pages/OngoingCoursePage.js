@@ -4,15 +4,18 @@ import { Link  } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import ellipse from "../images/Ellipse 34.png";
 import LmsHeader from "../lmsHeader/LmsHeader";
+import { Onclick, UserContext } from "./courseList/CourseList";
 
+// const src = Onclick(src)
+// const id = Onclick(id)
 
-
-
-function OngoingCourse (props) {
-    // const {src} = props.data;
+function OngoingCourse () {
+    const value = React.useContext(UserContext);
+    console.log(value)
+    // const {src, id} = props.data;
     // console.log("i was clicked")
-    // console.log(src)
-    console.log(props.id)
+    // console.log({src})
+    // console.log(`${id} ${src}`)
 return(
     <>                
         <div className={styles.ongoingCourse}>
@@ -55,8 +58,8 @@ return(
                             </div>
                         </div>
                         <div className={styles.courseVideoWrapper}>
-                            <video width="600px" height="350px" key={props.id} controls>
-                                <source src={props.src} type='video/mp4' />
+                            <video width="600px" height="350px" controls>
+                                <source src={value} type='video/mp4' />
                             </video>
                         </div>
                         <div className={styles.buttonWrapper}>

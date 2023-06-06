@@ -32,7 +32,7 @@ export default function LearningPath() {
                       <i><AiOutlinePlus /></i>
                   </div>
                 <div className={style.card_footer}>Add new course</div>  
-                </Link>
+            </Link>
             </div>
             
 

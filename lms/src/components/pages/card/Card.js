@@ -15,7 +15,9 @@ return(
     <>
         <div>
             <div className={styles.cardWrapper}>
+                <div className={styles.cardImgWrapper}>
                 <img src={card} alt="card" />
+                </div>
                 <div className={styles.cardTextWrapper}>
                     <p className={styles.cardText}>Advance/master course in UI/UX design</p>
                     <p className={styles.cardTextAmount}>$100.00</p>

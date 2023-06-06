@@ -117,7 +117,7 @@
 }
 @media screen and (max-width: 650px) {
     .secondSectionText{
-        width: 92vw;
+        width: 90vw;
     }
     .firstCenterSection{
         width: 35%;
@@ -127,17 +127,17 @@
         padding-right: 15px;
     }
     .fourthSection{
-        width: 90vw;
+        width: 88vw;
     }
     .pTag{
         font-weight: 599;
     }
     .courseSummary{
-        width: 100vw;
+        width: 96vw;
         justify-content: space-around;
         display: flex;
         font-size: 10.7px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .courseSummary div{
         width: 290px;

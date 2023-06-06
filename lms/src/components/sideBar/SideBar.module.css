@@ -5,7 +5,7 @@
 .sideBarWrapper{
     position: relative;
     overflow: hidden;
-    width: 220px;
+    width: 200px;
     height: 100%;
     background-color: #039BE5;
 }
@@ -19,10 +19,10 @@
 .sideBarWrapper .logo img{
     width: 120px;
 }
-.sideBarWrapper ul a{
+.sideBarWrapper div a{
     text-decoration: none;
 }
-.sideBarWrapper ul li{
+.sideBarWrapper div a div{
     list-style: none;
     display: flex;
     align-items: center;
@@ -32,22 +32,28 @@
     height: 42px;
     margin-bottom: 5px;
 }
-.navLinkWrapper .firstSectionLink li:hover{
+.navLinkWrapper .firstSectionLink a div:hover{
     padding-left: 40px;
-    margin-left: -40px;
+    margin-left: -20px;
     text-align: center;
-    width: 180px;
+    width: 170px;
     border-left: 3.5px solid #EC407A;
     background-color:  #64B5F6;
 }
-.sideBarWrapper ul li i{
+#firstSectionLink a .active{
+    /* padding-left: 40px;
+    margin-left: -20px;
+    text-align: center;
+    width: 170px; */
+    color: black;
+    /* border-left: 3.5px solid #EC407A; */
+    background-color:  #64B5F6;
+}
+.sideBarWrapper div a i{
     color: white;
     margin: 5px 8px 0px 0px;
 }
-.sideBarWrapper ul li i:nth-of-type(2){
-    color: white;
-}
-.sideBarFooter ul li{
+.sideBarFooter div a div{
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -56,10 +62,10 @@
     height: 30px;
     width: 50%;
 }
-.sideBarFooter ul a{
+.sideBarFooter div a{
     text-decoration: none;
 }
-.sideBarFooter li i{
+.sideBarFooter div i{
     color: white;
     margin: 4px 8px 0px 0px;
 }
@@ -71,6 +77,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 @media screen and (max-width: 650px) {
     .sideBarWrapper{

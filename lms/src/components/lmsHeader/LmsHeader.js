@@ -4,17 +4,28 @@ import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
+import SideBar from "../sideBar/SideBar";
 
 
 
 
 function LmsHeader({page}){
+
+    const showSideBar = () =>{
+        return(
+            <>
+                 <div className={styles.sideBarShow}>
+                    <SideBar />
+                 </div>
+            </>
+        )
+    }
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
             <div className={styles.courseHeader}>
                 <div className={styles.responsiveTag}>
-                    <div className={styles.menuIcon}></div>
+                    <div className={styles.menuIcon}><button onClick={showSideBar}></button></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
                 <h1 className={styles.headerText}>{page}</h1>

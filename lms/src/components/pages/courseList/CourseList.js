@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
-import { TfiLock } from "react-icons/tfi";
+// import { TfiLock } from "react-icons/tfi";
 import {  BsPlayCircleFill } from "react-icons/bs";
 import { FcCheckmark } from "react-icons/fc";
 import { CiStickyNote } from "react-icons/ci";
-import { RiArrowDownSLine } from "react-icons/ri";
+// import { RiArrowDownSLine } from "react-icons/ri";
 import styles from "./CourseList.module.css";
 import OngoingCourse  from "../OngoingCoursePage";
 import { Link } from "react-router-dom";
 
 
+export const UserContext = React.createContext();
+export const Onclick = (src) => {
+    console.log(src)
 
+return(
+    <UserContext.Provider value={src}>
+        <OngoingCourse />
+    </UserContext.Provider>
+    // <Component id={Component.id} src={Component.src} />
+)
+    // <OngoingCourse id={id} src={src} name={name}/>
+
+    // console.log(id, src, name)
+
+
+}
 function CourseList(){
 const [ courseList ] = useState([
     {
@@ -110,67 +125,60 @@ const [ courseList ] = useState([
 
 
 
-    const Onclick = (id, src, name) => {
-
-        <OngoingCourse id={id} src={src} name={name}/>
-
-        console.log(id, src, name)
-
-
-    }
+ 
 return(
     <>
         <div className={styles.courseListWrapper}>
             <div>
                 {
                     courseList.map((
-                        {
-                    id, 
-                    title,
-                    icon,
-                    icon2,
-                    icon3,
-                    name1,
-                    name2,
-                    name3,
-                    watch,
-                    time,
-                    src}, index
+                        data
+                    // id, 
+                    // title,
+                    // icon,
+                    // icon2,
+                    // icon3,
+                    // name1,
+                    // name2,
+                    // name3,
+                    // watch,
+                    // time,
+                    // src}, index
                     ) => (
-                        <details key={id} >
-                            <summary>{title}</summary>
+                        <details key={data.id} >
+                            <summary>{data.title}</summary>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
-                                        <i>{icon}</i>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                        <i>{data.icon}</i>
                                        <div className={styles.firstRow}>
-                                            <p>{name1}</p>
+                                            <p>{data.name1}</p>
                                             <div id={styles.section2}>
-                                                <i>{watch}</i>
-                                                <p>{time}</p>
+                                                <i>{data.watch}</i>
+                                                <p>{data.time}</p>
                                             </div>
                                         </div>
                                     </Link>
                                 </div>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
-                                        <i>{icon2}</i>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                        <i>{data.icon2}</i>
                                         <div className={styles.firstRow}>
-                                            <p>{name2}</p>
+                                            <p>{data.name2}</p>
                                             <div id={styles.section2}>
-                                                <i>{watch}</i>
-                                                <p>{time}</p>
+                                                <i>{data.watch}</i>
+                                                <p>{data.time}</p>
                                             </div>
                                         </div>
                                     </Link>
                                 </div>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(id, src)}>
-                                        <i>{icon3}</i>
+                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                        <i>{data.icon3}</i>
                                         <div className={styles.firstRow}>
-                                            <p>{name3}</p>
+                                            <p>{data.name3}</p>
                                             <div id={styles.section2}>
-                                                <i>{watch}</i>
-                                                <p>{time}</p>
+                                                <i>{data.watch}</i>
+                                                <p>{data.time}</p>
                                             </div>
                                         </div>
                                     </Link>

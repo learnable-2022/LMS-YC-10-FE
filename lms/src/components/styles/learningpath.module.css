@@ -57,6 +57,7 @@
 
 .courseDirectory{
     display: flex;
+    margin-left: 4.7px;
 }
 .courseDirectory div a{
     display: flex;
@@ -70,7 +71,9 @@
 .active{
     color:  #039BE5;
 }
-
+.learningPathBodyWrapper{
+    margin-left: 50px;
+}
 
 
 
@@ -87,6 +90,8 @@
         width: 350px;
         padding: 20px;
     }
-    
+    .learningPathBodyWrapper{
+        margin-left: 0px;
+    }
     
     }

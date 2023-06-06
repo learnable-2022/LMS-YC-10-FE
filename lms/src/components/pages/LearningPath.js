@@ -12,39 +12,40 @@ export default function LearningPath() {
       <div className={style.learningPath}>
         <LmsHeader page="Courses"/>
       </div>
-       <div className={style.wrapper}>
-          <div className={style.courseDirectory}>
-              <div>
-                  <Link to="/learningpath">
-                      <p className={style.active} >Course</p>
-                      <i><IoIosArrowForward /></i>
-                  </Link>
-              </div>
-             
-            </div>
-       <div className={style.cards}>
-
-         
-          <div className={style.card}>
-          <Link to="/courses" style={{ textDecoration: 'none' }} > 
-                <div className={style.card_body}>
-                    <i><AiOutlinePlus /></i>
+      <div className={style.learningPathBodyWrapper}>
+        <div className={style.wrapper}>
+            <div className={style.courseDirectory}>
+                <div>
+                    <Link to="/learningpath">
+                        <p className={style.active} >Course</p>
+                        <i><IoIosArrowForward /></i>
+                    </Link>
                 </div>
-              <div className={style.card_footer}>Add new course</div>  
-              </Link>
-          </div>
-           
+              
+              </div>
+        <div className={style.cards}>
 
-        {/* <Link to="/courses"> */}
-        <div className={style.card}>
-            <div className={style.card_body}>
-           <i> <AiOutlineMenu /></i>
+          
+            <div className={style.card}>
+            <Link to="/courses" style={{ textDecoration: 'none' }} > 
+                  <div className={style.card_body}>
+                      <i><AiOutlinePlus /></i>
+                  </div>
+                <div className={style.card_footer}>Add new course</div>  
+            </Link>
             </div>
-            <div className={style.card_footer}>Add new course</div>
+            
+
+          {/* <Link to="/courses"> */}
+          <div className={style.card}>
+              <div className={style.card_body}>
+            <i> <AiOutlineMenu /></i>
+              </div>
+              <div className={style.card_footer}>View Selected Courses</div>
+          </div>
+          {/* </Link> */}
         </div>
-         {/* </Link> */}
        </div>
-      
     </div>
     </div>
   

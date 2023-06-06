@@ -8,10 +8,12 @@ import SignUp from './components/pages/register/SignUp'
 import Login from './components/pages/register/Login'
 import ForgotPassword from './components/pages/register/ForgotPassword'
 import CreateNewPassword from './components/pages/register/CreateNewPassword'
-import ContactUs from './components/pages/ContactUs'
+import ContactUs from './components/pages/ContactUs';
+
+
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
  
 

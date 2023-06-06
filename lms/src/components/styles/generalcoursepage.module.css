@@ -15,6 +15,9 @@
     padding: 10px;
    
   }
+  .generalCourseBodyWrapper{
+    margin-left: 55px;
+  }
 .gridItem {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -62,7 +65,7 @@
 
 .courseDirectory{
     display: flex;
-    padding-left: 25px;
+    padding-left: 28px;
 }
 .courseDirectory div a{
     display: flex;
@@ -98,6 +101,8 @@
     font-size: 12px;
    
   }
-  
+  .generalCourseBodyWrapper{
+    margin-left: 0px;
+  }
   
   }

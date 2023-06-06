@@ -24,7 +24,7 @@ function Dashboard(){
     // let status = step > 0 ? (step < 4 ? "In Progress" : "Done") : "Stopped";
     return(
         <div className={styles.dashboard}>
-            <div className={styles.sidebar}><SideBar /></div>
+            <div className={styles.sidebar}><SideBar /></div> 
             <div className={styles.dashboardMain}>
                 <div className={styles.progressSummary}>
                     <div className={styles.pSumOne}>

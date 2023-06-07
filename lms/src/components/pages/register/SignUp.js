@@ -15,41 +15,43 @@ export default function SignUp() {
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [password_confirm, setConfirmPassword] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false); // new state
 
- 
+ const userName = `${firstName} ${lastName}`
 
-  // useEffect(() => {
-  //   // code to run on component mount
-  // }, []);
   const handleTermsAccepted = () => {
     setTermsAccepted(!termsAccepted);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const data = {
+      username: userName,
+      email: email,
+      password: password,
+      password_confirm: password_confirm
+    }
+  const url = "https://kidtots.onrender.com/student/"
 
-    // const redirectUrl = window.location.href;
-    const apiUrl = "https://kidtots.onrender.com/student/";
+     axios.post(url, data, {
+      headers:{
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+     }).then((response) =>{
+      console.log(response);
+    },(error) =>{
+      console.log(error)
+    }); 
+ 
+
+      
+console.log(data)
 
 
-    // window.location.href = `${apiUrl}&redirect_uri=${redirectUrl}`
 
-  axios.post(apiUrl,
-    // "/kidtots.onrender.com/student/",
-  {
-    username: `${firstName} ${lastName}`,
-    password: `${password}`,
-    email: `${email}`
-  }).then((response) =>{
-    console.log(response);
-  },(error) =>{
-    console.log(error)
-  })
-
-
-    if(password !== confirmPassword){
+    if(password !== password_confirm){
       alert("Password is not the same");
       return;
     }
@@ -67,48 +69,6 @@ export default function SignUp() {
   };
 
 
-  // const [{token}, dispatch ] = useStateProvider();
-  // useEffect(()=>{
-  //   const hash = window.location.hash;
-  //   if(hash){
-  //     const token = hash.substring(1).split("&")[0].split("=")[1];
-  //     dispatch({type: reducerCases.SET_TOKEN, token});
-  //   }
-  // },[token, dispatch])
-  
-  // const hash = window.location.hash;
-  // const token = hash.substring(1).split("&")[0].split("=")[1];
-
-  // var url = process.env.REACT_APP_API_URL + '/kidtots.onrender.com/student/';
-  // axios.post(url,
-  //   // "/kidtots.onrender.com/student/",
-  // {
-  //   username: `${firstName} ${lastName}`
-  // }).then((response) =>{
-  //   console.log(response);
-  // },(error) =>{
-  //   console.log(error)
-  // })
-
-
-  //  const userSignUp = (email, firstName, ) => new Promise((resolve, reject) => {
-  //     var url = process.env.REACT_APP_API_URL + 'api/seller/login';
-  //     axios.post(url, { email, password })
-  //       .then((response) => {
-  //         if (response.data.user) {
-  //           this.setSession(response.data.accessToken);
-  //           resolve(response.data.user);
-  //         } else {
-  //           reject(response.data.error);
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         console.log(url);
-  //         console.log(error);
-  //         reject(error);
-  //       });
-  //   })
-  //   userSignUp();
 
 
 
@@ -141,7 +101,7 @@ return (
 
             <input type="password" name='password' placeholder='Password' required value={password} onChange={(event) => setPassword(event.target.value)}/>
        
-            <input type="password" name='confirm-password' placeholder='Confirm password' required value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)}/>
+            <input type="password" name='confirm-password' placeholder='Confirm password' required value={password_confirm} onChange={(event) => setConfirmPassword(event.target.value)}/>
 
             <div className={style.agreeTerms} >
              <input type="checkbox" name='terms_and_conditions' className={style.checkbox} required 

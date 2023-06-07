@@ -4,7 +4,7 @@ import { MdOutlineAssignment } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
 import { VscHome } from "react-icons/vsc";
 import { FiLogIn } from "react-icons/fi";
-import styles from "../sideBar/SideBar.module.css"
+import styles from "./SideBar.module.css"
 import Logo from "../images/LogoWhite.png"; 
 import { NavLink, Link } from "react-router-dom";
 
@@ -20,29 +20,27 @@ return(
             </div>
             <div className={styles.navLinkWrapper}>
                 <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
-                    <NavLink to="/dashboard" className={styles.sideBarLink}
-                    style={({isActive}) =>{return {color: isActive? "black": ""}}}
-                    >
+                    <NavLink to="/dashboard">
                         <div>
                         <i><VscHome /></i><p>Dashboard</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/learningpath"  className={styles.sideBarLink}>
+                    <NavLink to="/learningpath">
                         <div>
                         <i><FaBook /></i><p>Courses</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/assignment"  className={styles.sideBarLink}>
+                    <NavLink to="/assignment">
                         <div>
                         <i><MdOutlineAssignment /></i><p>Assignments</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/certificate"  className={styles.sideBarLink}>
+                    <NavLink to="/certificate">
                         <div>
                         <i><IoDocumentOutline /></i><p>Certificates</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/settings"  className={styles.sideBarLink}>
+                    <NavLink to="/settings">
                         <div>
                         <i><IoSettingsOutline /></i><p>Settings</p>
                         </div>

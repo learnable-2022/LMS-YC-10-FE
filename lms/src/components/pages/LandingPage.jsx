@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Modal from "react-overlays/Modal";
+import React from "react";
+// , { useState }
+// import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'
@@ -21,21 +22,22 @@ import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
-import thankyou from '../images/thankyou.svg'
-import { Link } from 'react-router-dom'
-import AboutUs from '../pages/AboutUsPage.js'
+// import thankyou from '../images/thankyou.svg'
+// import { Link } from 'react-router-dom'
+// import AboutUs from '../pages/AboutUsPage.js'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
+import { Link } from "react-router-dom";
 
 
 
 
 function LandingPage(){
     
-    const [showModal, setShowModal] = useState(false);
-    const renderBackdrop = (props) => <div className="backdrop" {...props} />;
+    // const [showModal, setShowModal] = useState(false);
+    // const renderBackdrop = (props) => <div className="backdrop" {...props} />;
 
-    var handleClose = () => setShowModal(false);
+    // var handleClose = () => setShowModal(false);
   
     return (
         <div>
@@ -43,7 +45,6 @@ function LandingPage(){
                 <div className={styles.navContainer}>
                         <Header />
                 </div>
-
             </div>
             <div>
                 <div className={styles.wrapper}>
@@ -61,8 +62,8 @@ function LandingPage(){
                         </div>
                     </div>
                     <div className={styles.getStartedExplore}>
-                        <a href="#" className={styles.getStarted}>Get Started</a>
-                        <a href="#" className={styles.explore}>Explore Courses</a>
+                        <Link to="#" className={styles.getStarted}>Get Started</Link>
+                        <Link to="#" className={styles.explore}>Explore Courses</Link>
                     </div>
                 </div>
                 <div className={styles.partnerWrapper}>
@@ -135,10 +136,10 @@ function LandingPage(){
                             start sharing your expertise with the world!</p>
                         <div className={styles.trialPlans}>
                             <div className={styles.trial}>
-                                <a href="#" className={styles.getStarted}>Start For Free</a>
+                                <Link to="#" className={styles.getStarted}>Start For Free</Link>
                             </div>
                             <div className={styles.plans}>
-                                <a href="#">View All Plans</a>
+                                <Link to="#">View All Plans</Link>
                             </div>
                         </div>
                     </div>
@@ -207,14 +208,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={purpleShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2></h2>
+                                        {/* <h2></h2> */}
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={pinkGown} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2></h2>
+                                        {/* <h2></h2> */}
                                         <p></p>
                                     </div>
                                 </div>
@@ -228,14 +229,14 @@ function LandingPage(){
                                 <div className={styles.clientImg}>
                                     <img src={face} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2></h2>
+                                        {/* <h2></h2> */}
                                         <p></p>
                                     </div>
                                 </div>
                                 <div className={styles.clientImg}>
                                     <img src={yellowShirt} alt="" />
                                     <div className={styles.clientName}>
-                                        <h2></h2>
+                                        {/* <h2></h2> */}
                                         <p></p>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@
 .sideBarWrapper{
     position: relative;
     overflow: hidden;
-    width: 200px;
+    width: 220px;
     height: 100%;
     background-color: #039BE5;
 }
@@ -34,17 +34,17 @@
 }
 .navLinkWrapper .firstSectionLink a div:hover{
     padding-left: 40px;
-    margin-left: -20px;
+    margin-left: -30px;
     text-align: center;
-    width: 170px;
+    width: 180px;
     border-left: 3.5px solid #EC407A;
     background-color:  #64B5F6;
 }
-#firstSectionLink a .active{
+.active{
     /* padding-left: 40px;
-    margin-left: -20px;
+    margin-left: -30px;
     text-align: center;
-    width: 170px; */
+    width: 180px; */
     color: black;
     /* border-left: 3.5px solid #EC407A; */
     background-color:  #64B5F6;
@@ -78,7 +78,7 @@
     justify-content: space-between;
     height: 500px;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 @media screen and (max-width: 650px) {
     .sideBarWrapper{

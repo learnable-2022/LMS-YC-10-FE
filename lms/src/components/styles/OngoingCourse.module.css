@@ -50,6 +50,9 @@
     width: 400px;
     margin-top: 10px;
 }
+.buttonWrapper a{
+    text-decoration: none;
+}
 .btn1{
     border: none;
     background-color: #039BE5;

@@ -1,13 +1,14 @@
-import React, { useRef, useState, useEffect, useContext} from 'react'
+import React, { useRef, useState, useEffect} from 'react'
 import style  from './style.module.css'
 import axios from 'axios';
-import AuthContext from "../../../Utils/AuthProvider";
+// import AuthContext from "../../../Utils/AuthProvider";
 import Main from '../../main/Main';
 import { Link } from 'react-router-dom';
+// , useContext
 
 export default function Login() {
  
-  const { setAuth } = useContext(AuthContext);
+  // const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
@@ -48,10 +49,11 @@ const handleSubmit = (e) =>{
    }).then((response) =>{
     console.log(response);
 
-    setAuth({email, password});
+    // setAuth({email, password});
     setEmail("");
     setPassword("");
     setSuccess(true)
+    console.log(success)
    })
   }catch(error){
     console.log(error)
@@ -81,7 +83,7 @@ console.log(password, email)
     <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>
@@ -131,8 +133,8 @@ console.log(password, email)
               </div>
 
              <div className={style.GMbtns}>
-                <Link to="/"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/"><img src="./img/meta.svg" alt="Metamask" /></Link>
+                <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

@@ -18,7 +18,7 @@ return(
     <>
         <div className={styles.ongoingCourseWrapper}>
             <div>
-                <LmsHeader />
+                <LmsHeader  page='Course' />
             </div>
             <div>
             <div className={styles.courseDirectory}>

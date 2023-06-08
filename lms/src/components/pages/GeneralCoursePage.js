@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function GeneralCoursePage() {
   return (
     <div style={{ width: '100%', overflow: 'auto' }}>
-         <LmsHeader />
+         <LmsHeader  page='Course' />
          <div className={style.courseDirectory}>
               <div>
                   <Link to="/">

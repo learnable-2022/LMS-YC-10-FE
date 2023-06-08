@@ -16,7 +16,8 @@ function CoursePage() {
 return(
     <>
         <div>
-            <LmsHeader />
+            <LmsHeader page='Course' />
+            
             <div className={styles.courseHeaderWrapper}>
                 <div className={styles.bodyWrapper}>
                     <div>

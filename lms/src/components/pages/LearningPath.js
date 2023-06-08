@@ -10,7 +10,7 @@ export default function LearningPath() {
   return (
     <div  style={{ width: '100%', margin: '0px', padding: '0px' }}>
      
-        <LmsHeader />
+        <LmsHeader page='Course' />
        <div className={style.wrapper}>
           <div className={style.courseDirectory}>
               <div>
@@ -39,7 +39,7 @@ export default function LearningPath() {
             <div className={style.card_body}>
            <i> <AiOutlineMenu /></i>
             </div>
-            <div className={style.card_footer}>Add new course</div>
+            <div className={style.card_footer}>View selected courses</div>
         </div>
          {/* </Link> */}
        </div>

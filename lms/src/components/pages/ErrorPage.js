@@ -13,8 +13,8 @@ export default function ErrorPage(props){
     const goBack = () => {
         navigate(-1)
     }
-
-return(props.trigger)? (   
+    // props.trigger)? ( 
+return(  
     <>
        <div className={styles.errorPageWrapper}>
             <div className={styles.logoWrapper}>
@@ -28,5 +28,6 @@ return(props.trigger)? (
         </div>
         {props.children}
     </>
-) : "";
+)
+// ) : "";
 } 

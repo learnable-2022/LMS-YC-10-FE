@@ -8,10 +8,10 @@ import styles from "./SideBar.module.css"
 import Logo from "../images/LogoWhite.png"; 
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlinePieChart } from 'react-icons/ai';
-import ErrorPage from '../pages/ErrorPage';
+// import ErrorPage from '../pages/ErrorPage';
 // import styles from "../styles/ErrorPage.module.css";
-import pana from "../images/pana.png";
-import logo from "../images/Logo.png"
+// import pana from "../images/pana.png";
+// import logo from "../images/Logo.png"
 
 
 function SideBar(){
@@ -23,7 +23,7 @@ function SideBar(){
 return(
     <>
         <div className={styles.sideBarWrapper}>
-        <ErrorPage trigger={showError}>
+        {/* <ErrorPage trigger={showError}>
         <div className={styles.errorPageWrapper}>
             <div className={styles.logoWrapper}>
                 <img src={logo} alt="logo" />
@@ -34,7 +34,7 @@ return(
                 <button onClick={handleClick}>Back</button>
             </div>
         </div>
-        </ErrorPage>
+        </ErrorPage> */}
 
             <div className={styles.logo}>
                 <img src={Logo} alt="Logo" />

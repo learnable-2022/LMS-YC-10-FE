@@ -9,7 +9,7 @@ import LearningPath from "../pages/LearningPath";
 import GeneralCoursePage from "../pages/GeneralCoursePage";
 import Quiz from "../pages/Quiz";
 import QuizStart from "../pages/QuizStart";
-
+import ErrorPage from "../pages/ErrorPage"
 import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
 
@@ -19,7 +19,7 @@ function Main(){
 return(
     <>
         <div className={styles.main}>
-            
+            <Route path="*" element={<ErrorPage />} />
                 <div className={styles.sideBarWrapper}>
                     <div className={styles.sideBar}>
                         <SideBar />

@@ -9,6 +9,7 @@ import Login from './components/pages/register/Login'
 import ForgotPassword from './components/pages/register/ForgotPassword'
 import CreateNewPassword from './components/pages/register/CreateNewPassword'
 import ContactUs from './components/pages/ContactUs';
+import ErrorPage from "./components/pages/ErrorPage";
 // import PopUp from "./components/popUpSideBar/PopUp";
 
 
@@ -20,9 +21,7 @@ function App() {
       if (isLoggedIn) {
         return (
           <div className="App">
-            {/* <PopUp /> */}
          <Main />
-          {/* <ErrorPage /> */}
          </div>
         );
       }
@@ -32,7 +31,7 @@ function App() {
 
            
         <Routes>
-          {/* <Route index element={} /> */}
+          <Route index element={<ErrorPage />} />
           <Route path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
           <Route path="/signup" element={<SignUp />} />

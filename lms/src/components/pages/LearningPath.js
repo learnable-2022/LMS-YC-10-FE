@@ -34,7 +34,17 @@ export default function LearningPath() {
                 <div className={style.card_footer}>Add new course</div>  
             </Link>
             </div>
-            <div className={style.card_footer}>View selected courses</div>
+
+           
+            <div className={style.card}>
+            <Link to="/courses" style={{ textDecoration: 'none' }} > 
+                  <div className={style.card_body}>
+                      <i><AiOutlineMenu /></i>
+                  </div>
+                <div className={style.card_footer}>View selected courses</div>  
+            </Link>
+            </div>
+
         </div>
        </div>
     </div>

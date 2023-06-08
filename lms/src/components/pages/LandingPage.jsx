@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "react-overlays/Modal";
+// import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'

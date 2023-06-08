@@ -25,8 +25,8 @@ return(
                 <div className={styles.mainBody}>
                     <Routes>
                        
-                       <Route path="/" element={<Dashboard />}>
-                           <Route path='/dashboard' element={<Dashboard/>}/>
+                       <Route index path="/" element={<Dashboard />}>
+                           {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
                        </Route>
                         <Route path='/learningpath' element={<LearningPath />}/>
                         <Route path='/courses' element={<GeneralCoursePage />}/>

@@ -159,10 +159,11 @@
     }
 }
 
-/* 
+
 .sideBarWrapper{
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 220px;
     height: 100vh;
     background-color: #039BE5;
@@ -170,6 +171,14 @@
 .popheaderWrapper{
     display: flex;
     align-items: last baseline;
+}
+.cancelWrapper i{
+    margin-top: 5px;
+    font-size: 26px;
+    color: white;
+}
+.cancelWrapper i:hover{
+    cursor: pointer;
 }
 .sideBarWrapper .logo{
     display: flex;
@@ -180,13 +189,6 @@
 }
 .sideBarWrapper .logo img{
     width: 120px;
-}
-.cancelWrapper i{
-    font-size: 28px;
-    color: white;
-}
-.cancelWrapper i:hover{
-    cursor: pointer;
 }
 .sideBarWrapper div a{
     text-decoration: none;
@@ -210,15 +212,15 @@
     background-color:  #64B5F6;
 }
 .active{
-    padding-left: 40px;
+    /* padding-left: 40px;
     margin-left: -30px;
     text-align: center;
-    width: 180px;
+    width: 180px; */
     color: black;
-    border-left: 3.5px solid #EC407A;
+    /* border-left: 3.5px solid #EC407A; */
     background-color:  #64B5F6;
-} */
-/* .sideBarWrapper div a i{
+}
+.sideBarWrapper div a i{
     color: white;
     margin: 5px 8px 0px 0px;
 }
@@ -245,7 +247,7 @@
     height: 400px;
     margin-top: 10px;
     margin-left: 30px;
-} */
+}
 /* @media screen and (max-width: 650px) {
     .sideBarWrapper{
         overflow-x: hidden;

@@ -1,31 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LmsHeader.module.css";
 import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
-import SideBar from "../sideBar/SideBar";
-// import PopUp from "../popUpSideBar/PopUp";
-// import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
-// import { MdOutlineAssignment } from "react-icons/md";
-// import { FaBook } from "react-icons/fa";
-// import { VscHome } from "react-icons/vsc";
-// import { FiLogIn } from "react-icons/fi";
-// import Logo from "../images/LogoWhite.png"; 
-// import { NavLink, Link} from "react-router-dom";
-// , useNavigate 
-// onClick={handleClick}
+// import SideBar from "../sideBar/SideBar";
+import PopUp from "../popUpSideBar/PopUp";
+import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineAssignment,  MdOutlineClose } from "react-icons/md";
+import { FaBook } from "react-icons/fa";
+import { VscHome } from "react-icons/vsc";
+import { FiLogIn } from "react-icons/fi";
+import Logo from "../images/LogoWhite.png"; 
+import { NavLink, Link} from "react-router-dom";
+
 
 function LmsHeader({page}){
 
+    const [showBar, setShowBar] = useState(false)
+
     const showSideBar = () =>{
-        return(
-            <>
-                 <div className={styles.sideBarShow}>
-                    <SideBar />
-                 </div>
-            </>
-        )
+        setShowBar(!showBar)
     }
 return(
     <>
@@ -65,11 +60,14 @@ return(
                     </div>
                 </div>
             </div>
-            {/* <PopUp trigger={false}>
+            <PopUp trigger={showBar}>
         <div className={styles.sideBarWrapper}>
             <div className={styles.popheaderWrapper}>
                 <div className={styles.logo}>
                     <img src={Logo} alt="Logo" />
+                </div>
+                <div className={styles.cancelWrapper}>
+                <i onClick={showSideBar}><MdOutlineClose /></i>
                 </div>
             </div>
             <div className={styles.navLinkWrapper}>
@@ -111,7 +109,7 @@ return(
                 </div>
             </div>
         </div>
-        </PopUp> */}
+        </PopUp>
         </div>
         
     </>

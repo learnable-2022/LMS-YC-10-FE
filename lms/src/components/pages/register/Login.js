@@ -1,19 +1,15 @@
-import React, { useRef, useState, useEffect} from 'react'
-import style  from './style.module.css'
+import React, { useRef, useState, useEffect} from 'react';
+import style  from './style.module.css';
 import axios from 'axios';
-// import AuthContext from "../../../Utils/AuthProvider";
 import Main from '../../main/Main';
 import { Link } from 'react-router-dom';
-// , useContext
 
 export default function Login() {
  
-  // const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
-  // const [user, setUser] = useState('');
-  // const [pwd, setPwd] = useState('');
+
 
 
   const [email, setEmail] = useState("");
@@ -48,12 +44,11 @@ const handleSubmit = (e) =>{
     }
    }).then((response) =>{
     console.log(response);
-
-    // setAuth({email, password});
+    const token = response.data.token
+    localStorage.setItem('token', token)
     setEmail("");
     setPassword("");
     setSuccess(true)
-    console.log(success)
    })
   }catch(error){
     console.log(error)

@@ -20,6 +20,7 @@ function LmsHeader({page}){
             </>
         )
     }
+    
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>

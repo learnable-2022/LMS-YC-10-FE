@@ -13,7 +13,7 @@ import ContactUs from './components/pages/ContactUs';
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
  
 

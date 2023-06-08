@@ -10,7 +10,7 @@
     flex-direction: column;
 }
 
-header{
+.container header{
     float: left;
     width: 163.98px;
     margin-left: 20px;

@@ -1,22 +1,14 @@
 import React, { useState } from 'react'
 import style  from './style.module.css'
 import { AiFillCheckCircle } from 'react-icons/ai';
-// import { useNavigate } from 'react-router-dom';
+
 
 export default function AccountType() {
-  // const navigate = useNavigate();
+ 
   const [accountType, setAccountType] = useState();
   const [iconTutor, setIconTutor] = useState(false);
   const [iconStudent, setIconStudent] = useState(false);
- 
- const handleStudent = () => {
-  
-    // e.preventDefault();
-    setIconStudent(true);
-    // navigate('/SignUp')
 
- }
- 
   return (
     <div className={style.container}>
 

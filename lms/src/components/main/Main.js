@@ -19,7 +19,9 @@ function Main(){
 return(
     <>
         <div className={styles.main}>
-            <Route path="*" element={<ErrorPage />} />
+            <Routes>
+            <Route path="/error" element={<ErrorPage />} />
+            </Routes>
                 <div className={styles.sideBarWrapper}>
                     <div className={styles.sideBar}>
                         <SideBar />
@@ -28,17 +30,10 @@ return(
                 <div className={styles.mainBody}>
                     <Routes>
                        
-                       <Route index path="/" element={<Dashboard />}>
-                           {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
-                       </Route>
+                        <Route index path='/dashboard' element={<Dashboard/>}/>
                         <Route path='/learningpath' element={<LearningPath />}/>
                         <Route path='/courses' element={<GeneralCoursePage />}/>
                         <Route path='/coursepage' element={<CoursePage/>} />
-                        {/* <Route path='/calender' element={<Signup/>}/> */}
-                        {/* <Route path='/certificate' element={<Certificate/>}/> */}
-                        {/* <Route path='/webinars' element={<Signup/>}/> */}
-                        {/* <Route path='/progressbar' element={<Signup/>}/> */}
-                        {/* <Route path='/assignment' element={<Signup/>}/> */}
                         <Route path='/quiz' element={<Quiz/>}/>
                         <Route path='/quiz/quizstart' element={<QuizStart/>}/>
                         <Route path='/assignment' element={<Assignment/>}/>

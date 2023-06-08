@@ -16,8 +16,8 @@ return(
                     <div className={styles.navBarWrapper}>
                         <div className={styles.navBarWrapper}>
                             <li><Link to="/">Home</Link></li>
-                            <li><Link to="/termsofuse">Features</Link></li>
-                            <li><Link to="https://df">Pricing</Link></li>
+                            <li><Link to="/error">Features</Link></li>
+                            <li><Link to="/error">Pricing</Link></li>
                             <li><Link to="/contactus">Contact Us</Link></li>
                         </div>
                         <div className={styles.navBtn}>

@@ -15,11 +15,11 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 
 
 function SideBar(){
-    const [showError, setShowError] = useState(false)
-    const handleClick = () =>{
-        setShowError(!showError)
-        return 
-    }
+    // const [showError, setShowError] = useState(false)
+    // const handleClick = () =>{
+    //     setShowError(!showError)
+    //     return 
+    // }
 return(
     <>
         <div className={styles.sideBarWrapper}>
@@ -56,7 +56,7 @@ return(
                         <i><MdOutlineAssignment /></i><p>Assignments</p>
                         </div>
                     </NavLink>
-                    <NavLink onClick={handleClick}>
+                    <NavLink to="/error">
                         <div>
                             <i><AiOutlinePieChart /></i>
                             <p>Progress Report</p>

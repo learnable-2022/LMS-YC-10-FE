@@ -14,7 +14,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
  
 
@@ -31,14 +31,14 @@ function App() {
 
            
         <Routes>
-          <Route index element={<ErrorPage />} />
-          <Route path="/" element={ <LandingPage />} />
+          <Route index path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/createnewpassword" element={<CreateNewPassword />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route  path="/error" element={<ErrorPage />} />
 
 
           {/* <Route path="*" element={} /> */}

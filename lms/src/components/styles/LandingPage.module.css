@@ -1,33 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
-*{
-  font-family: 'Mada';
-}
-
-.landing{
-  display: flex;
-}
 .navContainer{
   width: 100%;
   position: fixed;
 
 }
-
 /* HERO STARTS HERE */
 .wrapper{
   display: flex;
   flex-direction: column;
   background-color: #E3F2FD;
-  padding-top: 120px;
-  padding-left: 60px;
-  padding-bottom: 120px;
+  width: 100%;
+  height: 700px;
 }
 .heroContainer{
   display: flex;
-  align-items: center;
+  height: 700px;
+  align-items:  center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 50px;
 }
 .text h1{
   font-weight: 800;
-  font-size: 56px;
+  font-size: 50px;
   width: 600px;
   text-align: left;
   letter-spacing: 0.01em;
@@ -37,11 +32,13 @@
   text-align: left;
 }
 .heroImg img{
-  width: 430px;
+  width: 410px;
 }
 .getStartedExplore{
   display: flex;
-  justify-content: left;
+  justify-content: end;
+  width: 38.5%;
+  padding-bottom: 100px;
 }
 .getStartedExplore a{
   text-align: center;
@@ -86,7 +83,6 @@
 }
 /* HERO SECTION END */
 
-
 /* PARTNERS SECTION BEGINS */
 .partnerWrapper{
   margin: 120px 100px;
@@ -123,6 +119,7 @@
 .coursesWrapper{
   display: flex;
   text-align: center;
+  gap: 30px;
   justify-content: space-between;
 }
 .coursesWrapper p{
@@ -175,26 +172,50 @@
   margin-top: 20px;
 }
 
-trial section starts
+/* trial section starts */
 .potentialWrapper{
-  padding: 60px 100px;
+  width: 76%;
 }
-.potentialContainer h1{
+.potentialContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
   font-weight: 700;
-  font-size: 64px;
-  line-height: 83px;
-  letter-spacing: 0.01em;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: left;
+  margin-bottom: 40px;
 }
-.potentialContainer p{
-  font-weight: 400;
-  font-size: 32px;
+.unlockTextWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.unlockPWrapper{
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.unlockPWrapper p{
+  font-weight: 500;
+  font-size: 18px;
   line-height: 41px;
-  padding-right: 15px;
+  width: 710px;
 }
 .trialPlans{
   display: flex;
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .trial{
   text-align: center;
@@ -221,21 +242,16 @@ trial section starts
 .provisionWrapper{
   margin: 60px 100px;
 }
-.provisionContainer h1{
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 83px;
-}
 .provisions{
   display: flex;
+  gap: 10px;
   justify-content: space-between;
-
 }
 .provisionContent{
   display: flex;
   border: 1px solid #555555;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
   gap: 10px;
 }
 .provisionImg{
@@ -243,11 +259,18 @@ trial section starts
   margin-top: auto;
   margin-bottom: auto;
 }
+.provisionImg img{
+  width: 100px;
+}
 .provisionText h5{
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 31px;
   margin-bottom: 7px;
+}
+.provisionText p{
+  font-weight: 500;
+  font-size: 16px;
 }
 /* PROVISION SECTION ENDS */
 
@@ -256,11 +279,6 @@ trial section starts
 .clientsWrapper{
   padding: 60px 90px;
   background: #FCE4EC;
-}
-.clientsContainer h1{
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 83px;
 }
 .clientcomment{
   background-color: white;
@@ -271,8 +289,8 @@ trial section starts
   margin: auto;
 }
 .clientcomment p{
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 19px;
   line-height: 31px;
 
 }
@@ -318,3 +336,63 @@ trial section starts
   border-radius: 100%;
 }
 
+@media screen and (max-width: 650px) {
+  .heroContainer{
+    width: 100%;
+  }
+  .text h1{
+    font-weight: 800;
+    font-size: 26px;
+    width: 330px;
+  }
+  .text p{
+    font-size: 16px;
+    width: 350px;
+  }
+  .heroImg img{
+    width: 200px;
+  }
+  .getStartedExplore{
+    width: 50%;
+  }
+  .getStarted{
+    width: 90px;
+    height: 10px;
+    font-size: 11px;
+    font-weight: 699;
+  }
+  .explore{
+    width: 110px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: 699;
+    padding: 0px 5px;
+  }
+  .partnerWrapper h1, .coursesSection h1{
+    font-size: 30px;
+  }
+  .partners img{
+    width: 50px;
+  }
+  .genesys img{
+    width: 80px;
+  }
+  .codevile img{
+    width: 80px;
+  }
+  .leanrable img{
+    width: 70px;
+  }
+  .tenece img{
+    width: 70px;
+  }
+  .coursesWrapper{
+    gap: 10px;
+  }
+  .coursesWrapper p{
+    font-size: 12px;
+  }
+  .coursesWrapper h4{
+    font-size: 11px;
+  }
+}

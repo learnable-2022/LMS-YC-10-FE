@@ -1,6 +1,4 @@
 import React from "react";
-// , { useState }
-// import Modal from "react-overlays/Modal";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
 import genesysLogo from '../images/genesysLogo.svg'
@@ -8,7 +6,6 @@ import codevilleLogo from '../images/codevilleLogo.svg'
 import learnableLogo from '../images/learnableLogo.svg'
 import teneceLogo from '../images/teneceLogo.svg'
 import emblem from '../images/emblem.svg'
-// import kidLogo from '../images/kidsLogo.svg'
 import webCourse from '../images/webCourse.svg'
 import roboticsCourse from '../images/roboticsCourse.svg'
 import uiCourse from '../images/uiCourse.svg'
@@ -22,9 +19,6 @@ import yellowShirt from '../images/yellowShirt.svg'
 import pinkGown from '../images/pinkGown.svg'
 import purpleShirt from '../images/purpleShirt.svg'
 import redShirt from '../images/redShirt.svg'
-// import thankyou from '../images/thankyou.svg'
-// import { Link } from 'react-router-dom'
-// import AboutUs from '../pages/AboutUsPage.js'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
@@ -34,10 +28,7 @@ import { Link } from "react-router-dom";
 
 function LandingPage(){
     
-    // const [showModal, setShowModal] = useState(false);
-    // const renderBackdrop = (props) => <div className="backdrop" {...props} />;
 
-    // var handleClose = () => setShowModal(false);
   
     return (
         <div>
@@ -62,12 +53,12 @@ function LandingPage(){
                         </div>
                     </div>
                     <div className={styles.getStartedExplore}>
-                        <Link to="#" className={styles.getStarted}>Get Started</Link>
-                        <Link to="#" className={styles.explore}>Explore Courses</Link>
+                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
+                        <Link to="/error" className={styles.explore}>Explore Courses</Link>
                     </div>
                 </div>
                 <div className={styles.partnerWrapper}>
-                    <h1>OUR PARTNERS</h1>
+                    <h1>Our Partners</h1>
                     <div className={styles.partners}>
                         <div className={styles.genesys}>
                             <img src={genesysLogo} alt="" />
@@ -129,6 +120,10 @@ function LandingPage(){
                 <div className={styles.potentialWrapper}>
                     <div className={styles.potentialContainer}>
                         <h1>Unlock Your Teaching Potentials</h1>
+                    </div>
+                </div>
+                <div className={styles.unlockTextWrapper}>
+                    <div className={styles.unlockPWrapper}>
                         <p>Easily upload and manage
                             your courses for free, engage with students,
                             and track your progress. Join our community 
@@ -136,10 +131,10 @@ function LandingPage(){
                             start sharing your expertise with the world!</p>
                         <div className={styles.trialPlans}>
                             <div className={styles.trial}>
-                                <Link to="#" className={styles.getStarted}>Start For Free</Link>
+                                <Link to="/login" className={styles.getStarted}>Start For Free</Link>
                             </div>
                             <div className={styles.plans}>
-                                <Link to="#">View All Plans</Link>
+                                <Link to="/error">View All Plans</Link>
                             </div>
                         </div>
                     </div>

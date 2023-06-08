@@ -7,14 +7,11 @@ import styles from "./Main.module.css";
 import OngoingCourse from "../pages/OngoingCoursePage";
 import LearningPath from "../pages/LearningPath";
 import GeneralCoursePage from "../pages/GeneralCoursePage";
-<<<<<<< HEAD
 import Quiz from "../pages/Quiz";
 import QuizStart from "../pages/QuizStart";
 
-=======
 import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
->>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
 
 
 
@@ -39,13 +36,10 @@ return(
                         {/* <Route path='/certificate' element={<Certificate/>}/> */}
                         {/* <Route path='/webinars' element={<Signup/>}/> */}
                         {/* <Route path='/progressbar' element={<Signup/>}/> */}
-<<<<<<< HEAD
                         {/* <Route path='/assignment' element={<Signup/>}/> */}
                         <Route path='/quiz' element={<Quiz/>}/>
                         <Route path='/quiz/quizstart' element={<QuizStart/>}/>
-=======
                         <Route path='/assignment' element={<Assignment/>}/>
->>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
                         <Route path='/settings' element={<SettingsPage/>}/>
                         <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
                     </Routes>

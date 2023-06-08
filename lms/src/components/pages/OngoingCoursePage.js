@@ -17,17 +17,10 @@ function OngoingCourse () {
     // console.log({src})
     // console.log(`${id} ${src}`)
 return(
-<<<<<<< HEAD
-    <>
-        <div className={styles.ongoingCourseWrapper}>
-            <div>
-                <LmsHeader  page='Course' />
-=======
     <>                
         <div className={styles.ongoingCourse}>
             <div className={styles.ongoingCourseHeader}>
                 <LmsHeader />
->>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
             </div>
             <div className={styles.ongoingCourseWrapper}>
                 <div>

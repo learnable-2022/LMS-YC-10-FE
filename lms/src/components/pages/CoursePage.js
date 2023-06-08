@@ -11,20 +11,12 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function CoursePage() {
 return(
     <>
-<<<<<<< HEAD
-        <div>
-            <LmsHeader page='Course' />
-            
-            <div className={styles.courseHeaderWrapper}>
-                <div className={styles.bodyWrapper}>
-=======
     <div className={mystyles.coursePageWrapper}>
         <div className={mystyles.courseLmsHeader}>
             <LmsHeader page="Courses"/>
         </div>
             <div className={mystyles.courseHeaderWrapper}>
                 <div className={mystyles.bodyWrapper}>
->>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
                     <div>
                         <div className={mystyles.courseDirectory}>
                             <div>

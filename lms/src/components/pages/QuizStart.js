@@ -122,7 +122,9 @@ export default function QuizStart() {
         <div className={styles.bodyWrapper}>
             <div className={styles.quizContainer}>
             {showScore ? (
+               
 				<div className={styles.scoreSection}>
+                
                     <img src={star} alt="" />
                     <h1 styles={{ display: 'block' }} >Congratulations</h1>
                     <p>You have succesfuly completed your quiz and earned a badge</p>

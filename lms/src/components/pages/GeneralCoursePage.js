@@ -8,17 +8,6 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function GeneralCoursePage() {
   return (
-<<<<<<< HEAD
-    <div style={{ width: '100%', overflow: 'auto' }}>
-         <LmsHeader  page='Course' />
-         <div className={style.courseDirectory}>
-              <div>
-                  <Link to="/">
-                      <p >Course</p>
-                      <i><IoIosArrowForward /></i>
-                  </Link>
-              </div>
-=======
     <div className={style.generalCourseWrapper}>
         <div className={style.generalLmsHeader}>
             <LmsHeader page="Courses"/>
@@ -31,7 +20,6 @@ export default function GeneralCoursePage() {
                         <i><IoIosArrowForward /></i>
                     </Link>
                 </div>
->>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
 
                 <div>
                     <Link to="/courses">

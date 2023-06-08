@@ -14,7 +14,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
  
 

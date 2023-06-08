@@ -12,6 +12,7 @@ import QuizStart from "../pages/QuizStart";
 import ErrorPage from "../pages/ErrorPage"
 import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
+import Certificate from "../pages/Certificate";
 
 
 
@@ -38,6 +39,7 @@ return(
                         <Route path='/quiz/quizstart' element={<QuizStart/>}/>
                         <Route path='/assignment' element={<Assignment/>}/>
                         <Route path='/settings' element={<SettingsPage/>}/>
+                        <Route path='/certificate' element={<Certificate/>}/>
                         <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
                     </Routes>
                 </div>

@@ -353,7 +353,7 @@
     width: 200px;
   }
   .getStartedExplore{
-    width: 50%;
+    width: 47%;
   }
   .getStarted{
     width: 90px;
@@ -368,8 +368,8 @@
     font-weight: 699;
     padding: 0px 5px;
   }
-  .partnerWrapper h1, .coursesSection h1{
-    font-size: 30px;
+  .partnerWrapper h1, .coursesSection h1, .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
+    font-size: 22px;
   }
   .partners img{
     width: 50px;
@@ -395,4 +395,5 @@
   .coursesWrapper h4{
     font-size: 11px;
   }
+
 }

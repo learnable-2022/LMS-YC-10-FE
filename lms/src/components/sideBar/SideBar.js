@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 import { FaBook } from "react-icons/fa";

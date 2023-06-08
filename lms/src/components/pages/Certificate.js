@@ -13,23 +13,14 @@ function Certificate() {
   return (
     <div className={style.certificateWrapper}>
         <div className={style.certificateHeaderWrapper}>
-            <LmsHeader />
+            <LmsHeader page="Certificate"/>
         </div>
-        <div className={style.certificateBodyWrapper}>
+        <div className={style.certMain}>
+            <div className={style.certificateBodyWrapper}>
             <div className={style.cert}>
                 <img src={certificate} alt='' />
-                <div className={style.issued}>
-                    <div>
-                        <h5>Issued Date</h5>
-                        <p></p>
-                    </div>
-                    <div>
-                        <h5>Issued By</h5>
-                        <p></p>
-                    </div>
-                </div>
             </div>
-            <div>
+            <div className={style.downloadWrapper}>
                 <div>
                     <img src={pdf} alt='pdf' />
                 </div>
@@ -40,6 +31,17 @@ function Certificate() {
                     <img src={jpg} alt='jpg' />
                 </div>
             </div>
+        </div>
+        <div className={style.issuedWrapper}>
+                <div className={style.issued}>
+                    <h3>Issued Date</h3>
+                    <p>May 16, 2023</p>
+                </div>
+                <div>
+                    <h3>Issued By</h3>
+                    <p>kidtots Organisation</p>
+                </div>
+        </div>
         </div>
     </div>
   )

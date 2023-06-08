@@ -22,6 +22,7 @@ function LmsHeader({page}){
     const showSideBar = () =>{
         setShowBar(!showBar)
     }
+    
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>

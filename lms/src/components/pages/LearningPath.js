@@ -34,16 +34,7 @@ export default function LearningPath() {
                 <div className={style.card_footer}>Add new course</div>  
             </Link>
             </div>
-            
-
-          {/* <Link to="/courses"> */}
-          <div className={style.card}>
-              <div className={style.card_body}>
-            <i> <AiOutlineMenu /></i>
-              </div>
-              <div className={style.card_footer}>View Selected Courses</div>
-          </div>
-          {/* </Link> */}
+            <div className={style.card_footer}>View selected courses</div>
         </div>
        </div>
     </div>

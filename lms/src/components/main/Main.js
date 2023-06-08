@@ -7,6 +7,9 @@ import styles from "./Main.module.css";
 import OngoingCourse from "../pages/OngoingCoursePage";
 import LearningPath from "../pages/LearningPath";
 import GeneralCoursePage from "../pages/GeneralCoursePage";
+import Quiz from "../pages/Quiz";
+import QuizStart from "../pages/QuizStart";
+
 import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
 
@@ -32,9 +35,12 @@ return(
                         <Route path='/courses' element={<GeneralCoursePage />}/>
                         <Route path='/coursepage' element={<CoursePage/>} />
                         {/* <Route path='/calender' element={<Signup/>}/> */}
-                        {/* <Route path='/classgroup' element={<Signup/>}/> */}
+                        {/* <Route path='/certificate' element={<Certificate/>}/> */}
                         {/* <Route path='/webinars' element={<Signup/>}/> */}
                         {/* <Route path='/progressbar' element={<Signup/>}/> */}
+                        {/* <Route path='/assignment' element={<Signup/>}/> */}
+                        <Route path='/quiz' element={<Quiz/>}/>
+                        <Route path='/quiz/quizstart' element={<QuizStart/>}/>
                         <Route path='/assignment' element={<Assignment/>}/>
                         <Route path='/settings' element={<SettingsPage/>}/>
                         <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />

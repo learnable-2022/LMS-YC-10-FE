@@ -4,13 +4,20 @@
 }
 *::-webkit-scrollbar{
     display: none;
-  }
+}
+.coursePageWrapper{
+    width: 84%;
+}
+.courseLmsHeader{
+    width: 100%;
+    margin-left: -41px;
+}
 .courseHeaderWrapper{
     display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 49px;
     height: 100%;
     max-height: 100%;
 }
@@ -36,7 +43,14 @@
     color:  #039BE5;
 }
 @media screen and (max-width: 650px) {
+
+    .coursePageWrapper{
+        width: 100%;
+    }
+    .courseLmsHeader{
+        margin: 0px;
+    }
     .courseHeaderWrapper{
-        margin-left: 18px;
+        margin-left: 25px;
     }
 }

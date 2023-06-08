@@ -4,22 +4,39 @@ import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
-import  menuIcon  from "../images/menuIcon.svg"
+import SideBar from "../sideBar/SideBar";
 
 
 
 
+<<<<<<< HEAD
 function LmsHeader({ page }){
+=======
+function LmsHeader({page}){
+
+    const showSideBar = () =>{
+        return(
+            <>
+                 <div className={styles.sideBarShow}>
+                    <SideBar />
+                 </div>
+            </>
+        )
+    }
+>>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
             <div className={styles.courseHeader}>
                 <div className={styles.responsiveTag}>
-                    <div className={styles.menuIcon}></div>
+                    <div className={styles.menuIcon}><button onClick={showSideBar}></button></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
                 <h1 className={styles.headerText}>{page}</h1>
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 633050b0e87437c28b52280e5d02f40c2f23d1b3
                 <div className={styles.courseInputWrapper}>
                     <div className={styles.courseSearchInput}>
                         <i><CiSearch /></i>

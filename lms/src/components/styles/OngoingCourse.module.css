@@ -1,3 +1,6 @@
+.ongoingCourse{
+    width: 80%;
+}
 .ongoingCourseWrapper{
     margin-left: 40px;
 }
@@ -16,9 +19,9 @@
 .active{
     color:  #039BE5;
 }
-.bodyWrapper{
+.courseBodyWrapper{
     display: flex;
-    width: 104%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
@@ -128,7 +131,6 @@
 }
 .progressBar details summary::after{
     content: "ᨆ";
-    /* margin-left: 50px; */
 }
 .progressBar details summary{
     display: flex;
@@ -136,4 +138,23 @@
     justify-content: space-between;
     width: 235px;
     font-weight: 550;
+}
+@media screen and (max-width: 650px) {
+    .ongoingCourse{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .ongoingCourseHeader{
+        width: 150%;
+    }
+    .progressBar{
+        display: none;
+    }
+    .courseBodyWrapper video{
+        width: 85vw;
+    }
+    .courseVideoWrapper{
+        display: flex;
+        justify-content: start;
+    }
 }

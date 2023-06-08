@@ -32,6 +32,13 @@
     width: 99%;
     justify-content: space-between;
 }
+.thirdIconWrapper hr{
+    width: 0.42px;
+    height: 26px;
+    border-radius: 12px;
+    border: 0.1px solid black;
+    background-color: black;
+}
 .fourthWrapper{
     display: flex;
     align-items: center;
@@ -114,6 +121,7 @@
    }
    .fourthWrapper img{
         width: 30px;
+        margin-bottom: 20px;
    }
    .lmsHeaderWrapper i{
         margin-bottom: 15px;
@@ -125,9 +133,6 @@
         border: 0.1px solid white;
         border-radius: 12px;
         background-color: white;
-   }
-   .fourthWrapper img{
-        margin-bottom: 20px;
    }
    .menuIcon{
         width: 20px;
@@ -149,47 +154,7 @@
         justify-content: space-between;
         width: 100%;
     }
-    /* .courseBody{
-        overflow-x: hidden;
+    .sideBarShow{
+        position: absolute;
     }
-    .courseHeader{
-        width: 68%;
-    }
-    .bodyWrapper{
-        width: 80%;
-    }
-    .courseInputWrapper{
-        width: 68%;
-    }
-    .headerIcons{
-        width: 18%;
-    }
-    .secondIconWrapper{
-        width: 42%;
-    }
-    .thirdIconWrapper{
-        width: 99%;
-    }
-    .fourthWrapper{
-        width: 15%;
-    }
-    .userProfileWrapper{
-        width: 50%;  
-    }
-    .courseSearchInput input{
-        width: 200px;
-        height: 25px;
-    }
-    .courseSearchInput input::placeholder{
-        font-size: 11.5px;
-    }
-    .courseSearchInput{
-        width: 210px;
-    }
-    .userProfileName{
-        font-size: 13px;
-    }
-    .userProfileDiv{
-        font-size: 11px;
-    } */
 }

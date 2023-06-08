@@ -1,10 +1,83 @@
-import React from 'react'
+import React, { useRef, useState, useEffect, useContext} from 'react'
 import style  from './style.module.css'
-import { AiOutlineMail } from 'react-icons/ai';
+import axios from 'axios';
+import AuthContext from "../../../Utils/AuthProvider";
+import Main from '../../main/Main';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
  
+  const { setAuth } = useContext(AuthContext);
+  const userRef = useRef();
+  const errRef = useRef();
+
+  // const [user, setUser] = useState('');
+  // const [pwd, setPwd] = useState('');
+
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errMsg, setErrMsg] = useState('');
+  const [success, setSuccess] = useState(false);
+
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    useEffect(() => {
+        setErrMsg('');
+    }, [email, password])
+
+
+const handleSubmit = (e) =>{
+  e.preventDefault();
+  const data = {
+    email: email,
+    password: password,
+  }
+
+  const url = "https://kidtots.onrender.com/student/sign"
+
+  try{
+  axios.post(url, data, {
+    headers:{
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+   }).then((response) =>{
+    console.log(response);
+
+    setAuth({email, password});
+    setEmail("");
+    setPassword("");
+    setSuccess(true)
+   })
+  }catch(error){
+    console.log(error)
+    if (!error?.response) {
+      setErrMsg('No Server Response');
+  } else if (error.response?.status === 400) {
+      setErrMsg('Missing Username or Password');
+  } else if (error.response?.status === 401) {
+      setErrMsg('Unauthorized');
+  } else {
+      setErrMsg('Login Failed');
+  }
+  errRef.current.focus();
+  }
+
+}
+console.log(password, email)
+
+
   return (
+    <>
+      { success ?(
+        <div>
+          <Main />
+        </div>
+      ):(
     <div className={style.container}>
 
         <header className={style.header}>
@@ -17,12 +90,20 @@ export default function Login() {
 
             <p>Sign in with your email address used in joining the organisaton</p>
 
-            <form action="" className={style.signUpform}>
+            <form className={style.signUpform} onSubmit={handleSubmit}>
             
-            <input type="email" name='email' placeholder='Email' required />
+            <input type="email" name='email' placeholder='Email' 
+            value={email} required 
+            onChange={(e) => setEmail(e.target.value)}
+            ref={userRef}
+            autoComplete="off"
+            />
 
 
-            <input type="password" name='password' placeholder='Password' required />
+            <input type="password" name='password' placeholder='Password'
+             value={password} 
+             required 
+             onChange={(e) => setPassword(e.target.value)}/>
 
             <div className={style.fgPwdRPwsd} >
 
@@ -46,12 +127,12 @@ export default function Login() {
               </div>
 
               <div className={style.loginDiv}>
-              <p>Don't have an account? <a href="/accounttype">Sign up</a></p>
+              <p>Don't have an account? <Link to="/accounttype">Sign up</Link></p>
               </div>
 
              <div className={style.GMbtns}>
-                <a href=""><img src="./img/google1.png" alt="Google" /></a>
-                <a href=""><img src="./img/meta.svg" alt="Metamask" /></a>
+                <Link to="/"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>
@@ -65,6 +146,9 @@ export default function Login() {
                 
                 <img  src="./img/Vector-3.png" alt="" />
         </div>
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     </div>
+      )}
+    </>
   )
 }

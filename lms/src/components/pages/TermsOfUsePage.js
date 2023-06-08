@@ -11,7 +11,7 @@ return(
             <div>
                 <Header />
             </div>
-            <div>
+            <div className={styles.termsWrapper}>
                 <h1>Terms Of Use</h1>
                 <div className={styles.bodyWrapper}>
                 <div className={styles.body}>

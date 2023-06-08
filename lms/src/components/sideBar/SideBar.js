@@ -1,12 +1,12 @@
 import React from "react";
-import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5"
-import { MdOutlineAssignment } from "react-icons/md"
-import { FaBook } from "react-icons/fa"
-import { VscHome } from "react-icons/vsc"
-import { FiLogIn } from "react-icons/fi"
+import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineAssignment } from "react-icons/md";
+import { FaBook } from "react-icons/fa";
+import { VscHome } from "react-icons/vsc";
+import { FiLogIn } from "react-icons/fi";
 import styles from "../sideBar/SideBar.module.css"
 import Logo from "../images/LogoWhite.png"; 
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 
 
@@ -19,32 +19,43 @@ return(
                 <img src={Logo} alt="Logo" />
             </div>
             <div className={styles.navLinkWrapper}>
-                <ul>
-                    <Link to="/dashboard">
-                        <li><i><VscHome /></i><p>Dashboard</p></li>
-                    </Link>
-                    <Link to="/learningpath">
-                        <li><i><FaBook /></i><p>Courses</p></li>
-                    </Link>
-                    <Link to="/assignment">
-                        <li><i><MdOutlineAssignment /></i><p>Assignments</p></li>
-                    </Link>
-                    <Link to="/certificate">
-                        <li><i><IoDocumentOutline /></i><p>Certificates</p></li>
-                    </Link>
-                    <Link to="/settings">
-                        <li><i><IoSettingsOutline /></i><p>Settings</p></li>
-                    </Link>      
-                </ul>
+                <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
+                    <NavLink to="/dashboard" className={styles.sideBarLink}
+                    style={({isActive}) =>{return {color: isActive? "black": ""}}}
+                    >
+                        <div>
+                        <i><VscHome /></i><p>Dashboard</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/learningpath"  className={styles.sideBarLink}>
+                        <div>
+                        <i><FaBook /></i><p>Courses</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/assignment"  className={styles.sideBarLink}>
+                        <div>
+                        <i><MdOutlineAssignment /></i><p>Assignments</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/certificate"  className={styles.sideBarLink}>
+                        <div>
+                        <i><IoDocumentOutline /></i><p>Certificates</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/settings"  className={styles.sideBarLink}>
+                        <div>
+                        <i><IoSettingsOutline /></i><p>Settings</p>
+                        </div>
+                    </NavLink>      
+                </div>
                 <div className={styles.sideBarFooter}>
-                    <ul>
-                        <Link to="">
-                            <li><i><FiLogIn /></i><p>Logout</p></li>
+                    <div>
+                        <Link to="/home">
+                        <div>
+                        <i><FiLogIn /></i><p>Logout</p>
+                        </div>
                         </Link>
-                        {/* <Link to="">
-                            <li><i><FiHelpCircle /></i><p>Help</p></li>
-                        </Link> */}
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>

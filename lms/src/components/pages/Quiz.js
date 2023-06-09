@@ -48,10 +48,11 @@ export default function Quiz() {
                 <h3>5 questions</h3>
                 <h4>This is going to be a quick quiz on everything we have covered in this course Introduction to Figma</h4>
                 
-                    {/* <button onClick={() => { <Link to = '/quiz/quizstart'/>}}>Get started</button> */}
+                
                 <a href="/quiz/quizstart" className={styles.startQuizBtn}>Get started</a>
                 <h2>OR</h2>
-                <Link to='/courses/ongoingcourse' styles={{ textDecoration: 'none' }} ><p>Skip quiz</p></Link>
+                <a href="/courses/ongoingcourse" className={styles.skipQuiz} >Skip quiz</a>
+                {/* <Link to='/courses/ongoingcourse' styles={{ textDecoration: 'none' }} ><p>Skip quiz</p></Link> */}
             </div>
             
         </div>

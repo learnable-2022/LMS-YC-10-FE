@@ -129,9 +129,10 @@ export default function QuizStart() {
                     <h1 styles={{ display: 'block' }} >Congratulations</h1>
                     <p>You have succesfuly completed your quiz and earned a badge</p>
 					
-                    <div>
+                    <div className={styles.scoreFooter}>
                         <p>You scored {score} out of {questions.length}</p>
-                    <Link to='/courses/ongoingcourse' styles={{ textDecoration: 'none', color: '#0288D1', padding: '10px' }} ><p>Back to class</p></Link>
+                        <a href="/courses/ongoingcourse" className={styles.bckToClxBtn}>Back to class</a>
+                    {/* <Link to='/courses/ongoingcourse' styles={{ textDecoration: 'none', color: '#0288D1', padding: '10px' }} >Back to class</Link> */}
                     </div>
 				</div>
                 

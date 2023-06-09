@@ -23,8 +23,8 @@ function Certificate() {
             <div className={style.downloadWrapper}>
                 <div>
                     <img src={pdf} alt='pdf' />
-                </div>
-                <div>
+                   <div>             </div>
+
                     <img src={docx} alt='docx' />
                 </div>
                 <div>

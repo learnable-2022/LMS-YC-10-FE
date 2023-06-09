@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from '../styles/Dashboard.module.css'
@@ -12,6 +12,9 @@ import WebDevIcon from '../images/webDevIcon.svg'
 import UxIcon from '../images/uxIcon.svg'
 import PyIcon from '../images/pyIcon.svg'
 import DataIcon from '../images/datasIcon.svg'
+import LmsHeader from "../lmsHeader/LmsHeader";
+
+
 function Dashboard(){
     // const [step, setStep] = useState(0);
 
@@ -19,7 +22,11 @@ function Dashboard(){
      let percentage = 30 //100 * progress;
     // let status = step > 0 ? (step < 4 ? "In Progress" : "Done") : "Stopped";
     return(
-        <div>
+        <div className={styles.progressMainWrapper}>
+            <div className={styles.lmsHeader}>
+                <LmsHeader page="Dashboard" />
+            </div>
+            <div className={styles.dashboardBodyWrapper}>
             <div className={styles.progressSummary}>
                 <div className={styles.pSumOne}>
                     <div className={styles.pSumOneHead}>
@@ -170,6 +177,7 @@ function Dashboard(){
                 <div className={styles.leaderboard}>
 
                 </div>
+            </div>
             </div>
         </div>
     )

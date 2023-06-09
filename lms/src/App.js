@@ -10,11 +10,10 @@ import ForgotPassword from './components/pages/register/ForgotPassword'
 import CreateNewPassword from './components/pages/register/CreateNewPassword'
 import ContactUs from './components/pages/ContactUs';
 import ErrorPage from "./components/pages/ErrorPage";
-// import PopUp from "./components/popUpSideBar/PopUp";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
  
 
@@ -34,7 +33,7 @@ function App() {
           <Route index path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login/*" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/createnewpassword" element={<CreateNewPassword />} />
           <Route path="/contactus" element={<ContactUs />} />

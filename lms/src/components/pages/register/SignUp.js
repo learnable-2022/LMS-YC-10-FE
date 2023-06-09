@@ -91,7 +91,7 @@ export default function SignUp() {
         "Accept": "application/json"
       }
      }).then((response) =>{
-      console.log(response);
+      // console.log(response);
       setSuccess(true);
 
       //clear state and controlled inputs
@@ -243,7 +243,7 @@ return (
 
             <div className={style.signUpOptions}>
               <div className={style.loginDiv}>
-              <p>Registered already? <a href="/Login">Login</a></p>
+              <p>Registered already? <a href="/login/*">Login</a></p>
               </div>
               
 

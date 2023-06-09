@@ -43,9 +43,9 @@ const handleSubmit = (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    console.log(response);
-    const token = response.data.token
-    localStorage.setItem('token', token)
+    // console.log(response);
+    // const token = response.data.token
+    // window.localStorage.setItem('token', token)
     setEmail("");
     setPassword("");
     setSuccess(true)
@@ -65,7 +65,6 @@ const handleSubmit = (e) =>{
   }
 
 }
-console.log(password, email)
 
 
   return (
@@ -128,8 +127,8 @@ console.log(password, email)
               </div>
 
              <div className={style.GMbtns}>
-                <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
+                <Link to="/login/*"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/login/*"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

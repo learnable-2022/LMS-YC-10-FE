@@ -1,6 +1,5 @@
 import React from 'react'
 import style  from './style.module.css'
-// import { AiOutlineMail } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 

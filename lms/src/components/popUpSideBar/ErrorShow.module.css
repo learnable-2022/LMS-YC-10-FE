@@ -1,5 +1,5 @@
 .errorPageWrapper{
-    width: 100vw;
+    width: 80%;
     height: 100vh;
 }
 .logoWrapper{
@@ -40,6 +40,9 @@
     font-weight: 600;
 }
 @media screen and (max-width: 768px) {
+    .errorPageWrapper{
+        width: 100%;
+    }
     .errorPageWrapper .errorBodyWrapper button{
         width: 280px;      
         height: 30px;

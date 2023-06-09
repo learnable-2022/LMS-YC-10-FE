@@ -26,6 +26,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+    text-align: left;
 }
 .pSumOne h2{
     font-weight: 500;
@@ -66,6 +67,10 @@
     border-radius: 10px;
     padding: 10px;
 }
+.firstSection{
+    display: flex;
+    align-items: center;
+}
 .lText{
     display: flex;
     gap: 80px;
@@ -77,7 +82,7 @@
     font-weight: 700;
     font-size: 24px;
 }
-.lText button{
+.lText button, .scheduleB button{
     width: 68px;
     height: 28px;
     background: #FFFFFF;
@@ -108,8 +113,9 @@
     font-size: 30px;
     padding: 7px;
 }
-.CircularProgressbar-text{
+.progressContainer .CircularProgressbar-text{
     font-size: 20px;
+    color: black;
 }
 .lContent h5{
     margin: 0;
@@ -175,6 +181,182 @@
     border-left: 0.5px solid #8E8E8E;
     height: 10px;
 }
+.leaderboardWrapper{
+    margin-left: 8px;
+    display: flex;    
+    width: 330px;
+    border-radius: 12px;    
+    height: 500px;
+    background-color: #2196F3;
+    align-items: flex-start;
+    justify-content: center;
+}
+.leaderboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.leaderboardHeader{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 260px;
+    align-items: center;
+}
+.leaderboardHeader button{
+    font-size: 14px;
+    width: 45px;
+    height: 25px;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+}
+.leaderboardProgressBar{
+    margin-top: -25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 250px;
+    color: white;
+}
+.leaderboardProgressBar span p{
+    margin: -25px;
+    margin-left: 0px;
+    font-size: 14px;
+}
+.leaderboardPoints{
+    width: 70px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.leaderboardPoints .CircularProgressbar-text{
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+.leaderboardTags{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+.leaderboardTags p{
+    font-size: 14px;
+}
+.leaderboardTags i{
+    margin-top: 5px;
+}
+.leaderboardPart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+}
+.studentBarWrapper{
+    background-color: white;
+    border-radius: 4px;
+    width: 300px;
+    padding-left: 5px;
+}
+.studentBar{
+    width: 285px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.image{
+    width: 260px;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+.name{
+    width: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.studentBar img{
+    height: 30px;
+    border-radius: 20px;
+}
+.scheduleHeader{
+    display: flex;
+    width: 625px;
+    align-items: center;
+    justify-content: space-between;
+}
+.scheduleHeader div{
+    display: flex;
+    align-items: center;
+}
+.scheduleHeader p{
+    font-size: 14px;
+    color: #2196F3;
+}
+.scheduleT{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    color: #C6C6C6;
+    margin-top: -25px;
+    justify-content: space-between;
+}
+.scheduleTi{
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+    display: flex;
+}
+.scheduleTit{
+    width: 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.courseName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin-top: -20px;
+}
+.courseTime{
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+}
+.courseImage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+}
+.courseName img{
+    border-radius: 20px;
+    margin-left: -10px;
+}
+.courseName p{
+    font-size: 14px;
+}
+.courseName span p{
+    color: #C6C6C6;
+    margin-top: -22px;
+    font-size: 13px;
+}
+.scheduleWrap{
+    margin-bottom: 30px;
+}
 @media screen and (max-width: 768px) {
     .progressMainWrapper{
         width: 100%;
@@ -188,6 +370,12 @@
     }
     .progressSummary{
         gap: 5px;
+    }
+    .bodyWrapper{
+        margin-left: 10px;
+    }
+    .scheduleWrap{
+        margin-left: 20px;
     }
     .pSumOne{
         padding: 10px;
@@ -207,5 +395,16 @@
     .learnGroup{
      flex-wrap: wrap;
     }
-    
+    .firstSection{
+        flex-wrap: wrap;
+    }
+    .scheduleHeader{
+        width: 425px;
+    }
+    .scheduleT{
+        width: 400px;
+    }
+    .courseName{
+        width: 400px;
+    }
 }

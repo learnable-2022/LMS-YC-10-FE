@@ -9,20 +9,16 @@ import LearningPath from "../pages/LearningPath";
 import GeneralCoursePage from "../pages/GeneralCoursePage";
 import Quiz from "../pages/Quiz";
 import QuizStart from "../pages/QuizStart";
-import ErrorPage from "../pages/ErrorPage"
 import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
 import Certificate from "../pages/Certificate";
-
+import ErrorShow from "../popUpSideBar/ErrorShow";
 
 
 function Main(){
 return(
     <>
         <div className={styles.main}>
-            <Routes>
-            <Route path="/error" element={<ErrorPage />} />
-            </Routes>
                 <div className={styles.sideBarWrapper}>
                     <div className={styles.sideBar}>
                         <SideBar />
@@ -41,6 +37,7 @@ return(
                         <Route path='/settings' element={<SettingsPage/>}/>
                         <Route path='/certificate' element={<Certificate/>}/>
                         <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
+                        <Route path="/error" element={<ErrorShow />} />
                     </Routes>
                 </div>
       

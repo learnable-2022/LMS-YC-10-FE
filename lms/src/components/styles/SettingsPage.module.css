@@ -103,7 +103,7 @@ input{
 input::placeholder{
     font-size: 14px;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .settingsPage{
         margin: 0;
         width: 100%;

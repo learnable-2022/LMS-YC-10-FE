@@ -128,7 +128,7 @@
         font-size: 11px;
     }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 768px){
     .footerText p{
         width: 420px;
         max-width: 450px;

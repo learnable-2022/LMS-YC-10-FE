@@ -142,7 +142,7 @@
     width: 235px;
     font-weight: 550;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .ongoingCourse{
         width: 100%;
         overflow-x: hidden;

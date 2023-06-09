@@ -15,7 +15,7 @@
     height: 100%;
     position: fixed;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .sideBar{
         display: none;
     }

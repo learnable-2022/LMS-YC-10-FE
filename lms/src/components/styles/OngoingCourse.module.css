@@ -50,6 +50,9 @@
     width: 400px;
     margin-top: 10px;
 }
+.buttonWrapper a{
+    text-decoration: none;
+}
 .btn1{
     border: none;
     background-color: #039BE5;
@@ -139,7 +142,7 @@
     width: 235px;
     font-weight: 550;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .ongoingCourse{
         width: 100%;
         overflow-x: hidden;

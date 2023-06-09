@@ -4,8 +4,10 @@ import { Link  } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import ellipse from "../images/Ellipse 34.png";
 import LmsHeader from "../lmsHeader/LmsHeader";
-import { Onclick, UserContext } from "./courseList/CourseList";
+import {  UserContext } from "./courseList/CourseList";
 
+
+// Onclick,
 // const src = Onclick(src)
 // const id = Onclick(id)
 
@@ -26,19 +28,19 @@ return(
                 <div>
                     <div className={styles.courseDirectory}>
                         <div>
-                            <Link to="/">
+                            <Link to="/learningpath">
                             <p>Course</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
                         </div>
                         <div>
-                            <Link to="/">
+                            <Link to="/courses">
                                 <p>Select a course</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
                         </div>
                         <div>
-                            <Link to="/" >
+                            <Link to="/coursepage" >
                             <p>UI/UX</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
@@ -63,9 +65,15 @@ return(
                             </video>
                         </div>
                         <div className={styles.buttonWrapper}>
-                            <button className={styles.btn1}>About</button>
-                            <button className={styles.btn2}>Quiz</button>
-                            <button className={styles.btn3}>Assignment</button>
+                            <Link to="/error">
+                                <button className={styles.btn1}>About</button>
+                            </Link>
+                            <Link to="/quiz">
+                                <button className={styles.btn2}>Quiz</button>
+                            </Link>
+                            <Link to="/assignment">
+                                <button className={styles.btn3}>Assignment</button>
+                            </Link>
                         </div>
                         <div className={styles.extraSource}>
                             <h3>About this lesson</h3>

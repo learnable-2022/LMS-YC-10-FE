@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react'
 import style  from './style.module.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Login from './Login';
-
+// , useNavigate
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{10,24}$/;
@@ -91,7 +91,7 @@ export default function SignUp() {
         "Accept": "application/json"
       }
      }).then((response) =>{
-      console.log(response);
+      // console.log(response);
       setSuccess(true);
 
       //clear state and controlled inputs
@@ -123,7 +123,7 @@ export default function SignUp() {
   };
 
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 return (
   <>
               {success ? (
@@ -193,7 +193,6 @@ return (
 
               </div>
 
-
             </div>
             <div className={style.passwordWrapper}>
             <input type="password" name='password' placeholder='Password' 
@@ -244,7 +243,7 @@ return (
 
             <div className={style.signUpOptions}>
               <div className={style.loginDiv}>
-              <p>Registered already? <a href="/Login">Login</a></p>
+              <p>Registered already? <a href="/login/*">Login</a></p>
               </div>
               
 
@@ -253,8 +252,8 @@ return (
               </div>
 
              <div className={style.GMbtns}>
-                <Link to="/"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/"><img src="./img/meta.svg" alt="Metamask" /></Link>
+                <Link to="/signup"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/signup"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

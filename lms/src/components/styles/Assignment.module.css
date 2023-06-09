@@ -296,7 +296,7 @@
     bottom: 0px;
     left: 0px;
   }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .assignment{
         width: 100%;
         margin: 0;

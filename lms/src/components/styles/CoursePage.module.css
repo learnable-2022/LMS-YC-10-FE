@@ -42,7 +42,7 @@
 .active{
     color:  #039BE5;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
 
     .coursePageWrapper{
         width: 100%;

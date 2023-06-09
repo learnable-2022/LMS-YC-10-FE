@@ -1,18 +1,15 @@
-import React, { useRef, useState, useEffect, useContext} from 'react'
-import style  from './style.module.css'
+import React, { useRef, useState, useEffect} from 'react';
+import style  from './style.module.css';
 import axios from 'axios';
-import AuthContext from "../../../Utils/AuthProvider";
 import Main from '../../main/Main';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
  
-  const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
-  // const [user, setUser] = useState('');
-  // const [pwd, setPwd] = useState('');
+
 
 
   const [email, setEmail] = useState("");
@@ -46,9 +43,9 @@ const handleSubmit = (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    console.log(response);
-
-    setAuth({email, password});
+    // console.log(response);
+    // const token = response.data.token
+    // window.localStorage.setItem('token', token)
     setEmail("");
     setPassword("");
     setSuccess(true)
@@ -68,7 +65,6 @@ const handleSubmit = (e) =>{
   }
 
 }
-console.log(password, email)
 
 
   return (
@@ -81,7 +77,7 @@ console.log(password, email)
     <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>
@@ -131,8 +127,8 @@ console.log(password, email)
               </div>
 
              <div className={style.GMbtns}>
-                <Link to="/"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/"><img src="./img/meta.svg" alt="Metamask" /></Link>
+                <Link to="/login/*"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/login/*"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

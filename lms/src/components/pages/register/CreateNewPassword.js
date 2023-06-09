@@ -1,6 +1,7 @@
 import React from 'react'
 import style  from './style.module.css'
-import { AiOutlineMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+
 
 export default function CreateNewPassword() {
  
@@ -8,7 +9,7 @@ export default function CreateNewPassword() {
     <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>
@@ -33,9 +34,8 @@ export default function CreateNewPassword() {
               
 
               <div className={style.loginDiv}>
-              <p>Don't have an account? <a href="./SignUp">Sign up</a></p>
+              <p>Don't have an account? <Link to="/signUp">Sign up</Link></p>
               </div>
-
             </div>
         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import style  from './style.module.css'
-import { AiOutlineMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom'
+// import { AiOutlineMail } from 'react-icons/ai';
 
 export default function ForgotPassword() {
  
@@ -8,7 +9,7 @@ export default function ForgotPassword() {
     <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>

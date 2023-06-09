@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style  from './style.module.css'
 import { AiFillCheckCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 export default function AccountType() {
@@ -10,7 +11,8 @@ export default function AccountType() {
   const [iconStudent, setIconStudent] = useState(false);
 
   return (
-    <div className={style.container}>
+      <>
+         <div className={style.container}>
 
         <header className={style.header}>
             <a href="./"><img src="./img/logo.png" alt="logo" /></a>
@@ -23,13 +25,13 @@ export default function AccountType() {
             <form action="" className={style.accountTypeForm}>
               
               
-              <a href="/SignUp"
+              <Link to="/signUp"
               
                 onClick={ (e) => 
                   {
                   // e.preventDefault();
                   setIconStudent(true);
-                 
+                
                 } }
               
               >
@@ -38,28 +40,28 @@ export default function AccountType() {
                   display: iconStudent ? 'block' : 'none',
                   color: iconStudent ? '#0288D1' : '',
                 }}
-                 /></span>
-                 </a>
+                /></span>
+                </Link>
                 
 
                 
               
-                 <a href="/SignUp" 
-                   onClick={ () => 
+                <Link to="/signUp" 
+                  onClick={ () => 
                     {
                     // e.preventDefault();
                     setIconTutor(true);
-                   
+                  
                   } }
                   >
                   Tutor
                 <span><AiFillCheckCircle 
-                 style={{
+                style={{
                   display: iconTutor ? 'block' : 'none',
                   color: iconTutor ? '#0288D1' : '',
                 }} />
                 </span>
-                </a>
+                </Link>
               
 
             </form>
@@ -67,12 +69,13 @@ export default function AccountType() {
 
         <div className={style.vectors}>
                 <img src="./img/Vector.png" alt="" />
-             
+            
         </div>
         <div className={style.vectors}>
                 
                 <img  src="./img/Vector-2.png" alt="" />
         </div>
-    </div>
+        </div>      
+      </>
   )
 }

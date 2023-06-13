@@ -1,0 +1,117 @@
+.wrapper{
+    margin: 0 20px;
+    width: 80%;
+}
+.courseDirectory div i{
+    margin: 5px 5px 0px;
+}
+.courseDirectory{
+    display: flex;
+}
+.courseDirectory div a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+.active{
+    color:  #039BE5;
+}
+.bodyWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.quizContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.quizHeading{
+    font-size: 32px;
+    color: #393939;
+    margin-top: 30px;
+}
+
+.quizContainer h3{
+    font-size: 24px;
+    color: #393939;
+}
+.quizContainer h4{
+    font-size: 20px;
+    color: #393939;
+}
+.quizContainer p{
+    font-size: 20px;
+    color: #0288D1;
+}
+
+.quizContainer .startQuizBtn{
+    text-decoration: none;
+    padding: 15px 30%;
+    outline: none;
+    background: #0288D1;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    /* width: 60%;
+    align-self: center; */
+    
+}
+.quizContainer .startQuizBtn:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #0288D1;
+    color: #0288D1;
+}
+
+.skipQuiz{
+    text-decoration: none;
+    color: #0288D1;
+}
+  
+@media (max-width:768px) {
+
+    .wrapper{
+    
+        width: 100%;
+    }
+    .courseDirectory p{
+        font-size: 10px;
+    }
+ 
+    .quizHeading{
+        font-size: 20px;
+        
+        margin-top: 20px;
+    }
+    
+    .quizContainer h3{
+        font-size: 15px;
+   
+    }
+    
+    .quizContainer p{
+        font-size: 15px;
+    }
+
+    .quizContainer h4{
+        font-size: 15px;
+    }
+    
+    .quizContainer .startQuizBtn{
+        padding: 10px 40%;
+        border-radius: 10px;
+     
+      
+        
+    }
+    
+    }

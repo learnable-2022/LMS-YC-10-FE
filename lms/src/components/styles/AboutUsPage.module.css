@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'mada' sans-serif;
+}
+.aboutUsBody h1{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+.aboutUsBodyWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px;
+}
+.aboutUsBodyText{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6.5vw;
+    font-size: 20px;
+    text-align: left;
+}
+.aboutUsBodyText h4{
+    font-size: 32px;
+    font-weight: 500;
+}
+.firstSection{
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+    height: 200px;
+    background: rgba(252, 228, 236, 0.7);
+}
+.firstSection img{
+    width: 300px;
+}
+.firstSection h3{
+    width: 200px;
+    margin-left: 50px;
+}
+.secondSection{
+    width: 85%;
+    margin: 20px 0px 60px;
+}
+.thirdSection{
+    height: 300px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #E3F2FD;
+}
+.thirdSubSection{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 18px;
+}
+.thirdSubSection h3{
+    font-size: 28px;
+}
+.thirdSubSection p{
+    width: 75%;
+}
+.thirdSubSection button{
+    width: 120px;
+    height: 40px;
+    background: #0288D1;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+.fourthSection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fourthSubSection{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 20px;
+}
+.fourthSubSection h3{
+    font-size: 28px;
+}
+.fourthSubSection p{
+    width: 95%;
+}
+.fifthSection img:nth-child(1){
+    width: 150px;
+    margin-right: 50px;
+}
+.fifthSection img:nth-child(2){
+    width: 150px;
+    margin-right: 50px;
+}
+.fifthSection img:nth-child(3){
+    width: 130px;
+    height: 50px;
+    margin-right: 50px;
+}
+.fifthSection img:nth-child(4){
+    width: 150px;
+    margin-right: 50px;
+}
+.sixthSection{
+    display: flex;
+    margin-top: 50px;
+}
+.sixthSection div:nth-child(1){
+    background: #1E0E83;
+    margin-right: 40px;
+    border-radius: 20px;
+    color: white;
+    padding: 20px 20px 30px 50px;
+}
+.sixthSection div:nth-child(2){
+    border-radius: 20px;
+    width: 1100px;
+    background: #DF0077;
+    color: white;
+    padding: 20px 40px 30px 50px;
+}
+.sixthSection div:nth-child(1) p{
+    width: 85%;
+}
+.sixthSection div h4{
+    font-size: 24px;
+}
+.sixthSection div p{
+    font-size: 15px;
+}
+.sixthSection div:nth-child(2) p{
+    width: 99%;
+}
+.sixthSection div button{
+    border: 1px solid #0288D1;
+    background-color: white;
+    width: 110px;
+    height: 35px;
+    border-radius: 15px;
+}
+.sixthSection div button a{
+    text-decoration: none;
+    color: black;
+
+}

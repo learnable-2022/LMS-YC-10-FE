@@ -1,0 +1,25 @@
+
+.main{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.mainBody{
+    display: flex;
+    width: 100%;
+    align-items: end;
+    left: 17.2%;
+    position: relative;
+}
+.sideBar{
+    height: 100%;
+    position: fixed;
+}
+@media screen and (max-width: 768px) {
+    .sideBar{
+        display: none;
+    }
+    .mainBody{
+        left: 0%;
+    }
+}

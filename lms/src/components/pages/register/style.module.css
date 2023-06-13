@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'mada' sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container header{
+    float: left;
+    width: 163.98px;
+    margin-left: 20px;
+    margin-top: 35px;
+    position: sticky;
+    top: 20px;
+}
+.container header div img{
+    width: 170px;
+}
+
+.formSection{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.formSection .heading{
+    font-size: 32px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.formSection .heading ~ p{
+    color: #0288D1;
+    margin-bottom: 10px;
+    width: 40%;
+ 
+}
+.formSection .accountTypeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 16px;
+}
+
+.accountTypeForm a{
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    padding: 16px 8px;
+    border: 1px solid #919191;border: 1px solid #919191;
+    box-sizing: border-box;
+    background: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000009;
+ 
+}
+
+.accountTypeForm a span{
+    position: absolute;
+    width: 35px;
+    left: 967px;
+  
+}
+
+
+
+/* VECTOR/IMAGE POSITIONS  */
+
+.vectors{
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}
+
+.vectors2{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.vectorsPosition3{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+/* sign up starts here */
+
+.signUpform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 16px;
+}
+
+.passwordWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.passwordWrapper input{
+    width: 100%;
+}
+.signUpform input{
+    width: 100%;
+    padding: 12px 5px;
+    border: 1px solid #717171;
+    box-sizing: border-box;
+}
+
+.signUpform input:focus{
+    border: 1px solid #0288D1;
+    outline: #0288D1;
+}
+
+.signUpform textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #717171;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.signUpform textarea:focus{
+    border: 1px solid #0288D1;
+    outline: #0288D1;
+}
+
+.signUpform .inputs{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+.nameWrapper{
+    width: 100%;
+}
+.signUpform .agreeTerms{
+ display: flex;
+ align-items: center;
+ width: 100%;
+ padding: 0;
+}
+
+.signUpform .agreeTerms input{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.signUpform .agreeTerms p{
+    font-size: 12px;
+    color: #909090;
+}
+
+
+
+.signUpform .signUpBtn{
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 5px;
+    background: #0288D1;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+   
+}
+
+.signUpform .signUpBtn:hover{
+    cursor: pointer;
+}
+
+.formSection .signUpOptions{
+    width: 40%;
+}
+
+.formSection .signUpOptions .loginDiv{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'mada' sans-serif;
+   
+}
+
+.formSection .signUpOptions .loginDiv p{
+    font-weight: bold;
+}
+
+.formSection .signUpOptions .loginDiv a{
+    text-decoration: none;
+    color: #0288D1;
+}
+
+.formSection .signUpOptions .or{
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.formSection .signUpOptions .or hr{
+    width: 80%;
+}
+
+.formSection .signUpOptions .or p{
+    padding: 0 10px;
+}
+.formSection .signUpOptions .GMbtns{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   
+}
+
+.formSection .signUpOptions .GMbtns a{
+    padding: 10px 20px;
+    border: 1px solid #BABABA;
+    background: white;
+    border-radius: 5px;
+}
+
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
+
+/* login  */
+
+.formSection .signUpform .fgPwdRPwsd{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    color: #909090;
+    align-items: center;
+}
+
+.formSection .signUpform .fgPwdRPwsd .checkbox{
+    display: flex;
+}
+
+.formSection .signUpform .fgPwdRPwsd input{
+    width: 20px;
+    margin: 0;
+ 
+}
+
+.formSection .signUpform .fgPwdRPwsd a{
+    text-decoration: none;
+    color: #909090;
+}
+
+
+
+
+/* contact us border  */
+.formSection .heading{
+    margin-top: 120px;
+}
+
+.contactUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 16px;
+    border: 1px solid #393939;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.contactUs p{
+    color: #0288D1;
+    display: flex;
+    align-self: flex-start;
+}
+
+.contactUs input{
+    width: 100%;
+    padding: 12px 5px;
+    border: 1px solid #717171;
+    box-sizing: border-box;
+}
+
+.contactUs input:focus{
+    border: 1px solid #0288D1;
+    outline: #0288D1;
+}
+
+.contactUs textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #717171;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.contactUs textarea:focus{
+    border: 1px solid #0288D1;
+    outline: #0288D1;
+}
+
+.contactUs .inputs{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.contactUs .agreeTerms{
+ display: flex;
+ align-items: center;
+ width: 100%;
+ margin-top: 20px;
+ padding: 0;
+ align-items: end;
+}
+
+.contactUs .agreeTerms input{
+    width: 20px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.contactUs .agreeTerms p{
+    font-size: 12px;
+    color: black;
+    width: 60%;
+    text-align: left;
+    font-weight: 499;
+}
+.contactUs .submitBtn{
+    display: flex;
+    align-self: flex-start;
+    padding: 14px 38px;
+    float: left;
+    color: black;
+    background: #E6F6FB;
+    border-radius: 20px;    
+    border: none;
+    margin-top: 20px;
+}
+
+.contactUs .submitBtn:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+    
+.vectors{
+display: none;
+}
+
+.vectors2{
+display: none;
+}
+
+.vectorsPosition3{
+ display: none;
+}
+
+}

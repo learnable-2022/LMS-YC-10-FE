@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'mada' sans-serif;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+.coursePageWrapper{
+    width: 84%;
+}
+.courseLmsHeader{
+    width: 100%;
+    margin-left: -41px;
+}
+.courseHeaderWrapper{
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    margin-left: 49px;
+    height: 100%;
+    max-height: 100%;
+}
+.courseBody{
+    display: flex;
+}
+.centerCoursePage{
+    width: 100%;
+}
+.courseDirectory{
+    display: flex;
+}
+.courseDirectory div a{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+}
+.courseDirectory div i{
+    margin: 5px 5px 0px;
+}
+.active{
+    color:  #039BE5;
+}
+@media screen and (max-width: 768px) {
+
+    .coursePageWrapper{
+        width: 100%;
+    }
+    .courseLmsHeader{
+        margin: 0px;
+    }
+    .courseHeaderWrapper{
+        margin-left: 25px;
+    }
+}

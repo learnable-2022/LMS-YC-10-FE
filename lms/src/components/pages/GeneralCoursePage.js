@@ -10,20 +10,20 @@ export default function GeneralCoursePage() {
 
     const getCourses = async (event) => {
       const url = "https://kidtots.onrender.com/student/courses"
-        const token = localStorage.getItem('token');
+        // const token = localStorage.getItem('token');
         const response = await axios.get(url, {
         headers:{
-                     'Authorization': `Bearer ${token}`,
-       "Content-Type": "application/json",
+            // 'Authorization': `Bearer ${token}`,
+            "Content-Type": "application/json",
          
         }
     })  
         console.log(response);
-        const { items } = response.data;
-        const courses = items.map(({ CourseName, _id, FrontImage, Level, Length }) => {
-            return { CourseName, _id, FrontImage, Level, Length };
-        });
-        console.log(courses)
+        // const { items } = response.data;
+        // const courses = items.map(({ CourseName, _id, FrontImage, Level, Length }) => {
+        //     return { CourseName, _id, FrontImage, Level, Length };
+        // });
+        // console.log(courses)
     }
         getCourses();
 

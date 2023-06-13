@@ -22,7 +22,7 @@ return(
     <>                
         <div className={styles.ongoingCourse}>
             <div className={styles.ongoingCourseHeader}>
-                <LmsHeader />
+                <LmsHeader page="Courses"/>
             </div>
             <div className={styles.ongoingCourseWrapper}>
                 <div>

@@ -4,7 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
 import profileImage from "../images/Mask group.png";
-// import SideBar from "../sideBar/SideBar";
 import PopUp from "../popUpSideBar/PopUp";
 import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAssignment,  MdOutlineClose } from "react-icons/md";
@@ -13,6 +12,7 @@ import { VscHome } from "react-icons/vsc";
 import { FiLogIn } from "react-icons/fi";
 import Logo from "../images/LogoWhite.png"; 
 import { NavLink, Link} from "react-router-dom";
+import { AiOutlinePieChart } from 'react-icons/ai';
 
 
 function LmsHeader({page}){
@@ -73,27 +73,33 @@ return(
             </div>
             <div className={styles.navLinkWrapper}>
                 <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
-                    <NavLink to="/dashboard" >
+                    <NavLink to="*/dashboard" >
                         <div>
                         <i><VscHome /></i><p>Dashboard</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/learningpath">
+                    <NavLink to="*/learningpath">
                         <div>
                         <i><FaBook /></i><p>Courses</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/assignment">
+                    <NavLink to="*/assignment">
                         <div>
                         <i><MdOutlineAssignment /></i><p>Assignments</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/certificate">
+                    <NavLink to="*/error">
+                        <div>
+                            <i><AiOutlinePieChart /></i>
+                            <p>Progress Report</p>
+                        </div>
+                    </NavLink> 
+                    <NavLink to="*/certificate">
                         <div>
                         <i><IoDocumentOutline /></i><p>Certificates</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/settings">
+                    <NavLink to="*/settings">
                         <div>
                         <i><IoSettingsOutline /></i><p>Settings</p>
                         </div>
@@ -101,7 +107,7 @@ return(
                 </div>
                 <div className={styles.sideBarFooter}>
                     <div>
-                        <Link to="/home">
+                        <Link to="/">
                         <div>
                         <i><FiLogIn /></i><p>Logout</p>
                         </div>

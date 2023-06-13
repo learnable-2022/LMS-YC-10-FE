@@ -42,7 +42,7 @@ return(
                         <li><Link to="/">FAQs</Link></li>
                         <li><Link to="/contactus">Contact Us</Link></li>
                         <li><Link to="/temsofuse">Terms of Service</Link></li>
-                        <li><Link to="https:/">Help Center</Link></li>
+                        <li><Link to="/contactus">Help Center</Link></li>
                     </div>
                 </div>
                 </div>

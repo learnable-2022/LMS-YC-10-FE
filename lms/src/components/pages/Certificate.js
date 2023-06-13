@@ -89,31 +89,31 @@ function Certificate() {
         </div>
         <div className={style.certMain}>
             <div className={style.certificateBodyWrapper}>
-            <div className={style.cert}>
-                <img src={certificate} alt='' />
+                <div className={style.cert}>
+                    <img src={certificate} alt='' />
+                </div>
+                <div className={style.downloadWrapper}>
+                    <div>
+                        <img src={pdf} alt='pdf' onClick={downloadPdf}/>
+                    <div>
+                    </div>
+                        <img src={docx} alt='docx' onClick={downloadDocx}/>
+                    </div>
+                    <div>
+                        <img src={jpg} alt='jpg' onClick={downloadJpg}/>
+                    </div>
+                </div>
             </div>
-            <div className={style.downloadWrapper}>
-                <div>
-                    <img src={pdf} alt='pdf' onClick={downloadPdf}/>
-                   <div>             </div>
-
-                    <img src={docx} alt='docx' onClick={downloadDocx}/>
-                </div>
-                <div>
-                    <img src={jpg} alt='jpg' onClick={downloadJpg}/>
-                </div>
+            <div className={style.issuedWrapper}>
+                    <div className={style.issued}>
+                        <h3>Issued Date</h3>
+                        <p>May 16, 2023</p>
+                    </div>
+                    <div>
+                        <h3>Issued By</h3>
+                        <p>kidtots Organisation</p>
+                    </div>
             </div>
-        </div>
-        <div className={style.issuedWrapper}>
-                <div className={style.issued}>
-                    <h3>Issued Date</h3>
-                    <p>May 16, 2023</p>
-                </div>
-                <div>
-                    <h3>Issued By</h3>
-                    <p>kidtots Organisation</p>
-                </div>
-        </div>
         </div>
     </div>
   )

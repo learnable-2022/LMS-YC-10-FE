@@ -32,6 +32,11 @@
     flex-direction: column;
     gap: 30px;
 }
+.downloadWrapper div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 @media screen and (max-width: 768px) {
     .certificateWrapper{
         width: 100%;

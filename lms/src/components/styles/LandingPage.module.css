@@ -1,7 +1,6 @@
 .navContainer{
   width: 100%;
   position: fixed;
-
 }
 /* HERO STARTS HERE */
 .wrapper{
@@ -82,10 +81,23 @@
   transition: 100ms;
 }
 /* HERO SECTION END */
-
+.landingPageBody{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.landingPageBodyWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 80%;
+  justify-content: space-evenly;
+}
 /* PARTNERS SECTION BEGINS */
 .partnerWrapper{
-  margin: 120px 100px;
+  width: 100%;
+  /* margin: 120px 100px; */
 }
 .partnerWrapper h1{
   font-weight: 700;
@@ -104,9 +116,14 @@
 
 /* COURSE SECTION BEGINS */
 .coursesSection{
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center; */
+  width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
-  padding: 100px;
+  /* padding: 100px; */
   background: #FAFAFA;
 }
 .coursesSection h1{
@@ -119,31 +136,31 @@
 .coursesWrapper{
   display: flex;
   text-align: center;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-between;
 }
 .coursesWrapper p{
   font-size: 16px;
 }
-.courseContainer{
+/* .courseContainer{
   width: 268px;
-  padding: 7px 10px 20px 10px;
+  padding: 7px 8px 20px 10px;
   border-radius: 12px;
-}
+} */
 .blue{
   width: 268px;
-  padding: 7px 10px 20px 10px;
+  padding: 14px 8px 20px;
   border-radius: 12px;
   background: #E3F2FD;
 }
 .red{
   width: 268px;
-  padding: 7px 10px 20px 10px;
+  padding: 14px 8px 20px;
   border-radius: 12px;
   background: #FCE4EC;
 }
 .courseImg img{
-  width: 100%;
+  width: 90%;
 }
 .coursesWrapper h4{
   font-weight: 700;
@@ -152,7 +169,7 @@
 }
 .coursesWrapper p{
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
 }
 /* courses section ends */
@@ -174,14 +191,14 @@
 
 /* trial section starts */
 .potentialWrapper{
-  width: 76%;
+  width: 100%;
 }
 .potentialContainer{
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
   font-weight: 700;
@@ -194,7 +211,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .unlockPWrapper{
@@ -240,7 +256,7 @@
 
 /* porvision section begins */
 .provisionWrapper{
-  margin: 60px 100px;
+  width: 100%;
 }
 .provisions{
   display: flex;
@@ -277,14 +293,26 @@
 
 /* Client testimonial */
 .clientsWrapper{
-  padding: 60px 90px;
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
   background: #FCE4EC;
+}
+.clientsContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 .clientcomment{
   background-color: white;
   border-radius: 40px;
   width: 85%;
-  height: 150px;
+  height: max-content;
   padding: 40px;
   margin: auto;
 }
@@ -292,18 +320,20 @@
   font-weight: 500;
   font-size: 19px;
   line-height: 31px;
-
 }
-.clientProfile{
+
+
+/* .clientProfile{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 60px;
   gap: 45px;
-}
-.clientImg{
+} */
+/* .clientImg{
   display: flex;
-
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 .clientImg img{
   width: 160px;
@@ -314,27 +344,28 @@
 }
 .clientName h2{
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 31px;
 }
 .clientName p{
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 26px;
-}
-.navCarosel{
+} */
+/* .navCarosel{
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 80px;
   margin-bottom: 60px;
-}
-.clientOne{
+} */
+/* .clientOne{
   width: 20px;
   height: 20px;
   background-color: #F48FB1;
   border-radius: 100%;
-}
+  transition: 0.6s ease;
+} */
 
 @media screen and (max-width: 768px) {
   .heroContainer{
@@ -347,7 +378,7 @@
   }
   .text p{
     font-size: 16px;
-    width: 350px;
+    width: 320px;
   }
   .heroImg img{
     width: 200px;
@@ -357,9 +388,11 @@
   }
   .getStarted{
     width: 90px;
-    height: 10px;
     font-size: 11px;
     font-weight: 699;
+  }
+  .trial .getStarted{
+    width: 90px;
   }
   .explore{
     width: 110px;
@@ -395,5 +428,31 @@
   .coursesWrapper h4{
     font-size: 11px;
   }
-
+  .unlockPWrapper p{
+    width: 85vw;
+  }
+  .provisions p{
+    font-size: 10px;
+    width: 10vw;
+  }
+  .landingPageBodyWrapper{
+    width: 90%;   
+  }
+  .partnerWrapper{
+    margin-left: 0px;
+  }
+  .provisionText h5{
+    font-size: 16px;
+    width: 13vw;
+  }
+  .provisionImg img{
+    width: 80px;
+  }
+  .clientcomment p{
+    font-size: 14px;
+    border: 1px solid red;
+  }
+  .clientsContainer{
+      width: 90%;
+  }  
 }

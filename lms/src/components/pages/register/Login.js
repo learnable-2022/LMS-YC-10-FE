@@ -3,6 +3,8 @@ import style  from './style.module.css';
 import axios from 'axios';
 import Main from '../../main/Main';
 import { Link } from 'react-router-dom';
+import logo from "../../images/Logo.png";
+
 
 export default function Login() {
  
@@ -16,7 +18,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
-
+  const [savePwd, setSavePwd] = useState(false)
 
     useEffect(() => {
         userRef.current.focus();
@@ -43,20 +45,37 @@ const handleSubmit = (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    // console.log(response);
-    // const token = response.data.token
-    // window.localStorage.setItem('token', token)
+    // const token2 = response.data.data.EmailAddress
+    // const token1 = response.data.data.Password
+    // const tokenImage = response.data.data.Image
+    const token = response.data.data
+    // const tokens = response.data
+    // let loginDetails = JSON.stringify(tokenImage)
+    // console.log(tokens)
+    // console.log(tokenImage)
+    // console.log(token1)
+    // console.log(token)
+    // console.log(token2)
+    // localStorage.setItem('token', loginDetails)
+
     setEmail("");
     setPassword("");
     setSuccess(true)
+    
+    handleChecked()
+    if(savePwd === true){
+      // localStorage.setItem(token)
+    localStorage.setItem('token', token)
+    }
+
+
    })
   }catch(error){
-    console.log(error)
-    if (!error?.response) {
+    if (!error?.response.status) {
       setErrMsg('No Server Response');
   } else if (error.response?.status === 400) {
       setErrMsg('Missing Username or Password');
-  } else if (error.response?.status === 401) {
+  } else if (error.response?.status === 404) {
       setErrMsg('Unauthorized');
   } else {
       setErrMsg('Login Failed');
@@ -65,7 +84,10 @@ const handleSubmit = (e) =>{
   }
 
 }
+  const handleChecked = () =>{
+    setSavePwd(!savePwd)
 
+  }
 
   return (
     <>
@@ -77,7 +99,9 @@ const handleSubmit = (e) =>{
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+          <div>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
+          </div>
         </header>
 
         <div className={style.formSection}>
@@ -103,10 +127,10 @@ const handleSubmit = (e) =>{
 
             <div className={style.fgPwdRPwsd} >
 
-            <a href="/forgotpassword">Forgotten password?</a>
+            <Link to="/forgotpassword">Forgotten password?</Link>
 
              <div className={style.checkbox}>
-             <input type="checkbox" name='remember-password' />
+             <input type="checkbox" name='remember-password' checked={savePwd} onChange={handleChecked}/>
              <p>Remember me</p>
              </div>
 
@@ -127,8 +151,8 @@ const handleSubmit = (e) =>{
               </div>
 
              <div className={style.GMbtns}>
-                <Link to="/login/*"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login/*"><img src="./img/meta.svg" alt="Metamask" /></Link>
+                <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
+                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

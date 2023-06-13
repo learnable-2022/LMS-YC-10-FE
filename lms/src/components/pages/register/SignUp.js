@@ -5,7 +5,7 @@ import axios from 'axios';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Login from './Login';
-// , useNavigate
+
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{10,24}$/;
@@ -33,7 +33,7 @@ export default function SignUp() {
   const [validMatch, setValidMatch] = useState(false);
   const [matchFocus, setMatchFocus] = useState(false);
 
-  const [termsAccepted, setTermsAccepted] = useState(false); // new state
+  const [termsAccepted, setTermsAccepted] = useState(false); 
 
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
@@ -91,7 +91,6 @@ export default function SignUp() {
         "Accept": "application/json"
       }
      }).then((response) =>{
-      // console.log(response);
       setSuccess(true);
 
       //clear state and controlled inputs
@@ -123,7 +122,6 @@ export default function SignUp() {
   };
 
 
-  // const navigate = useNavigate();
 return (
   <>
               {success ? (
@@ -132,7 +130,7 @@ return (
     <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>
@@ -243,7 +241,7 @@ return (
 
             <div className={style.signUpOptions}>
               <div className={style.loginDiv}>
-              <p>Registered already? <a href="/login/*">Login</a></p>
+              <p>Registered already? <a href="/login">Login</a></p>
               </div>
               
 

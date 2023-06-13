@@ -5,7 +5,7 @@
     width: 100%;
 }
 .dashboardBodyWrapper{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 .progressSummary{
     text-align: center;
@@ -69,11 +69,13 @@
 }
 .firstSection{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 .lText{
     display: flex;
-    gap: 80px;
+    gap: 60px;
     margin-bottom: 30px;
     height: 35px;
     align-items: center;
@@ -162,7 +164,7 @@
     padding-top: 9px;
     margin-right: 4px;
 }
-.gDetail p{
+.gDetail div{
     line-height: 27px;
     margin: 0;
     height: 27px;
@@ -170,7 +172,7 @@
     align-items: center;
     gap: 10px;
 }
-.gDetail p span{
+.gDetail div span{
     font-size: 10px;
     color: #8E8E8E;
     line-height: 27px;
@@ -179,7 +181,7 @@
 
 .vl{
     border-left: 0.5px solid #8E8E8E;
-    height: 10px;
+    height: 5px;
 }
 .leaderboardWrapper{
     margin-left: 8px;

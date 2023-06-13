@@ -35,7 +35,7 @@ function Dashboard(){
      let points = 115;
      let point = 40;
 
-    // let status = step > 0 ? (step < 4 ? "In Progress" : "Done") : "Stopped";
+   
     return(
         <div className={styles.progressMainWrapper}>
             <div className={styles.lmsHeader}>
@@ -106,7 +106,7 @@ function Dashboard(){
                                     <p>Chapter 1</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={percentage} text={`${percentage}%`}  style={{borderColor:" red" }} />
+                                    <CircularProgressbar value={percentage} text={`${percentage}%`} progressValueColor={"red"}/>
                                 </div>
                             </div>
                             <div className={styles.lContent}>
@@ -150,8 +150,18 @@ function Dashboard(){
                                 </div>
                                 <div className={styles.gDetail}>
                                     <h4>Web Development</h4>
-                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
-                                     45 members</span></p>
+                                    <div>
+                                        <span className={styles.icon}>
+                                            <i><FaEye style={{width:"12px"}} /></i>
+                                             Public
+                                        </span>
+                                            <div className={styles.vl}>
+                                            </div> 
+                                        <span>
+                                            <i><FaEye style={{width:"12px"}} /></i>
+                                            45 members
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.gContent}>
@@ -160,8 +170,15 @@ function Dashboard(){
                                 </div>
                                 <div className={styles.gDetail}>
                                     <h4>User Experience</h4>
-                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
-                                     45 members</span></p>
+                                    <div>
+                                        <span className={styles.icon}>
+                                            <i><FaEye style={{width:"12px"}} /></i>
+                                             Public
+                                        </span>
+                                        <div className={styles.vl}>
+                                        </div> <span><i><FaEye style={{width:"12px"}} /></i>
+                                            45 members</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.gContent}>
@@ -170,8 +187,17 @@ function Dashboard(){
                                 </div>
                                 <div className={styles.gDetail}>
                                     <h4>Python Group 5</h4>
-                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
-                                     45 members</span></p>
+                                    <div>
+                                        <span className={styles.icon}>
+                                            <i><FaEye style={{width:"12px"}} /></i> 
+                                            Public
+                                        </span>
+                                        <div className={styles.vl}>
+                                        </div> 
+                                        <span><i><FaEye style={{width:"12px"}} /></i>
+                                            45 members
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.gContent}>
@@ -180,8 +206,17 @@ function Dashboard(){
                                 </div>
                                 <div className={styles.gDetail}>
                                     <h4>Data Structures</h4>
-                                    <p><span className={styles.icon}><i><FaEye style={{width:"12px"}} /></i> Public</span><div className={styles.vl}></div> <span><i><FaEye style={{width:"12px"}} /></i>
-                                     45 members</span></p>
+                                    <div>
+                                        <span className={styles.icon}>
+                                            <i><FaEye style={{width:"12px"}} /></i> 
+                                            Public
+                                        </span>
+                                        <div className={styles.vl}>
+                                        </div> 
+                                        <span><i><FaEye style={{width:"12px"}} /></i>
+                                            45 members
+                                        </span>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +234,12 @@ function Dashboard(){
                                 <p>Place</p>
                             </span>
                             <div className={styles.leaderboardPoints}>
-                                <CircularProgressbar value={points} text={`${point}%`} style={{font:"30px"}} />
+                                <CircularProgressbar value={point} text={`${points} Points`} titleColor={'white'} style={{font:"30px"}} 
+                                  progressValueColor={'#ecf0f1'}
+                                  activeStrokeColor={'#f39c12'}
+                                  inActiveStrokeColor={'#9b59b6'}
+                                  inActiveStrokeOpacity={0.5}
+                                  inActiveStrokeWidth={40} />
                             </div>
                         </div>
                         <div className={styles.leaderboardTags}>

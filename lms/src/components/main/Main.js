@@ -27,19 +27,19 @@ return(
                 <div className={styles.mainBody}>
                     <Routes>
                        
-                        <Route path='/' element={<Dashboard/>}>
-                            <Route path='/dashboard' element={<Dashboard/>} />
-                        </Route>
-                        <Route path='/learningpath' element={<LearningPath />}/>
+                        <Route index path='*/dashboard' element={<Dashboard />} />
+                    
+                        <Route path='*/learningpath' element={<LearningPath />}/>
                         <Route path='/courses' element={<GeneralCoursePage />}/>
                         <Route path='/coursepage' element={<CoursePage/>} />
                         <Route path='/quiz' element={<Quiz/>}/>
                         <Route path='/quiz/quizstart' element={<QuizStart/>}/>
+                        <Route path='*/assignment' element={<Assignment/>}/>
                         <Route path='/assignment' element={<Assignment/>}/>
-                        <Route path='/settings' element={<SettingsPage/>}/>
-                        <Route path='/certificate' element={<Certificate/>}/>
+                        <Route path='*/settings' element={<SettingsPage/>}/>
+                        <Route path='*/certificate' element={<Certificate/>}/>
                         <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
-                        <Route path="/error" element={<ErrorShow />} />
+                        <Route path="*/error" element={<ErrorShow />} />
                     </Routes>
                 </div>
       

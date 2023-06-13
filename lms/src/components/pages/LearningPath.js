@@ -16,7 +16,7 @@ export default function LearningPath() {
         <div className={style.wrapper}>
             <div className={style.courseDirectory}>
                 <div>
-                    <Link to="/learningpath">
+                    <Link to="*/learningpath">
                         <p className={style.active} >Course</p>
                         <i><IoIosArrowForward /></i>
                     </Link>

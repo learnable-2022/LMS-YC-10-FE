@@ -18,7 +18,9 @@
     position: sticky;
     top: 20px;
 }
-
+.container header div img{
+    width: 170px;
+}
 
 .formSection{
     height: 100vh;
@@ -296,6 +298,7 @@
     width: 100%;
     font-size: 12px;
     color: #909090;
+    align-items: center;
 }
 
 .formSection .signUpform .fgPwdRPwsd .checkbox{
@@ -392,9 +395,6 @@
     text-align: left;
     font-weight: 499;
 }
-
-
-
 .contactUs .submitBtn{
     display: flex;
     align-self: flex-start;

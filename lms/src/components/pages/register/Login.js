@@ -110,7 +110,7 @@ const handleSubmit = (e) =>{
 
             <h2 className={style.heading}>Login</h2>
 
-            <p>Sign in with your email address used in joining the organisaton</p>
+            <p>Sign in with your email address used in joining the organisation</p>
 
             <form className={style.signUpform} onSubmit={handleSubmit}>
             

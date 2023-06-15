@@ -20,6 +20,9 @@ import Quiz from "./components/pages/Quiz";
 import CoursePage from "./components/pages/CoursePage";
 import GeneralCoursePage from "./components/pages/GeneralCoursePage";
 import LearningPath from "./components/pages/LearningPath";
+import OurMission from "./components/pages/OurMissonPage";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+import TermsOfUse from "./components/pages/TermsOfUsePage";
 
 
 
@@ -42,6 +45,9 @@ return (
           <Route path="/createnewpassword" element={<CreateNewPassword />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route  path="/error" element={<ErrorPage />} />
+          <Route  path="/ourmission" element={<OurMission />} />
+          <Route  path="/privacypolicy" element={<PrivacyPolicy/>} />
+          <Route  path="/termsofuse" element={<TermsOfUse />} />
           {/* <Route  path="/main/*" element={<Main />} /> */}
 
 

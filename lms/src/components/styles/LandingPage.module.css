@@ -117,14 +117,9 @@
 
 /* COURSE SECTION BEGINS */
 .coursesSection{
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center; */
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
-  /* padding: 100px; */
   background: #FAFAFA;
 }
 .coursesSection h1{
@@ -143,11 +138,6 @@
 .coursesWrapper p{
   font-size: 16px;
 }
-/* .courseContainer{
-  width: 268px;
-  padding: 7px 8px 20px 10px;
-  border-radius: 12px;
-} */
 .blue{
   width: 268px;
   padding: 14px 8px 20px;
@@ -195,11 +185,8 @@
   width: 100%;
 }
 .potentialContainer{
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
   font-weight: 700;
@@ -281,8 +268,7 @@
 }
 .provisionText h5{
   font-weight: 700;
-  font-size: 22px;
-  line-height: 31px;
+  font-size: 21px;
   margin-bottom: 7px;
 }
 .provisionText p{
@@ -323,50 +309,6 @@
   line-height: 31px;
 }
 
-
-/* .clientProfile{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  gap: 45px;
-} */
-/* .clientImg{
-  display: flex;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-.clientImg img{
-  width: 160px;
-}
-.clientName{
-  margin-left: 30px;
-  margin-top: 20px;
-}
-.clientName h2{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 31px;
-}
-.clientName p{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-} */
-/* .navCarosel{
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 80px;
-  margin-bottom: 60px;
-} */
-/* .clientOne{
-  width: 20px;
-  height: 20px;
-  background-color: #F48FB1;
-  border-radius: 100%;
-  transition: 0.6s ease;
-} */
 
 @media screen and (max-width: 768px) {
   .heroContainer{
@@ -443,15 +385,18 @@
     margin-left: 0px;
   }
   .provisionText h5{
-    font-size: 16px;
+    font-size: 15px;
     width: 13vw;
+  }
+  .provisionContent{
+    width: max-content;
+    padding: 5px;
   }
   .provisionImg img{
     width: 80px;
   }
   .clientcomment p{
     font-size: 14px;
-    border: 1px solid red;
   }
   .clientsContainer{
       width: 90%;

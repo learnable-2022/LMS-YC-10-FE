@@ -20,8 +20,10 @@ return(
                         </div>
                         <div className={styles.labelField}>
                             <label><p>Enter Your Email</p>
-                                <div>
-                                <input type="email" placeholder="hello@example.com"/>
+                                <div className={styles.labelFieldDiv}>
+                                <div className={styles.inputWrapper}>
+                                    <input type="email" placeholder="hello@example.com"/>
+                                </div>
                                 <button type="button">Submit</button>
                                 </div>
                             </label>
@@ -33,13 +35,13 @@ return(
                     <div>
                         <h3>About Us</h3>
                         <li><Link to="/ourmission">Our Mission</Link></li>
-                        <li><Link to="/">Meet the Team</Link></li>
-                        <li><Link to="/">Testmonials</Link></li>
+                        <li><Link to="/error">Meet the Team</Link></li>
+                        <li><Link to="/error">Testmonials</Link></li>
                         <li><Link to="/privacypolicy">Privacy Policy</Link></li>
                     </div>
                     <div className={styles.secondLinks}>
                         <h3>Support</h3>
-                        <li><Link to="/">FAQs</Link></li>
+                        <li><Link to="/error">FAQs</Link></li>
                         <li><Link to="/contactus">Contact Us</Link></li>
                         <li><Link to="/temsofuse">Terms of Service</Link></li>
                         <li><Link to="/contactus">Help Center</Link></li>

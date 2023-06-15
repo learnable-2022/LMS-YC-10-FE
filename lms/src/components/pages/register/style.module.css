@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .formSections{
     height: 100vh;
@@ -218,23 +218,22 @@
    
 }
 
-.formSection .signUpOptions .loginDiv p{
+.formSection .signUpOptions .loginDiv p, .formSections .signUpOptions .loginDiv p{
     font-weight: bold;
 }
 
-.formSection .signUpOptions .loginDiv a{
+.formSection .signUpOptions .loginDiv a, .formSections .signUpOptions .loginDiv a{
     text-decoration: none;
     color: #0288D1;
 }
 
-.formSection .signUpOptions .or{
-
+.formSection .signUpOptions .or, .formSections .signUpOptions .or{
     margin-top: 20px;
     display: flex;
     align-items: center;
 }
 
-.formSection .signUpOptions .or hr{
+.formSection .signUpOptions .or hr, .formSections .signUpOptions .or hr{
     width: 80%;
 }
 
@@ -393,7 +392,6 @@
  width: 100%;
  margin-top: 20px;
  padding: 0;
- align-items: end;
 }
 
 .contactUs .agreeTerms input{
@@ -427,7 +425,7 @@
 
 
 @media (max-width:768px) {
-    
+ 
 .vectors{
 display: none;
 }

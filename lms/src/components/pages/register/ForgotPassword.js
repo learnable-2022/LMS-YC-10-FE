@@ -12,7 +12,7 @@ export default function ForgotPassword() {
             <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
         </header>
 
-        <div className={style.formSection}>
+        <div className={style.formSections}>
 
             <h2 className={style.heading}>reset password</h2>
 

@@ -3,6 +3,7 @@ import SideBar from "../sideBar/SideBar";
 import styles from "./Main.module.css";
 
 
+
 function Main({pageLocation}){
 return(
     <>
@@ -13,7 +14,6 @@ return(
                     </div>
                 </div>
                 <div className={styles.mainBody}>
-
 
                     {pageLocation}
 

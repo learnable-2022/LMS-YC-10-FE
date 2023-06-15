@@ -61,8 +61,6 @@
     color: white;
     border: none;
     border-radius: 20px;
-    /* width: 60%;
-    align-self: center; */
     
 }
 .quizContainer .startQuizBtn:hover {
@@ -78,10 +76,12 @@
 }
   
 @media (max-width:768px) {
-
     .wrapper{
-    
+        margin: 0;
         width: 100%;
+    }
+    .quizBodyWrapper{
+        margin: 10px 0px 0px 20px;
     }
     .courseDirectory p{
         font-size: 10px;

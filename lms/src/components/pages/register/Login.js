@@ -5,10 +5,10 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
 
-export default function Login() {
-const navigate = useNavigate();
- 
 
+export default function Login() {
+ 
+  const navigate = useNavigate();
   const userRef = useRef();
   const errRef = useRef();
 
@@ -31,7 +31,6 @@ const navigate = useNavigate();
 
 
 const handleSubmit = (e) =>{
-  console.log("name")
   e.preventDefault();
   const data = {
     email: email,
@@ -50,7 +49,7 @@ const handleSubmit = (e) =>{
     // const token2 = response.data.data.EmailAddress
     // const token1 = response.data.data.Password
     // const tokenImage = response.data.data.Image
-    // const token = response.data.data
+    const token = response.data.data
     // const tokens = response.data
     // let loginDetails = JSON.stringify(tokenImage)
     // console.log(tokens)
@@ -63,29 +62,22 @@ const handleSubmit = (e) =>{
     setEmail("");
     setPassword("");
     setSuccess(true)
-
     navigate('/dashboard')
     
     handleChecked()
     if(savePwd === true){
       // localStorage.setItem(token)
-    // localStorage.setItem('token', token)
-    }
-    if(response?.status === 200){
-      console.log(response.status)
-      navigate("/main")
- 
+    localStorage.setItem('token', token)
     }
 
+
    })
-   
   }catch(error){
-    console.log(error.status)
-    if (!error) {
+    if (!error?.response.status) {
       setErrMsg('No Server Response');
-  } else if (error?.status === 400) {
+  } else if (error.response?.status === 400) {
       setErrMsg('Missing Username or Password');
-  } else if (error?.status === 404) {
+  } else if (error.response?.status === 404) {
       setErrMsg('Unauthorized');
   } else {
       setErrMsg('Login Failed');
@@ -101,7 +93,11 @@ const handleSubmit = (e) =>{
 
   return (
     <>
-   
+      {/* { success ?(
+        <div>
+          <Main />
+        </div>
+      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>
@@ -142,7 +138,7 @@ const handleSubmit = (e) =>{
 
             </div>
 
-            <button type='submit'  className={style.signUpBtn} >LOGIN</button>
+            <button className={style.signUpBtn} >LOGIN</button>
             </form>
 
             <div className={style.signUpOptions}>
@@ -158,7 +154,6 @@ const handleSubmit = (e) =>{
 
              <div className={style.GMbtns}>
                 <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

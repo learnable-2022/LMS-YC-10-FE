@@ -11,6 +11,7 @@ export default function Quiz() {
         <div>
             <LmsHeader  page='Course' />
         </div>
+        <div className={styles.quizBodyWrapper}>
         <div>
         <div className={styles.courseDirectory}>
             <div>
@@ -56,8 +57,8 @@ export default function Quiz() {
             </div>
             
         </div>
+        </div>
 
-    
 
     </div>
 </>

@@ -29,15 +29,15 @@ function App() {
  
 
      
-        return (
-          <div className="App">
+return (
+      <div className="App">
 
            
-        <Routes>
+      <Routes>
           <Route index path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login//*" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/createnewpassword" element={<CreateNewPassword />} />
           <Route path="/contactus" element={<ContactUs />} />
@@ -62,23 +62,6 @@ function App() {
 
            
 
-
-          {/* <Route path="*" element={} /> */}
-          <Route path="" element={<Main />} >
-                       
-              <Route path='/' element={<Dashboard />} />
-                       <Route path='/learningpath' element={<LearningPath />}/>
-                       <Route path='/courses' element={<GeneralCoursePage />}/>
-                       <Route path='/coursepage' element={<CoursePage/>} />
-                       <Route path='/quiz' element={<Quiz/>}/>
-                       <Route path='/quiz/quizstart' element={<QuizStart/>}/>
-                       <Route path='/assignment' element={<Assignment/>}/>
-                       {/* <Route path='/assignment' element={<Assignment/>}/> */}
-                       <Route path='/settings' element={<SettingsPage/>}/>
-                       <Route path='/certificate' element={<Certificate/>}/>
-                       <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
-                       <Route path="/error" element={<ErrorShow />} />
-                   </Route>
       </Routes>
           
          </div>

@@ -31,6 +31,7 @@ return(
                     <div className={styles.menuIcon} onClick={showSideBar}></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
+                <div  className={styles.courseHeader}>
                 <h1 className={styles.headerText}>{page}</h1>
                 <div className={styles.courseInputWrapper}>
                     <div className={styles.courseSearchInput}>
@@ -45,20 +46,12 @@ return(
                                 <hr/>
                                 <div className={styles.fourthWrapper}>
                                     <img src={profileImage} alt="profile" />
-                                    <div className={styles.userProfileWrapper}>
-                                        <div className={styles.userProfile}>
-                                            <div>
-                                                <p className={styles.userProfileName}>Arjen Angel</p>
-                                                <div className={styles.userProfileDiv} id={styles.userProfileDiv}>
-                                                    <p>Learner</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p className={styles.userProfileName}>Arjen Angel</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <PopUp trigger={showBar}>

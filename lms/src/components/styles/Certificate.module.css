@@ -42,10 +42,15 @@
         width: 100%;
     }
     .certMain{
-        margin: 30px 0px 0px 10px;
+        /* margin: 30px 0px 0px 30px;
+         */
+         display: flex;
+         align-items: first baseline;
+         justify-content: flex-start;
+         flex-direction: column;
     }
     .certificateBodyWrapper{
-        width: 80%;
+        width: 70%;
         gap: 20px;
         align-items: center;
     }

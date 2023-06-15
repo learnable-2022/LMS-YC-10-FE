@@ -64,6 +64,7 @@
 }
 .formSections .accountTypeForm a:active{
     box-shadow: blue;
+    transform: translateY(4px);
 }
 .accountTypeForm a{
     text-decoration: none;
@@ -202,6 +203,10 @@
 
 .signUpform .signUpBtn:hover{
     cursor: pointer;
+}
+.signUpform .signUpBtn:active{
+    cursor: pointer;
+    transform: translateY(4px);
 }
 
 .formSection .signUpOptions{
@@ -421,6 +426,10 @@
 
 .contactUs .submitBtn:hover{
     cursor: pointer;
+}
+.contactUs .submitBtn:active{
+    cursor: pointer;
+    transform: translateY(4px);
 }
 
 

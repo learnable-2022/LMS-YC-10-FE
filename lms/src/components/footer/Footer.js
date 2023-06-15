@@ -21,7 +21,7 @@ return(
                         <div className={styles.labelField}>
                             <label><p>Enter Your Email</p>
                                 <div className={styles.labelFieldDiv}>
-                                <div className={styles.inputWrapper}>
+                                <div className={styles.inputFooterWrapper}>
                                     <input type="email" placeholder="hello@example.com"/>
                                 </div>
                                 <button type="button">Submit</button>

@@ -39,7 +39,7 @@
 .labelField{
     margin-bottom: 10px;
 }
-.inputWrapper{
+.inputFooterWrapper{
     width: 450px;
     height: 40px;
     background: #E3E3E3;
@@ -137,7 +137,7 @@
         max-width: 450px;
         font-weight: 499;
     }
-    .inputWrapper{
+    .inputFooterWrapper{
         width: 330px;
         align-items: center;
     }

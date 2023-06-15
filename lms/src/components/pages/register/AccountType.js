@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function AccountType() {
  
-  const [accountType, setAccountType] = useState();
+  // const [accountType, setAccountType] = useState();
   const [iconTutor, setIconTutor] = useState(false);
   const [iconStudent, setIconStudent] = useState(false);
 
@@ -18,7 +18,7 @@ export default function AccountType() {
             <a href="./"><img src="./img/logo.png" alt="logo" /></a>
         </header>
 
-        <div className={style.formSection}>
+        <div className={style.formSections}>
 
             <h2 className={style.heading}>Choose account type</h2>
 

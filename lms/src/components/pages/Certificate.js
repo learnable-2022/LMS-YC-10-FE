@@ -111,7 +111,7 @@ function Certificate() {
                     </div>
                     <div>
                         <h3>Issued By</h3>
-                        <p>kidtots Organisation</p>
+                        <p>kidsTot Organisation</p>
                     </div>
             </div>
         </div>

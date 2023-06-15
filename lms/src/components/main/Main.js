@@ -13,7 +13,7 @@ import Assignment from "../pages/Assignment";
 import Dashboard from "../pages/Dashboard";
 import Certificate from "../pages/Certificate";
 import ErrorShow from "../popUpSideBar/ErrorShow";
-
+import { Outlet } from "react-router-dom";
 
 function Main(){
 return(
@@ -25,22 +25,8 @@ return(
                     </div>
                 </div>
                 <div className={styles.mainBody}>
-                    <Routes>
-                       
-                        <Route index path='*/dashboard' element={<Dashboard />} />
-                    
-                        <Route path='*/learningpath' element={<LearningPath />}/>
-                        <Route path='/courses' element={<GeneralCoursePage />}/>
-                        <Route path='/coursepage' element={<CoursePage/>} />
-                        <Route path='/quiz' element={<Quiz/>}/>
-                        <Route path='/quiz/quizstart' element={<QuizStart/>}/>
-                        <Route path='*/assignment' element={<Assignment/>}/>
-                        <Route path='/assignment' element={<Assignment/>}/>
-                        <Route path='*/settings' element={<SettingsPage/>}/>
-                        <Route path='*/certificate' element={<Certificate/>}/>
-                        <Route path="/courses/ongoingcourse" element={<OngoingCourse />} />
-                        <Route path="*/error" element={<ErrorShow />} />
-                    </Routes>
+                   <Outlet />
+
                 </div>
       
         </div>

@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect} from 'react';
 import style  from './style.module.css';
 import axios from 'axios';
-import Main from '../../main/Main';
-import { Link } from 'react-router-dom';
+// import Main from '../../main/Main';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
 
-
 export default function Login() {
+const navigate = useNavigate();
  
   const userRef = useRef();
   const errRef = useRef();
@@ -30,6 +30,7 @@ export default function Login() {
 
 
 const handleSubmit = (e) =>{
+  console.log("name")
   e.preventDefault();
   const data = {
     email: email,
@@ -48,7 +49,7 @@ const handleSubmit = (e) =>{
     // const token2 = response.data.data.EmailAddress
     // const token1 = response.data.data.Password
     // const tokenImage = response.data.data.Image
-    const token = response.data.data
+    // const token = response.data.data
     // const tokens = response.data
     // let loginDetails = JSON.stringify(tokenImage)
     // console.log(tokens)
@@ -61,21 +62,26 @@ const handleSubmit = (e) =>{
     setEmail("");
     setPassword("");
     setSuccess(true)
-    
     handleChecked()
     if(savePwd === true){
       // localStorage.setItem(token)
-    localStorage.setItem('token', token)
+    // localStorage.setItem('token', token)
+    }
+    if(response?.status === 200){
+      console.log(response.status)
+      navigate("/main")
+ 
     }
 
-
    })
+   
   }catch(error){
-    if (!error?.response.status) {
+    console.log(error.status)
+    if (!error) {
       setErrMsg('No Server Response');
-  } else if (error.response?.status === 400) {
+  } else if (error?.status === 400) {
       setErrMsg('Missing Username or Password');
-  } else if (error.response?.status === 404) {
+  } else if (error?.status === 404) {
       setErrMsg('Unauthorized');
   } else {
       setErrMsg('Login Failed');
@@ -93,7 +99,8 @@ const handleSubmit = (e) =>{
     <>
       { success ?(
         <div>
-          <Main />
+          {/* <Main /> */}
+        {/* nav */}
         </div>
       ):(
     <div className={style.container}>
@@ -136,7 +143,7 @@ const handleSubmit = (e) =>{
 
             </div>
 
-            <button className={style.signUpBtn} >LOGIN</button>
+            <button type='submit'  className={style.signUpBtn} >LOGIN</button>
             </form>
 
             <div className={style.signUpOptions}>

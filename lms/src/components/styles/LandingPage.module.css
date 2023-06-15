@@ -35,6 +35,7 @@
 }
 .getStartedExplore{
   display: flex;
+  align-items: center;
   justify-content: end;
   width: 38.5%;
   padding-bottom: 100px;

@@ -8,6 +8,7 @@ import logo from "../../images/Logo.png";
 export default function Login() {
 const navigate = useNavigate();
  
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -62,6 +63,9 @@ const handleSubmit = (e) =>{
     setEmail("");
     setPassword("");
     setSuccess(true)
+
+    navigate('/dashboard')
+    
     handleChecked()
     if(savePwd === true){
       // localStorage.setItem(token)
@@ -97,12 +101,7 @@ const handleSubmit = (e) =>{
 
   return (
     <>
-      { success ?(
-        <div>
-          {/* <Main /> */}
-        {/* nav */}
-        </div>
-      ):(
+   
     <div className={style.container}>
 
         <header className={style.header}>
@@ -175,7 +174,7 @@ const handleSubmit = (e) =>{
         </div>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     </div>
-      )}
+      {/* )} */}
     </>
   )
 }

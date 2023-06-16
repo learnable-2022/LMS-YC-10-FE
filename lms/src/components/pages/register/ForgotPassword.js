@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style  from './style.module.css'
 import { Link } from 'react-router-dom'
-// import { AiOutlineMail } from 'react-icons/ai';
+import axios from 'axios';
+
 
 export default function ForgotPassword() {
+  const [email, setEmail] = useState("");
+
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const data = {
+      email: email,
+  
+    }
+    const url = "https://kidtots.onrender.com/student/forgot-password"
+      axios.post(url, data, {
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+       }).then((response) =>{
+        console.log(response)
+
+       })
+
+  }
  
   return (
     <div className={style.container}>
@@ -18,15 +40,18 @@ export default function ForgotPassword() {
 
             <p>Enter email address assocaited with your account and we will send you a link to reset your password</p>
 
-            <form action="" className={style.signUpform}>
+            <form action="" className={style.signUpform} onSubmit={handleSubmit}>
             
-            <input type="email" name='email' placeholder='Email' required />
+            <input type="email" name='email' placeholder='Email' required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="off"/>
 
 
            
 
            
-            <button className={style.signUpBtn} >Enter</button>
+            <button type='submit' className={style.signUpBtn} >Enter</button>
             </form>
 
             <div className={style.signUpOptions}>

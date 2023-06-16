@@ -46,18 +46,30 @@ const handleSubmit = (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    // const token2 = response.data.data.EmailAddress
-    // const token1 = response.data.data.Password
-    // const tokenImage = response.data.data.Image
+    console.log(response)
     const token = response.data.data
-    // const tokens = response.data
-    // let loginDetails = JSON.stringify(tokenImage)
-    // console.log(tokens)
-    // console.log(tokenImage)
-    // console.log(token1)
-    // console.log(token)
-    // console.log(token2)
-    // localStorage.setItem('token', loginDetails)
+    // Assuming this code is running in a front-end JavaScript file
+
+// Access the value of a specific cookie
+function getCookieValue(cookieName) {
+  const cookies = document.cookie.split(';');
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    console.log("hi")
+    if (cookie.startsWith(`${cookieName}=`)) {
+      return cookie.substring(cookieName.length + 1);
+    }
+    console.log("hiii")
+
+  }
+
+  // return null;
+}
+
+const studentCookieValue = getCookieValue('STUDENT_COOKIE');
+
+console.log(studentCookieValue);
 
     setEmail("");
     setPassword("");
@@ -93,11 +105,6 @@ const handleSubmit = (e) =>{
 
   return (
     <>
-      {/* { success ?(
-        <div>
-          <Main />
-        </div>
-      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>

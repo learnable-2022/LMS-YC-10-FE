@@ -4,7 +4,6 @@ import { CiMail } from "react-icons/ci"
 import { BsTelephone } from "react-icons/bs"
 import { RxPerson } from "react-icons/rx"
 import { RiKey2Fill } from "react-icons/ri"
-import profileImage from "../images/Mask group.png"
 import LmsHeader from "../lmsHeader/LmsHeader";
 
 
@@ -12,6 +11,11 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 
 
 function SettingsPage(){
+
+    const username =   localStorage.getItem('Username')
+    const email =  localStorage.getItem('email')
+    const profileImage = localStorage.getItem('image')
+
 return(
     <>
         <div className={styles.settingsPage}>
@@ -30,7 +34,7 @@ return(
                                     <img src={profileImage} alt="ProfilePicture"  className={styles.profilePicture}/>
                                 </div>
                                 <div className={styles.profileName}>
-                                    <h2>Arjen Angel</h2>
+                                    <h2>{username}</h2>
                                     <button>Upload New</button>
                                 </div>
                             </div>
@@ -38,12 +42,12 @@ return(
                             <div className={styles.nameWrapper}>
                                 <div className={styles.nameWrapperFirst} >
                                     <i><RxPerson /></i>
-                                    <input type="text" placeholder="Angel"/>
+                                    <input type="text" placeholder={username}/>
                                 </div>
-                                <div>
+                                {/* <div>
                                     <i><RxPerson /></i>
                                     <input type="text" placeholder="Arjen"/>
-                                </div>
+                                </div> */}
                             </div>
                     <div className={styles.input}>
                     <div>

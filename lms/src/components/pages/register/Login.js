@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect} from 'react';
 import style  from './style.module.css';
 import axios from 'axios';
-import Main from '../../main/Main';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
 
@@ -46,28 +45,49 @@ const handleSubmit = (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    // const token2 = response.data.data.EmailAddress
-    // const token1 = response.data.data.Password
-    // const tokenImage = response.data.data.Image
+  
     const token = response.data.data
-    // const tokens = response.data
-    // let loginDetails = JSON.stringify(tokenImage)
-    // console.log(tokens)
-    // console.log(tokenImage)
-    // console.log(token1)
-    // console.log(token)
-    // console.log(token2)
-    // localStorage.setItem('token', loginDetails)
+
+    console.log(token)
+    const username = token.Name
+    const email = token.EmailAddress
+    const profileImage = token.Image
+
+    localStorage.setItem('Username', username )
+    localStorage.setItem('email', email )
+    localStorage.setItem('image', profileImage )
+
 
     setEmail("");
     setPassword("");
     setSuccess(true)
+
+    // Assuming this code is running in a front-end JavaScript file
+
+    // Access the value of a specific cookie
+    function getCookieValue(cookieName) {
+      const cookies = document.cookie.split(';');
+
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+
+        if (cookie.startsWith(`${cookieName}=`)) {
+          return cookie.substring(cookieName.length + 1);
+        }
+      }
+
+      return null;
+    }
+
+    const studentCookieValue = getCookieValue('STUDENT_COOKIE');
+
+    console.log(studentCookieValue);
     navigate('/dashboard')
     
     handleChecked()
     if(savePwd === true){
-      // localStorage.setItem(token)
-    localStorage.setItem('token', token)
+     
+    localStorage.setItem('token', JSON.stringify(token))
     }
 
 

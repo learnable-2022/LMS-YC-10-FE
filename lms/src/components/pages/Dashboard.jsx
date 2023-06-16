@@ -222,18 +222,18 @@ function Dashboard(){
                         </div>
                     </div>
                 </div>
-                <div className={styles.leaderboardWrapper}>
-                    <div className={styles.leaderboard}>
-                        <div className={styles.leaderboardHeader}>
+                <div className={styles.leaderBoardWrapper}>
+                    <div className={styles.leaderBoard}>
+                        <div className={styles.leaderBoardHeader}>
                             <h4>Leaderboard</h4>
                             <button>View</button>
                         </div>
-                        <div className={styles.leaderboardProgressBar}>
+                        <div className={styles.leaderBoardProgressBar}>
                             <span>
                                 <h3>26th</h3>
                                 <p>Place</p>
                             </span>
-                            <div className={styles.leaderboardPoints}>
+                            <div className={styles.leaderBoardPoints}>
                                 <CircularProgressbar value={point} text={`${points} Points`} titleColor={'white'} style={{font:"30px"}} 
                                   progressValueColor={'#ecf0f1'}
                                   activeStrokeColor={'#f39c12'}
@@ -242,14 +242,14 @@ function Dashboard(){
                                   inActiveStrokeWidth={40} />
                             </div>
                         </div>
-                        <div className={styles.leaderboardTags}>
+                        <div className={styles.leaderBoardTags}>
                             <i><HiOutlineChartSquareBar /></i>
-                            <div className={styles.leaderboardPart}>
+                            <div className={styles.leaderBoardPart}>
                                 <p>Student</p>
                                 <p>Total Points</p>
                             </div>
                         </div>
-                        <div>
+                        <div className={styles.overflow}>
                             <div className={styles.studentBarWrapper}>
                             <div className={styles.studentBar}>
                                 <p>01</p>

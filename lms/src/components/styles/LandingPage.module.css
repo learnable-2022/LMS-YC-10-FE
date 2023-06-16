@@ -59,12 +59,15 @@
   margin-right: 40px;
 }
 .getStarted:hover{
-  background: #BBDEFB;
-  color: black;
+  color: black;  
+  background: white;
+  color: #0288D1;
   transition: 300ms;
 }
 .getStarted:active{
-  background: #C6C6C6;
+  /* background: #C6C6C6; */
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
   transition: 100ms;
 }
 .explore{
@@ -74,12 +77,18 @@
   background-color: white;
 }
 .explore:hover{
-  background: #BBDEFB;
+  /* background: #BBDEFB; */
   transition: 300ms;
+  color: white;
+  border: 2px solid #0288D1;
+  background-color:  #0288D1;
+
 }
 .explore:active{
   background: #C6C6C6;
   transition: 100ms;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* HERO SECTION END */
 .landingPageBody{
@@ -97,8 +106,8 @@
 }
 /* PARTNERS SECTION BEGINS */
 .partnerWrapper{
+  margin-top: 60px;
   width: 100%;
-  /* margin: 120px 100px; */
 }
 .partnerWrapper h1{
   font-weight: 700;
@@ -199,6 +208,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
   justify-content: center;
 }
 .unlockPWrapper{

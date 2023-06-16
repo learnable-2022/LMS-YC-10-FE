@@ -26,7 +26,7 @@ function LmsHeader({page}){
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
-            <div className={styles.courseHeader}>
+            <div className={styles.courseHeaderH}>
                 <div className={styles.responsiveTag}>
                     <div className={styles.menuIcon} onClick={showSideBar}></div>
                     <div className={styles.responsiveImg}></div>

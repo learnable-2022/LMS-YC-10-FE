@@ -1,12 +1,17 @@
 .wrapper{
-    margin: 0 20px;
+    margin: 0;
     width: 80%;
+}
+.lmsHeader{
+    margin-left: -20px;
 }
 .courseDirectory div i{
     margin: 5px 5px 0px;
 }
 .courseDirectory{
-    display: flex;
+    display: flex;   
+     margin-left: 70px;
+    margin-top: 10px;
 }
 .courseDirectory div a{
     display: flex;
@@ -22,7 +27,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-  
+    margin: 30px 0px 0px 30px;
 }
 
 .quizContainer{
@@ -67,11 +72,19 @@
 }
 
 .quizBtns button{
-    padding: 4px 16px;
+    padding: 14px 26px;
     background-color: #039BE5;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.quizBtns button:hover{
+    padding: 14px 26px;
+    background-color: white;
+    color: #039BE5;
+    border: 1px solid #039BE5;
+    border-radius: 12px;
     cursor: pointer;
 }
 

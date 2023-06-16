@@ -3,13 +3,19 @@
 }
 .courseHeader{
     display: flex;
-    width: 91%;
+    width: 90%;
+    align-items: start;
+    justify-content: space-between;
+}
+.courseHeaderH{
+    display: flex;
+    width: 90%;
     align-items: start;
     justify-content: space-between;
 }
 .courseInputWrapper{
     display: flex;
-    width: 72%;
+    width: 68%;
     height: 15%;
     align-items: center;
     justify-content: space-between;
@@ -23,13 +29,13 @@
 .secondIconWrapper{
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 73%;
     justify-content: space-between;
 }
 .thirdIconWrapper{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 70%;
     justify-content: space-between;
 }
 .thirdIconWrapper hr{
@@ -125,14 +131,20 @@
     }
     .responsiveTag{
         display: flex;
-        width: 35%;
+        width: 30%;
         align-items: center;
         justify-content: space-between;
     }
     .courseHeader{
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 48%;
+        align-items: center;
+    }
+    .courseHeaderH{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         align-items: center;
     }
     .headerIcons{
@@ -188,7 +200,7 @@
     margin-bottom: 5px;
 }
 .navLinkWrapper .firstSectionLink a div:hover{
-    padding-left: 40px;
+    padding-left: 35px;
     margin-left: -30px;
     text-align: center;
     width: 180px;

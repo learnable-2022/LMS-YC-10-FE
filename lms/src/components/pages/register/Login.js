@@ -107,7 +107,7 @@ const handleSubmit = (e) =>{
         </header>
 
         <div className={style.formSection}>
-
+            <div className={style.formSectionDiv}>
             <h2 className={style.heading}>Login</h2>
 
             <p>Sign in with your email address used in joining the organisation</p>
@@ -157,6 +157,7 @@ const handleSubmit = (e) =>{
              </div>
 
             </div>
+        </div>
         </div>
 
         <div className={style.vectors2}>

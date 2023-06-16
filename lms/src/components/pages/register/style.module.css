@@ -29,6 +29,14 @@
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    width: 100%;
+}
+.formSectionDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .formSections{
     height: 100vh;
@@ -63,7 +71,8 @@
     color: white;
 }
 .formSections .accountTypeForm a:active{
-    box-shadow: blue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 .accountTypeForm a{
     text-decoration: none;
@@ -138,7 +147,7 @@
 }
 .signUpform input{
     width: 100%;
-    padding: 12px 5px;
+    padding: 12px 15px;
     border: 1px solid #717171;
     box-sizing: border-box;
 }
@@ -170,10 +179,10 @@
     width: 100%;
 }
 .signUpform .agreeTerms{
- display: flex;
- align-items: center;
- width: 100%;
- padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
 }
 
 .signUpform .agreeTerms input{
@@ -202,6 +211,10 @@
 
 .signUpform .signUpBtn:hover{
     cursor: pointer;
+}
+.signUpform .signUpBtn:active{   
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .formSection .signUpOptions{
@@ -421,6 +434,11 @@
 
 .contactUs .submitBtn:hover{
     cursor: pointer;
+}
+
+.contactUs .submitBtn:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 

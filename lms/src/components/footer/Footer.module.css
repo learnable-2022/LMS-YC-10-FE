@@ -59,9 +59,19 @@
     height: 40px;
     margin-left: -30px;
     border-radius: 17px;
-    background: #E6F6FB;
+    background: #039BE5;
     color: white;
     border: none;
+}
+.labelField div button:hover {
+    background: white;
+    color: #039BE5;
+    border: 1px solid #039BE5;
+    cursor: pointer;
+}
+.labelField div button:active {
+    transform: translateY(2px);
+ 
 }
 .labelField label p{
     display: flex;

@@ -14,12 +14,13 @@
     overflow-y: scroll;
     overflow-x: hidden;
     justify-content: center;
+    margin-top: 30px;
 }
 .profileText{
     text-align: left;
     font-size: 18px;
+    margin-top: 30px;
     margin-left: 81px;
-    margin-top: -15px;
 }
 .settingBodyWrapper{
    display: flex;

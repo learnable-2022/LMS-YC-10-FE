@@ -90,7 +90,7 @@ export default function QuizStart() {
   return (
     <>
     <div className={styles.wrapper}>
-        <div>
+        <div className={styles.lmsHeader}>
             <LmsHeader  page='Course' />
         </div>
         <div className={styles.quizStartBodyWrapper}>

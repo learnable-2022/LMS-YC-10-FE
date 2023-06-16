@@ -2,12 +2,13 @@ import React, { useRef, useState, useEffect} from 'react';
 import style  from './style.module.css';
 import axios from 'axios';
 import Main from '../../main/Main';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
 
 
 export default function Login() {
  
+  const navigate = useNavigate();
   const userRef = useRef();
   const errRef = useRef();
 
@@ -61,6 +62,7 @@ const handleSubmit = (e) =>{
     setEmail("");
     setPassword("");
     setSuccess(true)
+    navigate('/dashboard')
     
     handleChecked()
     if(savePwd === true){
@@ -91,11 +93,11 @@ const handleSubmit = (e) =>{
 
   return (
     <>
-      { success ?(
+      {/* { success ?(
         <div>
           <Main />
         </div>
-      ):(
+      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>
@@ -168,7 +170,7 @@ const handleSubmit = (e) =>{
         </div>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     </div>
-      )}
+      {/* )} */}
     </>
   )
 }

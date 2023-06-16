@@ -7,17 +7,11 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 import {  UserContext } from "./courseList/CourseList";
 
 
-// Onclick,
-// const src = Onclick(src)
-// const id = Onclick(id)
+
 
 function OngoingCourse () {
     const value = React.useContext(UserContext);
-    console.log(value)
-    // const {src, id} = props.data;
-    // console.log("i was clicked")
-    // console.log({src})
-    // console.log(`${id} ${src}`)
+
 return(
     <>                
         <div className={styles.ongoingCourse}>

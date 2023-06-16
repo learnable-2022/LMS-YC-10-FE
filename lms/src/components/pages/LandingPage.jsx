@@ -17,7 +17,7 @@ import messageIcon from '../images/messageIcon.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
-import CarouselObject from "./carousel/Carousel";
+// import CarouselObject from "./carousel/Carousel";
 
 
 function LandingPage(){
@@ -199,7 +199,7 @@ function LandingPage(){
                                             impact on children's education."</p>
                                     </div>
                                     <div className={styles.clientProfile}>
-                                        <CarouselObject />
+                                        {/* <CarouselObject /> */}
                                     </div>
                                     <div className={styles.navCarosel}>
                                         <div className={styles.clientOne} ></div>

@@ -30,31 +30,48 @@
 }
 .labelField div{
     display: flex;
+    align-items: center;
     flex-direction: row;
+}
+.labelFieldDiv{
     margin: 10px 0px 0px;
 }
 .labelField{
     margin-bottom: 10px;
 }
-.labelField div input{
+.inputWrapper{
     width: 450px;
     height: 40px;
     background: #E3E3E3;
     border-radius: 17px;
+}
+.labelField div input{
+    outline: none;
+    background: transparent;
     border: none;
+    padding-left: 20px;
 }
 .labelField div input::placeholder{
     font-size: 14px;
-    padding-left: 20px;
 }
 .labelField div button {
     width: 120px;
     height: 40px;
     margin-left: -30px;
     border-radius: 17px;
-    background: #E6F6FB;
+    background: #039BE5;
     color: white;
     border: none;
+}
+.labelField div button:hover {
+    background: white;
+    color: #039BE5;
+    border: 1px solid #039BE5;
+    cursor: pointer;
+}
+.labelField div button:active {
+    transform: translateY(2px);
+ 
 }
 .labelField label p{
     display: flex;
@@ -130,10 +147,9 @@
         max-width: 450px;
         font-weight: 499;
     }
-    .labelField div{
-        width: 350px;
-        height: 20px;
-        margin-bottom: 30px;
+    .inputWrapper{
+        width: 330px;
+        align-items: center;
     }
     .footerBodyWrapper{
         height: 750px;
@@ -141,6 +157,17 @@
     .labelField{
         width: 380px;
         text-align: left;
+        margin-bottom: 0px;
+    }
+    .labelFieldDiv{
+        display: flex;
+        align-items: center;
+        margin: 10px 0px 0px;
+    }
+    .labelField div{
+        display: flex;
+        align-items: center;
+     
     }
     .labelField button{
         font-size: 14px;

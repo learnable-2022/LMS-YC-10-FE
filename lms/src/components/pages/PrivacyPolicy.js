@@ -14,6 +14,7 @@ return(
                 <Header />
             </div>
             <div className={styles.privacyBodyWrapper}>
+                <h1>Privacy Policy</h1>
                 <div className={styles.privacyBody}>
                     <p>
                     At Kidstot, we are committed to protecting your privacy. This Privacy Policy 

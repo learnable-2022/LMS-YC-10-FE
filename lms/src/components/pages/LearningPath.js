@@ -4,9 +4,46 @@ import { AiOutlinePlus, AiOutlineMenu } from "react-icons/ai"
 import LmsHeader from "../lmsHeader/LmsHeader";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-
+import axios from 'axios';
 
 export default function LearningPath() {
+
+
+
+  const startCourse = (e) =>{
+    e.preventDefault();
+ 
+    const url = "https://kidtots.onrender.com/student/courses/start/:courseid"
+      axios.get(url, {
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+       }).then((response) =>{
+        console.log(response)
+
+       })
+
+  }
+
+  const continueCourse = (e) =>{
+    e.preventDefault();
+ 
+    const url = "https://kidtots.onrender.com/student/courses/continue/:courseid"
+      axios.get(url, {
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+       }).then((response) =>{
+        console.log(response)
+
+       })
+
+  }
+
+
+
   return (
     <div className={style.learningPathWrapper}>
       <div className={style.learningPath}>
@@ -26,7 +63,7 @@ export default function LearningPath() {
         <div className={style.cards}>
 
           
-            <div className={style.card}>
+            <div className={style.card} onClick={startCourse}>
             <Link to="/courses" style={{ textDecoration: 'none' }} > 
                   <div className={style.card_body}>
                       <i><AiOutlinePlus /></i>
@@ -36,7 +73,7 @@ export default function LearningPath() {
             </div>
 
            
-            <div className={style.card}>
+            <div className={style.card} onClick={continueCourse}>
             <Link to="/courses" style={{ textDecoration: 'none' }} > 
                   <div className={style.card_body}>
                       <i><AiOutlineMenu /></i>

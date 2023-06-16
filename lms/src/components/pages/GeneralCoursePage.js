@@ -8,22 +8,27 @@ import axios from 'axios';
 
 export default function GeneralCoursePage() {
 
+   
     const getCourses = async (event) => {
       const url = "https://kidtots.onrender.com/student/courses"
         // const token = localStorage.getItem('token');
-        const response = await axios.get(url, {
+        await axios.get(url, {
         headers:{
             // 'Authorization': `Bearer ${token}`,
             "Content-Type": "application/json",
          
         }
+    }).then((responses) =>{
+        console.log(responses);
+        const items  = responses.data.data;
+     
+       
+        const courses = items.map(({ CourseName, _id, FrontImage, Level, Length }) => {
+            return ({ CourseName, _id, FrontImage, Level, Length} )
+        });
+        console.log(courses)
     })  
-        console.log(response);
-        // const { items } = response.data;
-        // const courses = items.map(({ CourseName, _id, FrontImage, Level, Length }) => {
-        //     return { CourseName, _id, FrontImage, Level, Length };
-        // });
-        // console.log(courses)
+ 
     }
         getCourses();
 
@@ -51,30 +56,7 @@ return (
                     
                     </div>
                     
-            {/* {
-                courses.map(({CourseName, _id, FrontImage, Level, Length }) =>{
-                    return(
-                        <> */}
-                            {/* <div className={style.gridContainer}>
-                                <Link to="/coursepage" style={{textDecoration: "none"}} key={_id}>
-                                <div className={style.card}>
-                                    <img src={FrontImage} alt='' />
-                                    
-                                    <div className={style.details}>
-                                        <div className={style.left}>
-                                            <p>Course</p>
-                                        </div>
-                                        <div className={style.left}>
-                                                <p style={{color: 'white'}} >{CourseName}</p>
-                                        </div>
-                                        <div className={style.footer}>
-                                            <p>{Level}</p>
-                                            <p>{Length}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </Link>
-                            </div> */}
+          
                     <div className={style.gridContainer}>
 
                         <div className={style.gridItem}>
@@ -111,7 +93,7 @@ return (
                                             <p>Course</p>
                                         </div>
                                         <div className={style.left}>
-                                                <p style={{color: 'white'}} >Hardware and maintenance</p>
+                                            <p style={{color: 'white'}} >Hardware and Software</p>
                                         </div>
                                         <div className={style.footer}>
                                             <p>Beginner</p>

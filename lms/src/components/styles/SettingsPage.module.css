@@ -14,12 +14,13 @@
     overflow-y: scroll;
     overflow-x: hidden;
     justify-content: center;
+    margin-top: 30px;
 }
 .profileText{
     text-align: left;
     font-size: 18px;
+    margin-top: 30px;
     margin-left: 81px;
-    margin-top: -15px;
 }
 .settingBodyWrapper{
    display: flex;
@@ -110,26 +111,29 @@ input::placeholder{
         overflow-x: hidden;
     }
     .settingsPageHeader{
-        width: 150%;
+        width: 100%;
     }
     .settingBodyWrapper{
-        width: 100vw;
+        width: 90vw;
         height: 550px;
         margin-bottom: 30px;
     }
     .settingBody{
-        width: 75vw;
+        width: 60vw;
     }
     .nameWrapper{
-        width: 362px;
+        width: 342px;
         flex-wrap: wrap;
     }
     .nameWrapperFirst{
-        width: 352px;
+        width: 322px;
         margin-bottom: 10px;
     }
     .nameWrapper div input{
-        width: 315px;
+        width: 305px;
+    }
+    .nameWrapper div{
+        width: 332px;
     }
     .input div{
         width: 332px;

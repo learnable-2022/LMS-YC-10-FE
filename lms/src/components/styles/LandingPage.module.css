@@ -293,7 +293,7 @@
   width: 100%;
   display: flex;
   margin-top: 50px;
-  padding-bottom: 20px;
+  padding: 40px 0px;
   justify-content: center;
   align-items: center;
   background: #FCE4EC;

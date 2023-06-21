@@ -40,10 +40,11 @@
     font-weight: 600;
 }
 .errorPageWrapper .errorBodyWrapper button:hover{
-    border: 1px solid #0288D1;
-    color: #0288D1;
-    background-color: white;
-}
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
+    transition: 300ms;
+  }
 .errorPageWrapper .errorBodyWrapper button:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);

@@ -10,11 +10,11 @@ export default function LearningPath() {
 
 
 
-  const startCourse = (e) =>{
+  const startCourse = async (e) =>{
     e.preventDefault();
  
     const url = "https://kidtots.onrender.com/student/courses/start/:courseid"
-      axios.get(url, {
+    await axios.get(url, {
         headers:{
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -26,11 +26,11 @@ export default function LearningPath() {
 
   }
 
-  const continueCourse = (e) =>{
+  const continueCourse = async (e) =>{
     e.preventDefault();
  
     const url = "https://kidtots.onrender.com/student/courses/continue/:courseid"
-      axios.get(url, {
+    await axios.get(url, {
         headers:{
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -53,7 +53,7 @@ export default function LearningPath() {
         <div className={style.wrapper}>
             <div className={style.courseDirectory}>
                 <div>
-                    <Link to="*/learningpath">
+                    <Link to="/learningpath">
                         <p className={style.active} >Course</p>
                         <i><IoIosArrowForward /></i>
                     </Link>
@@ -64,7 +64,7 @@ export default function LearningPath() {
 
           
             <div className={style.card} onClick={startCourse}>
-            <Link to="/courses" style={{ textDecoration: 'none' }} > 
+            <Link to="/learningpath/courses" style={{ textDecoration: 'none' }} > 
                   <div className={style.card_body}>
                       <i><AiOutlinePlus /></i>
                   </div>
@@ -74,7 +74,7 @@ export default function LearningPath() {
 
            
             <div className={style.card} onClick={continueCourse}>
-            <Link to="/courses" style={{ textDecoration: 'none' }} > 
+            <Link to="/learningpath/courses" style={{ textDecoration: 'none' }} > 
                   <div className={style.card_body}>
                       <i><AiOutlineMenu /></i>
                   </div>

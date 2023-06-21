@@ -8,14 +8,14 @@ export default function ForgotPassword() {
   const [email, setEmail] = useState("");
 
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
     e.preventDefault();
     const data = {
       email: email,
   
     }
     const url = "https://kidtots.onrender.com/student/forgot-password"
-      axios.post(url, data, {
+     await axios.post(url, data, {
         headers:{
           "Content-Type": "application/json",
           "Accept": "application/json"

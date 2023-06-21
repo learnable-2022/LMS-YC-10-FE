@@ -32,7 +32,7 @@
 
 .quizContainer{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     gap: 20px;
     width: 100%;
@@ -47,7 +47,6 @@
 }
 
 .progress{
-    /* width: 10%; */
     height: 20px;
     background: #EC407A;
     border-radius: 24px;
@@ -80,14 +79,17 @@
     cursor: pointer;
 }
 .quizBtns button:hover{
-    padding: 14px 26px;
-    background-color: white;
-    color: #039BE5;
-    border: 1px solid #039BE5;
-    border-radius: 12px;
+    background: #005381;
     cursor: pointer;
+    color: white;
+    border: 1px solid #005381;
+    transition: 300ms;
 }
-
+.quizBtns button:active{
+    box-shadow: 3px 2px #666;
+    transform: translateY(4px);
+    transition: 100ms;
+}
 
 
 .answerSection{
@@ -143,12 +145,13 @@
     text-decoration: none;
     color: #039BE5;
 }
-
-
-
-
-
-  
+@media (max-width: 1000px) {
+    .wrapper{
+        margin: 5vw;
+        width: 100%;
+    }
+   
+}
 @media (max-width:768px) {
     .wrapper{
         margin: 0;
@@ -181,17 +184,15 @@
         padding: 10px;
     }
     
-.answers{
+    .answers{
     width: 100%;
  
-}
-
-.progressBar{
-    width: 100%;
-}
-.scoreSection img{
-    max-width: 70px;
-}
-    
-    
     }
+
+    .progressBar{
+    width: 100%;
+    }
+    .scoreSection img{
+    max-width: 70px;
+    }    
+}

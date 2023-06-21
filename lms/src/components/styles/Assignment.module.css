@@ -10,7 +10,7 @@
 }
 .assignmentFirstSection{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
 }
@@ -114,6 +114,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     background: #E3F2FD;
     border-radius: 12px;
@@ -305,6 +306,19 @@
     bottom: 0px;
     left: 0px;
   }
+@media screen and (max-width: 1000px) {
+    .assignment{
+        width: 100%;
+        margin-left: 5vw;
+    }
+
+}
+@media screen and (max-width: 830px) {
+    .assignment{
+        width: 100%;
+        margin-left: 7vw;
+    }
+}
 @media screen and (max-width: 768px) {
     .assignment{
         width: 100%;

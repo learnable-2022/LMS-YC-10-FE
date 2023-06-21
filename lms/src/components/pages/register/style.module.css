@@ -203,7 +203,7 @@
     padding: 12px 5px;
     background: #0288D1;
     color: white;
-    border-radius: 20px;
+    border-radius: 16px;
     border: none;
     margin-top: 20px;
    
@@ -211,6 +211,9 @@
 
 .signUpform .signUpBtn:hover{
     cursor: pointer;
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
 }
 .signUpform .signUpBtn:active{   
     box-shadow: 0 5px #666;
@@ -426,14 +429,16 @@
     padding: 14px 38px;
     float: left;
     color: black;
-    background: #E6F6FB;
-    border-radius: 20px;    
+    background: #0288D1;
+    border-radius: 16px;    
     border: none;
     margin-top: 20px;
 }
 
 .contactUs .submitBtn:hover{
     cursor: pointer;
+    background: #005381;
+    border: 1px solid #005381;
 }
 
 .contactUs .submitBtn:active{

@@ -12,12 +12,12 @@ import axios from 'axios';
 
 function Certificate() {
 
-    const downloadPdf = (
+    const downloadPdf = async (
         filePath,
         fileName = "Certificate",
         ) =>{
             const apiUrl = ""
-            axios.get(apiUrl, + filePath, { 
+        await axios.get(apiUrl, + filePath, { 
                 headers: {
                     "Content-Type": 'application/pdf',
         }}).then(response=> response.blob())
@@ -35,12 +35,12 @@ function Certificate() {
             link.parentNode.removeChild(link)
         })
     }
-    const downloadDocx = (
+    const downloadDocx = async (
         filePath,
         fileName = "Certificate",
         ) =>{
             const apiUrl = ""
-            axios.get(apiUrl, + filePath, { 
+        await axios.get(apiUrl, + filePath, { 
                 headers: {
                     "Content-Type": 'application/docx',
         }}).then(response=> response.blob())
@@ -58,12 +58,12 @@ function Certificate() {
             link.parentNode.removeChild(link)
         })
     }
-    const downloadJpg = (
+    const downloadJpg = async (
         filePath,
         fileName = "Certificate",
         ) =>{
             const apiUrl = ""
-            axios.get(apiUrl, + filePath, { 
+        await axios.get(apiUrl, + filePath, { 
                 headers: {
                     "Content-Type": 'application/jpg',
         }}).then(response=> response.blob())

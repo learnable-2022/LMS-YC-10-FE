@@ -1,0 +1,18 @@
+.teamHeader{
+    text-align: center;
+    font-size: 30px;
+    margin: 50px 0px;
+}
+.member{
+    padding: 20px 0px 20px 40px;
+}
+.teamBody{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+@media (max-width:768px) {
+    .teamBody{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+} 

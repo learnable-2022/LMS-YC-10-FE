@@ -21,6 +21,7 @@ import imaget4 from "../images/imaget4.png";
 import imaget5 from "../images/imaget5.png";
 import imaget6 from "../images/imaget6.png";
 import instructor from "../images/InstructorImg.png";
+// import ProgressBar from "./progressBar/ProgressBar";
 
 
 
@@ -35,6 +36,17 @@ function Dashboard(){
      let points = 115;
      let point = 40;
 
+    //  function setProgress(progress) {
+    //     const fillElement = document.querySelector('.progressbarfill');
+    //     const textElement = document.querySelector('.progressbarrtext');
+    //     console.log(fillElement)
+    //     console.log(textElement)
+    //     // fillElement.style.transform = `rotate(${progress * 360}deg)`;
+    //     textElement.textContent = `${Math.round(progress * 100)}%`;
+    //   }
+    //   setProgress(0.5)
+      // Example usage: setProgress(0.75); // Sets the progress to 75%
+      
    
     return(
         <div className={styles.progressMainWrapper}>
@@ -222,34 +234,36 @@ function Dashboard(){
                         </div>
                     </div>
                 </div>
-                <div className={styles.leaderboardWrapper}>
-                    <div className={styles.leaderboard}>
-                        <div className={styles.leaderboardHeader}>
+                <div className={styles.leaderBoardWrapper}>
+                    <div className={styles.leaderBoard}>
+                        <div className={styles.leaderBoardHeader}>
                             <h4>Leaderboard</h4>
                             <button>View</button>
                         </div>
-                        <div className={styles.leaderboardProgressBar}>
+                        <div className={styles.leaderBoardProgressBar}>
                             <span>
                                 <h3>26th</h3>
                                 <p>Place</p>
                             </span>
-                            <div className={styles.leaderboardPoints}>
-                                <CircularProgressbar value={point} text={`${points} Points`} titleColor={'white'} style={{font:"30px"}} 
-                                  progressValueColor={'#ecf0f1'}
-                                  activeStrokeColor={'#f39c12'}
-                                  inActiveStrokeColor={'#9b59b6'}
-                                  inActiveStrokeOpacity={0.5}
-                                  inActiveStrokeWidth={40} />
+                            <div className={styles.leaderBoardPoints}>
+                                <CircularProgressbar value={point} 
+                                text={`${points} Points`} 
+                                // titleColor={'white'} 
+                                //   progressValueColor={'#ecf0f1'}
+                                //   activeStrokeColor={'tomato'}
+                                  
+                                //   inActiveStrokeOpacity={0.1}
+                                   />
                             </div>
                         </div>
-                        <div className={styles.leaderboardTags}>
+                        <div className={styles.leaderBoardTags}>
                             <i><HiOutlineChartSquareBar /></i>
-                            <div className={styles.leaderboardPart}>
+                            <div className={styles.leaderBoardPart}>
                                 <p>Student</p>
                                 <p>Total Points</p>
                             </div>
                         </div>
-                        <div>
+                        <div className={styles.overflow}>
                             <div className={styles.studentBarWrapper}>
                             <div className={styles.studentBar}>
                                 <p>01</p>
@@ -376,6 +390,15 @@ function Dashboard(){
                 </div>
             </div>
             </div>
+            {/* <ProgressBar progress={0.75} /> */}
+            {/* <div className={styles.progressbarr}>
+            <div className={styles.progresss}></div>
+            </div>
+            <div className={styles.progressBbar}>
+            <div className={styles.progressbarfill}></div>
+        <div className={styles.progressbarrtext}>0%</div>
+            </div> */}
+
         </div>
     )
 }

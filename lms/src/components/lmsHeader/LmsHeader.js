@@ -30,11 +30,12 @@ function LmsHeader({page}){
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
-            <div className={styles.courseHeader}>
+            <div className={styles.courseHeaderH}>
                 <div className={styles.responsiveTag}>
                     <div className={styles.menuIcon} onClick={showSideBar}></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
+                <div  className={styles.courseHeader}>
                 <h1 className={styles.headerText}>{page}</h1>
                 <div className={styles.courseInputWrapper}>
                     <div className={styles.courseSearchInput}>
@@ -59,55 +60,81 @@ return(
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
             <PopUp trigger={showBar}>
-        <div className={styles.sideBarWrapper}>
-            <div className={styles.popheaderWrapper}>
-                <div className={styles.logo}>
-                    <img src={Logo} alt="Logo" />
-                </div>
-                <div className={styles.cancelWrapper}>
-                <i onClick={showSideBar}><MdOutlineClose /></i>
-                </div>
-            </div>
-            <div className={styles.navLinkWrapper}>
-                <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
-                    <NavLink to="*/dashboard" >
-                        <div>
-                        <i><VscHome /></i><p>Dashboard</p>
+                <div className={styles.sideBarWrapper}>
+                    <div className={styles.popheaderWrapper}>
+                        <div className={styles.logo}>
+                            <img src={Logo} alt="Logo" />
                         </div>
-                    </NavLink>
-                    <NavLink to="*/learningpath">
-                        <div>
-                        <i><FaBook /></i><p>Courses</p>
+                        <div className={styles.cancelWrapper}>
+                        <i onClick={showSideBar}><MdOutlineClose /></i>
                         </div>
-                    </NavLink>
-                    <NavLink to="*/assignment">
-                        <div>
-                        <i><MdOutlineAssignment /></i><p>Assignments</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="*/error">
-                        <div>
-                            <i><AiOutlinePieChart /></i>
-                            <p>Progress Report</p>
-                        </div>
-                    </NavLink> 
-                    <NavLink to="*/certificate">
-                        <div>
-                        <i><IoDocumentOutline /></i><p>Certificates</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="*/settings">
-                        <div>
-                        <i><IoSettingsOutline /></i><p>Settings</p>
-                        </div>
-                    </NavLink>      
+                    </div>
+                <div className={styles.navLinkWrapper}>
+                <div className={styles.firstSectionLink} >
+                    <li>
+                        <NavLink to="/dashboard"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><VscHome /></i><p>Dashboard</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/learningpath"                 
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><FaBook /></i><p>Courses</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/assignment"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><MdOutlineAssignment /></i><p>Assignments</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/error"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                                <i><AiOutlinePieChart /></i>
+                                <p>Progress Report</p>
+                            </div>
+                        </NavLink> 
+                    </li>
+                    <li>
+                        <NavLink to="/certificate"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><IoDocumentOutline /></i><p>Certificates</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/settings"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><IoSettingsOutline /></i><p>Settings</p>
+                            </div>
+                        </NavLink>
+                    </li>
                 </div>
                 <div className={styles.sideBarFooter}>
                     <div>

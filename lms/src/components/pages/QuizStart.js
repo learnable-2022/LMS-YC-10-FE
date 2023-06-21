@@ -16,6 +16,7 @@ export default function QuizStart() {
 				{ answerText: 'A social media platform ', isCorrect: false },
 				{ answerText: 'A cooking app', isCorrect: false },
 			],
+            id: 1
 		},
 		{
 			questionText: 'What can you create using figma?',
@@ -25,6 +26,7 @@ export default function QuizStart() {
 				{ answerText: 'Music compositions', isCorrect: false },
 				{ answerText: 'Science experiment', isCorrect: false },
 			],
+            id: 2
 		},
 		{
 			questionText: 'Which of the following is a basic feature of figma?',
@@ -34,6 +36,7 @@ export default function QuizStart() {
 				{ answerText: 'Drawing tools', isCorrect: true },
 				{ answerText: 'Gardening tips', isCorrect: false },
 			],
+            id: 3
 		},
 		{
 			questionText: 'How can you collaborate with others in figma?',
@@ -43,6 +46,7 @@ export default function QuizStart() {
 				{ answerText: 'Send text messages', isCorrect: false },
 				{ answerText: 'Through message', isCorrect: false },
 			],
+            id: 4
 		},
         {
 			questionText: 'How can children learn to use figma?',
@@ -52,6 +56,7 @@ export default function QuizStart() {
 				{ answerText: 'Take swimming lessons', isCorrect: false },
 				{ answerText: 'Watch tutorials and videos', isCorrect: true },
 			],
+            id: 5
 		},
 	];
 
@@ -85,31 +90,32 @@ export default function QuizStart() {
   return (
     <>
     <div className={styles.wrapper}>
-        <div>
+        <div className={styles.lmsHeader}>
             <LmsHeader  page='Course' />
         </div>
+        <div className={styles.quizStartBodyWrapper}>
         <div>
         <div className={styles.courseDirectory}>
             <div>
-                <Link to="/">
+                <Link to="/learningpath">
                    <p>Course</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/">
+                <Link to="/courses">
                     <p>Select a course</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/" >
+                <Link to="/coursepage" >
                    <p>UI/UX</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/" >
+                <Link to="/courses/ongoingcourse" >
                    <p>Introduction to Figma</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
@@ -154,20 +160,17 @@ export default function QuizStart() {
                     Question :{currentQuestion + 1}/ {questions.length}
                </h3>
 
-               <p className={styles.question}>
+               <p className={styles.question} key={questions.id}>
                  {questions[currentQuestion].questionText}
                   
                </p>
 
 
 					<div className={styles.answerSection}>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
+						{questions[currentQuestion].answerOptions.map((answerOption, index) => (
 							<button className={styles.answers} 
-                            // style={{
-                            //     backgroundColor: Selected ? '#0288D1' : 'white',
-                              
-                            //   }}
-                            onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                         
+                            onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} key={index}>{answerOption.answerText}</button>
 						))}
 					</div>
 
@@ -183,7 +186,7 @@ export default function QuizStart() {
             </div>
             
         </div>
-
+        </div>
     
 
     </div>

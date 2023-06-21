@@ -25,6 +25,7 @@
 }
 .courseListWrapper  a{
     text-decoration: none;
+    height: 30px;
     color: black;
 }
 .courseListWrapper .courseList #section1{
@@ -33,6 +34,7 @@
     justify-content: space-between;
     width: 650px;
     text-align: left;
+    height: 30px;
 }
 .courseListWrapper .courseList #section2{
     display: flex;

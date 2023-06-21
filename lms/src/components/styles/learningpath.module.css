@@ -1,8 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;800;900&display=swap');
-*{
-    font-family: 'mada' sans-serif;
-}
 .learningPathWrapper{
     width: 80%;
 }
@@ -10,7 +5,8 @@
     width: 100%;
 }
 .wrapper{
-    margin-left: 30px;
+    margin-left: 36px;
+    margin-top: 10px;
     height: 100%;
     max-height: 100%;
 }
@@ -77,13 +73,19 @@
 
 
 
-@media (max-width:768px) {
+@media screen and (max-width: 1000px) {
+    .learningPathWrapper{
+        margin-left: 5vw;
+    }
+    
+}
+@media screen and (max-width:768px) {
     .cards{
-      
         flex-direction: column;
     }
     .learningPathWrapper{
         width: 100%;
+        margin-left: 0;
     }
     .card{
         margin-top: 50px;
@@ -94,4 +96,4 @@
         margin-left: 0px;
     }
     
-    }
+}

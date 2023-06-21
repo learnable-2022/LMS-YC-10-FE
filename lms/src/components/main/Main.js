@@ -1,7 +1,5 @@
 import React from "react";
-
 import SideBar from "../sideBar/SideBar";
-
 import styles from "./Main.module.css";
 
 

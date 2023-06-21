@@ -5,10 +5,12 @@
 .centerPageText{
     font-size: 17px;
     text-align: left;
+    margin-bottom: 20px;
 }
 .firstCenterSection{
     display: flex;
     width: 100%;
+    margin-bottom: 30px;
     align-items: center;
 }
 #div{
@@ -36,6 +38,7 @@
     font-size: 12.5px;
 }
 .secondSection{
+    margin-bottom: 30px;
     width: 104%;
     text-align: left;
 }
@@ -47,9 +50,10 @@
     color: #393939;
     text-align: left;
     font-size: 14px;
+    margin-bottom: 30px;
     background: #FCE4EC;
     border-radius: 12px;
-    padding: 10px 0px 10px 5px;
+    padding: 15px 30px;
 }
 .thirdSection p{
     font-weight: 500;
@@ -57,11 +61,12 @@
 .pTag{
     font-weight: 499;
     text-align: left;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 .courseSummary{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     color: #0288D1;
     margin-left: -20px;
     width: 98%;
@@ -69,12 +74,14 @@
 }
 .courseSummary div{
     display: flex;
+    margin-bottom: 10px;
     width: 480px;
     justify-content: space-evenly;
 }
 .fourthSection{
     width: 100%;
     border: 1px solid #E91E63;
+    margin-bottom: 30px;
     border-radius: 12px;
 }
 .fourthSection span{
@@ -97,6 +104,7 @@
 .h3{
     color: #0288D1;
     font-weight: 500;
+    margin-bottom: 10px;
     text-align: left;
 }
 .centerFooter li{
@@ -123,7 +131,7 @@
         width: 35%;
     }
     .thirdSection{
-        width: 85vw;
+        width: 83vw;
         padding-right: 15px;
     }
     .fourthSection{
@@ -145,5 +153,33 @@
     .centerCoursePageWrapper{
         margin-top: 0px;
         width: 100%;
+    }
+    .centerFooter{
+        gap: 30px;   
+    }
+}
+@media screen and (max-width: 1000px) {
+    .secondSectionText{
+        width: 85vw;
+    }
+    .firstCenterSection{
+        width: 35%;
+    }
+    .thirdSection{
+        width: 83vw;
+        padding-right: 15px;
+    }
+    .fourthSection{
+        width: 88vw;
+    }
+    .pTag{
+        font-weight: 599;
+    }
+    .centerCoursePageWrapper{
+        margin-top: 0px;
+        width: 100%;
+    }
+    .centerFooter{
+        width: 90%;
     }
 }

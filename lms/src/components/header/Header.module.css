@@ -30,6 +30,12 @@
     text-decoration: none;
     color: black;
 }
+.navBarWrapper li a:hover{
+    color: #0288D1;
+}
+.navBarWrapper .active{
+    color: #0288D1;
+}
 .navBtn{
     width: 40%;
     display: flex;
@@ -52,16 +58,17 @@
 .navLogo{
     display: flex;
     align-items: flex-start;
+    margin-left: 20px;
 }
 .navLogo a{
     text-decoration: none;
 }
 .navLogo img{
-    width: 200px;
+    width: 140px;
 }
 @media screen and (max-width: 900px){
     .navLogo img{
-        width: 150px;
+        width: 110px;
     }
     .navBtn button{
         font-size: 12px;
@@ -74,7 +81,7 @@
 }
 @media screen and (max-width: 768px){
     .navLogo img{
-        width: 105px;
+        width: 90px;
     }
     .navBtn button{
         width: 52px;

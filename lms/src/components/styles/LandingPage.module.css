@@ -1,6 +1,7 @@
 .navContainer{
   width: 100%;
   position: fixed;
+  z-index: 1;
 }
 /* HERO STARTS HERE */
 .wrapper{
@@ -36,7 +37,7 @@
 .getStartedExplore{
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   width: 38.5%;
   padding-bottom: 100px;
 }
@@ -59,12 +60,14 @@
   margin-right: 40px;
 }
 .getStarted:hover{
-  background: #BBDEFB;
-  color: black;
+  background: #005381;
+  color: white;
+  border: 2px solid #005381;
   transition: 300ms;
 }
 .getStarted:active{
-  background: #C6C6C6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
   transition: 100ms;
 }
 .explore{
@@ -74,12 +77,17 @@
   background-color: white;
 }
 .explore:hover{
-  background: #BBDEFB;
   transition: 300ms;
+  background: #C6C6C6;
+  color: #000009;
+  border: 2px solid #C6C6C6;
+
 }
 .explore:active{
   background: #C6C6C6;
   transition: 100ms;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* HERO SECTION END */
 .landingPageBody{
@@ -97,8 +105,8 @@
 }
 /* PARTNERS SECTION BEGINS */
 .partnerWrapper{
+  margin-top: 60px;
   width: 100%;
-  /* margin: 120px 100px; */
 }
 .partnerWrapper h1{
   font-weight: 700;
@@ -109,7 +117,7 @@
   margin-bottom: 65px;
 }
 .partners{
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 /* PARTNER SECTION ENDS */
@@ -117,14 +125,9 @@
 
 /* COURSE SECTION BEGINS */
 .coursesSection{
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center; */
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
-  /* padding: 100px; */
   background: #FAFAFA;
 }
 .coursesSection h1{
@@ -143,11 +146,6 @@
 .coursesWrapper p{
   font-size: 16px;
 }
-/* .courseContainer{
-  width: 268px;
-  padding: 7px 8px 20px 10px;
-  border-radius: 12px;
-} */
 .blue{
   width: 268px;
   padding: 14px 8px 20px;
@@ -177,8 +175,9 @@
 
 .customerSupport{
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  z-index: 1;
+  bottom: 50px;
+  right: 80px;
   background-color: #c2185b;
   width: 70px;
   height: 70px;
@@ -195,11 +194,8 @@
   width: 100%;
 }
 .potentialContainer{
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
   font-weight: 700;
@@ -212,20 +208,21 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
   justify-content: center;
 }
 .unlockPWrapper{
-  width: 82%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 .unlockPWrapper p{
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 490;
+  font-size: 24px;
   line-height: 41px;
-  width: 710px;
+  width: 95%;
 }
 .trialPlans{
   display: flex;
@@ -243,7 +240,7 @@
 }
 .plans a{
   color: #039BE5;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   line-height: 31px;
   border-bottom: 3px solid #0288D1;
@@ -281,8 +278,7 @@
 }
 .provisionText h5{
   font-weight: 700;
-  font-size: 22px;
-  line-height: 31px;
+  font-size: 21px;
   margin-bottom: 7px;
 }
 .provisionText p{
@@ -297,7 +293,7 @@
   width: 100%;
   display: flex;
   margin-top: 50px;
-  padding-bottom: 20px;
+  padding: 40px 0px;
   justify-content: center;
   align-items: center;
   background: #FCE4EC;
@@ -322,52 +318,35 @@
   font-size: 19px;
   line-height: 31px;
 }
-
-
-/* .clientProfile{
+.triangleDownWrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 60px;
-  gap: 45px;
-} */
-/* .clientImg{
-  display: flex;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-.clientImg img{
-  width: 160px;
-}
-.clientName{
-  margin-left: 30px;
-  margin-top: 20px;
-}
-.clientName h2{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 31px;
-}
-.clientName p{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-} */
-/* .navCarosel{
-  display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 80px;
-  margin-bottom: 60px;
-} */
-/* .clientOne{
-  width: 20px;
-  height: 20px;
-  background-color: #F48FB1;
-  border-radius: 100%;
-  transition: 0.6s ease;
-} */
+  width: 100%;
+}
 
+.triangleDown {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid white;
+}
+
+.clientProfile{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clientAct{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
 @media screen and (max-width: 768px) {
   .heroContainer{
     width: 100%;
@@ -404,6 +383,7 @@
   }
   .partnerWrapper h1, .coursesSection h1, .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
     font-size: 22px;
+    margin-bottom: 10px;
   }
   .partners img{
     width: 50px;
@@ -433,8 +413,8 @@
     width: 85vw;
   }
   .provisions p{
-    font-size: 10px;
-    width: 10vw;
+    font-size: 9px;
+    width: 9vw;
   }
   .landingPageBodyWrapper{
     width: 90%;   
@@ -443,17 +423,39 @@
     margin-left: 0px;
   }
   .provisionText h5{
-    font-size: 16px;
-    width: 13vw;
+    font-size: 12px;
+    width: 12vw;
+  }
+  .provisionContent{
+    width: max-content;
+    padding: 5px 2px;
+    gap: 2px;
+    margin-left: 0;
   }
   .provisionImg img{
-    width: 80px;
+    width: 70px;
   }
   .clientcomment p{
     font-size: 14px;
-    border: 1px solid red;
   }
   .clientsContainer{
       width: 90%;
   }  
+  .provisions{
+    display: flex;
+    gap: 2px;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .unlockPWrapper p{
+    font-size: 15px;
+  }
+  .customerSupport{
+    width: 50px;
+    height: 50px;
+  }
+  .customerSupport img{
+    width: 20px;
+    margin-top: 15px;
+  }
 }

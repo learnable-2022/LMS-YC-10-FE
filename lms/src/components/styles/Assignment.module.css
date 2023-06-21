@@ -1,14 +1,16 @@
 .assignment{
     width: 75%;
     margin-left: 30px;
+    
 }
 .assignmentBodyWrapper{
     text-align: left;
     margin-left: 30px;
+    margin-top: 30px;
 }
 .assignmentFirstSection{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
 }
@@ -17,6 +19,7 @@
     width: 50%;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .tutorWrapper img{
     width: 50px;
@@ -25,16 +28,15 @@
 .tutorWrapper h3{
     color: #039BE5;
 }
-.tutorWrapper p{
-    margin-top: -15px;
-}
+
 .taskWrapper{
     display: flex;
+    margin-bottom: 30px;
     align-items: center;
 }
 .task{
     display: flex;
-    align-items: start;
+    align-items: center;
 }
 .taskTextWrapper{
     text-align: left;
@@ -42,7 +44,7 @@
 .taskText{
     display: flex;
     width: 400px;
-    margin-top: -12px;
+    margin-top: 0px;
     justify-content: space-between;
 }
 .taskWrapper hr{
@@ -98,7 +100,7 @@
     color: #F06292;
 }
 .taskDetails ol{
-    margin: -10px 0px 0px -25px;
+    margin: 0px 0px 0px 15px;
 }
 .taskDetails ol p{
     margin-left: -15px;
@@ -112,6 +114,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     background: #E3F2FD;
     border-radius: 12px;
@@ -125,6 +128,9 @@
     height: 50px;
     margin-right: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 60px;
     border: 3px solid #039BE5;
 }
@@ -147,6 +153,7 @@
     font-weight: 700;
     color: white;
     width: 80%;
+    margin-bottom: 30px;
 }
 .warningWrapper i{
     font-size: 25px;
@@ -157,6 +164,10 @@
     justify-content: space-between;
     align-items: center;
     width: 70%;
+    margin-bottom: 30px;
+}
+.resourcesh3{
+    margin-bottom: 30px;
 }
 .resourcesWrapper .resources{
     display: flex;
@@ -164,17 +175,19 @@
     background: #E3F2FD;
     border: 1px solid #42A5F5;
     border-radius: 12px;
-    width: 250px;
+    width: 260px;
+    height: 40px;
     justify-content: space-between;
 }
 .resourcesWrapper .resources div{
     display: flex;
     align-items: center;
-    width: 235px;
+    height: fit-content;
+    width: 245px;
     justify-content: space-evenly;
 }
 .resourcesWrapper div p{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: #C2185B;
     height: 25px;
@@ -189,7 +202,8 @@
 }
 .doingRetakesWrapper{
     display: flex;
-    align-items: start;
+    margin-bottom: 30px;
+    align-items: flex-start;
 }
 .doingRetakes{
     display: flex;
@@ -211,7 +225,7 @@
     align-items: center;
     justify-content: space-between;
     width: 70px;
-    margin: -34px 0px 20px;
+    margin: 0px 0px 20px;
     display: flex;
 }
 .doingRetakes div p span{
@@ -222,7 +236,7 @@
 }
 .assignmentTextArea{
     width: 70%;
-    height: 70px;
+    height: 80px;
     background: #EDEDED;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -233,7 +247,7 @@
 }
 .assignmentTextArea textarea{
     width: 95%;
-    height: 40px;
+    height: 50px;
     background: #EDEDED;
     border-radius: 12px;
     border: none;
@@ -244,7 +258,6 @@
     width: 28rem;
     max-width: 100%;
     text-align: center;
-    position: relative;
 } 
 #inputFileUpload {
     display: none;
@@ -268,9 +281,6 @@
 }
 .dragWrapper img{
     margin-right: 12px;
-}
-.dragTextWrapper{
-    margin-top: -25px;
 }
 .uploadButton{
     cursor: pointer;
@@ -296,6 +306,19 @@
     bottom: 0px;
     left: 0px;
   }
+@media screen and (max-width: 1000px) {
+    .assignment{
+        width: 100%;
+        margin-left: 5vw;
+    }
+
+}
+@media screen and (max-width: 830px) {
+    .assignment{
+        width: 100%;
+        margin-left: 7vw;
+    }
+}
 @media screen and (max-width: 768px) {
     .assignment{
         width: 100%;

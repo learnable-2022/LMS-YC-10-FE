@@ -30,41 +30,58 @@
 }
 .labelField div{
     display: flex;
+    align-items: center;
     flex-direction: row;
+}
+.labelFieldDiv{
     margin: 10px 0px 0px;
 }
 .labelField{
     margin-bottom: 10px;
 }
-.labelField div input{
+.inputWrapper{
     width: 450px;
     height: 40px;
     background: #E3E3E3;
     border-radius: 17px;
+}
+.labelField div input{
+    outline: none;
+    background: transparent;
     border: none;
+    padding-left: 20px;
 }
 .labelField div input::placeholder{
     font-size: 14px;
-    padding-left: 20px;
 }
 .labelField div button {
     width: 120px;
     height: 40px;
     margin-left: -30px;
     border-radius: 17px;
-    background: #E6F6FB;
+    background: #039BE5;
     color: white;
     border: none;
+}
+.labelField div button:hover {
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
+    cursor: pointer;
+}
+.labelField div button:active {
+    transform: translateY(2px);
+ 
 }
 .labelField label p{
     display: flex;
     font-weight: 500;
 }
 .labelField a{
-    color: black;
+    color: #0288D1;
 }
 .labelField p{
-    margin-top: 0;
+    margin-top: 4px;
 }
 .links{
     display: flex;
@@ -81,9 +98,12 @@
     font-weight: 750;
     font-size: 22px;
 }
-.links li a{
+.links a{
     text-decoration: none;
     color: black;
+}
+.links a:hover{
+    color: #0288D1;
 }
 .footerCopywrightWrapper{
     background-color:  #0288D1;
@@ -106,6 +126,48 @@
 }
 .footerCopywrightWrapper .footerCopywright div i{
     color: white;
+}
+.news{
+    z-index: 0;
+    position: absolute;
+    left: 20%;
+    top: 2850px;
+    background-color: white;
+    width: 260px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.news h3{
+   text-align: center;
+}
+.news p{
+   text-align: left;
+   font-size: 15px;
+   width: 180px;
+}
+.imgWrapper{
+    display: flex;
+    align-items: flex-start;
+}
+.imgWrapper img{
+    width: 140px;
+}
+.imgWrapper i{
+    position: relative;
+    top: -15%;
+    font-size: 22px;
+    right: -20%;
+    z-index: 0;
+}
+.imgWrapper i:hover{
+    transform: translateY(4px);
+}
+.imgWrapper i:active{
+    box-shadow: 3px 2px #666;
+    transform: translateY(4px);
 }
 @media screen and (max-width: 900px){
     .footerCopywrightWrapper .footerCopywright{
@@ -130,10 +192,9 @@
         max-width: 450px;
         font-weight: 499;
     }
-    .labelField div{
-        width: 350px;
-        height: 20px;
-        margin-bottom: 30px;
+    .inputWrapper{
+        width: 330px;
+        align-items: center;
     }
     .footerBodyWrapper{
         height: 750px;
@@ -141,6 +202,17 @@
     .labelField{
         width: 380px;
         text-align: left;
+        margin-bottom: 0px;
+    }
+    .labelFieldDiv{
+        display: flex;
+        align-items: center;
+        margin: 10px 0px 0px;
+    }
+    .labelField div{
+        display: flex;
+        align-items: center;
+     
     }
     .labelField button{
         font-size: 14px;

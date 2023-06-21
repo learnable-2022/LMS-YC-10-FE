@@ -9,6 +9,7 @@ import Login from './Login';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{10,24}$/;
+
 export default function SignUp() {
 
   const userRef = useRef();
@@ -137,6 +138,7 @@ return (
 
             <h2 className={style.heading}>Sign up</h2>
             <p>Sign up with your email address used in joining the organisation</p>
+            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <form action="" className={style.signUpform} onSubmit={handleSubmit}>
             
             <input type="email" name='email' placeholder='Email' 
@@ -251,7 +253,6 @@ return (
 
              <div className={style.GMbtns}>
                 <Link to="/signup"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/signup"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>
@@ -265,7 +266,6 @@ return (
                 
                 <img  src="./img/Vector-2.png" alt="" />
         </div>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     </div>
           )}
   </>

@@ -17,7 +17,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState('');
-  const [success, setSuccess] = useState(false);
   const [savePwd, setSavePwd] = useState(false)
 
     useEffect(() => {
@@ -29,7 +28,7 @@ export default function Login() {
     }, [email, password])
 
 
-const handleSubmit = (e) =>{
+const handleSubmit = async (e) =>{
   e.preventDefault();
   const data = {
     email: email,
@@ -39,7 +38,7 @@ const handleSubmit = (e) =>{
   const url = "https://kidtots.onrender.com/student/sign"
 
   try{
-  axios.post(url, data, {
+  await axios.post(url, data, {
     headers:{
       "Content-Type": "application/json",
       "Accept": "application/json"
@@ -58,36 +57,17 @@ const handleSubmit = (e) =>{
     localStorage.setItem('image', profileImage )
 
 
+
     setEmail("");
     setPassword("");
-    setSuccess(true)
 
-    // Assuming this code is running in a front-end JavaScript file
-
-    // Access the value of a specific cookie
-    function getCookieValue(cookieName) {
-      const cookies = document.cookie.split(';');
-
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-
-        if (cookie.startsWith(`${cookieName}=`)) {
-          return cookie.substring(cookieName.length + 1);
-        }
-      }
-
-      return null;
-    }
-
-    const studentCookieValue = getCookieValue('STUDENT_COOKIE');
-
-    console.log(studentCookieValue);
     navigate('/dashboard')
     
     handleChecked()
     if(savePwd === true){
      
     localStorage.setItem('token', JSON.stringify(token))
+
     }
 
 
@@ -111,13 +91,8 @@ const handleSubmit = (e) =>{
 
   }
 
-  return (
+return (
     <>
-      {/* { success ?(
-        <div>
-          <Main />
-        </div>
-      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>
@@ -127,10 +102,10 @@ const handleSubmit = (e) =>{
         </header>
 
         <div className={style.formSection}>
-
+            <div className={style.formSectionDiv}>
             <h2 className={style.heading}>Login</h2>
 
-            <p>Sign in with your email address used in joining the organisaton</p>
+            <p>Sign in with your email address used in joining the organisation</p>
 
             <form className={style.signUpform} onSubmit={handleSubmit}>
             
@@ -174,10 +149,10 @@ const handleSubmit = (e) =>{
 
              <div className={style.GMbtns}>
                 <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>
+        </div>
         </div>
 
         <div className={style.vectors2}>

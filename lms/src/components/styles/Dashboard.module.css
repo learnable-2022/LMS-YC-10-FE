@@ -8,11 +8,10 @@
     margin-left: 40px;
 }
 .progressSummary{
-    text-align: center;
-}
-.progressSummary{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    text-align: center;
     gap: 20px;
 }
 .pSumOne{
@@ -52,6 +51,7 @@
 }
 .pSumOneHead{
     display: flex;
+    align-items: center;
     gap: 4px;
     justify-content: center;
 }
@@ -183,32 +183,31 @@
     border-left: 0.5px solid #8E8E8E;
     height: 5px;
 }
-.leaderboardWrapper{
+.leaderBoardWrapper{
     margin-left: 8px;
     display: flex;    
     width: 330px;
-    border-radius: 12px;    
-    height: 500px;
+    border-radius: 12px; 
+    padding-top: 10px;   
+    height: 460px;
     background-color: #2196F3;
     align-items: flex-start;
     justify-content: center;
 }
-.leaderboard{
+.leaderBoard{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
 }
-.leaderboardHeader{
-    margin: 0;
+.leaderBoardHeader{
     display: flex;
     justify-content: space-between;
     color: white;
     width: 260px;
     align-items: center;
 }
-.leaderboardHeader button{
+.leaderBoardHeader button{
     font-size: 14px;
     width: 45px;
     height: 25px;
@@ -217,45 +216,43 @@
     outline: none;
     background-color: transparent;
 }
-.leaderboardProgressBar{
-    margin-top: -25px;
+.leaderBoardProgressBar{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     width: 250px;
+    margin-top: 10px;
     color: white;
 }
-.leaderboardProgressBar span p{
-    margin: -25px;
+.leaderBoardProgressBar span p{
     margin-left: 0px;
     font-size: 14px;
 }
-.leaderboardPoints{
+.leaderBoardPoints{
     width: 70px;
     font-weight: 700;
     font-size: 30px;
-    margin-top: 10px;
     margin-left: 10px;
 }
-.leaderboardPoints .CircularProgressbar-text{
+.leaderBoardPoints .CircularProgressbar-text{
     font-weight: 700;
     font-size: 20px;
     color: black;
 }
-.leaderboardTags{
+.leaderBoardTags{
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 250px;
 }
-.leaderboardTags p{
+.leaderBoardTags p{
     font-size: 14px;
 }
-.leaderboardTags i{
+.leaderBoardTags i{
     margin-top: 5px;
 }
-.leaderboardPart{
+.leaderBoardPart{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -264,36 +261,46 @@
 .studentBarWrapper{
     background-color: white;
     border-radius: 4px;
-    width: 300px;
+    width: 280px;
+    height: 40px;    
+    margin-bottom: 12px;
     padding-left: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+.overflow{
+    overflow-y: scroll;
 }
 .studentBar{
-    width: 285px;
+    width: 270px;
     font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 .image{
-    width: 260px;
+    width: 240px;
     display: flex;    
     align-items: center;
     justify-content: space-between;
 }
 .name{
-    width: 210px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .studentBar img{
-    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
     border-radius: 20px;
 }
 .scheduleHeader{
     display: flex;
     width: 625px;
+    margin-bottom: 15px;
     align-items: center;
     justify-content: space-between;
 }
@@ -309,8 +316,8 @@
     display: flex;
     align-items: center;
     width: 600px;
+    margin-bottom: 15px;
     color: #C6C6C6;
-    margin-top: -25px;
     justify-content: space-between;
 }
 .scheduleTi{
@@ -330,7 +337,7 @@
     align-items: center;
     justify-content: space-between;
     width: 600px;
-    margin-top: -20px;
+    margin-bottom: 15px;
 }
 .courseTime{
     display: flex;
@@ -353,15 +360,36 @@
 }
 .courseName span p{
     color: #C6C6C6;
-    margin-top: -22px;
     font-size: 13px;
 }
 .scheduleWrap{
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 1000px) {
+    .progressMainWrapper{
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+}
+@media screen and (max-width: 868px) {
+    .progressMainWrapper{
+        width: 100%;
+    }
+    .firstSection{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .scheduleWrap{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+}
 @media screen and (max-width: 768px) {
     .progressMainWrapper{
         width: 100%;
+        margin-left: 0;
     }
     .lmsHeader{
         width: 100%;
@@ -369,14 +397,16 @@
     .dashboardBodyWrapper{
         margin-left: 0px;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     .progressSummary{
-        gap: 5px;
+        gap: 2px;
     }
     .bodyWrapper{
         margin-left: 10px;
     }
     .scheduleWrap{
+        margin-top: 30px;
         margin-left: 20px;
     }
     .pSumOne{
@@ -386,16 +416,19 @@
     }
     .pSumOne p{
         font-weight: 600;
-        font-size: 12px;
+        font-size: 9px;
         text-align: left;
     }
     .pSumOne h2{
         font-weight: 600;
-        font-size: 38px;
+        font-size: 32px;
         width: 50px;
     }
+    .pSumOne img{
+        width: 14px;
+    }
     .learnGroup{
-     flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     .firstSection{
         flex-wrap: wrap;
@@ -409,4 +442,9 @@
     .courseName{
         width: 400px;
     }
+}
+.leaderBoardPoints .CircularProgressbar .CircularProgressbar-path {
+    stroke: black;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
 }

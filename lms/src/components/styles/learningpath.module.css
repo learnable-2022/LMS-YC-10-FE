@@ -73,12 +73,19 @@
 
 
 
+@media screen and (max-width: 1000px) {
+    .learningPathWrapper{
+        margin-left: 5vw;
+    }
+    
+}
 @media screen and (max-width:768px) {
     .cards{
         flex-direction: column;
     }
     .learningPathWrapper{
         width: 100%;
+        margin-left: 0;
     }
     .card{
         margin-top: 50px;
@@ -89,4 +96,4 @@
         margin-left: 0px;
     }
     
-    }
+}

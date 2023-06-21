@@ -64,9 +64,9 @@
     border: none;
 }
 .labelField div button:hover {
-    background: white;
-    color: #039BE5;
-    border: 1px solid #039BE5;
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
     cursor: pointer;
 }
 .labelField div button:active {
@@ -78,10 +78,10 @@
     font-weight: 500;
 }
 .labelField a{
-    color: black;
+    color: #0288D1;
 }
 .labelField p{
-    margin-top: 0;
+    margin-top: 4px;
 }
 .links{
     display: flex;
@@ -98,9 +98,12 @@
     font-weight: 750;
     font-size: 22px;
 }
-.links li a{
+.links a{
     text-decoration: none;
     color: black;
+}
+.links a:hover{
+    color: #0288D1;
 }
 .footerCopywrightWrapper{
     background-color:  #0288D1;
@@ -123,6 +126,48 @@
 }
 .footerCopywrightWrapper .footerCopywright div i{
     color: white;
+}
+.news{
+    z-index: 0;
+    position: absolute;
+    left: 20%;
+    top: 2850px;
+    background-color: white;
+    width: 260px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.news h3{
+   text-align: center;
+}
+.news p{
+   text-align: left;
+   font-size: 15px;
+   width: 180px;
+}
+.imgWrapper{
+    display: flex;
+    align-items: flex-start;
+}
+.imgWrapper img{
+    width: 140px;
+}
+.imgWrapper i{
+    position: relative;
+    top: -15%;
+    font-size: 22px;
+    right: -20%;
+    z-index: 0;
+}
+.imgWrapper i:hover{
+    transform: translateY(4px);
+}
+.imgWrapper i:active{
+    box-shadow: 3px 2px #666;
+    transform: translateY(4px);
 }
 @media screen and (max-width: 900px){
     .footerCopywrightWrapper .footerCopywright{

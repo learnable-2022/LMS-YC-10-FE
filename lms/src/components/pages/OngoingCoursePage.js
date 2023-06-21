@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/OngoingCourse.module.css";
-import { Link  } from "react-router-dom";
+import { Link, useParams  } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import ellipse from "../images/Ellipse 34.png";
 import LmsHeader from "../lmsHeader/LmsHeader";
@@ -10,6 +10,8 @@ import {  UserContext } from "./courseList/CourseList";
 
 
 function OngoingCourse () {
+
+    const { id } = useParams(); 
     const value = React.useContext(UserContext);
 
 return(
@@ -28,13 +30,13 @@ return(
                             </Link>
                         </div>
                         <div>
-                            <Link to="/courses">
+                            <Link to="/learningpath/courses">
                                 <p>Select a course</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
                         </div>
                         <div>
-                            <Link to="/coursepage" >
+                            <Link to={`/learningpath/courses/${id}`} >
                             <p>UI/UX</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
@@ -62,7 +64,7 @@ return(
                             <Link to="/error">
                                 <button className={styles.btn1}>About</button>
                             </Link>
-                            <Link to="/quiz">
+                            <Link to="/learningpath/quiz">
                                 <button className={styles.btn2}>Quiz</button>
                             </Link>
                             <Link to="/assignment">

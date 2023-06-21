@@ -23,7 +23,6 @@
     text-decoration: none;
 }
 .sideBarWrapper div a div{
-    list-style: none;
     display: flex;
     align-items: center;
     width: 100%;
@@ -40,8 +39,15 @@
     border-left: 3.5px solid #EC407A;
     background-color:  #64B5F6;
 }
-.active{
-    color: black;
+.firstSectionLink li{
+    list-style: none;
+}
+.firstSectionLink .active div{
+    padding-left: 40px;
+    margin-left: -30px;
+    text-align: center;
+    width: 180px;
+    border-left: 3.5px solid #EC407A;
     background-color:  #64B5F6;
 }
 .sideBarWrapper div a i{
@@ -49,7 +55,6 @@
     margin: 5px 8px 0px 0px;
 }
 .sideBarFooter div a div{
-    list-style-type: none;
     display: flex;
     align-items: center;
     color: white;

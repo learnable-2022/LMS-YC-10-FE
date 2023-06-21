@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import coursestyles from "./CenterCoursePage.module.css"
 import CourseList from "../courseList/CourseList";
 import Card from "../card/Card";
 import { GrGroup } from "react-icons/gr";
 import { BsStarFill } from "react-icons/bs";
+import axios from "axios";
 
 
 
+function CenterCoursePage(props){
+    console.log(props)
+    const [items, setItems] = useState([]);
+        // localStorage.getItem(token)
 
-function CenterCoursePage(){
+            useEffect(() => {
+          const url = "https://kidtots.onrender.com/student/courses/:courseid";
+          axios.get(url, {
+            headers: {
+            //   "Authorization": ` Bearer`,
+            // Authorization: "Bearer " + e,
+              "Content-Type": "application/json",
+            }
+          }).then((res) => {
+            const datas = res.data.data;
+            setItems(datas);
+          }).catch((error) => {
+          if(error.response.status === 400){
+      
+          }
+          });
+        }, []);
 return(
     <>
         <div className={coursestyles.centerCoursePageWrapper}>

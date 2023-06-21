@@ -51,8 +51,18 @@
     height: 40px;
     background: #0288D1;
     border-radius: 12px;
-    color: white;
+    color: black;
     border: none;
+}
+.profileWrapper button:hover{
+    cursor: pointer;
+    background: #005381;
+    border: 1px solid #005381;
+}
+
+.profileWrapper button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 .nameWrapper{
     display: flex;
@@ -94,7 +104,7 @@
 }
 .input div button{
     color:  #0288D1;
-    background-color: white;
+    background-color: transparent;
     border: none;
     margin: 15px 0px 0px 10px;
 }
@@ -103,6 +113,12 @@ input{
 }
 input::placeholder{
     font-size: 14px;
+}
+@media screen and (max-width: 1000px) {
+    .settingsPage{
+        margin-left: 5vw;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px) {
     .settingsPage{
@@ -122,24 +138,24 @@ input::placeholder{
         width: 60vw;
     }
     .nameWrapper{
-        width: 342px;
+        width: 63vw;
         flex-wrap: wrap;
     }
     .nameWrapperFirst{
-        width: 322px;
+        width: 56vw;
         margin-bottom: 10px;
     }
     .nameWrapper div input{
-        width: 305px;
+        width: 50vw;
     }
     .nameWrapper div{
-        width: 332px;
+        width: 56vw;
     }
     .input div{
-        width: 332px;
+        width: 56vw;
     }
     .input div input{
-        width: 226px;
+        width: 42vw;
     }
     .profileText{
         margin: 15px;

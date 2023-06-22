@@ -1,6 +1,6 @@
 .courseListWrapper{
     overflow-y: scroll;
-    height: 300px;
+    /* height: 300px; */
     color: #1C1C1C;
     width: 100%;
 }

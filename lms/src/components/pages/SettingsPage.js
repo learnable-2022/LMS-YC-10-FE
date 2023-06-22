@@ -41,13 +41,14 @@ function SettingsPage(){
         phonenumber: phonenumber,
         password: password,
       }
+      let token = localStorage.getItem("token")
     
-      const url = "https://kidtots.onrender.com/student/"
+      const url = "https://kidtots.onrender.com/student/user-update"
     
-      await axios.put(url, data, {
+      await axios.post(url, data, {
         headers:{
-          "Content-Type": "application/json",
-          "Accept": "application/json"
+        "Authorization": `Bearer` + token,
+        "Content-Type": "application/json",
         }
        }).then((response) =>{
         console.log(response)

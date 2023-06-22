@@ -35,7 +35,7 @@ function Footer(){
         email: email,
       }
     
-      const url = "https://kidtots.onrender.com/student/"
+      const url = "https://kidtots.onrender.com/newsletter"
     
       await axios.post(url, data, {
         headers:{

@@ -47,9 +47,16 @@
 }
 .labelField div input{
     outline: none;
-    background: transparent;
+    /* background: transparent; */
+    background: #E3E3E3;
     border: none;
+    width: 400px;
     padding-left: 20px;
+}
+.labelField div input:active{
+    outline: none;
+    background: #E3E3E3;
+    border: none;
 }
 .labelField div input::placeholder{
     font-size: 14px;

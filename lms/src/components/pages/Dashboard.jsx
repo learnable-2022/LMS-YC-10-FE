@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from '../styles/Dashboard.module.css'
@@ -13,7 +13,7 @@ import UxIcon from '../images/uxIcon.svg'
 import PyIcon from '../images/pyIcon.svg'
 import DataIcon from '../images/datasIcon.svg'
 import LmsHeader from "../lmsHeader/LmsHeader";
-import {HiOutlineChartSquareBar} from "react-icons/hi";
+import { HiOutlineChartSquareBar } from "react-icons/hi";
 import imaget1 from "../images/imaget1.png";
 import imaget2 from "../images/imaget2.png";
 import imaget3 from "../images/imaget3.png";
@@ -21,32 +21,45 @@ import imaget4 from "../images/imaget4.png";
 import imaget5 from "../images/imaget5.png";
 import imaget6 from "../images/imaget6.png";
 import instructor from "../images/InstructorImg.png";
-// import ProgressBar from "./progressBar/ProgressBar";
+import axios from "axios";
 
 
 
 function Dashboard(){
-    // const [step, setStep] = useState(0);
 
-    // let progress = step > 0 ? step / 4 : 0;
      let percentage = 10 //100 * progress;
      let basics = 75;
      let UI = 42;
      let python = 43;
      let points = 115;
      let point = 40;
+    
+     const [items, setItems] = useState([]);
 
-    //  function setProgress(progress) {
-    //     const fillElement = document.querySelector('.progressbarfill');
-    //     const textElement = document.querySelector('.progressbarrtext');
-    //     console.log(fillElement)
-    //     console.log(textElement)
-    //     // fillElement.style.transform = `rotate(${progress * 360}deg)`;
-    //     textElement.textContent = `${Math.round(progress * 100)}%`;
-    //   }
-    //   setProgress(0.5)
-      // Example usage: setProgress(0.75); // Sets the progress to 75%
-      
+    let token = localStorage.getItem("token")
+    // let studentId = localStorage.getItem("studentId")
+     useEffect(() => {
+       const url = `https://kidtots.onrender.com/student/leaderboard`;
+       axios
+         .get(url, {
+           headers: {
+            "Authorization": `Bearer` + token,
+             "Content-Type": "application/json",
+           },
+         })
+         .then((res) => {
+            console.log(res)
+           const datas = res.data.data;
+           setItems(datas);
+         })
+         .catch((error) => {
+           if (error.response.status === 400) {
+             // Handle error
+           }
+         });
+     }, [token]);
+
+     console.log(items)
    
     return(
         <div className={styles.progressMainWrapper}>

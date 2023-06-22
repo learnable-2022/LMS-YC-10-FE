@@ -10,7 +10,8 @@
     justify-content: flex-start;
 }
 .logoWrapper img{
-    width: 175px;
+    margin-left: 20px;
+    width: 140px;
 }
 .errorPageWrapper .errorBodyWrapper{
     display: flex;

@@ -3,7 +3,7 @@ import mystyles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import CenterCoursePage from "../pages/centerCoursepage/CenterCoursePage";
 import RightCoursePage from "../pages/rightCoursePage/RightCoursePage";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
 import axios from "axios";
 
@@ -11,35 +11,31 @@ import axios from "axios";
 
 function CoursePage() {
     const { id } = useParams();
-
+    const navigate = useNavigate()
     const [items, setItems] = useState([]);
 
-    console.log('ID:', id);
-  
-
-        // localStorage.getItem(token)
- 
+        let token = localStorage.getItem("token")
         useEffect(() => {
             const getData = async () =>{
-                const url = `https://kidtots.onrender.com/student/courses/${id}`;
+                const url = `https://kidtots.onrender.com/student/courses/get-single/${id}`;
             await axios.get(url, {
                   headers: {
-                  //   "Authorization": ` Bearer`,
-                  // Authorization: "Bearer " + token,
+                    "Authorization": `Bearer` + token,
                     "Content-Type": "application/json",
                   }
                 }).then((res) => {
                   const datas = res.data.data;
                   setItems(datas);
                 }).catch((error) => {
-                if(error.response.status === 400){
+                if(error.status === 400){
             
                 }
                 });
             }
             getData()
-        }, [id]);
-// console.log(user)
+        }, [id, token]);
+        // console.log("item", items)
+
 return(
     <>
     { items?
@@ -71,19 +67,17 @@ return(
                         </div>
                         <div className={mystyles.courseBody}>
                             <div className={mystyles.centerCoursePage}>
-                                <CenterCoursePage courseId={id}/>
+                                <CenterCoursePage courseItem={items}/>
                             </div>
                             <div>
-                                <RightCoursePage courseId={id} />
+                                <RightCoursePage courseItem={items} />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </div>
-    : <div>
-        <h1>Coming Soon!</h1>
-      </div>    
+    : navigate("/error")
     }
     </>
 )

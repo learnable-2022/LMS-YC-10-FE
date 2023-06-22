@@ -83,6 +83,7 @@
     border: 1px solid #E91E63;
     margin-bottom: 30px;
     border-radius: 12px;
+    height: fit-content;
 }
 .fourthSection span{
     display: flex;

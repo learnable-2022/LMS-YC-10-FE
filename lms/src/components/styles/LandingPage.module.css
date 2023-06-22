@@ -8,16 +8,17 @@
   flex-direction: column;
   background-color: #E3F2FD;
   width: 100%;
-  height: 700px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  padding-top: 120px;
 }
 .heroContainer{
   display: flex;
-  height: 700px;
   align-items:  center;
   justify-content: center;
   width: 100%;
   margin-bottom: 0;
-  padding-top: 50px;
 }
 .text h1{
   font-weight: 800;
@@ -31,14 +32,13 @@
   text-align: left;
 }
 .heroImg img{
-  width: 410px;
+ max-width: 410px;
 }
 .getStartedExplore{
   display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 38.5%;
-  padding-bottom: 100px;
+  margin-top: 10px;
+  width: 100%;
+  
 }
 .getStartedExplore a{
   text-align: center;
@@ -59,12 +59,15 @@
   margin-right: 40px;
 }
 .getStarted:hover{
-  background: #BBDEFB;
-  color: black;
+  color: black;  
+  background: white;
+  color: #0288D1;
   transition: 300ms;
 }
 .getStarted:active{
-  background: #C6C6C6;
+  /* background: #C6C6C6; */
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
   transition: 100ms;
 }
 .explore{
@@ -74,12 +77,18 @@
   background-color: white;
 }
 .explore:hover{
-  background: #BBDEFB;
+  /* background: #BBDEFB; */
   transition: 300ms;
+  color: white;
+  border: 2px solid #0288D1;
+  background-color:  #0288D1;
+
 }
 .explore:active{
   background: #C6C6C6;
   transition: 100ms;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* HERO SECTION END */
 .landingPageBody{
@@ -97,8 +106,8 @@
 }
 /* PARTNERS SECTION BEGINS */
 .partnerWrapper{
+  margin-top: 60px;
   width: 100%;
-  /* margin: 120px 100px; */
 }
 .partnerWrapper h1{
   font-weight: 700;
@@ -117,14 +126,9 @@
 
 /* COURSE SECTION BEGINS */
 .coursesSection{
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center; */
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
-  /* padding: 100px; */
   background: #FAFAFA;
 }
 .coursesSection h1{
@@ -143,11 +147,6 @@
 .coursesWrapper p{
   font-size: 16px;
 }
-/* .courseContainer{
-  width: 268px;
-  padding: 7px 8px 20px 10px;
-  border-radius: 12px;
-} */
 .blue{
   width: 268px;
   padding: 14px 8px 20px;
@@ -195,11 +194,8 @@
   width: 100%;
 }
 .potentialContainer{
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 .potentialContainer h1, .provisionContainer h1, .clientsContainer h1{
   font-weight: 700;
@@ -212,6 +208,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
   justify-content: center;
 }
 .unlockPWrapper{
@@ -281,8 +278,7 @@
 }
 .provisionText h5{
   font-weight: 700;
-  font-size: 22px;
-  line-height: 31px;
+  font-size: 21px;
   margin-bottom: 7px;
 }
 .provisionText p{
@@ -324,53 +320,14 @@
 }
 
 
-/* .clientProfile{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  gap: 45px;
-} */
-/* .clientImg{
-  display: flex;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-.clientImg img{
-  width: 160px;
-}
-.clientName{
-  margin-left: 30px;
-  margin-top: 20px;
-}
-.clientName h2{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 31px;
-}
-.clientName p{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-} */
-/* .navCarosel{
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 80px;
-  margin-bottom: 60px;
-} */
-/* .clientOne{
-  width: 20px;
-  height: 20px;
-  background-color: #F48FB1;
-  border-radius: 100%;
-  transition: 0.6s ease;
-} */
-
 @media screen and (max-width: 768px) {
+  .wrapper{
+    padding: 15px;
+    padding-top: 80px;
+  }
   .heroContainer{
     width: 100%;
+    flex-direction: column-reverse;
   }
   .text h1{
     font-weight: 800;
@@ -443,15 +400,18 @@
     margin-left: 0px;
   }
   .provisionText h5{
-    font-size: 16px;
+    font-size: 15px;
     width: 13vw;
+  }
+  .provisionContent{
+    width: max-content;
+    padding: 5px;
   }
   .provisionImg img{
     width: 80px;
   }
   .clientcomment p{
     font-size: 14px;
-    border: 1px solid red;
   }
   .clientsContainer{
       width: 90%;

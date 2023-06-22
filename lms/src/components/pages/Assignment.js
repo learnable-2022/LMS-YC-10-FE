@@ -155,7 +155,7 @@ return(
                         a maximum score. submit your assignment on time.</p>
                 </div>
                 <div>
-                    <h3>Resources</h3>
+                    <h3 className={styles.resourcesh3}>Resources</h3>
                     <div className={styles.resourcesWrapper}>
                         <div className={styles.resources}>
                             <div>

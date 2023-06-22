@@ -8,9 +8,10 @@ export default function Quiz() {
   return (
     <>
     <div className={styles.wrapper}>
-        <div>
+        <div className={styles.lmsHeader}>
             <LmsHeader  page='Course' />
         </div>
+        <div className={styles.quizBodyWrapper}>
         <div>
         <div className={styles.courseDirectory}>
             <div>
@@ -56,8 +57,8 @@ export default function Quiz() {
             </div>
             
         </div>
+        </div>
 
-    
 
     </div>
 </>

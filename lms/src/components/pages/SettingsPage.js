@@ -13,7 +13,7 @@ import LmsHeader from "../lmsHeader/LmsHeader";
 function SettingsPage(){
 
     const username =   localStorage.getItem('Username')
-    const email =  localStorage.getItem('email')
+    // const email =  localStorage.getItem('email')
     const profileImage = localStorage.getItem('image')
 
 return(

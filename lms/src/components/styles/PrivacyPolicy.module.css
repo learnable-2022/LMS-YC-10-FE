@@ -6,11 +6,21 @@
     width: 100%;
     display: flex;
     align-content: center;
+    flex-direction: column;
+    margin-top: 40px;
     justify-content: center;
+}
+.privacyBodyWrapper h1{
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    font-size: 38px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 .privacyBody{
     width: 87%;
     font-size: 18px;
+    margin-left: 55px;
     text-align: left;
 }
 .privacyBodyTextWrappper{
@@ -22,6 +32,7 @@
 .privacyBodyText{
     width: 87%;
     font-size: 18px;
+    margin-bottom: 30px;
     text-align: left;
 }
 .privacyBodyText ul li{

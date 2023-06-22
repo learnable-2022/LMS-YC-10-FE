@@ -251,7 +251,6 @@ return (
 
              <div className={style.GMbtns}>
                 <Link to="/signup"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/signup"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>

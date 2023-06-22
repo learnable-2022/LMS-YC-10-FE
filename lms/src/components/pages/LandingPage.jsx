@@ -17,7 +17,7 @@ import messageIcon from '../images/messageIcon.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
-import CarouselObject from "./carousel/Carousel";
+// import CarouselObject from "./carousel/Carousel";
 
 
 function LandingPage(){
@@ -40,15 +40,16 @@ function LandingPage(){
                             <p>Unlock a kid's 
                                 world of wonders and empowering <br />
                                 children through interactive learning"</p>
+                                <div className={styles.getStartedExplore}>
+                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
+                        <Link to="/login" className={styles.explore}>Explore Courses</Link>
+                    </div>
                         </div>
                         <div className={styles.heroImg}>
                             <img src={girlHero} alt="" />
                         </div>
                     </div>
-                    <div className={styles.getStartedExplore}>
-                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
-                        <Link to="/error" className={styles.explore}>Explore Courses</Link>
-                    </div>
+                    
                 </div>
                 <div className={styles.landingPageBody}>
                     <div className={styles.landingPageBodyWrapper}>
@@ -199,7 +200,7 @@ function LandingPage(){
                                             impact on children's education."</p>
                                     </div>
                                     <div className={styles.clientProfile}>
-                                        <CarouselObject />
+                                        {/* <CarouselObject /> */}
                                     </div>
                                     <div className={styles.navCarosel}>
                                         <div className={styles.clientOne} ></div>

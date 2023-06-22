@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-// import { TfiLock } from "react-icons/tfi";
 import {  BsPlayCircleFill } from "react-icons/bs";
 import { FcCheckmark } from "react-icons/fc";
 import { CiStickyNote } from "react-icons/ci";
-// import { RiArrowDownSLine } from "react-icons/ri";
 import styles from "./CourseList.module.css";
 import OngoingCourse  from "../OngoingCoursePage";
 import { Link } from "react-router-dom";
@@ -17,11 +15,8 @@ return(
     <UserContext.Provider value={src}>
         <OngoingCourse />
     </UserContext.Provider>
-    // <Component id={Component.id} src={Component.src} />
 )
-    // <OngoingCourse id={id} src={src} name={name}/>
-
-    // console.log(id, src, name)
+  
 
 
 }
@@ -133,17 +128,6 @@ return(
                 {
                     courseList.map((
                         data
-                    // id, 
-                    // title,
-                    // icon,
-                    // icon2,
-                    // icon3,
-                    // name1,
-                    // name2,
-                    // name3,
-                    // watch,
-                    // time,
-                    // src}, index
                     ) => (
                         <details key={data.id} >
                             <summary>{data.title}</summary>

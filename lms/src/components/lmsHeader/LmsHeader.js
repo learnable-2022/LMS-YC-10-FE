@@ -30,11 +30,12 @@ function LmsHeader({page}){
 return(
     <>
         <div className={styles.lmsHeaderWrapper}>
-            <div className={styles.courseHeader}>
+            <div className={styles.courseHeaderH}>
                 <div className={styles.responsiveTag}>
                     <div className={styles.menuIcon} onClick={showSideBar}></div>
                     <div className={styles.responsiveImg}></div>
                 </div>
+                <div  className={styles.courseHeader}>
                 <h1 className={styles.headerText}>{page}</h1>
                 <div className={styles.courseInputWrapper}>
                     <div className={styles.courseSearchInput}>
@@ -64,6 +65,7 @@ return(
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
             <PopUp trigger={showBar}>
         <div className={styles.sideBarWrapper}>
@@ -77,33 +79,33 @@ return(
             </div>
             <div className={styles.navLinkWrapper}>
                 <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
-                    <NavLink to="*/dashboard" >
+                    <NavLink to="/dashboard" >
                         <div>
                         <i><VscHome /></i><p>Dashboard</p>
                         </div>
                     </NavLink>
-                    <NavLink to="*/learningpath">
+                    <NavLink to="/learningpath">
                         <div>
                         <i><FaBook /></i><p>Courses</p>
                         </div>
                     </NavLink>
-                    <NavLink to="*/assignment">
+                    <NavLink to="/assignment">
                         <div>
                         <i><MdOutlineAssignment /></i><p>Assignments</p>
                         </div>
                     </NavLink>
-                    <NavLink to="*/error">
+                    <NavLink to="/error">
                         <div>
                             <i><AiOutlinePieChart /></i>
                             <p>Progress Report</p>
                         </div>
                     </NavLink> 
-                    <NavLink to="*/certificate">
+                    <NavLink to="/certificate">
                         <div>
                         <i><IoDocumentOutline /></i><p>Certificates</p>
                         </div>
                     </NavLink>
-                    <NavLink to="*/settings">
+                    <NavLink to="/settings">
                         <div>
                         <i><IoSettingsOutline /></i><p>Settings</p>
                         </div>

@@ -28,21 +28,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
+    width: 100%;
 }
-.formSection .heading{
-    font-size: 32px;
+.formSectionDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formSections{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -120px;
+}
+.formSection .heading, .formSections .heading{
+    font-size: 48px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 
-.formSection .heading ~ p{
+.formSection .heading ~ p, .formSections .heading ~ p{
     color: #0288D1;
     margin-bottom: 10px;
     width: 40%;
  
 }
-.formSection .accountTypeForm {
+.formSection .accountTypeForm, .formSections .accountTypeForm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +66,14 @@
     width: 50%;
     gap: 16px;
 }
-
+.formSections .accountTypeForm a:hover{
+    background-color: #0288D1;
+    color: white;
+}
+.formSections .accountTypeForm a:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 .accountTypeForm a{
     text-decoration: none;
     width: 100%;
@@ -124,7 +147,7 @@
 }
 .signUpform input{
     width: 100%;
-    padding: 12px 5px;
+    padding: 12px 15px;
     border: 1px solid #717171;
     box-sizing: border-box;
 }
@@ -156,10 +179,10 @@
     width: 100%;
 }
 .signUpform .agreeTerms{
- display: flex;
- align-items: center;
- width: 100%;
- padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
 }
 
 .signUpform .agreeTerms input{
@@ -189,6 +212,10 @@
 .signUpform .signUpBtn:hover{
     cursor: pointer;
 }
+.signUpform .signUpBtn:active{   
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 .formSection .signUpOptions{
     width: 40%;
@@ -204,23 +231,22 @@
    
 }
 
-.formSection .signUpOptions .loginDiv p{
+.formSection .signUpOptions .loginDiv p, .formSections .signUpOptions .loginDiv p{
     font-weight: bold;
 }
 
-.formSection .signUpOptions .loginDiv a{
+.formSection .signUpOptions .loginDiv a, .formSections .signUpOptions .loginDiv a{
     text-decoration: none;
     color: #0288D1;
 }
 
-.formSection .signUpOptions .or{
-
+.formSection .signUpOptions .or, .formSections .signUpOptions .or{
     margin-top: 20px;
     display: flex;
     align-items: center;
 }
 
-.formSection .signUpOptions .or hr{
+.formSection .signUpOptions .or hr, .formSections .signUpOptions .or hr{
     width: 80%;
 }
 
@@ -321,7 +347,7 @@
 
 /* contact us border  */
 .formSection .heading{
-    margin-top: 120px;
+    margin-top: 10px;
 }
 
 .contactUs{
@@ -379,7 +405,6 @@
  width: 100%;
  margin-top: 20px;
  padding: 0;
- align-items: end;
 }
 
 .contactUs .agreeTerms input{
@@ -411,9 +436,14 @@
     cursor: pointer;
 }
 
+.contactUs .submitBtn:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 @media (max-width:768px) {
-    
+ 
 .vectors{
 display: none;
 }
@@ -424,6 +454,15 @@ display: none;
 
 .vectorsPosition3{
  display: none;
+}
+
+.formSection .heading{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.contactUs{
+    width: 80%;
+   border: none;
 }
 
 }

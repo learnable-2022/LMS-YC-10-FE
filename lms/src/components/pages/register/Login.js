@@ -113,11 +113,6 @@ const handleSubmit = (e) =>{
 
   return (
     <>
-      {/* { success ?(
-        <div>
-          <Main />
-        </div>
-      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>
@@ -127,10 +122,10 @@ const handleSubmit = (e) =>{
         </header>
 
         <div className={style.formSection}>
-
+            <div className={style.formSectionDiv}>
             <h2 className={style.heading}>Login</h2>
 
-            <p>Sign in with your email address used in joining the organisaton</p>
+            <p>Sign in with your email address used in joining the organisation</p>
 
             <form className={style.signUpform} onSubmit={handleSubmit}>
             
@@ -174,10 +169,10 @@ const handleSubmit = (e) =>{
 
              <div className={style.GMbtns}>
                 <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>
+        </div>
         </div>
 
         <div className={style.vectors2}>

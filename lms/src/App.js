@@ -20,6 +20,10 @@ import Quiz from "./components/pages/Quiz";
 import CoursePage from "./components/pages/CoursePage";
 import GeneralCoursePage from "./components/pages/GeneralCoursePage";
 import LearningPath from "./components/pages/LearningPath";
+import OurMission from "./components/pages/OurMissonPage";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+import TermsOfUse from "./components/pages/TermsOfUsePage";
+
 
 
 function App() {
@@ -28,11 +32,11 @@ function App() {
  
 
      
-        return (
-          <div className="App">
+return (
+      <div className="App">
 
            
-        <Routes>
+      <Routes>
           <Route index path="/" element={ <LandingPage />} />
           <Route path="/accounttype" element={<AccountType /> } />
           <Route path="/signup" element={<SignUp />} />
@@ -41,6 +45,10 @@ function App() {
           <Route path="/createnewpassword" element={<CreateNewPassword />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route  path="/error" element={<ErrorPage />} />
+          <Route  path="/ourmission" element={<OurMission />} />
+          <Route  path="/privacypolicy" element={<PrivacyPolicy/>} />
+          <Route  path="/termsofuse" element={<TermsOfUse />} />
+          {/* <Route  path="/main/*" element={<Main />} /> */}
 
 
             {/* pages when when user is logged in  */}
@@ -60,9 +68,6 @@ function App() {
 
            
 
-
-          {/* <Route path="*" element={} /> */}
-       
       </Routes>
           
          </div>

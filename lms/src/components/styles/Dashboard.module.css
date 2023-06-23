@@ -365,9 +365,31 @@
 .scheduleWrap{
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 1000px) {
+    .progressMainWrapper{
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+}
+@media screen and (max-width: 868px) {
+    .progressMainWrapper{
+        width: 100%;
+    }
+    .firstSection{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .scheduleWrap{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+}
 @media screen and (max-width: 768px) {
     .progressMainWrapper{
         width: 100%;
+        margin-left: 0;
     }
     .lmsHeader{
         width: 100%;
@@ -420,4 +442,9 @@
     .courseName{
         width: 400px;
     }
+}
+.leaderBoardPoints .CircularProgressbar .CircularProgressbar-path {
+    stroke: black;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
 }

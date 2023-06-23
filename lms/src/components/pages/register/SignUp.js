@@ -5,10 +5,12 @@ import axios from 'axios';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Login from './Login';
+import logo from "../../images/Logo.png";
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{10,24}$/;
+
 export default function SignUp() {
 
   const userRef = useRef();
@@ -130,13 +132,14 @@ return (
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>
 
             <h2 className={style.heading}>Sign up</h2>
             <p>Sign up with your email address used in joining the organisation</p>
+            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <form action="" className={style.signUpform} onSubmit={handleSubmit}>
             
             <input type="email" name='email' placeholder='Email' 
@@ -264,7 +267,6 @@ return (
                 
                 <img  src="./img/Vector-2.png" alt="" />
         </div>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     </div>
           )}
   </>

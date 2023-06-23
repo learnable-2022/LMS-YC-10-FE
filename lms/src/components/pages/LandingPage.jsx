@@ -1,11 +1,11 @@
 import React from "react";
 import styles from '../styles/LandingPage.module.css'
 import girlHero from '../images/girlHero.svg'
-import genesysLogo from '../images/genesysLogo.svg'
-import codevilleLogo from '../images/codevilleLogo.svg'
-import learnableLogo from '../images/learnableLogo.svg'
-import teneceLogo from '../images/teneceLogo.svg'
-import emblem from '../images/emblem.svg'
+import genesysLogo from '../images/Logo side 1.png'
+import codevilleLogo from '../images/Codeville.png'
+import learnableLogo from '../images/Learenable.png'
+import teneceLogo from '../images/Tenece - jpeg.png'
+import emblem from '../images/Greensprings School - jpeg.png'
 import webCourse from '../images/webCourse.svg'
 import roboticsCourse from '../images/roboticsCourse.svg'
 import uiCourse from '../images/uiCourse.svg'
@@ -17,7 +17,8 @@ import messageIcon from '../images/messageIcon.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
-// import CarouselObject from "./carousel/Carousel";
+// import CarouselObject from "./carousel/CarouselItem";
+import CarouselItem from "./carousel/CarouselItem";
 
 
 function LandingPage(){
@@ -199,17 +200,15 @@ function LandingPage(){
                                             rewards that come from making a positive
                                             impact on children's education."</p>
                                     </div>
-                                    <div className={styles.clientProfile}>
-                                        {/* <CarouselObject /> */}
-                                    </div>
-                                    <div className={styles.navCarosel}>
-                                        <div className={styles.clientOne} ></div>
-                                        <div className={styles.clientOne} ></div>
-                                        <div className={styles.clientOne} ></div>
-                                        <div className={styles.clientOne} ></div>
-                                        <div className={styles.clientOne}></div>
+                                    <div className={styles.triangleDownWrapper}>
+                                        <div className={styles.triangleDown}></div>
                                     </div>
                                 </div>
+                                    <div className={styles.clientProfile}>
+                                        <div className={styles.clientAct}>
+                                            <CarouselItem />
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                 <div>

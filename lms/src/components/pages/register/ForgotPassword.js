@@ -2,20 +2,21 @@ import React, { useState } from 'react'
 import style  from './style.module.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import logo from "../../images/Logo.png";
 
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
 
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
     e.preventDefault();
     const data = {
       email: email,
   
     }
     const url = "https://kidtots.onrender.com/student/forgot-password"
-      axios.post(url, data, {
+     await axios.post(url, data, {
         headers:{
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -31,7 +32,7 @@ export default function ForgotPassword() {
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
         </header>
 
         <div className={style.formSections}>

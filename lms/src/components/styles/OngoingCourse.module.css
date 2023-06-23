@@ -2,13 +2,14 @@
     width: 80%;
 }
 .ongoingCourseWrapper{
-    margin-left: 40px;
+    margin: 10px 0px 30px 50px;
 }
 .courseDirectory div i{
     margin: 5px 5px 0px;
 }
 .courseDirectory{
     display: flex;
+    margin-left: 10px;
 }
 .courseDirectory div a{
     display: flex;
@@ -23,18 +24,19 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 .tutorWrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 235px;
+    margin-bottom: 20px;
 }
 .tutorWrapper div{
     text-align: left;
-    margin-top: 8px;
 }
 .tutorWrapper h3{
     color: #039BE5;
@@ -49,6 +51,7 @@
     justify-content: space-between;
     width: 400px;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 .buttonWrapper a{
     text-decoration: none;
@@ -80,17 +83,40 @@
     border-radius: 16px;
     padding: 4px 6px;
 }
+.btn1:hover{
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
+    transition: 300ms;
+}
+.btn2:hover, .btn3:hover{
+    color: #000009;
+    transition: 300ms;
+    background: #C6C6C6;
+    border: 2px solid #C6C6C6;
+  
+}
+.btn1:active, .btn2:active, .btn3:active{
+    background: #C6C6C6;
+    transition: 100ms;
+    box-shadow: 3px 2px #666;
+    transform: translateY(4px);
+}
 .extraSource{
     text-align: left;
 }
+.extraSource h3{
+    margin-bottom: 10px;
+}
 .extraSource p{
     width: 550px;
+    margin-bottom: 30px;
 }
 .extraSource a{
     color:  #EC407A;
     text-decoration: none;
 }
-.progressBar {
+.progressBar{
     background: #E3F2FD;
     padding: 30px 20px 40px 25px;
     width: 250px;
@@ -101,7 +127,8 @@
     display: flex;
     align-items: center;
     width: 160px;
-    justify-content: start;
+    justify-content: flex-start;
+    gap: 10px;
 }
 .progressBar hr{
     border-radius: 8px;
@@ -142,22 +169,31 @@
     width: 235px;
     font-weight: 550;
 }
+@media screen and (max-width: 1000px) {
+    .ongoingCourse{
+        width: 100%;
+        margin-left: 5vw;
+    }
+
+}
 @media screen and (max-width: 768px) {
     .ongoingCourse{
         width: 100%;
+        margin-left: 0;
         overflow-x: hidden;
     }
     .ongoingCourseHeader{
-        width: 150%;
+        width: 100%;
     }
     .progressBar{
         display: none;
     }
     .courseBodyWrapper video{
         width: 85vw;
+        z-index: 0;
     }
     .courseVideoWrapper{
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
     }
 }

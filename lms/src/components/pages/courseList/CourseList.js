@@ -132,7 +132,7 @@ return(
                         <details key={data.id} >
                             <summary>{data.title}</summary>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                    <Link to="/learningpath/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
                                         <i>{data.icon}</i>
                                        <div className={styles.firstRow}>
                                             <p>{data.name1}</p>
@@ -144,7 +144,7 @@ return(
                                     </Link>
                                 </div>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                    <Link to="/learningpath/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
                                         <i>{data.icon2}</i>
                                         <div className={styles.firstRow}>
                                             <p>{data.name2}</p>
@@ -156,7 +156,7 @@ return(
                                     </Link>
                                 </div>
                                 <div id={styles.section1}>
-                                    <Link to="/courses/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
+                                    <Link to="/learningpath/ongoingcourse" className={styles.courseList} onClick={()=>Onclick(data.src)}>
                                         <i>{data.icon3}</i>
                                         <div className={styles.firstRow}>
                                             <p>{data.name3}</p>

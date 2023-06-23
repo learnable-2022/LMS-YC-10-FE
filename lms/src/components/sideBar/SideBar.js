@@ -29,42 +29,66 @@ return(
                 <img src={Logo} alt="Logo" />
             </div>
             <div className={styles.navLinkWrapper}>
-                <div className={styles.firstSectionLink} id={styles.firstSectionLink}>
-                    <NavLink to="/dashboard">
-                        <div>
-                        <i><VscHome /></i><p>Dashboard</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/learningpath">
-                        <div>
-                        <i><FaBook /></i><p>Courses</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/assignment">
-                        <div>
-                        <i><MdOutlineAssignment /></i><p>Assignments</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/error">
-                        <div>
-                            <i><AiOutlinePieChart /></i>
-                            <p>Progress Report</p>
-                        </div>
-                    </NavLink>  
-                    <NavLink to="/certificate">
-                        <div>
-                        <i><IoDocumentOutline /></i><p>Certificates</p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/settings">
-                        <div>
-                        <i><IoSettingsOutline /></i><p>Settings</p>
-                        </div>
-                    </NavLink>
+                <div className={styles.firstSectionLink} >
+                    <li>
+                        <NavLink to="/dashboard"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><VscHome /></i><p>Dashboard</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/learningpath"                 
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><FaBook /></i><p>Courses</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/assignment"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><MdOutlineAssignment /></i><p>Assignments</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/error"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                                <i><AiOutlinePieChart /></i>
+                                <p>Progress Report</p>
+                            </div>
+                        </NavLink> 
+                    </li>
+                    <li>
+                        <NavLink to="/certificate"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><IoDocumentOutline /></i><p>Certificates</p>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/settings"
+                        className={({isActive, isPending}) => isPending ? "pending": 
+                        isActive ? styles.active : ""}>
+                            <div>
+                            <i><IoSettingsOutline /></i><p>Settings</p>
+                            </div>
+                        </NavLink>
+                    </li>
                 </div>
                 <div className={styles.sideBarFooter}>
-                    <div onclick={handleLogout}>
-                        <Link to="">
+                    <div>
+                        <Link to="/">
                         <div>
                         <i><FiLogIn /></i><p>Logout</p>
                         </div>

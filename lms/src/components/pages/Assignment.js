@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Assignment.module.css";
 import LmsHeader from "../lmsHeader/LmsHeader";
 import ellipse from "../images/Ellipse 34.png";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { FiDownload } from "react-icons/fi";
 import link from "../images/Link.svg";
-
+import axios from "axios";
 
 
 
@@ -82,6 +82,56 @@ function handleFile(files) {
 
   
 function Assignment(){
+
+
+    const [ message, setMesage ] = useState("")
+    const handleFirst = async (
+        filePath,
+        fileName = "Certificate",
+        ) =>{
+            const apiUrl = ""
+        await axios.get(apiUrl, + filePath, { 
+                headers: {
+                    "Content-Type": 'application/pdf',
+        }}).then(response=> response.blob())
+        .then(blob =>{
+            const url = window.URL.createObjectURL(new Blob([blob]))
+
+            const link = document.createElement('a')
+            link.href = url;
+            link.download = fileName;
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            link.parentNode.removeChild(link)
+        })
+    }
+    const handleSecond = async (
+        filePath,
+        fileName = "Certificate",
+        ) =>{
+            const apiUrl = ""
+        await   axios.get(apiUrl, + filePath, { 
+                headers: {
+                    "Content-Type": 'application/pdf',
+        }}).then(response=> response.blob())
+        .then(blob =>{
+            const url = window.URL.createObjectURL(new Blob([blob]))
+
+            const link = document.createElement('a')
+            link.href = url;
+            link.download = fileName;
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            link.parentNode.removeChild(link)
+        })
+    }
+
 return(
     <>
         <div className={styles.assignment}>
@@ -158,13 +208,13 @@ return(
                     <h3 className={styles.resourcesh3}>Resources</h3>
                     <div className={styles.resourcesWrapper}>
                         <div className={styles.resources}>
-                            <div>
+                            <div  onClick={handleFirst}>
                                 <p>Designing a user-friendly login</p>
                                 <i><FiDownload /></i>
                             </div>
                         </div>
                         <div className={styles.resources}>
-                            <div>
+                            <div onClick={handleSecond}>
                                 <p>Designing UX login form and process</p>
                                 <i><FiDownload /></i>
                             </div>
@@ -180,7 +230,8 @@ return(
                         </div>
                     </div>
                     <div className={styles.assignmentTextArea}>
-                        <textarea placeholder="Type Answer"></textarea>
+                        <textarea placeholder="Type Answer" 
+                        value={message} onChange={(e) => setMesage(e.target.value)}></textarea>
                     </div>
                     <div>
                         <DragDropFile />

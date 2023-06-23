@@ -41,15 +41,16 @@ function LandingPage(){
                             <p>Unlock a kid's 
                                 world of wonders and empowering <br />
                                 children through interactive learning"</p>
+                                <div className={styles.getStartedExplore}>
+                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
+                        <Link to="/login" className={styles.explore}>Explore Courses</Link>
+                    </div>
                         </div>
                         <div className={styles.heroImg}>
                             <img src={girlHero} alt="" />
                         </div>
                     </div>
-                    <div className={styles.getStartedExplore}>
-                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
-                        <Link to="/error" className={styles.explore}>Explore Courses</Link>
-                    </div>
+                    
                 </div>
                 <div className={styles.landingPageBody}>
                     <div className={styles.landingPageBodyWrapper}>

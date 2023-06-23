@@ -18,8 +18,8 @@
     position: sticky;
     top: 20px;
 }
-.container header div img{
-    width: 170px;
+.container header img{
+    width: 140px;
 }
 
 .formSection{
@@ -350,7 +350,7 @@
 
 /* contact us border  */
 .formSection .heading{
-    margin-top: 120px;
+    margin-top: 10px;
 }
 
 .contactUs{
@@ -459,6 +459,15 @@ display: none;
 
 .vectorsPosition3{
  display: none;
+}
+
+.formSection .heading{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.contactUs{
+    width: 80%;
+   border: none;
 }
 
 }

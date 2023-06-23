@@ -30,6 +30,8 @@ export default function Login() {
 
 const handleSubmit = async (e) =>{
   e.preventDefault();
+  localStorage.clear();
+  
   const data = {
     email: email,
     password: password,
@@ -44,21 +46,29 @@ const handleSubmit = async (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-    const token = response.data.token
-    localStorage.setItem("token", token)
-    console.log(token)
+  
+    const token = response.data.data
 
+    console.log(token)
+    const username = token.Name
+    const email = token.EmailAddress
+    const profileImage = token.Image
+
+    localStorage.setItem('Username', username )
+    localStorage.setItem('email', email )
+    localStorage.setItem('image', profileImage )
 
 
     setEmail("");
     setPassword("");
-    
+
     navigate('/dashboard')
     
     handleChecked()
     if(savePwd === true){
-      // localStorage.setItem(token)
-    // localStorage.setItem('token', token)
+     
+    localStorage.setItem('token', JSON.stringify(token))
+
     }
 
 

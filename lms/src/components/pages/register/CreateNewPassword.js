@@ -1,7 +1,7 @@
 import React from 'react'
 import style  from './style.module.css'
 import { Link } from 'react-router-dom';
-
+import logo from "../../images/Logo.png";
 
 export default function CreateNewPassword() {
  
@@ -9,7 +9,7 @@ export default function CreateNewPassword() {
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>

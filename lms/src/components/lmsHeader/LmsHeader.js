@@ -3,7 +3,7 @@ import styles from "./LmsHeader.module.css";
 import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
-import profileImage from "../images/Mask group.png";
+// import profileImage from "../images/Mask group.png";
 import PopUp from "../popUpSideBar/PopUp";
 import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAssignment,  MdOutlineClose } from "react-icons/md";
@@ -16,6 +16,10 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 
 
 function LmsHeader({page}){
+
+  const username =   localStorage.getItem('Username')
+   const email =  localStorage.getItem('email')
+   const profileImage = localStorage.getItem('image')
 
     const [showBar, setShowBar] = useState(false)
 
@@ -46,7 +50,16 @@ return(
                                 <hr/>
                                 <div className={styles.fourthWrapper}>
                                     <img src={profileImage} alt="profile" />
-                                    <p className={styles.userProfileName}>Arjen Angel</p>
+                                    <div className={styles.userProfileWrapper}>
+                                        <div className={styles.userProfile}>
+                                            <div>
+                                                <p className={styles.userProfileName}>{username}</p>
+                                                {/* <div className={styles.userProfileDiv} id={styles.userProfileDiv}>
+                                                    <p>Learner</p>
+                                                </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

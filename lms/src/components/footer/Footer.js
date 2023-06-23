@@ -108,7 +108,7 @@ return(
                         </div>
                     </div>
                 </div>
-                <PopUp trigger={showBar}>
+                <PopUp trigger={true}>
                     <div className={styles.news}>
                         <div className={styles.imgWrapper}>  
                             <img src={newsImage} alt="Thanks" />

@@ -77,7 +77,6 @@
 }
 .labelField div button:active {
     transform: translateY(2px);
- 
 }
 .labelField label p{
     display: flex;
@@ -198,9 +197,20 @@
         max-width: 450px;
         font-weight: 499;
     }
+    .footerBody h1{
+        font-size: 26px;
+        font-weight: 800;
+    }
+    .footerBody{
+        margin-left: 30px;
+    }
     .inputWrapper{
-        width: 320px;
+        width: 310px;
         align-items: center;
+    }
+    .inputWrapper input{
+        width: 280px;
+        height: 35px;
     }
     .footerBodyWrapper{
         height: 750px;
@@ -221,6 +231,7 @@
     }
     .labelField button{
         font-size: 14px;
+        width: 100px;
     }
     .labelField p, .labelField a{
         font-size: 15px;
@@ -250,8 +261,14 @@
         font-size: 11.5px;
     }
     .inputWrapper{
-        width: 300px;
-        height: 35px;
+        width: 290px;
+        height: 32px;
+    }
+    .labelField div input{
+        width: 240px;
+        height: 32px;
+        border-radius: 17px;
+        padding-left: 10px;
     }
     .links{
         width: 75%;
@@ -261,9 +278,9 @@
         text-align: left;
         margin-bottom: 0px;
     }
-    .labelFieldDiv button{
+    .labelField div button {
         font-size: 12px;
-        height: 35px;
+        height: 32px;
         width: 80px;
     }
 }

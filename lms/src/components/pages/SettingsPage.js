@@ -4,7 +4,6 @@ import { CiMail } from "react-icons/ci"
 import { BsTelephone } from "react-icons/bs"
 import { RxPerson } from "react-icons/rx"
 import { RiKey2Fill } from "react-icons/ri"
-// import profileImage from "../images/Mask group.png"
 import LmsHeader from "../lmsHeader/LmsHeader";
 import axios from 'axios';
 
@@ -15,8 +14,8 @@ import axios from 'axios';
 function SettingsPage(){
 
 
-    let username = localStorage.getItem("userName");
-    let userImage = localStorage.getItem("userImage");
+    let username = localStorage.getItem("Username");
+    let userImage = localStorage.getItem("image");
     let firstname = username.split(" ")[0]
     let lastname = username.split(" ")[1]
     console.log(firstname)

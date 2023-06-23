@@ -5,6 +5,7 @@ import axios from 'axios';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Login from './Login';
+import logo from "../../images/Logo.png";
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -131,7 +132,7 @@ return (
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
         </header>
 
         <div className={style.formSection}>

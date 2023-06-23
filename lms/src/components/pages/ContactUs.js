@@ -43,15 +43,17 @@ export default function ContactUs() {
         "Accept": "application/json"
       }
      }).then((response) =>{
-      console.log(response)
+      // console.log(response)
 
   
-      setEmail("");
-      setPNumber("");
-      setFirstName("");
-      setLastName("");
-      setMessage("");
-
+      if(response.status === 200){
+        setEmail("");
+        setPNumber("");
+        setFirstName("");
+        setLastName("");
+        setMessage("");
+  
+      }
       
   
   

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style  from './style.module.css'
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-
+import logo from "../../images/Logo.png";
 
 export default function AccountType() {
  
@@ -15,7 +15,7 @@ export default function AccountType() {
          <div className={style.container}>
 
         <header className={style.header}>
-            <a href="./"><img src="./img/logo.png" alt="logo" /></a>
+            <a href="./"><img src={logo} alt="logo" /></a>
         </header>
 
         <div className={style.formSections}>

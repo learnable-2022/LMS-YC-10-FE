@@ -30,6 +30,8 @@ export default function Login() {
 
 const handleSubmit = async (e) =>{
   e.preventDefault();
+  localStorage.clear();
+  
   const data = {
     email: email,
     password: password,
@@ -45,23 +47,37 @@ const handleSubmit = async (e) =>{
     }
    }).then((response) =>{
    if(response.status === 200){
-    const token = response.data.token
-    localStorage.setItem("token", token)
-    const username = response.data.data.Name
-    const userImage = response.data.data.Image
+    // const token = response.data.token
+    // localStorage.setItem("token", token)
+    const token = response.data.data
+    localStorage.setItem('token', JSON.stringify(token))
+    // const username = response.data.data.Name
+    // const userImage = response.data.data.Image
     const studentId = response.data.data._id
     localStorage.setItem("studentId", studentId)
-    localStorage.setItem("userName", username)
-    localStorage.setItem("userImage", userImage)
+    // localStorage.setItem("userName", username)
+    // localStorage.setItem("userImage", userImage)
     setEmail("");
     setPassword("");
+
+  
+    
+
+    console.log(token)
+    const username = token.Name
+    const email = token.EmailAddress
+    const profileImage = token.Image
+
+    localStorage.setItem('Username', username )
+    localStorage.setItem('email', email )
+    localStorage.setItem('image', profileImage )
+
     navigate('/dashboard')
    }
 
-
     handleChecked()
     if(savePwd === true){
- 
+
     }
 
 

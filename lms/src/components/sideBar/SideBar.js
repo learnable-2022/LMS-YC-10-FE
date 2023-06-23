@@ -6,13 +6,20 @@ import { VscHome } from "react-icons/vsc";
 import { FiLogIn } from "react-icons/fi";
 import styles from "./SideBar.module.css"
 import Logo from "../images/LogoWhite.png"; 
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { AiOutlinePieChart } from 'react-icons/ai';
 
 
 
 function SideBar(){
+    const navigate = useNavigate();
  
+    const handleLogout = () => {
+        localStorage.clear();
+
+        navigate('/')
+    }
+
 return(
     <>
         <div className={styles.sideBarWrapper}>

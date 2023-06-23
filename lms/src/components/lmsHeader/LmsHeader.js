@@ -17,9 +17,10 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 
 function LmsHeader({page}){
 
+    const username =   localStorage.getItem('Username')
+   const profileImage = localStorage.getItem('image')
+
     const [showBar, setShowBar] = useState(false)
-    const username = localStorage.getItem("userName");
-    const userImage = localStorage.getItem("userImage");
 
     const showSideBar = () =>{
         setShowBar(!showBar)
@@ -47,8 +48,8 @@ return(
                             <div className={styles.thirdIconWrapper}>
                                 <hr/>
                                 <div className={styles.fourthWrapper}>
-                                    <img src={userImage} alt="profile" />
-                                    <p className={styles.userProfileName}>{username}</p>
+                                    <img src={profileImage} alt="profile" />                                  
+                                    <p className={styles.userProfileName}>{username}</p>                  
                                 </div>
                             </div>
                         </div>

@@ -129,7 +129,7 @@ function LandingPage(){
                                         <Link to="/login" className={styles.getStarted}>Start For Free</Link>
                                     </div>
                                     <div className={styles.plans}>
-                                        <Link to="/error">View All Plans</Link>
+                                        <Link to="/comingsoon">View All Plans</Link>
                                     </div>
                                 </div>
                             </div>

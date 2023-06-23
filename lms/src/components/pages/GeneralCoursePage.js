@@ -15,6 +15,7 @@ export default function GeneralCoursePage() {
 
   const { continueCourse } = useParams();
 
+
   const [items, setItems] = useState([]);
 
   const [continueItems, setContinueItems] = useState([]);
@@ -39,7 +40,7 @@ export default function GeneralCoursePage() {
   }
  
   useEffect(() => {
-    if(start === "start" && start !== "continue"){
+    if(start === "start" && continueCourse !== "continue"){
       const getAllCourse = async () =>{
         const url = "https://kidtots.onrender.com/student/courses";
       await axios
@@ -60,8 +61,10 @@ export default function GeneralCoursePage() {
           });
       }
       getAllCourse()
-      }else if(continueCourse === "continue" && continueCourse !== "start"){
-        const continueCourse = async () =>{ 
+      }
+      if(continueCourse === "continue" && start !== "start"){
+        console.log(continueCourse)
+        const continueCourses = async () =>{ 
           const url = "https://kidtots.onrender.com/student/student-courses"
           await axios.get(url, {
               headers:{
@@ -71,11 +74,12 @@ export default function GeneralCoursePage() {
               }
              }).then((response) =>{
               const list = response.data.data;
+              console.log(response)
               setContinueItems(list);
              })
       
         }
-        continueCourse()
+        continueCourses()
       }
     }, [token, start, continueCourse]);
 

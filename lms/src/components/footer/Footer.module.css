@@ -47,7 +47,6 @@
 }
 .labelField div input{
     outline: none;
-    /* background: transparent; */
     background: #E3E3E3;
     border: none;
     width: 400px;
@@ -62,7 +61,7 @@
     font-size: 14px;
 }
 .labelField div button {
-    width: 120px;
+    width: 115px;
     height: 40px;
     margin-left: -30px;
     border-radius: 17px;
@@ -200,14 +199,14 @@
         font-weight: 499;
     }
     .inputWrapper{
-        width: 330px;
+        width: 320px;
         align-items: center;
     }
     .footerBodyWrapper{
         height: 750px;
     }
     .labelField{
-        width: 380px;
+        width: 370px;
         text-align: left;
         margin-bottom: 0px;
     }
@@ -219,7 +218,6 @@
     .labelField div{
         display: flex;
         align-items: center;
-     
     }
     .labelField button{
         font-size: 14px;
@@ -251,7 +249,21 @@
     .footerIconsWrapper a i{
         font-size: 11.5px;
     }
+    .inputWrapper{
+        width: 300px;
+        height: 35px;
+    }
     .links{
         width: 75%;
+    }
+    .labelField{
+        width: 350px;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .labelFieldDiv button{
+        font-size: 12px;
+        height: 35px;
+        width: 80px;
     }
 }

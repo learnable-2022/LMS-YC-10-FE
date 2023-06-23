@@ -10,7 +10,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 30px 0px;
+  padding: 30px 0px 50px 0px;
   padding-top: 120px;
 }
 .headerWrapper{
@@ -564,5 +564,105 @@
   .customerSupport img{
     width: 20px;
     margin-top: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text h1{
+    font-weight: 800;
+    font-size: 23px;
+    width: 300px;
+  }
+  .text p{
+    font-size: 14px;
+    width: 290px;
+  }
+  .heroImg img{
+    width: 150px;
+  }
+  .getStartedExplore a{
+    height: 25px;
+    line-height: 25px;
+  }
+  .getStarted{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 8px;
+    font-size: 9px;
+    font-weight: 699;
+  }
+  .explore{
+    width: fit-content;
+    height: fit-content;
+    font-size: 9px;
+    font-weight: 699;
+    padding: 0px 8px;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .text h1{
+    font-weight: 800;
+    font-size: 20px;
+    width: 280px;
+  }
+  .text p{
+    font-size: 12px;
+    width: 270px;
+  }
+  .heroImg img{
+    width: 130px;
+  }
+  .getStartedExplore{
+    width: 57%;
+  }
+  .getStarted{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 8px;
+    font-size: 8px;
+    font-weight: 699;
+  }
+  .explore{
+    width: fit-content;
+    height: fit-content;
+    font-size: 9px;
+    font-weight: 699;
+    padding: 0px 8px;
+  }
+
+}
+@media screen and (max-width: 460px) {
+  .text h1{
+    font-weight: 800;
+    font-size: 18px;
+    width: 220px;
+  }
+  .text p{
+    font-size: 10px;
+    width: 220px;
+  }
+  .heroImg img{
+    width: 130px;
+  }
+  .getStartedExplore{
+    width: 67%;
+  }
+  .getStarted{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 8px;
+    font-size: 8px;
+    font-weight: 699;
+  }
+  .explore{
+    width: fit-content;
+    height: fit-content;
+    font-size: 8px;
+    font-weight: 699;
+    padding: 0px 8px;
+  }
+  .getStartedExplore a{
+    height: 20px;
+    line-height: 20px;
   }
 }

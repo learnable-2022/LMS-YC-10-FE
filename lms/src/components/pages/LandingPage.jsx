@@ -17,7 +17,6 @@ import messageIcon from '../images/messageIcon.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
-// import CarouselObject from "./carousel/CarouselItem";
 import CarouselItem from "./carousel/CarouselItem";
 
 
@@ -48,7 +47,7 @@ function LandingPage(){
                     </div>
                     <div className={styles.getStartedExplore}>
                         <Link to="/login" className={styles.getStarted}>Get Started</Link>
-                        <Link to="/error" className={styles.explore}>Explore Courses</Link>
+                        <Link to="/comingsoon" className={styles.explore}>Explore Courses</Link>
                     </div>
                 </div>
                 <div className={styles.landingPageBody}>

@@ -4,7 +4,7 @@ import { CiMail } from "react-icons/ci"
 import { BsTelephone } from "react-icons/bs"
 import { RxPerson } from "react-icons/rx"
 import { RiKey2Fill } from "react-icons/ri"
-import profileImage from "../images/Mask group.png"
+// import profileImage from "../images/Mask group.png"
 import LmsHeader from "../lmsHeader/LmsHeader";
 import axios from 'axios';
 
@@ -14,6 +14,13 @@ import axios from 'axios';
 
 function SettingsPage(){
 
+
+    let username = localStorage.getItem("userName");
+    let userImage = localStorage.getItem("userImage");
+    let firstname = username.split(" ")[0]
+    let lastname = username.split(" ")[1]
+    console.log(firstname)
+    console.log(lastname)
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -94,7 +101,7 @@ return(
                         <form  action='' className={styles.settingBody} onSubmit={handleSubmit}>
                             <div className={styles.profileWrapper}>
                                 <div>
-                                    <img src={profileImage} alt="ProfilePicture"  className={styles.profilePicture}/>
+                                    <img src={userImage} alt="ProfilePicture"  className={styles.profilePicture}/>
                                 </div>
                                 <div className={styles.profileName}>
                                     <h2>Arjen Angel</h2>
@@ -105,12 +112,12 @@ return(
                             <div className={styles.nameWrapper}>
                                 <div className={styles.nameWrapperFirst} >
                                     <i><RxPerson /></i>
-                                    <input type="text" placeholder="Angel" required 
+                                    <input type="text" placeholder={firstname} required 
                                     value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                                 </div>
                                 <div>
                                     <i><RxPerson /></i>
-                                    <input type="text" placeholder="Arjen" required 
+                                    <input type="text" placeholder={lastname} required 
                                     value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                                 </div>
                             </div>

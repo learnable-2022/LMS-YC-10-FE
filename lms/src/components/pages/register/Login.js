@@ -47,8 +47,12 @@ const handleSubmit = async (e) =>{
    if(response.status === 200){
     const token = response.data.token
     localStorage.setItem("token", token)
+    const username = response.data.data.Name
+    const userImage = response.data.data.Image
     const studentId = response.data.data._id
     localStorage.setItem("studentId", studentId)
+    localStorage.setItem("userName", username)
+    localStorage.setItem("userImage", userImage)
     setEmail("");
     setPassword("");
     navigate('/dashboard')

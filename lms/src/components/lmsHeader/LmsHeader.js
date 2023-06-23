@@ -3,7 +3,7 @@ import styles from "./LmsHeader.module.css";
 import { CiSearch } from "react-icons/ci";
 import { BsChatRight } from "react-icons/bs";
 import { FiBell } from "react-icons/fi";
-import profileImage from "../images/Mask group.png";
+// import profileImage from "../images/Mask group.png";
 import PopUp from "../popUpSideBar/PopUp";
 import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAssignment,  MdOutlineClose } from "react-icons/md";
@@ -18,6 +18,8 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 function LmsHeader({page}){
 
     const [showBar, setShowBar] = useState(false)
+    const username = localStorage.getItem("userName");
+    const userImage = localStorage.getItem("userImage");
 
     const showSideBar = () =>{
         setShowBar(!showBar)
@@ -45,8 +47,8 @@ return(
                             <div className={styles.thirdIconWrapper}>
                                 <hr/>
                                 <div className={styles.fourthWrapper}>
-                                    <img src={profileImage} alt="profile" />
-                                    <p className={styles.userProfileName}>Arjen Angel</p>
+                                    <img src={userImage} alt="profile" />
+                                    <p className={styles.userProfileName}>{username}</p>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +96,7 @@ return(
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/error"
+                        <NavLink to="/comingsoon"
                         className={({isActive, isPending}) => isPending ? "pending": 
                         isActive ? styles.active : ""}>
                             <div>

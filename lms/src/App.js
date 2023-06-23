@@ -25,6 +25,7 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import TermsOfUse from "./components/pages/TermsOfUsePage";
 import MeetTeam from "./components/pages/MeetTeam";
 import AboutUs from "./components/pages/AboutUsPage";
+import ComingSoon from "./components/pages/ComingSoon";
 
 
 
@@ -52,13 +53,14 @@ return (
           <Route  path="/termsofuse" element={<TermsOfUse />} />
           <Route  path="/theteam" element={<MeetTeam />} />
           <Route  path="/aboutus" element={<AboutUs />} />
+          <Route  path="/comingsoon" element={<ComingSoon />} />
           {/* <Route  path="/main/*" element={<Main />} /> */}
 
 
             {/* pages when when user is logged in  */}
           <Route  path="/dashboard" element={<Main pageLocation={<Dashboard />}/>} />
           <Route  path="/learningpath" element={<Main pageLocation={<LearningPath />}/>} />
-          <Route  path="/learningpath/courses" element={<Main pageLocation={<GeneralCoursePage />}/>} />
+          <Route  path="/learningpath/courses/:start" element={<Main pageLocation={<GeneralCoursePage />}/>} />
           <Route  path="/learningpath/courses/:id" element={<Main pageLocation={<CoursePage />}/>} />
           <Route  path="/learningpath/quiz" element={<Main pageLocation={<Quiz />}/>} />
           <Route  path="/learningpath/quiz/quizstart" element={<Main pageLocation={<QuizStart />}/>} />

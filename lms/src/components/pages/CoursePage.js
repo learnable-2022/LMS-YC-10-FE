@@ -11,6 +11,18 @@ import axios from "axios";
 
 function CoursePage() {
     const { id } = useParams();
+
+    const { start } = useParams()
+    const { continueCourse } = useParams();
+    const [page, setPage ] = useState('')
+
+    if(start === "start" && continueCourse === ""){
+        setPage(start)
+      }else if(start === "" && continueCourse === "continue"){
+        setPage(continueCourse)
+      }
+     
+
     const navigate = useNavigate()
     const [items, setItems] = useState([]);
 
@@ -34,7 +46,7 @@ function CoursePage() {
             }
             getData()
         }, [id, token]);
-        // console.log("item", items)
+        
 
 return(
     <>
@@ -54,14 +66,15 @@ return(
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/learningpath/courses">
+                                <Link to={`/learningpath/courses/${page}`}>
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
                                 <Link to={`/learningpath/courses/${id}`} >
-                                    <p className={mystyles.active}>UI/UX</p>
+                                    <p className={mystyles.active}>{items.CourseName}</p>
+                                    <i></i>
                                 </Link>
                             </div>
                         </div>
@@ -70,7 +83,7 @@ return(
                                 <CenterCoursePage courseItem={items}/>
                             </div>
                             <div>
-                                <RightCoursePage courseItem={items} />
+                                <RightCoursePage courseItem={items._id} />
                             </div>
                         </div>
                     </div>

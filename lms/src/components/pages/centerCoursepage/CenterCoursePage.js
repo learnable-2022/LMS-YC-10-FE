@@ -9,7 +9,7 @@ import { BsStarFill } from "react-icons/bs";
 
 function CenterCoursePage({courseItem}){
     // console.log(props)
-    console.log(courseItem)
+    // console.log(courseItem)
 
  
 return(
@@ -43,9 +43,9 @@ return(
                     <p className={coursestyles.pTag}>Course content</p>
                     <span className={coursestyles.courseSummary}>
                         <div>
-                            {/* <p>{`${courseItem.Modules.length} sections-`}</p>
+                            <p>{`${courseItem.Modules.length} sections-`}</p>
                             <p>{`${courseItem.Modules.length * 2} lectures-`}</p>
-                            <p>{`${courseItem.Length} total length`}</p> */}
+                            <p>{`${courseItem.Length} total length`}</p>
                         </div>
                         <p>Expand all sections</p>
                     </span>

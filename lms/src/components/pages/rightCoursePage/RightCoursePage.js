@@ -1,25 +1,21 @@
 import React, { useState, useEffect} from "react";
-import kid1 from "../../images/kid1.png";
-import kid2 from "../../images/kid2.png";
-import kid3 from "../../images/kid3.png";
-import kid4 from "../../images/kid4.png";
 import design from "../../images/design.png";
 import chat from "../../images/chat.png";
 import puzzle from "../../images/WordPuzzle.png";
 import styles from "./RightCoursePage.module.css";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 
 function RightCoursePage({courseItem}){
 
-    const { id } = useParams()
+    // const { id } = useParams()
     const [items, setItems] = useState([]);
 
     let token = localStorage.getItem("token")
     // let studentId = localStorage.getItem("studentId")
      useEffect(() => {
-       const url = `https://kidtots.onrender.com/student/leaderboard/${id}`;
+       const url = `https://kidtots.onrender.com/student/leaderboard/${courseItem}`;
        axios
          .get(url, {
            headers: {
@@ -37,7 +33,7 @@ function RightCoursePage({courseItem}){
              // Handle error
            }
          });
-     }, [token, id]);
+     }, [token, courseItem]);
 
      console.log(items)
 
@@ -68,7 +64,16 @@ return(
                     <a href="https://">More</a>
                 </div>
                 <div className={styles.participants}>
-                    <div className={styles.rightSectionWrapper}>
+                    {
+                        items.map(( item , index) =>
+                        (
+                        <div className={styles.rightSectionWrapper} key={index}>
+                            <img src={item.imageUrl} alt="Child" />
+                            <p>{item.name}</p>
+                        </div>   
+                        ))
+                    }
+                    {/* <div className={styles.rightSectionWrapper}>
                         <img src={kid1} alt="Child" />
                         <p>Perpee James</p>
                     </div>
@@ -83,7 +88,7 @@ return(
                     <div className={styles.rightSectionWrapper}>
                         <img src={kid4} alt="Child" />
                         <p>Ifeanyi Okereke</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

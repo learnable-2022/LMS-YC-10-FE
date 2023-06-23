@@ -17,8 +17,8 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 
 function LmsHeader({page}){
 
-    const username =   localStorage.getItem('Username')
-   const profileImage = localStorage.getItem('image')
+    const username =   localStorage.getItem('userName')
+   const profileImage = localStorage.getItem('userImage')
 
     const [showBar, setShowBar] = useState(false)
 

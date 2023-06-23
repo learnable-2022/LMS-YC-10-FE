@@ -14,12 +14,12 @@ import axios from 'axios';
 function SettingsPage(){
 
 
-    let username = localStorage.getItem("Username");
-    let userImage = localStorage.getItem("image");
+    let username = localStorage.getItem("userName");
+    let userImage = localStorage.getItem("userImage");
     let firstname = username.split(" ")[0]
     let lastname = username.split(" ")[1]
-    console.log(firstname)
-    console.log(lastname)
+
+    
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -30,12 +30,6 @@ function SettingsPage(){
     // const [errMsg, setErrMsg] = useState('');
   
     const userName = `${firstName} ${lastName}`
-  
-    console.log(password)
-    console.log(userName)
-    console.log(message)
-    console.log(phonenumber)
-    console.log(email)
 
   
     const handleSubmit = async (e) => {
@@ -103,7 +97,7 @@ return(
                                     <img src={userImage} alt="ProfilePicture"  className={styles.profilePicture}/>
                                 </div>
                                 <div className={styles.profileName}>
-                                    <h2>Arjen Angel</h2>
+                                    <h2>{username}</h2>
                                     <button type='submit'>Upload New</button>
                                 </div>
                             </div>

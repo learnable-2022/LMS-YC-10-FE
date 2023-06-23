@@ -32,22 +32,24 @@ function LandingPage(){
             </div>
             <div>
                 <div className={styles.wrapper}>
-                    <div className={styles.heroContainer} >
-                        <div className={styles.text}>
-                            <h1>Empowering Your Child <br />
-                                Through Our Learning <br /> Management
-                                System</h1>
-                            <p>Unlock a kid's 
-                                world of wonders and empowering <br />
-                                children through interactive learning"</p>
+                    <div className={styles.headerWrapper}>
+                        <div className={styles.heroContainer} >
+                            <div className={styles.text}>
+                                <h1>Empowering Your Child <br />
+                                    Through Our Learning <br /> Management
+                                    System</h1>
+                                <p>Unlock a kid's 
+                                    world of wonders and empowering <br />
+                                    children through interactive learning"</p>
+                            </div>
+                            <div className={styles.heroImg}>
+                                <img src={girlHero} alt="" />
+                            </div>
                         </div>
-                        <div className={styles.heroImg}>
-                            <img src={girlHero} alt="" />
+                        <div className={styles.getStartedExplore}>
+                            <Link to="/login" className={styles.getStarted}>Get Started</Link>
+                            <Link to="/comingsoon" className={styles.explore}>Explore Courses</Link>
                         </div>
-                    </div>
-                    <div className={styles.getStartedExplore}>
-                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
-                        <Link to="/comingsoon" className={styles.explore}>Explore Courses</Link>
                     </div>
                 </div>
                 <div className={styles.landingPageBody}>

@@ -52,7 +52,9 @@ const handleSubmit = async (e) =>{
     const username = response.data.data.Name
     const userImage = response.data.data.Image
     const studentId = response.data.data._id
+    const userEmail = response.data.data.EmailAddress
     localStorage.setItem("studentId", studentId)
+    localStorage.setItem("userEmail", userEmail)
     localStorage.setItem("userName", username)
     localStorage.setItem("userImage", userImage)
     setEmail("");
@@ -112,7 +114,7 @@ return (
             value={email} required 
             onChange={(e) => setEmail(e.target.value)}
             ref={userRef}
-            autoComplete="off"
+            autoComplete="current-password"
             />
 
 

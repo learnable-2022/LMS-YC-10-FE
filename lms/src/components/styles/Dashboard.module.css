@@ -116,10 +116,6 @@
     font-size: 30px;
     padding: 7px;
 }
-.progressContainer .CircularProgressbar-text{
-    font-size: 20px;
-    color: black;
-}
 .lContent h5{
     margin: 0;
     font-weight: 500;
@@ -270,7 +266,9 @@
     align-items: flex-start;
 }
 .overflow{
+    height: 280px;
     overflow-y: scroll;
+    margin-bottom: 10px;
 }
 .studentBar{
     width: 270px;
@@ -443,9 +441,4 @@
     .courseName{
         width: 400px;
     }
-}
-.leaderBoardPoints .CircularProgressbar .CircularProgressbar-path {
-    stroke: black;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 0.5s ease 0s;
 }

@@ -32,11 +32,11 @@ return(
                     </div>
                     <div className={coursestyles.thirdSection}>
                         <ol><p>COURSE OVERVIEW</p>
-                            <li>Understand the definition and principles of UI/UX Design in order to design with intention.</li>
-                            <li>Achieve a deep understanding of the entire life-cycle of design—the process, purpose, and tools.</li>
-                            <li>Learn the basics of HCI (human-computer interaction) and the psychology behind user decision-making.</li>
-                            <li>Discover the industry-standard tools and specific project deliverables in UI/UX.</li>
-                            <li>Explain why you made design decisions, through presentations of assignments and your personal portfolio.</li>
+                            <li>Students are expected to actively engage in the course by attending classes or accessing course materials regularly.</li>
+                            <li>Students should manage their time effectively to meet course deadlines and complete assignments on time.</li>
+                            <li>Students are expected to communicate respectfully with instructors, peers, and course staff.</li>
+                            <li>Students should approach the course with a commitment to learning and personal growth.</li>
+                            <li>Preparation and Readiness.</li>
                             <li>Eligibility</li>
                         </ol>
                     </div>

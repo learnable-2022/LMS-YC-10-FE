@@ -15,17 +15,13 @@ function Footer(){
     const [showBar, setShowBar] = useState(false)
     const showPop = () =>{
         setShowBar(!showBar)
-        // setShowBar(!showBar)
+    
     }
 
-    // const userRef = useRef();
-    const errRef = useRef();
-    // const [errMsg, setErrMsg] = useState('');
-    console.log(email)
 
-    // useEffect(() => {
-    //     userRef.current.focus();
-    // }, [])
+    const errRef = useRef();
+
+
     useEffect(() => {
         setErrMsg('');
     }, [email])
@@ -43,13 +39,11 @@ function Footer(){
           "Accept": "application/json"
         }
        }).then((response) =>{
-        // console.log(response)
+     
         if(response.status === 200){
         setShowBar(!showBar)
-          
-        }
-    
         setEmail("");
+        }
   
        }).then((error) =>{
         console.log(error)
@@ -63,20 +57,12 @@ function Footer(){
         errRef.current.focus();
        })
       // catch(error){
-      //   if (!error?.response.status) {
-      //     setErrMsg('No Server Response');
-      // } else if (error.response?.status === 400) {
-      //     setErrMsg('Missing Username or Password');
-      // } else if (error.response?.status === 404) {
-      //     setErrMsg('Unauthorized');
-      // } else {
-      //     setErrMsg('Login Failed');
-      // }
-      // errRef.current.focus();
+
       // }
     
     
     }
+    
 return(
     <>
         <div className={styles.footerWrapper}>
@@ -100,7 +86,7 @@ return(
                                         <input type="email" placeholder="hello@example.com" required
                                         value={email} onChange={(e) => setEmail(e.target.value)}/>
                                     </div>
-                                    <button type="button">Submit</button>
+                                    <button type="submit" >Submit</button>
                                     </div>
                                 </label>
                             </form>

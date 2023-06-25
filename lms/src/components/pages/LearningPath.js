@@ -4,12 +4,17 @@ import { AiOutlinePlus, AiOutlineMenu } from "react-icons/ai"
 import LmsHeader from "../lmsHeader/LmsHeader";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-
+// import { UserContext } from '../../utils/UserContext';
+// , { useContext }
 
 export default function LearningPath() {
 
+
+
   const start = "start";
   const continuecourse = "continue";
+
+ 
   return (
     <div className={style.learningPathWrapper}>
       <div className={style.learningPath}>
@@ -40,7 +45,8 @@ export default function LearningPath() {
 
            
             <div className={style.card}>
-              <Link to={`/learningpath/courses/${continuecourse}`} style={{ textDecoration: 'none' }} > 
+              <Link to={`/learningpath/courses/${continuecourse}`} 
+              style={{ textDecoration: 'none' }}> 
                     <div className={style.card_body}>
                         <i><AiOutlineMenu /></i>
                     </div>

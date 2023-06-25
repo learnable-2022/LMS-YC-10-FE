@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext} from "react";
 import { IoDocumentOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
@@ -9,16 +9,19 @@ import Logo from "../images/LogoWhite.png";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlinePieChart } from 'react-icons/ai';
 import axios from "axios";
+import { UserContext } from '../../utils/UserContext';
 
 
 
 function SideBar(){
 
+    const user = useContext(UserContext)
  
     const handleLogout = async () => {
-        //   e.preventDefault();
+    
         let token = localStorage.getItem("token")
-        let email = localStorage.getItem("userEmail")
+        // let email = localStorage.getItem("userEmail")
+        const email = user.userData.data.Email
           const data = {
             email: email,
           }
@@ -32,7 +35,6 @@ function SideBar(){
            }).then((response) =>{
          
             if(response.status === 200){
-                console.log(response)
                 localStorage.clear();
             // setEmail("");
             }

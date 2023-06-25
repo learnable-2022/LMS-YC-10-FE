@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from '../styles/SettingsPage.module.css';
 import { CiMail } from "react-icons/ci"
 import { BsTelephone } from "react-icons/bs"
@@ -6,6 +6,7 @@ import { RxPerson } from "react-icons/rx"
 import { RiKey2Fill } from "react-icons/ri"
 import LmsHeader from "../lmsHeader/LmsHeader";
 import axios from 'axios';
+import { UserContext } from '../../utils/UserContext';
 
 
 
@@ -14,20 +15,25 @@ import axios from 'axios';
 function SettingsPage(){
 
 
-    let username = localStorage.getItem("userName");
-    let userImage = localStorage.getItem("userImage");
-    let firstname = username.split(" ")[0]
-    let lastname = username.split(" ")[1]
+    const user  = useContext(UserContext);
 
+    const username = user.userData.data.Name
+    const userImage = user.userData.data.Image
+ 
+    const token = user.userData.token
+
+
+    const firstname = username.split(" ")[0]
+    const lastname = username.split(" ")[1]
+
+  
     
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
     const [password, setPassword] = useState("");
     const [phonenumber, setPhoneNumber] = useState("");
   
-    // const [errMsg, setErrMsg] = useState('');
   
     const userName = `${firstName} ${lastName}`
 
@@ -37,46 +43,29 @@ function SettingsPage(){
       const data = {
         username: userName,
         email: email,
-        message: message,
         phonenumber: phonenumber,
         password: password,
       }
-      let token = localStorage.getItem("token")
+
     
       const url = "https://kidtots.onrender.com/student/user-update"
-    
+    //   axios.defaults.withCredentials = true;
       await axios.post(url, data, {
         headers:{
-        "Authorization": `Bearer` + token,
+        "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json",
         }
        }).then((response) =>{
-        console.log(response)
-  
     
-        setEmail("");
-        setPassword("");
-        setFirstName("");
-        setLastName("");
-        setMessage("");
-  
-        
-    
+        if(response.status === 200){
+            setEmail("");
+            setPassword("");
+            setFirstName("");
+            setLastName("");
+        }
     
        })
-      // catch(error){
-      //   if (!error?.response.status) {
-      //     setErrMsg('No Server Response');
-      // } else if (error.response?.status === 400) {
-      //     setErrMsg('Missing Username or Password');
-      // } else if (error.response?.status === 404) {
-      //     setErrMsg('Unauthorized');
-      // } else {
-      //     setErrMsg('Login Failed');
-      // }
-      // errRef.current.focus();
-      // }
-    
+
     
     }
 return(
@@ -108,7 +97,7 @@ return(
                                     <input type="text" placeholder={firstname} required 
                                     value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                                 </div>
-                                <div>
+                                <div className={styles.nameWrapperSecond}>
                                     <i><RxPerson /></i>
                                     <input type="text" placeholder={lastname} required 
                                     value={lastName} onChange={(e) => setLastName(e.target.value)}/>
@@ -117,13 +106,13 @@ return(
                             <div className={styles.input}>
                                 <div>
                                     <i><CiMail /></i>
-                                    <input type="email" placeholder="hello@example.com" required 
+                                    <input type="email" placeholder="helloexample@gmail.com" required 
                                     value={email} onChange={(e) => setEmail(e.target.value)}/>
                                     <button type='button'>Edit</button>
                                 </div>
                                 <div>
                                     <i><BsTelephone /></i>
-                                    <input type="tel" placeholder="Phone number" required 
+                                    <input type="tel" placeholder="Phone number"
                                     value={phonenumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
                                     <button type='button'>Add</button>
                                 </div>

@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "carousel": "^0.0.3",
+    "js-cookie": "^3.0.5",
     "pure-react": "^1.0.4",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",

@@ -66,6 +66,7 @@ export default function QuizStart() {
 	const [score, setScore] = useState(0);
     const [Selected, setSelected] = useState(false)
 
+    console.log(Selected)
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);

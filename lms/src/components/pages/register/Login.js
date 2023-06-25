@@ -1,12 +1,16 @@
-import React, { useRef, useState, useEffect} from 'react';
+import React, { useRef, useState, useContext, useEffect} from 'react';
 import style  from './style.module.css';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
+import { UserContext } from '../../../utils/UserContext';
+import Cookies from "js-cookie";
 
 
 export default function Login() {
  
+  const { updateUser } = useContext(UserContext)
+
   const navigate = useNavigate();
   const userRef = useRef();
   const errRef = useRef();
@@ -30,7 +34,6 @@ export default function Login() {
 
 const handleSubmit = async (e) =>{
   e.preventDefault();
-  localStorage.clear();
   
   const data = {
     email: email,
@@ -47,23 +50,17 @@ const handleSubmit = async (e) =>{
     }
    }).then((response) =>{
    if(response.status === 200){
+    const user = response.data
     const token = response.data.token
+    // setUserData(user)
+    updateUser(user)
     localStorage.setItem("token", token)
-    const username = response.data.data.Name
-    const userImage = response.data.data.Image
-    const studentId = response.data.data._id
-    const userEmail = response.data.data.EmailAddress
-    localStorage.setItem("studentId", studentId)
-    localStorage.setItem("userEmail", userEmail)
-    localStorage.setItem("userName", username)
-    localStorage.setItem("userImage", userImage)
+    Cookies.set("STUDENT_COOKIE", token, { expires: 7})
+
     setEmail("");
     setPassword("");
-
-  
-
-
     navigate('/dashboard')
+
    }
 
     handleChecked()
@@ -114,7 +111,7 @@ return (
             value={email} required 
             onChange={(e) => setEmail(e.target.value)}
             ref={userRef}
-            autoComplete="current-password"
+            autoComplete="on"
             />
 
 

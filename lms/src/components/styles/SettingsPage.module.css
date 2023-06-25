@@ -66,17 +66,22 @@
 }
 .nameWrapper{
     display: flex;
-    width: 425px;
+    /* width: 425px; */
 }
-.nameWrapper div{
+.nameWrapperSecond{
     display: flex;
     align-items: center;
-    width: 340px;
+    width: 198px;
     height: 50px;
     border: 1px solid black;
 }
 .nameWrapperFirst{
     margin-right: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    width: 198px;
+    height: 50px;
 }
 .nameWrapper div i{
     padding: 0px 5px 0px 10px;
@@ -136,6 +141,8 @@ input::placeholder{
     }
     .settingBody{
         width: 60vw;
+        height: fit-content;
+        padding-bottom: 30px;
     }
     .nameWrapper{
         width: 63vw;

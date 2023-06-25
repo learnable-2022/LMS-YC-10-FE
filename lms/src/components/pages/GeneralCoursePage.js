@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import style from '../styles/generalcoursepage.module.css';
 import LmsHeader from "../lmsHeader/LmsHeader";
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -6,53 +6,71 @@ import { IoIosArrowForward } from "react-icons/io";
 import axios from 'axios';
 import PopUp from '../popUpSideBar/PopUp';
 import { GiCancel } from "react-icons/gi"
+import { UserContext } from '../../utils/UserContext';
 
 
 
 export default function GeneralCoursePage() {
 
-  const { start } = useParams()
+  const { select } = useParams();
+  const user = useContext(UserContext)
 
-  const { continueCourse } = useParams();
-
+  
 
   const [items, setItems] = useState([]);
-
   const [continueItems, setContinueItems] = useState([]);
 
   const navigate = useNavigate()
 
   const [showBar, setShowBar] = useState(false)
 
-  const [page, setPage ] = useState('')
-  let token = localStorage.getItem("token")
-
+  const token = user.userData.token
 
   const showPop = () =>{
       setShowBar(!showBar)
   }
 
 
-  if(start === "start" && continueCourse === ""){
-    setPage(start)
-  }else if(start === "" && continueCourse === "continue"){
-    setPage(continueCourse)
-  }
  
   useEffect(() => {
-    if(start === "start" && continueCourse !== "continue"){
+    if(select === "continue"){
+
+      const continueCourses = async () =>{ 
+        const url = "https://kidtots.onrender.com/student/student-courses"
+        // axios.defaults.withCredentials = true;
+        await axios.get(url, {
+            headers:{
+              "Authorization": "Bearer " + token,
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            }
+           }).then((response) =>{
+            if(response.status === 200){
+              const list = response.data.data;
+              setContinueItems(list);
+
+            }
+           })
+    
+      }
+      continueCourses()
+    }else if(select === "start"){
       const getAllCourse = async () =>{
         const url = "https://kidtots.onrender.com/student/courses";
+        // axios.defaults.withCredentials = true;
       await axios
           .get(url, {
             headers: {
-              "Authorization": "Bearer" + token,
+              "Authorization": "Bearer " + token,
               "Content-Type": "application/json",
             },
           })
           .then((res) => {
-            const datas = res.data.data;
-            setItems(datas);
+            if(res.status === 200){
+              const datas = res.data.data;
+              setItems(datas);
+            }
+
           })
           .catch((error) => {
             if (error.response.status === 400) {
@@ -62,37 +80,23 @@ export default function GeneralCoursePage() {
       }
       getAllCourse()
       }
-      if(continueCourse === "continue" && start !== "start"){
-        console.log(continueCourse)
-        const continueCourses = async () =>{ 
-          const url = "https://kidtots.onrender.com/student/student-courses"
-          await axios.get(url, {
-              headers:{
-                "Authorization": "Bearer" + token,
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-              }
-             }).then((response) =>{
-              const list = response.data.data;
-              console.log(response)
-              setContinueItems(list);
-             })
-      
-        }
-        continueCourses()
-      }
-    }, [token, start, continueCourse]);
+
+    }, [token, select]);
+
+
+
+
 
 
 
   const startCourse = async (e) =>{
-    // console.log(e)
 
   const url = `https://kidtots.onrender.com/student/courses/start/${e}`;
+  axios.defaults.withCredentials = true;
    await axios
       .get(url, {
         headers: {
-          "Authorization": "Bearer" + token,
+          "Authorization": "Bearer " + token,
           "Content-Type": "application/json",
         },
       })
@@ -124,7 +128,7 @@ export default function GeneralCoursePage() {
             </Link>
           </div>
           <div>
-            <Link to={`/learningpath/courses/${page}`}>
+            <Link to={`/learningpath/courses/${select}`}>
               <p className={style.active}>Select a course</p>
               <i><IoIosArrowForward /></i>
             </Link>
@@ -137,7 +141,7 @@ export default function GeneralCoursePage() {
               className={style.gridItem}
               key={data._id}
             >
-              <div style={{ textDecoration: 'none' }}
+              <div  style={{ textDecoration: 'none' }}
               onClick={showPop} 
               >
                 <div className={style.card}>

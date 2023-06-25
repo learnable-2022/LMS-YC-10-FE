@@ -11,18 +11,9 @@ import axios from "axios";
 
 function CoursePage() {
     const { id } = useParams();
-
-    const { start } = useParams()
-    const { continueCourse } = useParams();
-    const [page, setPage ] = useState('')
-
-    if(start === "start" && continueCourse === ""){
-        setPage(start)
-      }else if(start === "" && continueCourse === "continue"){
-        setPage(continueCourse)
-      }
+    // console.log(id)
+    const { select } = useParams()
      
-
     const navigate = useNavigate()
     const [items, setItems] = useState([]);
 
@@ -30,9 +21,11 @@ function CoursePage() {
         useEffect(() => {
             const getData = async () =>{
                 const url = `https://kidtots.onrender.com/student/courses/get-single/${id}`;
+                // axios.defaults.withCredentials = true;
+                // const url = `https://kidtots.onrender.com/student/courses/get-single/6494dd3d3ae0f1aa4fb15999`;
             await axios.get(url, {
                   headers: {
-                    "Authorization": `Bearer` + token,
+                    "Authorization": `Bearer ` + token,
                     "Content-Type": "application/json",
                   }
                 }).then((res) => {
@@ -66,7 +59,7 @@ return(
                                 </Link>
                             </div>
                             <div>
-                                <Link to={`/learningpath/courses/${page}`}>
+                                <Link to={`/learningpath/courses/${select}`}>
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>

@@ -248,6 +248,12 @@
         font-size: 7px;
         margin: 0px 1px;
     }
+    .news{
+        z-index: 0;
+        position: absolute;
+        left: 15%;
+        top: 2650px;
+    }
 }
 @media screen and (max-width: 450px){
     .footerCopywrightWrapper .footerCopywright p{

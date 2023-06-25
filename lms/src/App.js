@@ -60,7 +60,7 @@ return (
             {/* pages when when user is logged in  */}
           <Route  path="/dashboard" element={<Main pageLocation={<Dashboard />}/>} />
           <Route  path="/learningpath" element={<Main pageLocation={<LearningPath />}/>} />
-          <Route  path="/learningpath/courses/:start" element={<Main pageLocation={<GeneralCoursePage />}/>} />
+          <Route  path="/learningpath/courses/:select" element={<Main pageLocation={<GeneralCoursePage />}/>} />
           <Route  path="/learningpath/courses/:id" element={<Main pageLocation={<CoursePage />}/>} />
           <Route  path="/learningpath/quiz" element={<Main pageLocation={<Quiz />}/>} />
           <Route  path="/learningpath/quiz/quizstart" element={<Main pageLocation={<QuizStart />}/>} />

@@ -1,6 +1,4 @@
-import React,{ useState, useEffect } from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import React from "react";
 import styles from '../styles/Dashboard.module.css'
 import { FaEye } from "react-icons/fa";
 import CourseComp from '../images/courseComp.svg'
@@ -21,9 +19,10 @@ import imaget4 from "../images/imaget4.png";
 import imaget5 from "../images/imaget5.png";
 import imaget6 from "../images/imaget6.png";
 import instructor from "../images/InstructorImg.png";
-import axios from "axios";
-
-
+// import axios from "axios";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+// ,{ useState, useEffect } 
 
 function Dashboard(){
 
@@ -34,32 +33,32 @@ function Dashboard(){
      let points = 115;
      let point = 40;
     
-     const [items, setItems] = useState([]);
+    //  const [items, setItems] = useState([]);
 
-    let token = localStorage.getItem("token")
-    // let studentId = localStorage.getItem("studentId")
-     useEffect(() => {
-       const url = `https://kidtots.onrender.com/student/leaderboard`;
-       axios
-         .get(url, {
-           headers: {
-            "Authorization": `Bearer` + token,
-             "Content-Type": "application/json",
-           },
-         })
-         .then((res) => {
-            console.log(res)
-           const datas = res.data.data;
-           setItems(datas);
-         })
-         .catch((error) => {
-           if (error.response.status === 400) {
-             // Handle error
-           }
-         });
-     }, [token]);
+    // // let token = localStorage.getItem("token")
+    // // let studentId = localStorage.getItem("studentId")
+    //  useEffect(() => {
+    //    const url = `https://kidtots.onrender.com/student/leaderboard`;
+    //    axios
+    //      .get(url, {
+    //        headers: {
+    //         // "Authorization": `Bearer` + token,
+    //          "Content-Type": "application/json",
+    //        },
+    //      })
+    //      .then((res) => {
+    //         console.log(res)
+    //        const datas = res.data.data;
+    //        setItems(datas);
+    //      })
+    //      .catch((error) => {
+    //        if (error.response.status === 400) {
+    //          // Handle error
+    //        }
+    //      });
+    //  }, []);
 
-     console.log(items)
+    //  console.log(items)
    
     return(
         <div className={styles.progressMainWrapper}>
@@ -131,7 +130,16 @@ function Dashboard(){
                                     <p>Chapter 1</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={percentage} text={`${percentage}%`} progressValueColor={"red"}/>
+                                    <CircularProgressbar value={percentage} 
+                                    text={`${percentage}%`} 
+                                    styles={{
+                                        path: {
+                                          stroke: '#FF1F11',
+                                        },
+                                        text: {
+                                            fill:  'black',
+                                        },
+                                      }}/>
                                 </div>
                             </div>
                             <div className={styles.lContent}>
@@ -140,7 +148,15 @@ function Dashboard(){
                                     <p>Chapter 2</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={basics} text={`${basics}%`} style={{color:"solid green" }}/>
+                                    <CircularProgressbar value={basics} 
+                                    text={`${basics}%`} 
+                                    styles={{
+                                        path: {
+                                            stroke: "#40ec7e" 
+                                    },
+                                    text: {
+                                        fill:  'black',
+                                    },}}/>
                                 </div>
                             </div>
                             <div className={styles.lContent}>
@@ -149,7 +165,15 @@ function Dashboard(){
                                     <p>Chapter 3</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={UI} text={`${UI}%`} style={{font:"30px"}} />
+                                    <CircularProgressbar value={UI} 
+                                    text={`${UI}%`} 
+                                    styles={{
+                                        path: {
+                                            stroke: "#E91E63"
+                                    },
+                                    text: {
+                                        fill:  'black',
+                                    },}} />
                                 </div>
                             </div>
                             <div className={styles.lContent}>
@@ -158,7 +182,15 @@ function Dashboard(){
                                     <p>Chapter 4</p>
                                 </div>
                                 <div className={styles.progressContainer}>
-                                    <CircularProgressbar value={python} text={`${python}%`} style={{font:"30px"}} />
+                                    <CircularProgressbar value={python} 
+                                    text={`${python}%`}  
+                                    styles={{
+                                        path: {
+                                            stroke: "#40ec7e" 
+                                    },
+                                    text: {
+                                        fill:  'black',
+                                    },}} />
                                 </div>
                             </div>
                         </div>
@@ -261,12 +293,21 @@ function Dashboard(){
                             <div className={styles.leaderBoardPoints}>
                                 <CircularProgressbar value={point} 
                                 text={`${points} Points`} 
-                                // titleColor={'white'} 
-                                //   progressValueColor={'#ecf0f1'}
-                                //   activeStrokeColor={'tomato'}
-                                  
-                                //   inActiveStrokeOpacity={0.1}
-                                   />
+                                styles={{
+                                path: {
+                                    stroke: "#EC407A" 
+                                },
+                                text: {
+                                    fill:  '#ffffff',
+                                    fontSize: "16px",
+                                    fontFamily: 'mada',
+                                    textAlign: "center",
+                                },
+                                root: {
+                                    width: '100px',
+                                  },
+                                }}
+                              />
                             </div>
                         </div>
                         <div className={styles.leaderBoardTags}>

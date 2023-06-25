@@ -58,7 +58,7 @@ return(
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/error"
+                        <NavLink to="/comingsoon"
                         className={({isActive, isPending}) => isPending ? "pending": 
                         isActive ? styles.active : ""}>
                             <div>

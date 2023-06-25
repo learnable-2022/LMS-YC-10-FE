@@ -35,7 +35,7 @@ function Footer(){
         email: email,
       }
     
-      const url = "https://kidtots.onrender.com/student/"
+      const url = "https://kidtots.onrender.com/newsletter"
     
       await axios.post(url, data, {
         headers:{
@@ -43,7 +43,7 @@ function Footer(){
           "Accept": "application/json"
         }
        }).then((response) =>{
-        console.log(response)
+        // console.log(response)
         if(response.status === 200){
         setShowBar(!showBar)
           
@@ -130,7 +130,7 @@ return(
                         <h3><Link to="/error">Support</Link></h3>
                         <li><Link to="/error">FAQs</Link></li>
                         <li><Link to="/contactus">Contact Us</Link></li>
-                        <li><Link to="/temsofuse">Terms of Service</Link></li>
+                        <li><Link to="/termsofuse">Terms of Service</Link></li>
                         <li><Link to="/contactus">Help Center</Link></li>
                     </div>
                 </div>

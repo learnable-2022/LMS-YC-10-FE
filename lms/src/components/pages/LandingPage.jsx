@@ -17,7 +17,6 @@ import messageIcon from '../images/messageIcon.svg'
 import Header from '../header/Header'
 import Footer from "../footer/Footer"
 import { Link } from "react-router-dom";
-// import CarouselObject from "./carousel/CarouselItem";
 import CarouselItem from "./carousel/CarouselItem";
 
 
@@ -33,24 +32,25 @@ function LandingPage(){
             </div>
             <div>
                 <div className={styles.wrapper}>
-                    <div className={styles.heroContainer} >
-                        <div className={styles.text}>
-                            <h1>Empowering Your Child <br />
-                                Through Our Learning <br /> Management
-                                System</h1>
-                            <p>Unlock a kid's 
-                                world of wonders and empowering <br />
-                                children through interactive learning"</p>
-                                <div className={styles.getStartedExplore}>
-                        <Link to="/login" className={styles.getStarted}>Get Started</Link>
-                        <Link to="/login" className={styles.explore}>Explore Courses</Link>
-                    </div>
+                    <div className={styles.headerWrapper}>
+                        <div className={styles.heroContainer} >
+                            <div className={styles.text}>
+                                <h1>Empowering Your Child <br />
+                                    Through Our Learning <br /> Management
+                                    System</h1>
+                                <p>Unlock a kid's 
+                                    world of wonders and empowering <br />
+                                    children through interactive learning"</p>
+                            </div>
+                            <div className={styles.heroImg}>
+                                <img src={girlHero} alt="" />
+                            </div>
                         </div>
-                        <div className={styles.heroImg}>
-                            <img src={girlHero} alt="" />
+                        <div className={styles.getStartedExplore}>
+                            <Link to="/login" className={styles.getStarted}>Get Started</Link>
+                            <Link to="/comingsoon" className={styles.explore}>Explore Courses</Link>
                         </div>
                     </div>
-                    
                 </div>
                 <div className={styles.landingPageBody}>
                     <div className={styles.landingPageBodyWrapper}>
@@ -131,7 +131,7 @@ function LandingPage(){
                                         <Link to="/login" className={styles.getStarted}>Start For Free</Link>
                                     </div>
                                     <div className={styles.plans}>
-                                        <Link to="/error">View All Plans</Link>
+                                        <Link to="/comingsoon">View All Plans</Link>
                                     </div>
                                 </div>
                             </div>

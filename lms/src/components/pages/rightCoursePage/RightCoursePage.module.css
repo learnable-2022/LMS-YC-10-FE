@@ -67,6 +67,8 @@
 }
 .participants{
     overflow-y: scroll;
+    height: fit-content;
+    max-height: 200px;
 }
 @media screen and (max-width: 1000px) {
     .rightCoursePageWrapper{

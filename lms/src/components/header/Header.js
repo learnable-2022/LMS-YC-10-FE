@@ -18,10 +18,10 @@ return(
                             <li><NavLink to="/"
                             className={({isActive, isPending}) => isPending ? "pending": 
                             isActive ? styles.active : ""}>Home</NavLink></li>
-                            <li><NavLink to="/error"
+                            <li><NavLink to="/comingsoon"
                             className={({isActive, isPending}) => isPending ? "pending": 
                             isActive ? styles.active : ""}>Features</NavLink></li>
-                            <li><NavLink to="/error"
+                            <li><NavLink to="/comingsoon"
                             className={({isActive, isPending}) => isPending ? "pending": 
                             isActive ? styles.active : ""}>Pricing</NavLink></li>
                             <li><NavLink to="/contactus" className={({isActive, isPending}) => isPending ? "pending":

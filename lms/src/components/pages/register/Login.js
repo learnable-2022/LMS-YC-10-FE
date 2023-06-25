@@ -46,39 +46,37 @@ const handleSubmit = async (e) =>{
       "Accept": "application/json"
     }
    }).then((response) =>{
-  
-    const token = response.data.data
-
-    console.log(token)
-    const username = token.Name
-    const email = token.EmailAddress
-    const profileImage = token.Image
-
-    localStorage.setItem('Username', username )
-    localStorage.setItem('email', email )
-    localStorage.setItem('image', profileImage )
-
-
+   if(response.status === 200){
+    const token = response.data.token
+    localStorage.setItem("token", token)
+    const username = response.data.data.Name
+    const userImage = response.data.data.Image
+    const studentId = response.data.data._id
+    localStorage.setItem("studentId", studentId)
+    localStorage.setItem("userName", username)
+    localStorage.setItem("userImage", userImage)
     setEmail("");
     setPassword("");
 
+  
+
+
     navigate('/dashboard')
-    
+   }
+
     handleChecked()
     if(savePwd === true){
-     
-    localStorage.setItem('token', JSON.stringify(token))
 
     }
 
 
    })
   }catch(error){
-    if (!error?.response.status) {
+    if (!error?.status) {
       setErrMsg('No Server Response');
-  } else if (error.response?.status === 400) {
+  } else if (error?.status === 400) {
       setErrMsg('Missing Username or Password');
-  } else if (error.response?.status === 404) {
+  } else if (error?.status === 404) {
       setErrMsg('Unauthorized');
   } else {
       setErrMsg('Login Failed');
@@ -134,7 +132,7 @@ return (
 
             </div>
 
-            <button className={style.signUpBtn} >LOGIN</button>
+            <button className={style.signUpBtn} type="submit">LOGIN</button>
             </form>
 
             <div className={style.signUpOptions}>

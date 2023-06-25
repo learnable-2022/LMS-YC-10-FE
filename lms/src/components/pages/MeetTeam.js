@@ -14,7 +14,7 @@ import anointing from '../images/anointing.png';
 import nkem from '../images/nkem.png';
 import nkechi from '../images/nkechi.png';
 import lawrence from '../images/lawrence.png';
-
+import chimz from '../images/chimz.png';
 
 
 function MeetTeam() {
@@ -101,7 +101,7 @@ function MeetTeam() {
                 </div>
                 <div className={style.member}>
                     <div className={style.triangle}>
-                        <img src={victor} alt='victor' />
+                        <img src={chimz} alt='victor' />
                     </div>
                     <h3>Chimzuruoke Enemuo</h3>
                     <p>Backend Developer</p>

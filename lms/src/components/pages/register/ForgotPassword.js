@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import style  from './style.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import logo from "../../images/Logo.png";
 
@@ -8,12 +8,11 @@ import logo from "../../images/Logo.png";
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
 
-
+  const navigate = useNavigate()
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const data = {
       email: email,
-  
     }
     const url = "https://kidtots.onrender.com/student/forgot-password"
      await axios.post(url, data, {
@@ -23,6 +22,9 @@ export default function ForgotPassword() {
         }
        }).then((response) =>{
         console.log(response)
+        if(response.status === 200){
+          navigate("/login")
+        }
 
        })
 
@@ -39,7 +41,7 @@ export default function ForgotPassword() {
 
             <h2 className={style.heading}>reset password</h2>
 
-            <p>Enter email address assocaited with your account and we will send you a link to reset your password</p>
+            <p>Enter email address associated with your account and we will send you a link to reset your password</p>
 
             <form action="" className={style.signUpform} onSubmit={handleSubmit}>
             

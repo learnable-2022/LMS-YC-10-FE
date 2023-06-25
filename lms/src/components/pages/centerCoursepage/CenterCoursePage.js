@@ -1,40 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import coursestyles from "./CenterCoursePage.module.css"
 import CourseList from "../courseList/CourseList";
 import Card from "../card/Card";
 import { GrGroup } from "react-icons/gr";
 import { BsStarFill } from "react-icons/bs";
-import axios from "axios";
 
 
 
-function CenterCoursePage(props){
-    console.log(props)
-    const [items, setItems] = useState([]);
-        // localStorage.getItem(token)
+function CenterCoursePage({courseItem}){
+    // console.log(props)
+    // console.log(courseItem)
 
-            useEffect(() => {
-          const url = "https://kidtots.onrender.com/student/courses/:courseid";
-          axios.get(url, {
-            headers: {
-            //   "Authorization": ` Bearer`,
-            // Authorization: "Bearer " + e,
-              "Content-Type": "application/json",
-            }
-          }).then((res) => {
-            const datas = res.data.data;
-            setItems(datas);
-          }).catch((error) => {
-          if(error.response.status === 400){
-      
-          }
-          });
-        }, []);
+ 
 return(
     <>
         <div className={coursestyles.centerCoursePageWrapper}>
             <div className={coursestyles.centerPage}>
-                <p className={coursestyles.centerPageText}>The complete  6- weeks UI/UX design skill learning</p>
+                <p className={coursestyles.centerPageText}>{courseItem.CourseName}</p>
                 <div className={coursestyles.firstCenterSection}>
                     <div id={coursestyles.div1}>
                         <i><BsStarFill /></i>
@@ -46,9 +28,7 @@ return(
                     </div>
                 </div>
                     <div className={coursestyles.secondSection}>
-                    <p className={coursestyles.secondSectionText}>Our 6- weeks UI/UX design skill course equips learners with the essential skills to 
-                        become world-class designers. Our exponential instructors provide hands-on learning 
-                        opportunities to design and prototype digital products, conduct user, flows and wire frames research</p>
+                    <p className={coursestyles.secondSectionText}>{courseItem.Description}</p>
                     </div>
                     <div className={coursestyles.thirdSection}>
                         <ol><p>COURSE OVERVIEW</p>
@@ -63,15 +43,15 @@ return(
                     <p className={coursestyles.pTag}>Course content</p>
                     <span className={coursestyles.courseSummary}>
                         <div>
-                            <p>41 sections-</p>
-                            <p>490 lectures-</p>
-                            <p>65hours 33 minutes total length</p>
+                            <p>{`${courseItem.Modules.length} sections-`}</p>
+                            <p>{`${courseItem.Modules.length * 2} lectures-`}</p>
+                            <p>{`${courseItem.Length} total length`}</p>
                         </div>
                         <p>Expand all sections</p>
                     </span>
                     <div className={coursestyles.fourthSection}>
                         <div>
-                            <CourseList />
+                            <CourseList items={courseItem.Modules}/>
                         </div>
                     </div>
                     <h3 className={coursestyles.h3}>SKILLS TO GAIN</h3>

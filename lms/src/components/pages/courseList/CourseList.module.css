@@ -1,6 +1,7 @@
 .courseListWrapper{
     overflow-y: scroll;
-    height: 300px;
+    height: fit-content;
+    max-height: 300px;
     color: #1C1C1C;
     width: 100%;
 }
@@ -23,9 +24,14 @@
     content: "ᨆ";
     margin-right: 15px;
 }
-.courseListWrapper  a{
+.courseListWrapper .courseList{
     text-decoration: none;
-    height: 30px;
+    height: 35px;
+    color: black;
+}
+.courseListWrapper a{
+    text-decoration: none;
+    height: 35px;
     color: black;
 }
 .courseListWrapper .courseList #section1{
@@ -61,6 +67,9 @@
         font-size: 13.5px;
     }
     .courseListWrapper  a{
+        font-size: 13.5px;
+    }
+    .courseListWrapper  .courseList{
         font-size: 13.5px;
     }
 }

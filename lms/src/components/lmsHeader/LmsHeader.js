@@ -17,9 +17,8 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 
 function LmsHeader({page}){
 
-  const username =   localStorage.getItem('Username')
-   const email =  localStorage.getItem('email')
-   const profileImage = localStorage.getItem('image')
+    const username =   localStorage.getItem('userName')
+   const profileImage = localStorage.getItem('userImage')
 
     const [showBar, setShowBar] = useState(false)
 
@@ -49,17 +48,8 @@ return(
                             <div className={styles.thirdIconWrapper}>
                                 <hr/>
                                 <div className={styles.fourthWrapper}>
-                                    <img src={profileImage} alt="profile" />
-                                    <div className={styles.userProfileWrapper}>
-                                        <div className={styles.userProfile}>
-                                            <div>
-                                                <p className={styles.userProfileName}>{username}</p>
-                                                {/* <div className={styles.userProfileDiv} id={styles.userProfileDiv}>
-                                                    <p>Learner</p>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <img src={profileImage} alt="profile" />                                  
+                                    <p className={styles.userProfileName}>{username}</p>                  
                                 </div>
                             </div>
                         </div>
@@ -107,7 +97,7 @@ return(
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/error"
+                        <NavLink to="/comingsoon"
                         className={({isActive, isPending}) => isPending ? "pending": 
                         isActive ? styles.active : ""}>
                             <div>

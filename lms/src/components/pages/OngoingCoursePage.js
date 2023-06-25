@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/OngoingCourse.module.css";
-import { Link  } from "react-router-dom";
+import { Link, useParams  } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import ellipse from "../images/Ellipse 34.png";
 import LmsHeader from "../lmsHeader/LmsHeader";
-import {  UserContext } from "./courseList/CourseList";
 
 
-// Onclick,
-// const src = Onclick(src)
-// const id = Onclick(id)
+
+
 
 function OngoingCourse () {
-    const value = React.useContext(UserContext);
-    console.log(value)
-    // const {src, id} = props.data;
-    // console.log("i was clicked")
-    // console.log({src})
-    // console.log(`${id} ${src}`)
+    const { encodedId } = useParams();
+
+    // Decode the ID from the URL
+    const url = decodeURIComponent(encodedId);
+    
+    const { id } = useParams(); 
+    const { start } = useParams()
+    const { continueCourse } = useParams();
+    const [page, setPage ] = useState('')
+
+    if(start === "start" && continueCourse === ""){
+        setPage(start)
+      }else if(start === "" && continueCourse === "continue"){
+        setPage(continueCourse)
+    }
+
+    
 return(
     <>                
         <div className={styles.ongoingCourse}>
@@ -34,14 +43,14 @@ return(
                             </Link>
                         </div>
                         <div>
-                            <Link to="/courses">
+                            <Link to={`/learningpath/courses/${page}`}>
                                 <p>Select a course</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
                         </div>
                         <div>
-                            <Link to="/coursepage" >
-                            <p>UI/UX</p>
+                            <Link to={`/learningpath/courses/${id}`} >
+                                <p>UI/UX</p>
                                 <i><IoIosArrowForward /></i>
                             </Link>
                         </div>
@@ -61,14 +70,14 @@ return(
                         </div>
                         <div className={styles.courseVideoWrapper}>
                             <video width="600px" height="350px" controls>
-                                <source src={value} type='video/mp4' />
+                                <source src={url} type='video/mp4' />
                             </video>
                         </div>
                         <div className={styles.buttonWrapper}>
                             <Link to="/error">
                                 <button className={styles.btn1}>About</button>
                             </Link>
-                            <Link to="/quiz">
+                            <Link to="/learningpath/quiz">
                                 <button className={styles.btn2}>Quiz</button>
                             </Link>
                             <Link to="/assignment">
@@ -80,8 +89,7 @@ return(
                             <p>Creating a Style guide in figma is a great way of establishing consistency in your 
                                 visual language across different devices of your design. </p>
                             <h3>Useful Links</h3>
-                            <a href="https://designcode.io/figma-handbook-color-and-text-styles-in-figma/">
-                                https://designcode.io/figma-handbook-color-and-text-styles-in-figma/</a>
+                            <a href={"l"}>No Extra </a>
                         </div>
                     </div>
                     <div className={styles.progressBar}>

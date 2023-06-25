@@ -1,32 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style  from './style.module.css'
-import { Link } from 'react-router-dom'
-// import { AiOutlineMail } from 'react-icons/ai';
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import logo from "../../images/Logo.png";
+
 
 export default function ForgotPassword() {
+  const [email, setEmail] = useState("");
+
+  const navigate = useNavigate()
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+    const data = {
+      email: email,
+    }
+    const url = "https://kidtots.onrender.com/student/forgot-password"
+     await axios.post(url, data, {
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+       }).then((response) =>{
+        console.log(response)
+        if(response.status === 200){
+          navigate("/login")
+        }
+
+       })
+
+  }
  
   return (
     <div className={style.container}>
 
         <header className={style.header}>
-            <Link to="/"><img src="./img/logo.png" alt="logo" /></Link>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
         </header>
 
-        <div className={style.formSection}>
+        <div className={style.formSections}>
 
             <h2 className={style.heading}>reset password</h2>
 
-            <p>Enter email address assocaited with your account and we will send you a link to reset your password</p>
+            <p>Enter email address associated with your account and we will send you a link to reset your password</p>
 
-            <form action="" className={style.signUpform}>
+            <form action="" className={style.signUpform} onSubmit={handleSubmit}>
             
-            <input type="email" name='email' placeholder='Email' required />
+            <input type="email" name='email' placeholder='Email' required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="off"/>
 
 
            
 
            
-            <button className={style.signUpBtn} >Enter</button>
+            <button type='submit' className={style.signUpBtn} >Enter</button>
             </form>
 
             <div className={style.signUpOptions}>

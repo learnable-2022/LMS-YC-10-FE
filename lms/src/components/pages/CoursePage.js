@@ -1,17 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import mystyles from "../styles/CoursePage.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import CenterCoursePage from "../pages/centerCoursepage/CenterCoursePage";
 import RightCoursePage from "../pages/rightCoursePage/RightCoursePage";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import LmsHeader from "../lmsHeader/LmsHeader";
+import axios from "axios";
 
 
 
 function CoursePage() {
+    const { id } = useParams();
+    // console.log(id)
+    const { select } = useParams()
+     
+    const navigate = useNavigate()
+    const [items, setItems] = useState([]);
+
+        let token = localStorage.getItem("token")
+        useEffect(() => {
+            const getData = async () =>{
+                const url = `https://kidtots.onrender.com/student/courses/get-single/${id}`;
+                // axios.defaults.withCredentials = true;
+                // const url = `https://kidtots.onrender.com/student/courses/get-single/6494dd3d3ae0f1aa4fb15999`;
+            await axios.get(url, {
+                  headers: {
+                    "Authorization": `Bearer ` + token,
+                    "Content-Type": "application/json",
+                  }
+                }).then((res) => {
+                  const datas = res.data.data;
+                  setItems(datas);
+                }).catch((error) => {
+                if(error.status === 400){
+            
+                }
+                });
+            }
+            getData()
+        }, [id, token]);
+        
+
 return(
     <>
-    <div className={mystyles.coursePageWrapper}>
+    { items?
+    <div className={mystyles.coursePageWrapper} >
         <div className={mystyles.courseLmsHeader}>
             <LmsHeader page="Courses"/>
         </div>
@@ -26,29 +59,32 @@ return(
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/courses">
+                                <Link to={`/learningpath/courses/${select}`}>
                                     <p>Select a course</p>
                                     <i><IoIosArrowForward /></i>
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/coursepage" >
-                                    <p className={mystyles.active}>UI/UX</p>
+                                <Link to={`/learningpath/courses/${id}`} >
+                                    <p className={mystyles.active}>{items.CourseName}</p>
+                                    <i></i>
                                 </Link>
                             </div>
                         </div>
                         <div className={mystyles.courseBody}>
                             <div className={mystyles.centerCoursePage}>
-                                <CenterCoursePage />
+                                <CenterCoursePage courseItem={items}/>
                             </div>
                             <div>
-                                <RightCoursePage />
+                                <RightCoursePage courseItem={items._id} />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </div>
+    : navigate("/error")
+    }
     </>
 )
 }

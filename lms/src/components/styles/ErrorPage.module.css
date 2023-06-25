@@ -10,7 +10,8 @@
     justify-content: flex-start;
 }
 .logoWrapper img{
-    width: 175px;
+    margin-left: 20px;
+    width: 140px;
 }
 .errorPageWrapper .errorBodyWrapper{
     display: flex;
@@ -38,6 +39,16 @@
     color: white;
     font-size: 16px;
     font-weight: 600;
+}
+.errorPageWrapper .errorBodyWrapper button:hover{
+    background: #005381;
+    color: white;
+    border: 1px solid #005381;
+    transition: 300ms;
+  }
+.errorPageWrapper .errorBodyWrapper button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 @media screen and (max-width: 768px) {
     .errorPageWrapper .errorBodyWrapper button{

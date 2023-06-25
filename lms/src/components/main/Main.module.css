@@ -1,15 +1,15 @@
 
 .main{
     display: flex;
-    position: relative;
     width: 100%;
 }
 .mainBody{
     display: flex;
     width: 100%;
-    align-items: end;
+    align-items: flex-end;
     left: 17.2%;
-    position: relative;
+    position: absolute;
+    margin-top: 20px;
 }
 .sideBar{
     height: 100%;
@@ -21,5 +21,6 @@
     }
     .mainBody{
         left: 0%;
+        margin-top: 0px;
     }
 }

@@ -8,31 +8,32 @@ export default function Quiz() {
   return (
     <>
     <div className={styles.wrapper}>
-        <div>
+        <div className={styles.lmsHeader}>
             <LmsHeader  page='Course' />
         </div>
+        <div className={styles.quizBodyWrapper}>
         <div>
         <div className={styles.courseDirectory}>
             <div>
-                <Link to="/">
+                <Link to="/learningpath">
                    <p>Course</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/">
+                <Link to="/learningpath/courses">
                     <p>Select a course</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/" >
+                <Link to="/learningpath/courses/coursepage" >
                    <p>UI/UX</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
             </div>
             <div>
-                <Link to="/" >
+                <Link to="/learningpath/ongoingcourse" >
                    <p>Introduction to Figma</p>
                     <i><IoIosArrowForward /></i>
                 </Link>
@@ -49,15 +50,15 @@ export default function Quiz() {
                 <h4>This is going to be a quick quiz on everything we have covered in this course Introduction to Figma</h4>
                 
                 
-                <a href="/quiz/quizstart" className={styles.startQuizBtn}>Get started</a>
+                <a href="/learningpath/quiz/quizstart" className={styles.startQuizBtn}>Get started</a>
                 <h2>OR</h2>
-                <a href="/courses/ongoingcourse" className={styles.skipQuiz} >Skip quiz</a>
+                <a href="/learningpath/ongoingcourse" className={styles.skipQuiz} >Skip quiz</a>
                 {/* <Link to='/courses/ongoingcourse' styles={{ textDecoration: 'none' }} ><p>Skip quiz</p></Link> */}
             </div>
             
         </div>
+        </div>
 
-    
 
     </div>
 </>

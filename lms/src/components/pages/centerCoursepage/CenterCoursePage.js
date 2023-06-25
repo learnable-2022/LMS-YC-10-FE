@@ -7,13 +7,16 @@ import { BsStarFill } from "react-icons/bs";
 
 
 
+function CenterCoursePage({courseItem}){
+    // console.log(props)
+    // console.log(courseItem)
 
-function CenterCoursePage(){
+ 
 return(
     <>
         <div className={coursestyles.centerCoursePageWrapper}>
             <div className={coursestyles.centerPage}>
-                <p className={coursestyles.centerPageText}>The complete  6- weeks UI/UX design skill learning</p>
+                <p className={coursestyles.centerPageText}>{courseItem.CourseName}</p>
                 <div className={coursestyles.firstCenterSection}>
                     <div id={coursestyles.div1}>
                         <i><BsStarFill /></i>
@@ -25,32 +28,30 @@ return(
                     </div>
                 </div>
                     <div className={coursestyles.secondSection}>
-                    <p className={coursestyles.secondSectionText}>Our 6- weeks UI/UX design skill course equips learners with the essential skills to 
-                        become world-class designers. Our exponential instructors provide hands-on learning 
-                        opportunities to design and prototype digital products, conduct user, flows and wire frames research</p>
+                    <p className={coursestyles.secondSectionText}>{courseItem.Description}</p>
                     </div>
                     <div className={coursestyles.thirdSection}>
                         <ol><p>COURSE OVERVIEW</p>
-                            <li>Understand the definition and principles of UI/UX Design in order to design with intention.</li>
-                            <li>Achieve a deep understanding of the entire life-cycle of design—the process, purpose, and tools.</li>
-                            <li>Learn the basics of HCI (human-computer interaction) and the psychology behind user decision-making.</li>
-                            <li>Discover the industry-standard tools and specific project deliverables in UI/UX.</li>
-                            <li>Explain why you made design decisions, through presentations of assignments and your personal portfolio.</li>
+                            <li>Students are expected to actively engage in the course by attending classes or accessing course materials regularly.</li>
+                            <li>Students should manage their time effectively to meet course deadlines and complete assignments on time.</li>
+                            <li>Students are expected to communicate respectfully with instructors, peers, and course staff.</li>
+                            <li>Students should approach the course with a commitment to learning and personal growth.</li>
+                            <li>Preparation and Readiness.</li>
                             <li>Eligibility</li>
                         </ol>
                     </div>
                     <p className={coursestyles.pTag}>Course content</p>
                     <span className={coursestyles.courseSummary}>
                         <div>
-                            <p>41 sections-</p>
-                            <p>490 lectures-</p>
-                            <p>65hours 33 minutes total length</p>
+                            <p>{`${courseItem.Modules.length} sections-`}</p>
+                            <p>{`${courseItem.Modules.length * 2} lectures-`}</p>
+                            <p>{`${courseItem.Length} total length`}</p>
                         </div>
                         <p>Expand all sections</p>
                     </span>
                     <div className={coursestyles.fourthSection}>
                         <div>
-                            <CourseList />
+                            <CourseList items={courseItem.Modules}/>
                         </div>
                     </div>
                     <h3 className={coursestyles.h3}>SKILLS TO GAIN</h3>

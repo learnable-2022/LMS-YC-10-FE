@@ -1,13 +1,16 @@
-import React, { useRef, useState, useEffect} from 'react';
+import React, { useRef, useState, useContext, useEffect} from 'react';
 import style  from './style.module.css';
 import axios from 'axios';
-import Main from '../../main/Main';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../images/Logo.png";
+import { UserContext } from '../../../utils/UserContext';
+import Cookies from "js-cookie";
 
 
 export default function Login() {
  
+  const { updateUser } = useContext(UserContext)
+
   const navigate = useNavigate();
   const userRef = useRef();
   const errRef = useRef();
@@ -18,7 +21,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState('');
-  const [success, setSuccess] = useState(false);
   const [savePwd, setSavePwd] = useState(false)
 
     useEffect(() => {
@@ -30,8 +32,9 @@ export default function Login() {
     }, [email, password])
 
 
-const handleSubmit = (e) =>{
+const handleSubmit = async (e) =>{
   e.preventDefault();
+  
   const data = {
     email: email,
     password: password,
@@ -40,44 +43,39 @@ const handleSubmit = (e) =>{
   const url = "https://kidtots.onrender.com/student/sign"
 
   try{
-  axios.post(url, data, {
+  await axios.post(url, data, {
     headers:{
       "Content-Type": "application/json",
       "Accept": "application/json"
     }
    }).then((response) =>{
-    // const token2 = response.data.data.EmailAddress
-    // const token1 = response.data.data.Password
-    // const tokenImage = response.data.data.Image
-    const token = response.data.data
-    // const tokens = response.data
-    // let loginDetails = JSON.stringify(tokenImage)
-    // console.log(tokens)
-    // console.log(tokenImage)
-    // console.log(token1)
-    // console.log(token)
-    // console.log(token2)
-    // localStorage.setItem('token', loginDetails)
+   if(response.status === 200){
+    const user = response.data
+    const token = response.data.token
+    // setUserData(user)
+    updateUser(user)
+    localStorage.setItem("token", token)
+    Cookies.set("STUDENT_COOKIE", token, { expires: 7})
 
     setEmail("");
     setPassword("");
-    setSuccess(true)
     navigate('/dashboard')
-    
+
+   }
+
     handleChecked()
     if(savePwd === true){
-      // localStorage.setItem(token)
-    localStorage.setItem('token', token)
+
     }
 
 
    })
   }catch(error){
-    if (!error?.response.status) {
+    if (!error?.status) {
       setErrMsg('No Server Response');
-  } else if (error.response?.status === 400) {
+  } else if (error?.status === 400) {
       setErrMsg('Missing Username or Password');
-  } else if (error.response?.status === 404) {
+  } else if (error?.status === 404) {
       setErrMsg('Unauthorized');
   } else {
       setErrMsg('Login Failed');
@@ -91,13 +89,8 @@ const handleSubmit = (e) =>{
 
   }
 
-  return (
+return (
     <>
-      {/* { success ?(
-        <div>
-          <Main />
-        </div>
-      ):( */}
     <div className={style.container}>
 
         <header className={style.header}>
@@ -107,10 +100,10 @@ const handleSubmit = (e) =>{
         </header>
 
         <div className={style.formSection}>
-
+            <div className={style.formSectionDiv}>
             <h2 className={style.heading}>Login</h2>
 
-            <p>Sign in with your email address used in joining the organisaton</p>
+            <p>Sign in with your email address used in joining the organisation</p>
 
             <form className={style.signUpform} onSubmit={handleSubmit}>
             
@@ -118,7 +111,7 @@ const handleSubmit = (e) =>{
             value={email} required 
             onChange={(e) => setEmail(e.target.value)}
             ref={userRef}
-            autoComplete="off"
+            autoComplete="on"
             />
 
 
@@ -138,7 +131,7 @@ const handleSubmit = (e) =>{
 
             </div>
 
-            <button className={style.signUpBtn} >LOGIN</button>
+            <button className={style.signUpBtn} type="submit">LOGIN</button>
             </form>
 
             <div className={style.signUpOptions}>
@@ -154,10 +147,10 @@ const handleSubmit = (e) =>{
 
              <div className={style.GMbtns}>
                 <Link to="/login"><img src="./img/google1.png" alt="Google" /></Link>
-                <Link to="/login"><img src="./img/meta.svg" alt="Metamask" /></Link>
              </div>
 
             </div>
+        </div>
         </div>
 
         <div className={style.vectors2}>
